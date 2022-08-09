@@ -15,7 +15,7 @@
       <guid>https://www.deploymentshare.com/post/bp-applications/</guid>
       <description>Hello everyone, I hope you are all safe and well.
 I’ve been thinking about writing this for a while and I hope it helps some of you new to app packaging.
-How do I build apps? It never hurts to brush up if you’re a seasoned app-packager. App packaging isn’t going away any time soon, everyone needs apps. The Microsoft app store has gotten better but I don’t feel it’s quite there yet in terms of broadly available applications. Sometimes, companies can have line-of-business applications that they build in-house and as system administrators, you may be responsible for packaging and distributing those applications.</description>
+ How do I build apps?  It never hurts to brush up if you’re a seasoned app-packager. App packaging isn’t going away any time soon, everyone needs apps. The Microsoft app store has gotten better but I don’t feel it’s quite there yet in terms of broadly available applications. Sometimes, companies can have line-of-business applications that they build in-house and as system administrators, you may be responsible for packaging and distributing those applications.</description>
     </item>
     
     <item>
@@ -162,7 +162,7 @@ Originally based on BlogEngine.NET, I migrated the site to WordPress in 2019. Sa
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://www.deploymentshare.com/author/jonathan-fallis/</guid>
-      <description>https://www.deploymentshare.com/images/profile.jpeg does not exist Click on ABOUT ME to find out more</description>
+      <description>Click on ABOUT ME to find out more</description>
     </item>
     
     <item>
