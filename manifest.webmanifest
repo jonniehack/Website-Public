@@ -1,1 +1,56 @@
-{"name":"Deploymentshare | Personal Tech Blog","short_name":"Deploymentshare | Personal Tech Blog","lang":"en-us","display":"fullscreen","orientation":"portrait","start_url":"https://deploymentshare.com/?utm_source=web_app_manifest","background_color":"#fff","theme_color":"#3498db","icons":[{"src":"/images/favicon_hu2dc8486dcc9cad31e6ba1375ebb5aa14_6002_48x48_resize_lanczos_3.png","sizes":"48x48","type":"image/png"},{"src":"/images/favicon_hu2dc8486dcc9cad31e6ba1375ebb5aa14_6002_72x72_resize_lanczos_3.png","sizes":"72x72","type":"image/png"},{"src":"/images/favicon_hu2dc8486dcc9cad31e6ba1375ebb5aa14_6002_96x96_resize_lanczos_3.png","sizes":"96x96","type":"image/png"},{"src":"/images/favicon_hu2dc8486dcc9cad31e6ba1375ebb5aa14_6002_144x144_resize_lanczos_3.png","sizes":"144x144","type":"image/png"},{"src":"/images/favicon_hu2dc8486dcc9cad31e6ba1375ebb5aa14_6002_192x192_resize_lanczos_3.png","sizes":"192x192","type":"image/png","purpose":"any maskable"},{"src":"/images/favicon_hu2dc8486dcc9cad31e6ba1375ebb5aa14_6002_512x512_resize_lanczos_3.png","sizes":"512x512","type":"image/png"}]}
+{
+  "name": "Deploymentshare | Personal Tech Blog",
+  "short_name": "Deploymentshare | Personal Tech Blog",
+  "lang": "en-us",
+  "display": "fullscreen",
+  "orientation" : "portrait",
+  "start_url": "https://deploymentshare.com/?utm_source=web_app_manifest",
+  "background_color": "#fff",
+  "theme_color": "#3498db",
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  "icons": [
+    {
+      "src": "/images/favicon_hu2dc8486dcc9cad31e6ba1375ebb5aa14_6002_48x48_resize_lanczos_3.png",
+      "sizes": "48x48",
+      "type": "image/png"
+    },
+    {
+      "src": "/images/favicon_hu2dc8486dcc9cad31e6ba1375ebb5aa14_6002_72x72_resize_lanczos_3.png",
+      "sizes": "72x72",
+      "type": "image/png"
+    },
+    {
+      "src": "/images/favicon_hu2dc8486dcc9cad31e6ba1375ebb5aa14_6002_96x96_resize_lanczos_3.png",
+      "sizes": "96x96",
+      "type": "image/png"
+    },
+    {
+      "src": "/images/favicon_hu2dc8486dcc9cad31e6ba1375ebb5aa14_6002_144x144_resize_lanczos_3.png",
+      "sizes": "144x144",
+      "type": "image/png"
+    },
+    {
+      "src": "/images/favicon_hu2dc8486dcc9cad31e6ba1375ebb5aa14_6002_192x192_resize_lanczos_3.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/images/favicon_hu2dc8486dcc9cad31e6ba1375ebb5aa14_6002_512x512_resize_lanczos_3.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+  
+  
+}
