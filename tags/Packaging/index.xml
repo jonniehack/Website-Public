@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Packaging on Deploymentshare | Personal Tech Blog</title>
+    <link>https://deploymentshare.com/tags/Packaging/</link>
+    <description>Recent content in Packaging on Deploymentshare | Personal Tech Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 27 Mar 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://deploymentshare.com/tags/Packaging/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How to build apps in Endpoint Manager</title>
+      <link>https://deploymentshare.com/post/BP-Applications/</link>
+      <pubDate>Sat, 27 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://deploymentshare.com/post/BP-Applications/</guid>
+      <description>Hello everyone, I hope you are all safe and well.
+I’ve been thinking about writing this for a while and I hope it helps some of you new to app packaging.
+How do I build apps? It never hurts to brush up if you’re a seasoned app-packager. App packaging isn’t going away any time soon, everyone needs apps. The Microsoft app store has gotten better but I don’t feel it’s quite there yet in terms of broadly available applications. Sometimes, companies can have line-of-business applications that they build in-house and as system administrators, you may be responsible for packaging and distributing those applications.</description>
+    </item>
+    
+    <item>
+      <title>PowerShell App Deployment Toolkit and Intune Win32 APPS</title>
+      <link>https://deploymentshare.com/post/BP-PSADTIntune/</link>
+      <pubDate>Fri, 11 Sep 2020 00:00:00 +0100</pubDate>
+      
+      <guid>https://deploymentshare.com/post/BP-PSADTIntune/</guid>
+      <description>Hi Folks! Leading on from this post about getting started with PSADT, and as promised, I’m writing up my experience with it and creating Win32 Intune apps. So firstly, I’m assuming by now that you read and absorbed the first write up I did, you should have noticed that a couple of things I did in that post can actually be done differently and be eager and armed with understanding the format and have a good idea about what to do. Combine that with great ‘google-fu’ and you’re ready to continue your decent app packaging journey. Using this with ConfigMgr applications is quite simple because once you’ve prepared your application you use the root folder as the source content for the application and the rest is pretty straight forward (holler at me if you want that blogging too).</description>
+    </item>
+    
+  </channel>
+</rss>
