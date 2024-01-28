@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Group Tag on Deploymentshare | Personal Tech Blog</title>
+    <link>https://deploymentshare.com/tags/group-tag/</link>
+    <description>Recent content in Group Tag on Deploymentshare | Personal Tech Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 14 Dec 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://deploymentshare.com/tags/group-tag/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>SETTING A GROUP TAG DURING A CONFIGURATION MANAGER TASK SEQUENCE</title>
+      <link>https://deploymentshare.com/post/bp-apgrouptagts/</link>
+      <pubDate>Thu, 14 Dec 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://deploymentshare.com/post/bp-apgrouptagts/</guid>
+      <description>In this post I&amp;rsquo;m going to talk about using the Windows autopilot deployment for existing devices Task sequence in configuration manager and modifying that task sequence to set a group tag during the process. You may know that traditionally this tasks sequence is used to &amp;lsquo;build&amp;rsquo; devices and have them ready to start the autopilot process. I had a customer recently that had that very need. They had purchased a large number of machines that were delivered with Windows 10 installed and not Windows 11. As the customer was on their Windows 11 uplift journey already they were a bit disappointed to say the least and they opted to create a Configuration Manager task sequence to prep them for autopilot.</description>
+    </item>
+    
+  </channel>
+</rss>
