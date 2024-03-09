@@ -2,10 +2,10 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://deploymentshare.com/tags/autopilot/</loc>
+    <loc>https://deploymentshare.com/articles/</loc>
     <lastmod>2023-12-14T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://deploymentshare.com/post/</loc>
+    <loc>https://deploymentshare.com/tags/autopilot/</loc>
     <lastmod>2023-12-14T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://deploymentshare.com/categories/</loc>
@@ -32,7 +32,7 @@
     <loc>https://deploymentshare.com/categories/intune/</loc>
     <lastmod>2023-12-14T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://deploymentshare.com/post/bp-apgrouptagts/</loc>
+    <loc>https://deploymentshare.com/articles/bp-apgrouptagts/index/</loc>
     <lastmod>2023-12-14T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://deploymentshare.com/tags/</loc>
@@ -44,7 +44,7 @@
     <loc>https://deploymentshare.com/tags/applications/</loc>
     <lastmod>2021-03-27T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://deploymentshare.com/post/bp-applications/</loc>
+    <loc>https://deploymentshare.com/articles/bp-applications/index/</loc>
     <lastmod>2021-03-27T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://deploymentshare.com/categories/microsoft-deployment-toolkit/</loc>
@@ -74,7 +74,7 @@
     <loc>https://deploymentshare.com/tags/hybrid-aad/</loc>
     <lastmod>2020-09-15T00:00:00+01:00</lastmod>
   </url><url>
-    <loc>https://deploymentshare.com/post/bp-forticlient/</loc>
+    <loc>https://deploymentshare.com/articles/bp-forticlient/index/</loc>
     <lastmod>2020-09-15T00:00:00+01:00</lastmod>
   </url><url>
     <loc>https://deploymentshare.com/tags/vpn/</loc>
@@ -89,16 +89,26 @@
     <loc>https://deploymentshare.com/tags/powershell/</loc>
     <lastmod>2020-09-11T00:00:00+01:00</lastmod>
   </url><url>
-    <loc>https://deploymentshare.com/post/bp-psadtintune/</loc>
+    <loc>https://deploymentshare.com/articles/bp-psadtintune/index/</loc>
     <lastmod>2020-09-11T00:00:00+01:00</lastmod>
   </url><url>
     <loc>https://deploymentshare.com/tags/deployment/</loc>
     <lastmod>2020-08-19T00:00:00+01:00</lastmod>
   </url><url>
-    <loc>https://deploymentshare.com/post/bp-psadt/</loc>
+    <loc>https://deploymentshare.com/articles/bp-psadt/index/</loc>
     <lastmod>2020-08-19T00:00:00+01:00</lastmod>
   </url><url>
+    <loc>https://deploymentshare.com/apps/1password/</loc>
+  </url><url>
+    <loc>https://deploymentshare.com/apps/7zip/</loc>
+  </url><url>
+    <loc>https://deploymentshare.com/apps/</loc>
+  </url><url>
     <loc>https://deploymentshare.com/author/</loc>
+  </url><url>
+    <loc>https://deploymentshare.com/apps/graphxray/</loc>
+  </url><url>
+    <loc>https://deploymentshare.com/apps/greenshot/</loc>
   </url><url>
     <loc>https://deploymentshare.com/homepage/full/</loc>
   </url><url>
@@ -126,12 +136,22 @@
   </url><url>
     <loc>https://deploymentshare.com/404/</loc>
   </url><url>
+    <loc>https://deploymentshare.com/apps/notepadpp/</loc>
+  </url><url>
     <loc>https://deploymentshare.com/privacy-policy/</loc>
   </url><url>
     <loc>https://deploymentshare.com/terms-conditions/</loc>
   </url><url>
+    <loc>https://deploymentshare.com/apps/postman/</loc>
+  </url><url>
+    <loc>https://deploymentshare.com/apps/powerbi/</loc>
+  </url><url>
+    <loc>https://deploymentshare.com/apps/psadt/</loc>
+  </url><url>
     <loc>https://deploymentshare.com/search/</loc>
   </url><url>
     <loc>https://deploymentshare.com/contact/</loc>
+  </url><url>
+    <loc>https://deploymentshare.com/apps/vscode/</loc>
   </url>
 </urlset>
