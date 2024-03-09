@@ -6,7 +6,7 @@
   <head>
     
     <meta charset="utf-8" />
-<title>PowerShell App Deployment Toolkit Write Up</title>
+<title>PowerShell App Deployment Toolkit and Intune Win32 Apps</title>
 
 
 <meta
@@ -72,7 +72,7 @@
 
 
 
-  <base href="https://deploymentshare.com/articles/bp-psadt/index/" />
+  <base href="https://deploymentshare.com/articles/bp-psadtintune/" />
 
 
 
@@ -83,7 +83,7 @@
   
 
 
-<title>PowerShell App Deployment Toolkit Write Up</title>
+<title>PowerShell App Deployment Toolkit and Intune Win32 Apps</title>
 
 
 
@@ -163,8 +163,8 @@
       
       
       
-        <meta property="og:image" content="https://deploymentshare.com/images/title/psadt.png" />
-        <meta name="twitter:image" content="https://deploymentshare.com/images/title/psadt.png" />
+        <meta property="og:image" content="https://deploymentshare.com/images/title/psadt_intune.png" />
+        <meta name="twitter:image" content="https://deploymentshare.com/images/title/psadt_intune.png" />
         <meta
           name="twitter:card"
           content="summary
@@ -172,8 +172,8 @@
           " />
       
       
-      <meta property="og:image:width" content="1280" />
-      <meta property="og:image:height" content="640" />
+      <meta property="og:image:width" content="800" />
+      <meta property="og:image:height" content="418" />
     
 
 
@@ -192,13 +192,13 @@
 
 
 
-<meta property="og:title" content="PowerShell App Deployment Toolkit Write Up" />
+<meta property="og:title" content="PowerShell App Deployment Toolkit and Intune Win32 Apps" />
 <meta property="og:description" content="Visit www.deploymentshare.com to find out more" />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="https://deploymentshare.com/articles/bp-psadt/index/" />
+<meta property="og:url" content="https://deploymentshare.com/articles/bp-psadtintune/" />
 
 
-<meta name="twitter:title" content="PowerShell App Deployment Toolkit Write Up" />
+<meta name="twitter:title" content="PowerShell App Deployment Toolkit and Intune Win32 Apps" />
 <meta name="twitter:description" content="Visit www.deploymentshare.com to find out more" />
 
 
@@ -19394,25 +19394,25 @@ header {
       <div
         class="col-lg-8 mx-auto ">
         <div class=" mb-4">
-          <h1 class="h2 mb-3">PowerShell App Deployment Toolkit Write Up</h1>
+          <h1 class="h2 mb-3">PowerShell App Deployment Toolkit and Intune Win32 Apps</h1>
           <ul class="list-inline post-meta mb-3">
             <li class="list-inline-item"><i class="fas fa-user me-2"></i>
               <a href="/author/jonathan-fallis/">Jonathan Fallis</a>
             </li>
-            <li class="list-inline-item">Date : August 19, 2020</li>
+            <li class="list-inline-item">Date : September 11, 2020</li>
             <li class="list-inline-item">Categories :
               <a
                 href="/categories/intune/" class="ms-1">Intune </a>
               ,<a
                 href="/categories/powershell/" class="ms-1">Power shell </a>
-              ,<a
-                href="/categories/configuration-manager/" class="ms-1">Configuration manager </a>
               </li>
             <li class="list-inline-item">Tags : <a
+                href="/tags/app-packaging/" class="ms-1">App packaging </a> ,<a
                 href="/tags/applications/" class="ms-1">Applications </a> ,<a
-                href="/tags/configmgr/" class="ms-1">Config mgr </a> ,<a
-                href="/tags/deployment/" class="ms-1">Deployment </a> ,<a
+                href="/tags/cloud/" class="ms-1">Cloud </a> ,<a
+                href="/tags/endpoint-manager/" class="ms-1">Endpoint manager </a> ,<a
                 href="/tags/intune/" class="ms-1">Intune </a> ,<a
+                href="/tags/packaging/" class="ms-1">Packaging </a> ,<a
                 href="/tags/powershell/" class="ms-1">Power shell </a> 
             </li>
           </ul>
@@ -19501,31 +19501,31 @@ header {
         <picture>
           <source
             
-              srcset="/images/title/psadt_hu78066341200bc99ae5c17e319924de93_174696_545x0_resize_q90_h2_lanczos_3.webp"
+              srcset="/images/title/psadt_intune_hu5c1e9785d68eb537350744836900f95e_84443_545x0_resize_q90_h2_lanczos_3.webp"
             
             media="(max-width: 575px)" />
           <source
             
-              srcset="/images/title/psadt_hu78066341200bc99ae5c17e319924de93_174696_600x0_resize_q90_h2_lanczos_3.webp"
+              srcset="/images/title/psadt_intune_hu5c1e9785d68eb537350744836900f95e_84443_600x0_resize_q90_h2_lanczos_3.webp"
             
             media="(max-width: 767px)" />
           <source
             
-              srcset="/images/title/psadt_hu78066341200bc99ae5c17e319924de93_174696_700x0_resize_q90_h2_lanczos_3.webp"
+              srcset="/images/title/psadt_intune_hu5c1e9785d68eb537350744836900f95e_84443_700x0_resize_q90_h2_lanczos_3.webp"
             
             media="(max-width: 991px)" />
           <source
             
-              srcset="/images/title/psadt_hu78066341200bc99ae5c17e319924de93_174696_1110x0_resize_q90_h2_lanczos_3.webp"
+              srcset="/images/title/psadt_intune_hu5c1e9785d68eb537350744836900f95e_84443_1110x0_resize_q90_h2_lanczos_3.webp"
              />
           <img
             
               loading="lazy" decoding="async"
-              src="/images/title/psadt_hu78066341200bc99ae5c17e319924de93_174696_1110x0_resize_lanczos_3.png"
+              src="/images/title/psadt_intune_hu5c1e9785d68eb537350744836900f95e_84443_1110x0_resize_lanczos_3.png"
             class=" w-100 img"
             alt="post-thumb"
-            width="1280"
-            height="640" />
+            width="800"
+            height="418" />
         </picture>
       
       
@@ -19543,13 +19543,42 @@ header {
         </div>
         
         <div class="">
-          <div class="content"><p>Hi all, thought I’d write up what I’ve been working on recently, which is re-visiting PowerShell App Deployment Toolkit.  A great Resource for ConfigMgr apps, but equally it is supported in Intune so I will be doing a follow-up post on using this with Intune.  I know there are plenty of blogs out there on this so this is just my interpretation and is intended to get people started.
-I know, for example, that the kit comes with a wide variety cmdlets that you can utilise to achieve tasks but this write up is based around getting those a little familiar with PowerShell up to speed with it.  There are many ways to skin a cat.</p>
-<ins>
-<h5 id="prep-work">Prep Work</h5>
-</ins>
-<ol>
-<li>Download the latest toolkit from here: <a href="https://psappdeploytoolkit.com/"
+          <div class="content"><p>Hi Folks!
+<br />
+<br />
+Leading on from <a href="articles/bp-psadt/"
+
+
+
+ 
+
+
+>this post</a>
+ about getting started with PSADT, and as promised, I’m writing up my experience with it and creating Win32 Intune apps.
+<br />
+<br />
+So firstly, I’m assuming by now that you read and absorbed the first write up I did, you should have noticed that a couple of things I did in that post can actually be done differently and be eager and armed with understanding the format and have a good idea about what to do.  Combine that with great ‘google-fu’ and you’re ready to continue your decent app packaging journey.
+<br />
+<br />
+Using this with ConfigMgr applications is quite simple because once you’ve prepared your application you use the root folder as the source content for the application and the rest is pretty straight forward (holler at me if you want that blogging too).  Putting that into Intune however is slightly different.  There are many blog posts about Intune Content Prep Tool however in a nut-shell, this tool will take your content (source) files for your application, and output a single .intunewin file which is the file format that Intune understands.
+So lets go ahead and download the tool from here and extract it to a local folder.</p>
+<p>
+<img src="img/PSADTIntune1.png#centre" alt="Alt Text"  /></p>
+<p>The following files should be in the extracted folder</p>
+<p>
+<img src="img/PSADTIntune2.png#centre" alt="Alt Text"  /></p>
+<p>What we’re going to do is launch a cmd prompt as admin and browse to the folder that contains the files.  This way if we have more that one app to create the executable wont exit when we’ve finished.  When you launch the IntuneWinAppUtil.exe you will be asked three questions.</p>
+<blockquote>
+<p><em>“Who would Use the Intune app must answer me these questions three”</em>
+<br />
+…<strong>Monty Python</strong> (true story)</p>
+</blockquote>
+<p>
+<img src="img/PSADTIntune3.png#centre" alt="Alt Text"  /></p>
+<p>Pretty straight forward stuff, specify the sources folder (in our case this will be one of the subfolders we created by copying the TOOLKIT MASTER folder (see previous post), specify the setup file (note this is not the full install command with switches) in our case we’ll be specifying “deploy-application.ps1” which is the script that we’ll call when we want to install and uninstall the application in questions and finally the output folder for the .intunewin file we can import to Intune.  The output file will take the format of [SetupFileName].intunewin so we’ll get deploy-application.intunewin. Remember if you’re making lots of Intune content files and they’re all made from PSADT, the output file will be the same so use different output folders.
+<br />
+<br />
+Next, we’ll move over to Intune now and start to import the application. Log into <a href="https://endpoint.microsoft.com/"
 
 
 
@@ -19558,221 +19587,90 @@ I know, for example, that the kit comes with a wide variety cmdlets that you can
  
 
 
->https://psappdeploytoolkit.com/</a>
-</li>
-<li>Extract the .ZIP folder and call this folder “PSADT – FULL”</li>
-<li>Go into the folder, into the Toolkit folder and create a folder called “Files” (if it doesn’t exist already)
-
-<img src="img/PSADT1.png#centre" alt="Alt Text"  /></li>
-<li>This is where we’re going to store our source files for the applications we’re going to deploy.</li>
-<li>From within the FULL folder, copy the Toolkit folder out to the foot and call this “PSADT – TOOLKIT MASTER”
-
-<img src="img/PSADT2.png#centre" alt="Alt Text"  /></li>
-</ol>
-<p>TOOLKIT MASTER should only contain the following items</p>
+>https://endpoint.microsoft.com/</a>
+ and navigate to the apps blade, select to add a new app and chose the type of “Win32”.</p>
 <p>
-<img src="img/PSADT3.png#centre" alt="Alt Text"  /></p>
-<p>Now you have a copy of the full kit that’s not been touched and a copy of the toolkit you can begin to customise for your customer(s).</p>
-<ol start="6">
-<li>Working with the TOOLKIT MASTER folder, Open up “Deploy-Application.ps1 and edit the following&hellip;</li>
-</ol>
-<p>Comment out the “Show-InstallationWelcome” and Show-InstallationProgress</p>
+<img src="img/PSADTIntune4.png#centre" alt="Alt Text"  /></p>
+<p>Then continue to populate the details of the app.  In my example I’m using 7Zip.
+Here is the <strong>App Information</strong> section with the parts I’ve edited numbered</p>
 <p>
-<img src="img/PSADT4.png#centre" alt="Alt Text"  /></p>
-<ol start="7">
-<li>Do the same for Pre-Uninstallation, comment them out…
-
-<img src="img/PSADT5.png#centre" alt="Alt Text"  /></li>
-<li>Under Post-Installation, comment out the line highlighted below
-
-<img src="img/PSADT6.png#centre" alt="Alt Text"  /></li>
-<li>The above actions make it more silent so the user isn’t bothered when installation takes place. These are options you may wish to reinstate later, the choice is up to you I’ll let you do your own research on that, but for now we’re aiming for not bothering the end user.</li>
-<li>Save the script.</li>
-<li>Next, within the AppDeployToolkit folder, open up the AppDeployToolkit.xml file and change the following</li>
-</ol>
-<p>Under MSI Options edit the install params to be /QN instead of /QB-!</p>
+<img src="img/PSADTIntune5.png#centre" alt="Alt Text"  /></p>
+<p>Next is the <strong>Program</strong> section</p>
 <p>
-<img src="img/PSADT71.png#centre" alt="Alt Text"  /></p>
-<ins>
-<h5 id="branding">Branding</h5>
-</ins>
+<img src="img/PSADTIntune6.png#centre" alt="Alt Text"  /></p>
+<p>You can see here is where we call the two PowerShell commands (coincidentally these will be the same commands used in ConfigMgr)
+<br />
+You can set some Requirements of you own if you have them, I normally select Windows 10 1607 as the minimum OS and select the architecture based upon what I’m deploying.  In the case of 7Zip I have downloaded just the x64 version of the application and then added an Execute-MSI statement in the PSADT code to install it.   So my requirements might be this…</p>
+<p>
+<img src="img/PSADTIntune13.png#centre" alt="Alt Text"  /></p>
+<p>And finally we have the Detection Methods. Normally I like to use the the DisplayVersion of the application that gets stored in the registry hives after installation but in some case you can just use the MSI Product Code.  Generally (but not all the time remember!) you can use one of the following two hives to harvest information about the installed application.</p>
 <ol>
-<li>You will need to brand the toolkit to your specific customer, otherwise it will be using the standard branding.</li>
-<li>From within the TOOLKIT MASTER, open up the “AppDeployToolkit” folder and replace the “AppDeployToolkitBanner.png” with a branded one (must be the same name!)</li>
-<li>Next, replace the Icon file (same folder) with a branded Icon file, again with the exact same name.  To do this, create an image 256×256 pixels in size, then open the image using Greenshot and this will give you and option to save the image as a .ICO file
+<li>HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall</li>
+<li>HKLM:\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall.</li>
+</ol>
+<p>I wrote a quick PowerShell script to go get the child object under these keys for you and bring back the PSChildName, DisplayName, DisplayVersion and (for use later) the Uninstall String that’s stored in the registry so that you can install the app on your test box using the PSADT script you created for testing.  I use these lines of code so much.  After its installed you can then harvest what you need from the registry for the detection method.  Here is the code I use.</p>
+<h5 id="code">Code</h5>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#007020">Clear-Host</span>
+</span></span><span style="display:flex;"><span><span style="color:#bb60d5">$Hive</span> = <span style="color:#007020">Get-ChildItem</span> -Path HKLM<span style="">:</span>\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall
+</span></span><span style="display:flex;"><span><span style="color:#bb60d5">$Hive2</span> = <span style="color:#007020">Get-ChildItem</span> -Path HKLM<span style="">:</span>\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall
+</span></span><span style="display:flex;"><span><span style="color:#007020">Write-Host</span> -ForegroundColor Green <span style="color:#4070a0">&#34;x64 Registry Hive - HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall &#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#bb60d5">$Hive</span> | <span style="color:#007020">Get-ItemProperty</span> | <span style="color:#007020">Select-Object</span> -Property PSChildName, DisplayName, DisplayVersion, UninstallString | <span style="color:#007020">Sort-Object</span> DisplayName | <span style="color:#007020">Format-Table</span> -AutoSize -Wrap
+</span></span><span style="display:flex;"><span><span style="color:#007020">Write-Host</span> -ForegroundColor Cyan <span style="color:#4070a0">&#34;x86 Registry Hive - HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#bb60d5">$Hive2</span> | <span style="color:#007020">Get-ItemProperty</span> | <span style="color:#007020">Select-Object</span> -Property PSChildName, DisplayName, DisplayVersion, UninstallString | <span style="color:#007020">Sort-Object</span> DisplayName | <span style="color:#007020">Format-Table</span> -AutoSize -Wrap
+</span></span></code></pre></div><p>If you run this it’ll output to the PowerShell Console the keys (you can copy these straight into Intune detection clauses for Registry.  And then you can select your column to use.
+<br />
+Here is an example:</p>
+<p>
+<img src="img/PSADTIntune14.png#centre" alt="Alt Text"  /></p>
+<p>From this I can take a number of things:
+<br />
+Firstly, the registry hive key at the top in green text (cyan for the other hive) I can copy this out as first part of the Key path on an Intune Detection Method.  Then I can append the PSChildName item for the individual key, so if I wanted my clause to be whether or not the registry key simply exists, I can use the RegistryHivePath+PSChildName (in red below).</p>
+<p>
+<img src="img/PSADTIntune15.png#centre" alt="Alt Text"  /></p>
+<p>If I wanted to use the Version number, for example I wanted to say greater than or equal to I could use the RegistryHivePath+PSChildName as the Key Path, then use the DisplayVersion as the Value Name and use the correct operator, like so….</p>
+<p>
+<img src="img/PSADTIntune16.png#centre" alt="Alt Text"  /></p>
+<p>Which gives me&hellip;</p>
+<p>
+<img src="img/PSADTIntune17.png#centre" alt="Alt Text"  /></p>
+<p>Ok so now you have an idea on how to get your PSADT apps into Intune as Win32 Applications using the Intune Content Prep Tool, take a moment to go get a coffee as now we’ll move to testing them, once they’re finished uploading and syncing.
 <br />
 <br />
-You are now ready to use this toolkit in a silent manner for your ConfigMgr or Intune applications</li>
-</ol>
-<ins>
-<h5 id="process">Process</h5>
-</ins>
-<ol>
-<li>For each app you will need a COPY of the TOOLKIT MASTER folder, so lets start by creating one
+First, we’ll need to set up an AAD group to deploy the applications to and to which we can assign our user who should have an Intune license.  Deploying the applications as available is the most effective way to test the applications before we push them out as a required install, using something like autopilot.  So lets go and set up a new group ready for deployment.
+<br />
+<br />
+Next manually add the user you’re deploying the application to, to the group.
+And finally edit the assignments of the application so that its assigned as Available to the group you want to test with.
+<br />
+<br />
+Remember – You (mostly want to) deploy the app to the user because the user holds the Intune license.
+Once its uploaded and synced you should see that in your company portal on the device.  Open Company portal on the test device and log in with the username/password for the test user in the group we created above.  Here we see our 7Zip Win32 App (Yes I know there’s a MSfB app for 7Zip, stay with me here… its the process I want you to learn).
 
-<img src="img/PSADT91.png#centre" alt="Alt Text"  /></li>
-<li>Next you will need to download your content files (source files) and place them in the ‘Files’ Directory.</li>
-<li>Now we can start editing the script to match the criteria of the application we’re trying to deploy.</li>
-<li>First, open up the DeployApplication.ps1 and scroll down to the “Variable Declaration” section where we’re going to populate all the details of the application we’re going to deploy.  Lets fill this out, here is an example
+<img src="img/7-Zip_Available.png#centre" alt="Alt Text"  />
+We then highlight and select to install
 
-<img src="img/PSADT9.png#centre" alt="Alt Text"  /></li>
-<li>Now we’re ready to do the app work!</li>
-<li>You don’t need to worry about having in depth PowerShell (although some helps) with this script you simply only need to remember a few things.  Firstly, there are three phases of installation in the script
-<ol>
-<li>Pre-Installation – where you would place any code you want to execute BEFORE the app installs</li>
-<li>Installation – the app install itself</li>
-<li>Post Installation – where you would place any post actions such as copying files or registry entries or even clean up activities.</li>
-</ol>
-</li>
-<li>I’m going to break these down in to a .EXE and a .MSI installation for you.</li>
-</ol>
-<ins>
-<h5 id="msi-example">MSI Example</h5>
-</ins>
-<p>Read through the examples carefully and take in and fully understand the ‘Take Away’ section which is where I’ve highlighted what you should have learned.
-Scenario:  Lets say that you have to install Flash Player (THE HORROR!), but before you do you have to create a folder called “C:\Flash” which is what the company you’re working for want to use to store all their website flash content in.  Strange, I know, but lets roll with it.  So we have two things we need to achieve;</p>
-<ul>
-<li>we need to install the program</li>
-<li>we need to create the folder.</li>
-</ul>
-<p>The folder creation, it doesn’t matter in this particular case whether we do it before or after the installation so we can place that in either “Pre-Installation” or “Post-Installation” step, I’m going to chose Post-Installation in this case.</p>
-<ol>
-<li>As with traditional applications,  MSI installs are pretty easy to do.  The script has its own cmdlet to handle this called Execute-MSI (see the top tips section at the end!)</li>
-<li>So, firstly we would take a copy of the TOOLKIT MASTER folder and Rename it to “Adobe Flash”
-
-<img src="img/PSADT101.png#centre" alt="Alt Text"  /></li>
-<li>We would then open up the DeployApplication.ps1 and edit the Variable Declaration as stated above in the Process Section to match Adobe Flash and the version number etc.
-
-<img src="img/PSADT9.png#centre" alt="Alt Text"  /></li>
-<li>Next we would locate the “Installation section” and add in our installation line:
-
-<img src="img/PSADT10.png#centre" alt="Alt Text"  /></li>
-</ol>
-<p>I’ve blurred out the rest to draw your eyes to the correct section…. Notice the format of the string, it reads pretty straight forward, no more calling MSIEXEC.exe, dont worry about the format of the code as that will be explained later (see the top tips at the end!)</p>
-<p>You can see here from the help for this cmdlet that the cmdlet called, Execute-MSI, expects the files to be in the “Files Directory” (highlighted in Blue).  This is why we sense checked the folder earlier.</p>
-<p>
-<img src="img/PSADT11.png#centre" alt="Alt Text"  /></p>
-<ol start="5">
-<li>Next we create the folder “C:\Flash” as per the requirements.  In the post-installation section, simple add your code…
-
-<img src="img/PSADT12.png#centre" alt="Alt Text"  /></li>
-</ol>
-<p>Again, I’ve blurred out the surrounding code to draw your attention to the section to use, you’ll start to pick up they follow the same format</p>
-<p>There is a cmdlet you can use for this that build into the PSADT module, I’ll let you explore that!  However this achieves the same thing</p>
-<ol start="6">
-<li>Let populate the uninstall section so that we can uninstall the app using the script too…
-
-<img src="img/PSADT13.png#centre" alt="Alt Text"  /></li>
-</ol>
-<p>Notice that the ‘action’ switch has changed in this case.</p>
-<p>And that’s it, done.  Save the script. You can test this before on a test box (which I suggest you do).
-When creating your ConfigMgr application, the command to install the application would be to call the DeployApplication.ps1 with a switch of -DeploymentType Install, like so…</p>
-<ul>
-<li>Deploy-Application.ps1 -DeploymentType Install
-The uninstall command would be</li>
-<li>Deploy-Applicaiton.ps1 -DeploymentType Uninstall</li>
-</ul>
+<img src="img/7-Zip_Installed.png#centre" alt="Alt Text"  />
+Happy days!
+<br />
+We can see here that it is indeed installed.</p>
+<br />
+<br />
 <ins>
 <h5 id="take-away">Take Away</h5>
 </ins>
-<ul>
-<li>Understand the structure of Pre, Post, and Install and what tasks need to be done when, given your requirements.</li>
-<li>Know that under the &lt;\Perform Tasks Here&gt; sections, you can have as much code as you need, doing whatever tasks you want.</li>
-<li>Understand the cmdlet written for installing MSIs.  You use Execute-MSI with a Install switch</li>
-<li>If you wanted to uninstall items before installing the new version, you could use “Start-Process” and call the uninstall with a -wait switch like so…
-<ul>
-<li>Start-Process -FilePath “C:\Windows\system32\msiexec.exe” -ArgumentList “/x{26923b43-4d38-484f-9b9e-de460746276c} /qn” -wait</li>
-<li>This would;
-<ul>
-<li>Call msiexec that exists on all windows based machines</li>
-<li>Pass the argument list of uninstall, quietly with no UI.</li>
-<li>Wait until its finished before it does the next line of code, so if you had multiple install</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<ins>
-<h5 id="exe-example">.EXE Example</h5>
-</ins>
-<p>Scenario:  Lets say that you have to install Flash Player (THE HORROR! AGAIN!!!), but before you do you have to create Registry Key “HKLM:\Software\Company\Adobe\Flash” with a string key in there  called “Status” that has a setting of “Awesome” and an Integer key (DWORD) called “ReallyAwesome” with a setting of “00000001” which is what the company want, because they’re weird.
-<br />
-<br />
-The string key must be created BEFORE the application is installed and the Integer key must be created AFTER the software is installed.
-<br />
-<br />
-We know that the .exe accepts the switch /quiet for the install and also /uninstall /quiet for the uninstall, which we’ve gotten from normal testing.  We need to..</p>
-<ul>
-<li>Create the String Regkey (before install)</li>
-<li>Install the program</li>
-<li>Create the Integer Regkey (after Install)</li>
-<li>Set the uninstall up</li>
-</ul>
-<ol>
-<li>So lets create the first regkey, inside Pre-Installation
-
-<img src="img/PSADT14.png#centre" alt="Alt Text"  /></li>
-<li>Next we need to install the application
-
-<img src="img/PSADT15.png#centre" alt="Alt Text"  /></li>
-</ol>
-<ul>
-<li>Notice the difference here, we’re not using Execute-MSI this time.
-<ul>
-<li>Starting a process</li>
-<li>Passing the arguments</li>
-<li>Adding -wait so it waits for the install to finish</li>
-<li>There are many ways to call .exe’s from PowerShell, doesn’t really matter what you use.</li>
-</ul>
-</li>
-</ul>
-<ol start="3">
-<li>
-<p>Next we add the regkey we need to add AFTER the installation.
-
-<img src="img/PSADT16.png#centre" alt="Alt Text"  />
-<br />
-<br />
-Remember we set the path earlier on, in the Pre-Installation section so the variable $RegistryPath, is already there.</p>
-</li>
-<li>
-<p>And finally the uninstall section needs populating
-
-<img src="img/PSADT17.png#centre" alt="Alt Text"  /></p>
-</li>
-</ol>
-<br />
-Hopefully this is beginning to make sense now….
-<br />
-<br />
-<ins>
-<h5 id="take-away-1">Take Away</h5>
-</ins>
-<ul>
-<li>Cement our understand the structure of Pre, Post, and Install section and what tasks need to be done when, given your requirements.</li>
-<li>Know that under the <Perform Tasks Here> sections, you can have as much code as you need, doing whatever tasks you want.</li>
-<li>Calling executables is different as we cant leverage the Execute-MSI cmdlet, so we use Start-Process with a -wait on the end</li>
-</ul>
-<ins>
-<h5 id="top-tips">Top Tips</h5>
-</ins>
-Within the folder structure of your PSADT, there is a sub folder called “AppDeployToolkit”
+<p>Now, if there are issues (and this is the good bit for me!) don’t forget that PSADT apps log their own <strong>install</strong> and <strong>uninstall</strong> logs into <em>C:\Windows\Logs\Software</em> however if you edit this to match the <strong>IntuneManagementExtension.log</strong> files location (C:\ProgramData\Microsoft\IntuneManagementExtension\Logs), you will have lovely logs to use for troubleshooting <strong>AND</strong> you can collect them remotely from the Intune portal!!</p>
 <p>
-<img src="img/PSADT3.png#centre" alt="Alt Text"  />
+<img src="img/PDADT_LogFileLocation1.png#centre" alt="Alt Text"  />
 <br />
-And in there you will find a script called AppDeployToolkitHelp.ps1</p>
+<br /></p>
 <p>
-<img src="img/PSADT18.png#centre" alt="Alt Text"  />
-<br />
-If you run this script you will launch the help section where you will have detailed instructions on the cmdlets available inside PSADT and how to use them.</p>
+<img src="img/PDADT_LogFileLocation2.png#centre" alt="Alt Text"  /></p>
+<p>Once configured, you can use the “Collect Diagnostics” button and this will collect the logs remotely, without interrupting the end users.  Wonderful!</p>
 <p>
-<img src="img/PSADT19.png#centre" alt="Alt Text"  />
+<img src="img/Collectlogs.png#centre" alt="Alt Text"  /></p>
+<p>THAT, I feel, is <strong>awesome</strong> and will help greatly with troubleshooting your Win32 Apps, should there be a problem
 <br />
-<br />
-The section highlighted with a red arrow is the name of the cmdlets you can use, and the green arrow points to the format of the code to use with some examples at the bottom.
-You will find almost everything you need in here to fit most of the requirements for app packaging.  There are also plenty of tutorials you can access on YouTube to gain further understanding of this but it is very powerful indeed.
-Some of the items we commented out in at the beginning to make the user experience more silent, can be switched back on if you wish, we can make it as visual or silent as you wish, the more you use this tool the more you will realise its potential &amp; scalability.  It is supported in ConfigMgr and Intune (win32) Applications, but it does not negate the need for proper testing in the normal manner via VM’s and information gathering.
-<br />
+I hope this helps you.
 <br />
 Thanks for reading <br>
 Jonathan.</p>
@@ -20164,9 +20062,9 @@ Jonathan.</p>
     "@type": "Article",
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": "https:\/\/deploymentshare.com\/articles\/bp-psadt\/index\/"
+      "@id": "https:\/\/deploymentshare.com\/articles\/bp-psadtintune\/"
     },
-    "headline": "PowerShell App Deployment Toolkit Write Up",
+    "headline": "PowerShell App Deployment Toolkit and Intune Win32 Apps",
     "description": "",
     "image": "",
     "author": {
@@ -20181,7 +20079,7 @@ Jonathan.</p>
         "url": "images\/logo2.png"
       }
     },
-    "datePublished": "2020-08-19"
+    "datePublished": "2020-09-11"
   }
 </script>
 
