@@ -3,7 +3,10 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://deploymentshare.com/articles/</loc>
-    <lastmod>2023-12-14T00:00:00+00:00</lastmod>
+    <lastmod>2024-02-17T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://deploymentshare.com/</loc>
+    <lastmod>2024-02-17T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://deploymentshare.com/tags/autopilot/</loc>
     <lastmod>2023-12-14T00:00:00+00:00</lastmod>
@@ -18,9 +21,6 @@
     <lastmod>2023-12-14T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://deploymentshare.com/categories/configuration-manager/</loc>
-    <lastmod>2023-12-14T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://deploymentshare.com/</loc>
     <lastmod>2023-12-14T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://deploymentshare.com/tags/group-tag/</loc>

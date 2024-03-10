@@ -19554,37 +19554,30 @@ I know, for example, that the kit comes with a wide variety cmdlets that you can
 </li>
 <li>Extract the .ZIP folder and call this folder “PSADT – FULL”</li>
 <li>Go into the folder, into the Toolkit folder and create a folder called “Files” (if it doesn’t exist already)
-
-<img src="img/PSADT1.png#centre" alt="Alt Text"  /></li>
+<img src="https://deploymentshare.com/articles/bp-psadt/articles/bp-psadt/img/PSADT1_huc7de5b4107723c74bdfa09c6239a5acc_5039_filter_2985174371754512541.png#centre" alt="Alt Text"  /></li>
 <li>This is where we’re going to store our source files for the applications we’re going to deploy.</li>
 <li>From within the FULL folder, copy the Toolkit folder out to the foot and call this “PSADT – TOOLKIT MASTER”
-
-<img src="img/PSADT2.png#centre" alt="Alt Text"  /></li>
+<img src="https://deploymentshare.com/articles/bp-psadt/articles/bp-psadt/img/PSADT2_hu9455bec0a610fbfd5228fad4e40d30f4_2170_filter_5166006866924622271.png#centre" alt="Alt Text"  /></li>
 </ol>
 <p>TOOLKIT MASTER should only contain the following items</p>
-<p>
-<img src="img/PSADT3.png#centre" alt="Alt Text"  /></p>
+<p><img src="https://deploymentshare.com/articles/bp-psadt/articles/bp-psadt/img/PSADT3_hue55ca1111b50e43082d24c2b09e49e12_3980_filter_2985174371754512541.png#centre" alt="Alt Text"  /></p>
 <p>Now you have a copy of the full kit that’s not been touched and a copy of the toolkit you can begin to customise for your customer(s).</p>
 <ol start="6">
 <li>Working with the TOOLKIT MASTER folder, Open up “Deploy-Application.ps1 and edit the following&hellip;</li>
 </ol>
 <p>Comment out the “Show-InstallationWelcome” and Show-InstallationProgress</p>
-<p>
-<img src="img/PSADT4.png#centre" alt="Alt Text"  /></p>
+<p><img src="https://deploymentshare.com/articles/bp-psadt/articles/bp-psadt/img/PSADT4_hu51b1d5d4b9532d0ff64633cec37421f0_21791_filter_10178021649641695718.png#centre" alt="Alt Text"  /></p>
 <ol start="7">
 <li>Do the same for Pre-Uninstallation, comment them out…
-
-<img src="img/PSADT5.png#centre" alt="Alt Text"  /></li>
+<img src="https://deploymentshare.com/articles/bp-psadt/articles/bp-psadt/img/PSADT5_hued06e107c04df8cc8fb375e0e46ceae4_16797_filter_18043868477826428011.png#centre" alt="Alt Text"  /></li>
 <li>Under Post-Installation, comment out the line highlighted below
-
-<img src="img/PSADT6.png#centre" alt="Alt Text"  /></li>
+<img src="https://deploymentshare.com/articles/bp-psadt/articles/bp-psadt/img/PSADT6_huf97d9cad146ef1afb4366b01d4a14200_13912_filter_10709242437403104825.png#centre" alt="Alt Text"  /></li>
 <li>The above actions make it more silent so the user isn’t bothered when installation takes place. These are options you may wish to reinstate later, the choice is up to you I’ll let you do your own research on that, but for now we’re aiming for not bothering the end user.</li>
 <li>Save the script.</li>
 <li>Next, within the AppDeployToolkit folder, open up the AppDeployToolkit.xml file and change the following</li>
 </ol>
 <p>Under MSI Options edit the install params to be /QN instead of /QB-!</p>
-<p>
-<img src="img/PSADT71.png#centre" alt="Alt Text"  /></p>
+<p><img src="https://deploymentshare.com/articles/bp-psadt/articles/bp-psadt/img/PSADT71_hu81d741a15a8d535390c5b256469a6208_26825_filter_8408970618223441960.png#centre" alt="Alt Text"  /></p>
 <ins>
 <h5 id="branding">Branding</h5>
 </ins>
@@ -19601,13 +19594,11 @@ You are now ready to use this toolkit in a silent manner for your ConfigMgr or I
 </ins>
 <ol>
 <li>For each app you will need a COPY of the TOOLKIT MASTER folder, so lets start by creating one
-
-<img src="img/PSADT91.png#centre" alt="Alt Text"  /></li>
+<img src="https://deploymentshare.com/articles/bp-psadt/articles/bp-psadt/img/PSADT91_huc487cbca0dccb9cf4aac7460c1115589_3274_filter_2840132569258162484.png#centre" alt="Alt Text"  /></li>
 <li>Next you will need to download your content files (source files) and place them in the ‘Files’ Directory.</li>
 <li>Now we can start editing the script to match the criteria of the application we’re trying to deploy.</li>
 <li>First, open up the DeployApplication.ps1 and scroll down to the “Variable Declaration” section where we’re going to populate all the details of the application we’re going to deploy.  Lets fill this out, here is an example
-
-<img src="img/PSADT9.png#centre" alt="Alt Text"  /></li>
+<img src="https://deploymentshare.com/articles/bp-psadt/articles/bp-psadt/img/PSADT9_hua16596d41466be167e2c626d1ff2617c_14040_filter_7217220789815406146.png#centre" alt="Alt Text"  /></li>
 <li>Now we’re ready to do the app work!</li>
 <li>You don’t need to worry about having in depth PowerShell (although some helps) with this script you simply only need to remember a few things.  Firstly, there are three phases of installation in the script
 <ol>
@@ -19631,30 +19622,24 @@ Scenario:  Lets say that you have to install Flash Player (THE HORROR!), but bef
 <ol>
 <li>As with traditional applications,  MSI installs are pretty easy to do.  The script has its own cmdlet to handle this called Execute-MSI (see the top tips section at the end!)</li>
 <li>So, firstly we would take a copy of the TOOLKIT MASTER folder and Rename it to “Adobe Flash”
-
-<img src="img/PSADT101.png#centre" alt="Alt Text"  /></li>
+<img src="https://deploymentshare.com/articles/bp-psadt/articles/bp-psadt/img/PSADT101_hu7c70d724cdedb39d627b9f97fd75e0df_3517_filter_1316449356872410847.png#centre" alt="Alt Text"  /></li>
 <li>We would then open up the DeployApplication.ps1 and edit the Variable Declaration as stated above in the Process Section to match Adobe Flash and the version number etc.
-
-<img src="img/PSADT9.png#centre" alt="Alt Text"  /></li>
+<img src="https://deploymentshare.com/articles/bp-psadt/articles/bp-psadt/img/PSADT9_hua16596d41466be167e2c626d1ff2617c_14040_filter_7217220789815406146.png#centre" alt="Alt Text"  /></li>
 <li>Next we would locate the “Installation section” and add in our installation line:
-
-<img src="img/PSADT10.png#centre" alt="Alt Text"  /></li>
+<img src="https://deploymentshare.com/articles/bp-psadt/articles/bp-psadt/img/PSADT10_hue04ecaad000c71d2abd074c1b414186b_17347_filter_17578836538424866394.png#centre" alt="Alt Text"  /></li>
 </ol>
 <p>I’ve blurred out the rest to draw your eyes to the correct section…. Notice the format of the string, it reads pretty straight forward, no more calling MSIEXEC.exe, dont worry about the format of the code as that will be explained later (see the top tips at the end!)</p>
 <p>You can see here from the help for this cmdlet that the cmdlet called, Execute-MSI, expects the files to be in the “Files Directory” (highlighted in Blue).  This is why we sense checked the folder earlier.</p>
-<p>
-<img src="img/PSADT11.png#centre" alt="Alt Text"  /></p>
+<p><img src="https://deploymentshare.com/articles/bp-psadt/articles/bp-psadt/img/PSADT11_hu1072817c770e186700dda5d28f8419c3_10714_filter_11048419535598566070.png#centre" alt="Alt Text"  /></p>
 <ol start="5">
 <li>Next we create the folder “C:\Flash” as per the requirements.  In the post-installation section, simple add your code…
-
-<img src="img/PSADT12.png#centre" alt="Alt Text"  /></li>
+<img src="https://deploymentshare.com/articles/bp-psadt/articles/bp-psadt/img/PSADT12_hu102ea2472dd2e00e14df2640c9fcdfde_15608_filter_17415185657109270367.png#centre" alt="Alt Text"  /></li>
 </ol>
 <p>Again, I’ve blurred out the surrounding code to draw your attention to the section to use, you’ll start to pick up they follow the same format</p>
 <p>There is a cmdlet you can use for this that build into the PSADT module, I’ll let you explore that!  However this achieves the same thing</p>
 <ol start="6">
 <li>Let populate the uninstall section so that we can uninstall the app using the script too…
-
-<img src="img/PSADT13.png#centre" alt="Alt Text"  /></li>
+<img src="https://deploymentshare.com/articles/bp-psadt/articles/bp-psadt/img/PSADT13_hua5eb3b633be5196c4940702e615a8666_14534_filter_18072519446380242770.png#centre" alt="Alt Text"  /></li>
 </ol>
 <p>Notice that the ‘action’ switch has changed in this case.</p>
 <p>And that’s it, done.  Save the script. You can test this before on a test box (which I suggest you do).
@@ -19702,11 +19687,9 @@ We know that the .exe accepts the switch /quiet for the install and also /uninst
 </ul>
 <ol>
 <li>So lets create the first regkey, inside Pre-Installation
-
-<img src="img/PSADT14.png#centre" alt="Alt Text"  /></li>
+<img src="https://deploymentshare.com/articles/bp-psadt/articles/bp-psadt/img/PSADT14_hud21ce2a7537515e43d2f96591727357b_27039_filter_5651363130363104582.png#centre" alt="Alt Text"  /></li>
 <li>Next we need to install the application
-
-<img src="img/PSADT15.png#centre" alt="Alt Text"  /></li>
+<img src="https://deploymentshare.com/articles/bp-psadt/articles/bp-psadt/img/PSADT15_hue511ab796e15c319b85729ab8a130469_17621_filter_6030061811240906273.png#centre" alt="Alt Text"  /></li>
 </ol>
 <ul>
 <li>Notice the difference here, we’re not using Execute-MSI this time.
@@ -19721,16 +19704,14 @@ We know that the .exe accepts the switch /quiet for the install and also /uninst
 <ol start="3">
 <li>
 <p>Next we add the regkey we need to add AFTER the installation.
-
-<img src="img/PSADT16.png#centre" alt="Alt Text"  />
+<img src="https://deploymentshare.com/articles/bp-psadt/articles/bp-psadt/img/PSADT16_hu4f57dd4730937b7a5566086038e3f087_16872_filter_4030636664608894039.png#centre" alt="Alt Text"  />
 <br />
 <br />
 Remember we set the path earlier on, in the Pre-Installation section so the variable $RegistryPath, is already there.</p>
 </li>
 <li>
 <p>And finally the uninstall section needs populating
-
-<img src="img/PSADT17.png#centre" alt="Alt Text"  /></p>
+<img src="https://deploymentshare.com/articles/bp-psadt/articles/bp-psadt/img/PSADT17_hu417074d7b2ac9ae1777d3805cb2b7f84_13784_filter_12696290146251783533.png#centre" alt="Alt Text"  /></p>
 </li>
 </ol>
 <br />
@@ -19749,16 +19730,13 @@ Hopefully this is beginning to make sense now….
 <h5 id="top-tips">Top Tips</h5>
 </ins>
 Within the folder structure of your PSADT, there is a sub folder called “AppDeployToolkit”
-<p>
-<img src="img/PSADT3.png#centre" alt="Alt Text"  />
+<p><img src="https://deploymentshare.com/articles/bp-psadt/articles/bp-psadt/img/PSADT3_hue55ca1111b50e43082d24c2b09e49e12_3980_filter_2985174371754512541.png#centre" alt="Alt Text"  />
 <br />
 And in there you will find a script called AppDeployToolkitHelp.ps1</p>
-<p>
-<img src="img/PSADT18.png#centre" alt="Alt Text"  />
+<p><img src="https://deploymentshare.com/articles/bp-psadt/articles/bp-psadt/img/PSADT18_hu94cbd916b01bc30db0d75409ce684271_7349_filter_9473145420685310373.png#centre" alt="Alt Text"  />
 <br />
 If you run this script you will launch the help section where you will have detailed instructions on the cmdlets available inside PSADT and how to use them.</p>
-<p>
-<img src="img/PSADT19.png#centre" alt="Alt Text"  />
+<p><img src="https://deploymentshare.com/articles/bp-psadt/articles/bp-psadt/img/PSADT19_hu3cd656faa191e151edfc57ed0c36d2dd_108205_filter_9615954918639120350.png#centre" alt="Alt Text"  />
 <br />
 <br />
 The section highlighted with a red arrow is the name of the cmdlets you can use, and the green arrow points to the format of the code to use with some examples at the bottom.
