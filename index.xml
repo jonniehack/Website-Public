@@ -1,20 +1,222 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Deploymentshare | Personal Tech Blog</title><link>https://deploymentshare.com/</link><description>Recent content on Deploymentshare | Personal Tech Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sat, 17 Feb 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://deploymentshare.com/index.xml" rel="self" type="application/rss+xml"/><item><title>Intune and PowerBI Deep Dive - Part 6 - Managed Devices</title><link>https://deploymentshare.com/articles/bp-6-pbi-intune/</link><pubDate>Sat, 17 Feb 2024 00:00:00 +0000</pubDate><guid>https://deploymentshare.com/articles/bp-6-pbi-intune/</guid><description>In this post we are finally going to look at getting some data into PowerBI to play around with. We are going to use a query in PowerBI to go and retrieve our managed devices information. Remember discussing pagination for APIs? Should you have more than 1000 devices we&amp;rsquo;re also going to need to consider Pagination but don&amp;rsquo;t worry there are three methods to do this discussed below.
-Quick Links Series Menu Part 1 - Where to Start Part 2 - Application Registration Part 3 - Exploring Graph URLs Part 4 - Get-BearerToken Part 5 - Heavy Lifting Part 6 - Get-Devices Now, when you first approach this task you might consider employing a coding mindset akin to PowerShell, such as fetching the initial 1000 devices and implementing a do-while loop to retrieve the remaining ones using a method such as checking for the presence of another @Data.</description></item><item><title>Intune and PowerBI Deep Dive - Part 5 - Heavy Lifting</title><link>https://deploymentshare.com/articles/bp-5-pbi-intune/</link><pubDate>Mon, 05 Feb 2024 00:00:00 +0000</pubDate><guid>https://deploymentshare.com/articles/bp-5-pbi-intune/</guid><description>In this post we&amp;rsquo;ll take a look at using Logic Apps and OData.Feed to do the &amp;lsquo;heavy lifting&amp;rsquo; for us. By heavy lifting, essentially this is handling pagination of the Microsoft Graph Call. Using the app registration permissions for authorisation to the data, then processing the result in order to make sure we have all the data we need and finally passing the results back to PowerBI so that its handled outside of PowerBI. PowerBI only cares about the data.
-Quick Links Series Menu Part 1 - Where to Start Part 2 - Application Registration Part 3 - Exploring Graph URLs Part 4 - Get-BearerToken Part 5 - Heavy Lifting Part 6 - Get-Devices There are three ways I&amp;rsquo;ve achieved this.</description></item><item><title>Intune and PowerBI Deep Dive - Part 4 - Get-BearerToken</title><link>https://deploymentshare.com/articles/bp-4-pbi-intune/</link><pubDate>Thu, 25 Jan 2024 00:00:00 +0000</pubDate><guid>https://deploymentshare.com/articles/bp-4-pbi-intune/</guid><description>In the previous posts, we talked about obtaining an access token (bearer token) to access the data in our environments. We even looked at using our first POST query to post a request for a token in PostMan. The reason I&amp;rsquo;ve called this post &amp;lsquo;Get-BearerToken&amp;rsquo; is because I&amp;rsquo;m going to explain how to use a combination of PowerBI Variables and a function to leverage the Application Registration we have to get a bearer token within PowerBI Desktop. We can then use that bearer token to authenticate against the Microsoft Graph and start to pull data into PowerBI like we did in the PostMan application.</description></item><item><title>Intune and PowerBI Deep Dive - Part 3 - Exploring Graph URLs</title><link>https://deploymentshare.com/articles/bp-3-pbi-intune/</link><pubDate>Sat, 20 Jan 2024 00:00:00 +0000</pubDate><guid>https://deploymentshare.com/articles/bp-3-pbi-intune/</guid><description>Next up, we&amp;rsquo;re going to explore the Graph and the URLs and permissions, in this post, continuing on from Part 1 and Part 2 , our next step is begin to firstly understand our path to getting Intune Data into PowerBI, which is going to be via direct Microsoft Graph calls - Remembering of course that the Intune Data warehouse did not meet our requirements. We are also going to leverage an application registration to access the data we want to see. This is gonna be a BIG post, so make sure you have plenty of time to read.
-Quick Links Series Menu Part 1 - Where to Start Part 2 - Application Registration Part 3 - Exploring Graph URLs Part 4 - Get-BearerToken Part 5 - Heavy Lifting Part 6 - Get-Devices We&amp;rsquo;re going to explore the Microsoft Graph URLs, the structure of them, how to obtain what we need and some tools to test them to ensure we&amp;rsquo;ve got them correct.</description></item><item><title>Intune and PowerBI Deep Dive - Part 2 - Application Registration</title><link>https://deploymentshare.com/articles/bp-2-pbi-intune/</link><pubDate>Sat, 13 Jan 2024 00:00:00 +0000</pubDate><guid>https://deploymentshare.com/articles/bp-2-pbi-intune/</guid><description>Continuing from Part 1 , our next step is to establish an application registration in Azure. This registration will enable us to utilise its permissions for accessing data on the Microsoft Graph and hopefully then, importing that data into PowerBI. This setup is essential as it serves as a global prerequisite for accomplishing our ultimate objective.
-Quick Links Series Menu Part 1 - Where to Start Part 2 - Application Registration Part 3 - Exploring Graph URLs Part 4 - Get-BearerToken Part 5 - Heavy Lifting Part 6 - Get-Devices Creating the App Reg This is going to be a &amp;lsquo;whistle stop tour&amp;rsquo; of setting up an application registration.</description></item><item><title>Intune and PowerBI Deep Dive - Part 1 - Where to Start</title><link>https://deploymentshare.com/articles/bp-1-pbi-intune/</link><pubDate>Wed, 10 Jan 2024 00:00:00 +0000</pubDate><guid>https://deploymentshare.com/articles/bp-1-pbi-intune/</guid><description>In this series, I will guide you through the process of extracting data from Microsoft Graph, specifically Microsoft Intune, and integrating it into PowerBI. We will explore different approaches, considering their advantages and disadvantages, in order to provide you with a solid foundation for creating your own reports within your specific environment. Its intent is to take you on a journey as I discover what to do, so please do take the time to read them in order to ensure you come along for the ride! I have invested significant time and effort into studying this subject and understanding the potential pitfalls associated with various approaches.</description></item><item><title>Setting a Group Tag During a Configuration Manager Task Sequence</title><link>https://deploymentshare.com/articles/bp-apgrouptagts/</link><pubDate>Thu, 14 Dec 2023 00:00:00 +0000</pubDate><guid>https://deploymentshare.com/articles/bp-apgrouptagts/</guid><description>In this post I&amp;rsquo;m going to talk about using the Windows autopilot deployment for existing devices Task sequence in configuration manager and modifying that task sequence to set a group tag during the process. You may know that traditionally this tasks sequence is used to &amp;lsquo;build&amp;rsquo; devices and have them ready to start the autopilot process. I had a customer recently that had that very need. They had purchased a large number of machines that were delivered with Windows 10 installed and not Windows 11. As the customer was on their Windows 11 uplift journey already they were a bit disappointed to say the least and they opted to create a Configuration Manager task sequence to prep them for autopilot.</description></item><item><title>How to build apps in Endpoint Manager</title><link>https://deploymentshare.com/articles/bp-applications/</link><pubDate>Sat, 27 Mar 2021 00:00:00 +0000</pubDate><guid>https://deploymentshare.com/articles/bp-applications/</guid><description>Hello everyone, I hope you are all safe and well.
-I’ve been thinking about writing this for a while and I hope it helps some of you new to app packaging.
-How do I build apps? It never hurts to brush up if you’re a seasoned app-packager. App packaging isn’t going away any time soon, everyone needs apps. The Microsoft app store has gotten better but I don’t feel it’s quite there yet in terms of broadly available applications. Sometimes, companies can have line-of-business applications that they build in-house and as system administrators, you may be responsible for packaging and distributing those applications.</description></item><item><title>Logon to Autopilot HAADJ Devices Using FortiClient VPN</title><link>https://deploymentshare.com/articles/bp-forticlient/</link><pubDate>Tue, 15 Sep 2020 00:00:00 +0100</pubDate><guid>https://deploymentshare.com/articles/bp-forticlient/</guid><description>I recently had a customer who uses FortiClient as their VPN solution, and they have recently embarked on setting up Hybrid AAD. We set their tenant up, sorted out licensing and I started to put in the fundamental elements to begin the journey to using Autopilot for provisioning devices. I had undertaken setting up AAD connect and using IDFix to remediate any issues, such as UPN suffixes for end-users via PowerShell, and we were ready to go. Equally, I had made them an Intune Win32app for FortiClient, and this installed and removed just fine using PSADT. I had already tested the Autopilot process and things were looking good.</description></item><item><title>PowerShell App Deployment Toolkit and Intune Win32 Apps</title><link>https://deploymentshare.com/articles/bp-psadtintune/</link><pubDate>Fri, 11 Sep 2020 00:00:00 +0100</pubDate><guid>https://deploymentshare.com/articles/bp-psadtintune/</guid><description>Hi Folks! Leading on from this post about getting started with PSADT, and as promised, I’m writing up my experience with it and creating Win32 Intune apps. So firstly, I’m assuming by now that you read and absorbed the first write up I did, you should have noticed that a couple of things I did in that post can actually be done differently and be eager and armed with understanding the format and have a good idea about what to do. Combine that with great ‘google-fu’ and you’re ready to continue your decent app packaging journey. Using this with ConfigMgr applications is quite simple because once you’ve prepared your application you use the root folder as the source content for the application and the rest is pretty straight forward (holler at me if you want that blogging too).</description></item><item><title>PowerShell App Deployment Toolkit Write Up</title><link>https://deploymentshare.com/articles/bp-psadt/</link><pubDate>Wed, 19 Aug 2020 00:00:00 +0100</pubDate><guid>https://deploymentshare.com/articles/bp-psadt/</guid><description>Hi all, thought I’d write up what I’ve been working on recently, which is re-visiting PowerShell App Deployment Toolkit. A great Resource for ConfigMgr apps, but equally it is supported in Intune so I will be doing a follow-up post on using this with Intune. I know there are plenty of blogs out there on this so this is just my interpretation and is intended to get people started. I know, for example, that the kit comes with a wide variety cmdlets that you can utilise to achieve tasks but this write up is based around getting those a little familiar with PowerShell up to speed with it.</description></item><item><title>Elements That You Can Use To Create A New Post On This Template.</title><link>https://deploymentshare.com/articles/elements/</link><pubDate>Sun, 15 Mar 2020 15:40:24 +0600</pubDate><guid>https://deploymentshare.com/articles/elements/</guid><description>Heading example Here is example of hedings. You can use this heading by following markdownify rules. For example: use # for heading 1 and use ###### for heading 6.
-Heading 1 Heading 2 Heading 3 Heading 4 Heading 5 Heading 6 Emphasis Emphasis, aka italics, with asterisks or underscores.
-Strong emphasis, aka bold, with asterisks or underscores.
-Combined emphasis with asterisks and underscores.
-Strikethrough uses two tildes. Scratch this.
-Link I&amp;rsquo;m an inline-style link I&amp;rsquo;m an inline-style link with title I&amp;rsquo;m a reference-style link I&amp;rsquo;m a relative reference to a repository file You can use numbers for reference-style link definitions Or leave it empty and use the link text itself .</description></item><item><title>1Password</title><link>https://deploymentshare.com/apps/1password/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://deploymentshare.com/apps/1password/</guid><description>1Password makes it easy to generate, store, and autofill passwords for all your online accounts, on all your devices. Because weak and reused passwords are a leading cause of security incidents, using a password manager is an easy way to protect yourself, your family, or your business. This is an external link, no content is served from this website Download Here</description></item><item><title>7Zip</title><link>https://deploymentshare.com/apps/7zip/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://deploymentshare.com/apps/7zip/</guid><description>7-Zip is free software with open source. The most of the code is under the GNU LGPL license. Some parts of the code are under the BSD 3-clause License. Also there is unRAR license restriction for some parts of the code. Read 7-Zip License information.
-You can use 7-Zip on any computer, including a computer in a commercial organization. You don&amp;rsquo;t need to register or pay for 7-Zip. This is an external link, no content is served from this website Download Here</description></item><item><title>Graph Xray</title><link>https://deploymentshare.com/apps/graphxray/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://deploymentshare.com/apps/graphxray/</guid><description>View Graph and PowerShell API details as you browse the Microsoft portals. This is an external link, no content is served from this website Download Here</description></item><item><title>Greenshot</title><link>https://deploymentshare.com/apps/greenshot/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://deploymentshare.com/apps/greenshot/</guid><description>Greenshot is a light-weight screenshot software tool for Windows with the following key features:
-Quickly create screenshots of a selected region, window or fullscreen; you can even capture complete (scrolling) web pages from Internet Explorer. Easily annotate, highlight or obfuscate parts of the screenshot. Export the screenshot in various ways: save to file, send to printer, copy to clipboard, attach to e-mail, send Office programs or upload to photo sites like Flickr or Picasa, and others. &amp;hellip;and a lot more options simplyfying creation of and work with screenshots every day. This is an external link, no content is served from this website Download Here</description></item><item><title>Homepage Full</title><link>https://deploymentshare.com/homepage/full/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://deploymentshare.com/homepage/full/</guid><description/></item><item><title>Homepage Full Left</title><link>https://deploymentshare.com/homepage/full-left/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://deploymentshare.com/homepage/full-left/</guid><description/></item><item><title>Homepage Full Right</title><link>https://deploymentshare.com/homepage/full-right/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://deploymentshare.com/homepage/full-right/</guid><description/></item><item><title>Homepage Grid</title><link>https://deploymentshare.com/homepage/grid/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://deploymentshare.com/homepage/grid/</guid><description/></item><item><title>Homepage Grid Left</title><link>https://deploymentshare.com/homepage/grid-left/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://deploymentshare.com/homepage/grid-left/</guid><description/></item><item><title>Homepage Grid Right</title><link>https://deploymentshare.com/homepage/grid-right/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://deploymentshare.com/homepage/grid-right/</guid><description/></item><item><title>Homepage List</title><link>https://deploymentshare.com/homepage/list/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://deploymentshare.com/homepage/list/</guid><description/></item><item><title>Homepage List Left</title><link>https://deploymentshare.com/homepage/list-left/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://deploymentshare.com/homepage/list-left/</guid><description/></item><item><title>Homepage List Right</title><link>https://deploymentshare.com/homepage/list-right/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://deploymentshare.com/homepage/list-right/</guid><description/></item><item><title>Jonathan Fallis</title><link>https://deploymentshare.com/about/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://deploymentshare.com/about/</guid><description>https://deploymentshare.com/Images/AboutMe/banner.jpg does not existHi, I&amp;rsquo;m Jonathan. I am currently working as a Technical Consultant in the Intune practice at Phoenix Software (who, in recognition for outstanding achievements, have been awarded Microsoft Partner of the Year for 2023 ), specialising in the deployment and management of Microsoft Intune, a pivotal tool for modern device management and application deployment.
-Beyond working with Microsoft Intune, I am passionate about PowerShell scripting and PowerBI reporting. This interest extends beyond professional obligation, reflecting a genuine enthusiasm for the products and trying to apply them to everyday life. Whether supporting clients on their cloud journey, crafting PowerShell scripts to automate complex tasks day-to-day or harnessing PowerBI for insightful data reporting, I&amp;rsquo;m normally geeking out somewhere.</description></item><item><title>Jonathan Fallis</title><link>https://deploymentshare.com/author/jonathan-fallis/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://deploymentshare.com/author/jonathan-fallis/</guid><description>https://deploymentshare.com/images/aboutme/banner.jpg does not existHi, I&amp;rsquo;m Jonathan. I am currently working as a Technical Consultant in the Cloud Endpoint practice at Phoenix Software (who, in recognition for outstanding achievements, have been awarded Microsoft Partner of the Year for 2023 ), specialising in the deployment and management of Microsoft Intune, a pivotal tool for modern device management and application deployment.
-Beyond working with Microsoft Intune, I am passionate about PowerShell scripting and PowerBI reporting. This interest extends beyond professional obligation, reflecting a genuine enthusiasm for the products and trying to apply them to everyday life. Whether supporting clients on their cloud journey, crafting PowerShell scripts to automate complex tasks day-to-day or harnessing PowerBI for insightful data reporting, I&amp;rsquo;m normally geeking out somewhere.</description></item><item><title>No Search Found</title><link>https://deploymentshare.com/404/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://deploymentshare.com/404/</guid><description/></item><item><title>Notepad ++</title><link>https://deploymentshare.com/apps/notepadpp/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://deploymentshare.com/apps/notepadpp/</guid><description>Notepad++ is a free (as in “free speech” and also as in “free beer”) source code editor and Notepad replacement that supports several languages. Running in the MS Windows environment, its use is governed by GNU General Public License. This is an external link, no content is served from this website Download Here</description></item><item><title>Our Privacy Policy</title><link>https://deploymentshare.com/privacy-policy/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://deploymentshare.com/privacy-policy/</guid><description>Responsibility of Contributors Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus, donec nunc eros, ullamcorper id feugiat quisque aliquam sagittis. Sem turpis sed viverra massa gravida pharetra. Non dui dolor potenti eu dignissim fusce. Ultrices amet, in curabitur a arcu a lectus morbi id. Iaculis erat sagittis in tortor cursus. Molestie urna eu tortor, erat scelerisque eget. Nunc hendrerit sed interdum lacus. Lorem quis viverra sed
-pretium, aliquam sit. Praesent elementum magna amet, tincidunt eros, nibh in leo. Malesuada purus, lacus, at aliquam suspendisse tempus. Quis tempus amet, velit nascetur sollicitudin. At sollicitudin eget amet in. Eu velit nascetur sollicitudin erhdfvssfvrgss eget viverra nec elementum.</description></item><item><title>Our Terms And Conditions</title><link>https://deploymentshare.com/terms-conditions/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://deploymentshare.com/terms-conditions/</guid><description>Responsibility of Contributors Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus, donec nunc eros, ullamcorper id feugiat quisque aliquam sagittis. Sem turpis sed viverra massa gravida pharetra. Non dui dolor potenti eu dignissim fusce. Ultrices amet, in curabitur a arcu a lectus morbi id. Iaculis erat sagittis in tortor cursus. Molestie urna eu tortor, erat scelerisque eget. Nunc hendrerit sed interdum lacus. Lorem quis viverra sed
-pretium, aliquam sit. Praesent elementum magna amet, tincidunt eros, nibh in leo. Malesuada purus, lacus, at aliquam suspendisse tempus. Quis tempus amet, velit nascetur sollicitudin. At sollicitudin eget amet in. Eu velit nascetur sollicitudin erhdfvssfvrgss eget viverra nec elementum.</description></item><item><title>Postman</title><link>https://deploymentshare.com/apps/postman/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://deploymentshare.com/apps/postman/</guid><description>Postman is an API platform for building and using APIs. Postman simplifies each step of the API lifecycle and streamlines collaboration so you can create better APIs—faster. This is an external link, no content is served from this website Download Here</description></item><item><title>PowerBI Desktop</title><link>https://deploymentshare.com/apps/powerbi/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://deploymentshare.com/apps/powerbi/</guid><description>Whether you’re on the go or need to create rich, interactive reports, download the tools you need to build reports and stay connected to your data from anywhere, anytime. Get a 360° view of your business data on the go—at the touch of your fingers—and quickly connect, shape, visualize, and share data insights through Power BI. This is an external link, no content is served from this website Download Here</description></item><item><title>PSADT</title><link>https://deploymentshare.com/apps/psadt/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://deploymentshare.com/apps/psadt/</guid><description>PowerShell App Deployment Toolkit (PSADT) is a versatile solution that streamlines and standardizes the process of software deployment, making it easier than ever to manage your IT environment. It has a comprehensive set of features, such as dynamic logging, user interaction capabilities, and customizable functionality. This is an external link, no content is served from this website - Download available from the Github link Download Here</description></item><item><title>Search Results</title><link>https://deploymentshare.com/search/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://deploymentshare.com/search/</guid><description/></item><item><title>Talk To Me Anytime :)</title><link>https://deploymentshare.com/contact/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://deploymentshare.com/contact/</guid><description>Ask Us Anything Or just Say Hi, Rather than just filling out a form, Sleeknote also offers help to the user with links directing them to find additional information or take popular actions.</description></item><item><title>Visual Studio Code</title><link>https://deploymentshare.com/apps/vscode/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://deploymentshare.com/apps/vscode/</guid><description>Visual Studio Code is a free, lightweight, and extensible code editor for building web, desktop, and mobile applications, using any programming language and framework.
-Visual Studio Code has built-in support for Git source control management and powerful integrations with GitHub, an integrated debugger, and smart code completion with IntelliSense and with AI-driven IntelliCode. With over 30,000 extensions and themes in the Visual Studio Code Marketplace, you can customize the features and the look of Visual Studio Code to fit your needs, preferences, and style.
-You can use Visual Studio Code to build any kind of app, for web, desktop, and mobile.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Deploymentshare | Personal Tech Blog</title>
+    <link>https://deploymentshare.com/</link>
+    <description>Recent content on Deploymentshare | Personal Tech Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 14 Dec 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://deploymentshare.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Setting a Group Tag During a Configuration Manager Task Sequence</title>
+      <link>https://deploymentshare.com/articles/bp-apgrouptagts/</link>
+      <pubDate>Thu, 14 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>https://deploymentshare.com/articles/bp-apgrouptagts/</guid>
+      <description>In this post I&amp;rsquo;m going to talk about using the Windows autopilot deployment for existing devices Task sequence in configuration manager and modifying that task sequence to set a group tag during the process. You may know that traditionally this tasks sequence is used to &amp;lsquo;build&amp;rsquo; devices and have them ready to start the autopilot process. I had a customer recently that had that very need. They had purchased a large number of machines that were delivered with Windows 10 installed and not Windows 11. As the customer was on their Windows 11 uplift journey already they were a bit disappointed to say the least and they opted to create a Configuration Manager task sequence to prep them for autopilot.</description>
+    </item>
+    <item>
+      <title>How to build apps in Endpoint Manager</title>
+      <link>https://deploymentshare.com/articles/bp-applications/</link>
+      <pubDate>Sat, 27 Mar 2021 00:00:00 +0000</pubDate>
+      <guid>https://deploymentshare.com/articles/bp-applications/</guid>
+      <description>Hello everyone, I hope you are all safe and well.&#xA;I’ve been thinking about writing this for a while and I hope it helps some of you new to app packaging.&#xA;How do I build apps? It never hurts to brush up if you’re a seasoned app-packager. App packaging isn’t going away any time soon, everyone needs apps. The Microsoft app store has gotten better but I don’t feel it’s quite there yet in terms of broadly available applications. Sometimes, companies can have line-of-business applications that they build in-house and as system administrators, you may be responsible for packaging and distributing those applications.</description>
+    </item>
+    <item>
+      <title>Logon to Autopilot HAADJ Devices Using FortiClient VPN</title>
+      <link>https://deploymentshare.com/articles/bp-forticlient/</link>
+      <pubDate>Tue, 15 Sep 2020 00:00:00 +0100</pubDate>
+      <guid>https://deploymentshare.com/articles/bp-forticlient/</guid>
+      <description>I recently had a customer who uses FortiClient as their VPN solution, and they have recently embarked on setting up Hybrid AAD. We set their tenant up, sorted out licensing and I started to put in the fundamental elements to begin the journey to using Autopilot for provisioning devices. I had undertaken setting up AAD connect and using IDFix to remediate any issues, such as UPN suffixes for end-users via PowerShell, and we were ready to go. Equally, I had made them an Intune Win32app for FortiClient, and this installed and removed just fine using PSADT. I had already tested the Autopilot process and things were looking good.</description>
+    </item>
+    <item>
+      <title>PowerShell App Deployment Toolkit and Intune Win32 Apps</title>
+      <link>https://deploymentshare.com/articles/bp-psadtintune/</link>
+      <pubDate>Fri, 11 Sep 2020 00:00:00 +0100</pubDate>
+      <guid>https://deploymentshare.com/articles/bp-psadtintune/</guid>
+      <description>Hi Folks! Leading on from this post about getting started with PSADT, and as promised, I’m writing up my experience with it and creating Win32 Intune apps. So firstly, I’m assuming by now that you read and absorbed the first write up I did, you should have noticed that a couple of things I did in that post can actually be done differently and be eager and armed with understanding the format and have a good idea about what to do. Combine that with great ‘google-fu’ and you’re ready to continue your decent app packaging journey. Using this with ConfigMgr applications is quite simple because once you’ve prepared your application you use the root folder as the source content for the application and the rest is pretty straight forward (holler at me if you want that blogging too).</description>
+    </item>
+    <item>
+      <title>PowerShell App Deployment Toolkit Write Up</title>
+      <link>https://deploymentshare.com/articles/bp-psadt/</link>
+      <pubDate>Wed, 19 Aug 2020 00:00:00 +0100</pubDate>
+      <guid>https://deploymentshare.com/articles/bp-psadt/</guid>
+      <description>Hi all, thought I’d write up what I’ve been working on recently, which is re-visiting PowerShell App Deployment Toolkit. A great Resource for ConfigMgr apps, but equally it is supported in Intune so I will be doing a follow-up post on using this with Intune. I know there are plenty of blogs out there on this so this is just my interpretation and is intended to get people started. I know, for example, that the kit comes with a wide variety cmdlets that you can utilise to achieve tasks but this write up is based around getting those a little familiar with PowerShell up to speed with it.</description>
+    </item>
+    <item>
+      <title>1Password</title>
+      <link>https://deploymentshare.com/apps/1password/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://deploymentshare.com/apps/1password/</guid>
+      <description>1Password makes it easy to generate, store, and autofill passwords for all your online accounts, on all your devices. Because weak and reused passwords are a leading cause of security incidents, using a password manager is an easy way to protect yourself, your family, or your business. This is an external link, no content is served from this website Download Here </description>
+    </item>
+    <item>
+      <title>7Zip</title>
+      <link>https://deploymentshare.com/apps/7zip/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://deploymentshare.com/apps/7zip/</guid>
+      <description>7-Zip is free software with open source. The most of the code is under the GNU LGPL license. Some parts of the code are under the BSD 3-clause License. Also there is unRAR license restriction for some parts of the code. Read 7-Zip License information.&#xA;You can use 7-Zip on any computer, including a computer in a commercial organization. You don&amp;rsquo;t need to register or pay for 7-Zip. This is an external link, no content is served from this website Download Here </description>
+    </item>
+    <item>
+      <title>Graph Xray</title>
+      <link>https://deploymentshare.com/apps/graphxray/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://deploymentshare.com/apps/graphxray/</guid>
+      <description>View Graph and PowerShell API details as you browse the Microsoft portals. This is an external link, no content is served from this website Download Here </description>
+    </item>
+    <item>
+      <title>Greenshot</title>
+      <link>https://deploymentshare.com/apps/greenshot/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://deploymentshare.com/apps/greenshot/</guid>
+      <description>Greenshot is a light-weight screenshot software tool for Windows with the following key features:&#xA;Quickly create screenshots of a selected region, window or fullscreen; you can even capture complete (scrolling) web pages from Internet Explorer. Easily annotate, highlight or obfuscate parts of the screenshot. Export the screenshot in various ways: save to file, send to printer, copy to clipboard, attach to e-mail, send Office programs or upload to photo sites like Flickr or Picasa, and others. &amp;hellip;and a lot more options simplyfying creation of and work with screenshots every day. This is an external link, no content is served from this website Download Here </description>
+    </item>
+    <item>
+      <title>Homepage Full</title>
+      <link>https://deploymentshare.com/homepage/full/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://deploymentshare.com/homepage/full/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Homepage Full Left</title>
+      <link>https://deploymentshare.com/homepage/full-left/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://deploymentshare.com/homepage/full-left/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Homepage Full Right</title>
+      <link>https://deploymentshare.com/homepage/full-right/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://deploymentshare.com/homepage/full-right/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Homepage Grid</title>
+      <link>https://deploymentshare.com/homepage/grid/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://deploymentshare.com/homepage/grid/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Homepage Grid Left</title>
+      <link>https://deploymentshare.com/homepage/grid-left/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://deploymentshare.com/homepage/grid-left/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Homepage Grid Right</title>
+      <link>https://deploymentshare.com/homepage/grid-right/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://deploymentshare.com/homepage/grid-right/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Homepage List</title>
+      <link>https://deploymentshare.com/homepage/list/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://deploymentshare.com/homepage/list/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Homepage List Left</title>
+      <link>https://deploymentshare.com/homepage/list-left/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://deploymentshare.com/homepage/list-left/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Homepage List Right</title>
+      <link>https://deploymentshare.com/homepage/list-right/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://deploymentshare.com/homepage/list-right/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Jonathan Fallis</title>
+      <link>https://deploymentshare.com/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://deploymentshare.com/about/</guid>
+      <description>https://deploymentshare.com/Images/AboutMe/banner.jpg does not exist&#xD;Hi, I&amp;rsquo;m Jonathan. I am currently working as a Technical Consultant in the Intune practice at Phoenix Software (who, in recognition for outstanding achievements, have been awarded Microsoft Partner of the Year for 2023 ), specialising in the deployment and management of Microsoft Intune, a pivotal tool for modern device management and application deployment.&#xA;Beyond working with Microsoft Intune, I am passionate about PowerShell scripting and PowerBI reporting. This interest extends beyond professional obligation, reflecting a genuine enthusiasm for the products and trying to apply them to everyday life. Whether supporting clients on their cloud journey, crafting PowerShell scripts to automate complex tasks day-to-day or harnessing PowerBI for insightful data reporting, I&amp;rsquo;m normally geeking out somewhere.</description>
+    </item>
+    <item>
+      <title>Jonathan Fallis</title>
+      <link>https://deploymentshare.com/author/jonathan-fallis/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://deploymentshare.com/author/jonathan-fallis/</guid>
+      <description>https://deploymentshare.com/images/aboutme/banner.jpg does not exist&#xD;Hi, I&amp;rsquo;m Jonathan. I am currently working as a Technical Consultant in the Cloud Endpoint practice at Phoenix Software (who, in recognition for outstanding achievements, have been awarded Microsoft Partner of the Year for 2023 ), specialising in the deployment and management of Microsoft Intune, a pivotal tool for modern device management and application deployment.&#xA;Beyond working with Microsoft Intune, I am passionate about PowerShell scripting and PowerBI reporting. This interest extends beyond professional obligation, reflecting a genuine enthusiasm for the products and trying to apply them to everyday life. Whether supporting clients on their cloud journey, crafting PowerShell scripts to automate complex tasks day-to-day or harnessing PowerBI for insightful data reporting, I&amp;rsquo;m normally geeking out somewhere.</description>
+    </item>
+    <item>
+      <title>No Search Found</title>
+      <link>https://deploymentshare.com/404/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://deploymentshare.com/404/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Notepad &#43;&#43;</title>
+      <link>https://deploymentshare.com/apps/notepadpp/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://deploymentshare.com/apps/notepadpp/</guid>
+      <description>Notepad++ is a free (as in “free speech” and also as in “free beer”) source code editor and Notepad replacement that supports several languages. Running in the MS Windows environment, its use is governed by GNU General Public License. This is an external link, no content is served from this website Download Here </description>
+    </item>
+    <item>
+      <title>Our Privacy Policy</title>
+      <link>https://deploymentshare.com/privacy-policy/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://deploymentshare.com/privacy-policy/</guid>
+      <description>Responsibility of Contributors Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus, donec nunc eros, ullamcorper id feugiat quisque aliquam sagittis. Sem turpis sed viverra massa gravida pharetra. Non dui dolor potenti eu dignissim fusce. Ultrices amet, in curabitur a arcu a lectus morbi id. Iaculis erat sagittis in tortor cursus. Molestie urna eu tortor, erat scelerisque eget. Nunc hendrerit sed interdum lacus. Lorem quis viverra sed&#xA;pretium, aliquam sit. Praesent elementum magna amet, tincidunt eros, nibh in leo. Malesuada purus, lacus, at aliquam suspendisse tempus. Quis tempus amet, velit nascetur sollicitudin. At sollicitudin eget amet in. Eu velit nascetur sollicitudin erhdfvssfvrgss eget viverra nec elementum.</description>
+    </item>
+    <item>
+      <title>Our Terms And Conditions</title>
+      <link>https://deploymentshare.com/terms-conditions/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://deploymentshare.com/terms-conditions/</guid>
+      <description>Responsibility of Contributors Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus, donec nunc eros, ullamcorper id feugiat quisque aliquam sagittis. Sem turpis sed viverra massa gravida pharetra. Non dui dolor potenti eu dignissim fusce. Ultrices amet, in curabitur a arcu a lectus morbi id. Iaculis erat sagittis in tortor cursus. Molestie urna eu tortor, erat scelerisque eget. Nunc hendrerit sed interdum lacus. Lorem quis viverra sed&#xA;pretium, aliquam sit. Praesent elementum magna amet, tincidunt eros, nibh in leo. Malesuada purus, lacus, at aliquam suspendisse tempus. Quis tempus amet, velit nascetur sollicitudin. At sollicitudin eget amet in. Eu velit nascetur sollicitudin erhdfvssfvrgss eget viverra nec elementum.</description>
+    </item>
+    <item>
+      <title>Postman</title>
+      <link>https://deploymentshare.com/apps/postman/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://deploymentshare.com/apps/postman/</guid>
+      <description>Postman is an API platform for building and using APIs. Postman simplifies each step of the API lifecycle and streamlines collaboration so you can create better APIs—faster. This is an external link, no content is served from this website Download Here </description>
+    </item>
+    <item>
+      <title>PowerBI Desktop</title>
+      <link>https://deploymentshare.com/apps/powerbi/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://deploymentshare.com/apps/powerbi/</guid>
+      <description>Whether you’re on the go or need to create rich, interactive reports, download the tools you need to build reports and stay connected to your data from anywhere, anytime. Get a 360° view of your business data on the go—at the touch of your fingers—and quickly connect, shape, visualize, and share data insights through Power BI. This is an external link, no content is served from this website Download Here </description>
+    </item>
+    <item>
+      <title>PSADT</title>
+      <link>https://deploymentshare.com/apps/psadt/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://deploymentshare.com/apps/psadt/</guid>
+      <description>PowerShell App Deployment Toolkit (PSADT) is a versatile solution that streamlines and standardizes the process of software deployment, making it easier than ever to manage your IT environment. It has a comprehensive set of features, such as dynamic logging, user interaction capabilities, and customizable functionality. This is an external link, no content is served from this website - Download available from the Github link Download Here </description>
+    </item>
+    <item>
+      <title>Search Results</title>
+      <link>https://deploymentshare.com/search/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://deploymentshare.com/search/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Talk To Me Anytime :)</title>
+      <link>https://deploymentshare.com/contact/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://deploymentshare.com/contact/</guid>
+      <description>Ask Us Anything Or just Say Hi, Rather than just filling out a form, Sleeknote also offers help to the user with links directing them to find additional information or take popular actions.</description>
+    </item>
+    <item>
+      <title>Visual Studio Code</title>
+      <link>https://deploymentshare.com/apps/vscode/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://deploymentshare.com/apps/vscode/</guid>
+      <description>Visual Studio Code is a free, lightweight, and extensible code editor for building web, desktop, and mobile applications, using any programming language and framework.&#xA;Visual Studio Code has built-in support for Git source control management and powerful integrations with GitHub, an integrated debugger, and smart code completion with IntelliSense and with AI-driven IntelliCode. With over 30,000 extensions and themes in the Visual Studio Code Marketplace, you can customize the features and the look of Visual Studio Code to fit your needs, preferences, and style.&#xA;You can use Visual Studio Code to build any kind of app, for web, desktop, and mobile.</description>
+    </item>
+  </channel>
+</rss>
