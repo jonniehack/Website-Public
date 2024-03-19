@@ -187,6 +187,37 @@ if (!doNotTrack) {
 
 
 
+<script>
+  !(function () {
+    let t = 0;
+    document.addEventListener("mousemove", function () {
+      1 == ++t && gtmLoader();
+    }),
+      (window.onscroll = function (n) {
+        1 == ++t &&gtmLoader();
+      }),
+      setTimeout(function () {
+        0 === t && (t++, gtmLoader());
+      }, 5e3);
+  })();
+
+  function gtmLoader() {
+    (function (w, d, s, l, i) {
+      w[l] = w[l] || [];
+      w[l].push({
+        "gtm.start": new Date().getTime(),
+        event: "gtm.js",
+      });
+      var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s),
+        dl = l != "dataLayer" ? "&l=" + l : "";
+      j.async = true;
+      j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+      f.parentNode.insertBefore(j, f);
+    })(window, document, "script", "dataLayer", "G-H36JXQVDWY");
+  }
+</script>
+
 
 
 
@@ -19048,6 +19079,14 @@ header {
 
 
       
+  <noscript
+    ><iframe
+      src="https://www.googletagmanager.com/ns.html?id=G-H36JXQVDWY"
+      height="0"
+      width="0"
+      style="display:none;visibility:hidden"></iframe
+  ></noscript>
+
 
     
 
@@ -19185,6 +19224,10 @@ header {
                           >Microsoft Intune</a
                         >
                       
+                        <a class="dropdown-item" href="https://learn.microsoft.com/en-us/officeupdates/update-history-microsoft365-apps-by-date"
+                          >Office 365</a
+                        >
+                      
                         <a class="dropdown-item" href="https://learn.microsoft.com/en-us/power-bi/fundamentals/desktop-latest-update?tabs=powerbi-desktop"
                           >PowerBI Desktop</a
                         >
@@ -19195,6 +19238,10 @@ header {
                       
                         <a class="dropdown-item" href="https://learn.microsoft.com/en-us/windows/release-health/windows11-release-information"
                           >Windows 11</a
+                        >
+                      
+                        <a class="dropdown-item" href="https://learn.microsoft.com/en-us/windows-server/get-started/windows-server-release-info"
+                          >Windows Server</a
                         >
                       
                     </div>

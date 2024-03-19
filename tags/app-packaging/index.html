@@ -182,6 +182,37 @@ if (!doNotTrack) {
 
 
 
+<script>
+  !(function () {
+    let t = 0;
+    document.addEventListener("mousemove", function () {
+      1 == ++t && gtmLoader();
+    }),
+      (window.onscroll = function (n) {
+        1 == ++t &&gtmLoader();
+      }),
+      setTimeout(function () {
+        0 === t && (t++, gtmLoader());
+      }, 5e3);
+  })();
+
+  function gtmLoader() {
+    (function (w, d, s, l, i) {
+      w[l] = w[l] || [];
+      w[l].push({
+        "gtm.start": new Date().getTime(),
+        event: "gtm.js",
+      });
+      var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s),
+        dl = l != "dataLayer" ? "&l=" + l : "";
+      j.async = true;
+      j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+      f.parentNode.insertBefore(j, f);
+    })(window, document, "script", "dataLayer", "G-H36JXQVDWY");
+  }
+</script>
+
 
 
 
@@ -19043,6 +19074,14 @@ header {
 
 
       
+  <noscript
+    ><iframe
+      src="https://www.googletagmanager.com/ns.html?id=G-H36JXQVDWY"
+      height="0"
+      width="0"
+      style="display:none;visibility:hidden"></iframe
+  ></noscript>
+
 
     
 
@@ -19180,6 +19219,10 @@ header {
                           >Microsoft Intune</a
                         >
                       
+                        <a class="dropdown-item" href="https://learn.microsoft.com/en-us/officeupdates/update-history-microsoft365-apps-by-date"
+                          >Office 365</a
+                        >
+                      
                         <a class="dropdown-item" href="https://learn.microsoft.com/en-us/power-bi/fundamentals/desktop-latest-update?tabs=powerbi-desktop"
                           >PowerBI Desktop</a
                         >
@@ -19190,6 +19233,10 @@ header {
                       
                         <a class="dropdown-item" href="https://learn.microsoft.com/en-us/windows/release-health/windows11-release-information"
                           >Windows 11</a
+                        >
+                      
+                        <a class="dropdown-item" href="https://learn.microsoft.com/en-us/windows-server/get-started/windows-server-release-info"
+                          >Windows Server</a
                         >
                       
                     </div>
@@ -20127,7 +20174,7 @@ I’ve been thinking about writing this for a while and I hope it helps some of 
               href="/categories/intune/"
               class="d-flex"
               >Intune
-              <small class="ms-auto">(5)</small></a
+              <small class="ms-auto">(11)</small></a
             >
           </li>
           <li>
@@ -20136,6 +20183,14 @@ I’ve been thinking about writing this for a while and I hope it helps some of 
               class="d-flex"
               >Microsoft deployment toolkit
               <small class="ms-auto">(1)</small></a
+            >
+          </li>
+          <li>
+            <a
+              href="/categories/powerbi/"
+              class="d-flex"
+              >Powerbi
+              <small class="ms-auto">(6)</small></a
             >
           </li>
           <li>
@@ -20231,8 +20286,18 @@ I’ve been thinking about writing this for a while and I hope it helps some of 
             >
           </li>
           <li class="list-inline-item">
+            <a href="/tags/microsoft/"
+              >Microsoft</a
+            >
+          </li>
+          <li class="list-inline-item">
             <a href="/tags/packaging/"
               >Packaging</a
+            >
+          </li>
+          <li class="list-inline-item">
+            <a href="/tags/powerbi/"
+              >Powerbi</a
             >
           </li>
           <li class="list-inline-item">
@@ -20391,20 +20456,31 @@ I’ve been thinking about writing this for a while and I hope it helps some of 
 <!-- referral -->
   <div class="widget">
     <h4 class="widget-title h5"><span>UK Referral Links</span></h4>
-    I dont use adverts on my site to make it easier to read, however, please use these links if you're thinking of joining any of these services and want to share a free incentive with me.  <br> <br>
+    I don't use adverts on my site to make it easier to read, however, please use my referral links if you're thinking of joining any of these services and want to share a free incentive with me.  <br> <br>
+        Energy Supplier (£50 each)
         <a href="https://share.octopus.energy/sepia-mink-787">
           <img src="https://th.bing.com/th/id/R.ae0a46514d79264fec5a089209471514?rik=wcweKtbBaDydyA&riu=http%3a%2f%2fmysmartenergy.uk%2fimages%2frefersmall.png&ehk=pDgWtLnNVy1GGKeJARZXW5VTJjf48tGfSCImKiLPA%2bE%3d&risl=&pid=ImgRaw&r=0" height="100" width="300">  
         </a>
         <br>
         <br>
+        Broadband & TV services (£50 each)
         <a href="http://aklam.io/uXEUVq">
-          <img src="https://www.omd.com/wp-content/uploads/2022/08/VirginMedia02.jpg" height="100" width="300">  
+          <img src="https://www.snapcomms.com/hs-fs/hubfs/images/Case_studies/page/virgin-media-banner.jpg?width=570&name=virgin-media-banner.jpg" height="100" width="300">  
         </a>
         <br>
         <br>
+        Buildings and Contents Insurance (£50 Each)
         <a href="https://policyexpert.mention-me.com/m/ol/ru1as-jonathan-fallis">
-          <img src="https://d2t2wfirfyzjhs.cloudfront.net/images/ex-desc/policyexperthomelogo.jpg" height="100" width="300">  
+          <img src="https://www.moneyexpert.com/storage/uploads/2021/01/policy-expert-logo-1609777567GXC4S.png" height="100" width="300">  
         </a>
+        <br>
+        <br>
+        Mobile Phones (Incentive varies)
+        <a href="http://aklam.io/gW7TnR">
+          <img src="https://th.bing.com/th/id/OIP.uYduACTQfa4YdfPZoBayAgAAAA?rs=1&pid=ImgDetMain" height="100" width="300">  
+        </a>
+
+        
   </div></div>
         </aside>
       

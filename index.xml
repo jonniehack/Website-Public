@@ -6,8 +6,50 @@
     <description>Recent content on Deploymentshare | Personal Tech Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 14 Dec 2023 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 17 Feb 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://deploymentshare.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Intune and PowerBI Deep Dive - Part 6 - Managed Devices</title>
+      <link>https://deploymentshare.com/articles/bp-6-pbi-intune/</link>
+      <pubDate>Sat, 17 Feb 2024 00:00:00 +0000</pubDate>
+      <guid>https://deploymentshare.com/articles/bp-6-pbi-intune/</guid>
+      <description>In this post we are finally going to look at getting some data into PowerBI to play around with. We are going to use a query in PowerBI to go and retrieve our managed devices information. Remember discussing pagination for APIs? Should you have more than 1000 devices we&amp;rsquo;re also going to need to consider Pagination but don&amp;rsquo;t worry there are three methods to do this discussed below.&#xA;Quick Links Series Menu Part 1 - Where to Start Part 2 - Application Registration Part 3 - Exploring Graph URLs Part 4 - Get-BearerToken Part 5 - Heavy Lifting Part 6 - Get-Devices Now, when you first approach this task you might consider employing a coding mindset akin to PowerShell, such as fetching the initial 1000 devices and implementing a do-while loop to retrieve the remaining ones using a method such as checking for the presence of another @Data.</description>
+    </item>
+    <item>
+      <title>Intune and PowerBI Deep Dive - Part 5 - Heavy Lifting</title>
+      <link>https://deploymentshare.com/articles/bp-5-pbi-intune/</link>
+      <pubDate>Mon, 05 Feb 2024 00:00:00 +0000</pubDate>
+      <guid>https://deploymentshare.com/articles/bp-5-pbi-intune/</guid>
+      <description>In this post we&amp;rsquo;ll take a look at using Logic Apps and OData.Feed to do the &amp;lsquo;heavy lifting&amp;rsquo; for us. By heavy lifting, essentially this is handling pagination of the Microsoft Graph Call. Using the app registration permissions for authorisation to the data, then processing the result in order to make sure we have all the data we need and finally passing the results back to PowerBI so that its handled outside of PowerBI. PowerBI only cares about the data.&#xA;Quick Links Series Menu Part 1 - Where to Start Part 2 - Application Registration Part 3 - Exploring Graph URLs Part 4 - Get-BearerToken Part 5 - Heavy Lifting Part 6 - Get-Devices There are three ways I&amp;rsquo;ve achieved this.</description>
+    </item>
+    <item>
+      <title>Intune and PowerBI Deep Dive - Part 4 - Get-BearerToken</title>
+      <link>https://deploymentshare.com/articles/bp-4-pbi-intune/</link>
+      <pubDate>Thu, 25 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>https://deploymentshare.com/articles/bp-4-pbi-intune/</guid>
+      <description>In the previous posts, we talked about obtaining an access token (bearer token) to access the data in our environments. We even looked at using our first POST query to post a request for a token in PostMan. The reason I&amp;rsquo;ve called this post &amp;lsquo;Get-BearerToken&amp;rsquo; is because I&amp;rsquo;m going to explain how to use a combination of PowerBI Variables and a function to leverage the Application Registration we have to get a bearer token within PowerBI Desktop. We can then use that bearer token to authenticate against the Microsoft Graph and start to pull data into PowerBI like we did in the PostMan application.</description>
+    </item>
+    <item>
+      <title>Intune and PowerBI Deep Dive - Part 3 - Exploring Graph URLs</title>
+      <link>https://deploymentshare.com/articles/bp-3-pbi-intune/</link>
+      <pubDate>Sat, 20 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>https://deploymentshare.com/articles/bp-3-pbi-intune/</guid>
+      <description>Next up, we&amp;rsquo;re going to explore the Graph and the URLs and permissions, in this post, continuing on from Part 1 and Part 2 , our next step is begin to firstly understand our path to getting Intune Data into PowerBI, which is going to be via direct Microsoft Graph calls - Remembering of course that the Intune Data warehouse did not meet our requirements. We are also going to leverage an application registration to access the data we want to see. This is gonna be a BIG post, so make sure you have plenty of time to read.&#xA;Quick Links Series Menu Part 1 - Where to Start Part 2 - Application Registration Part 3 - Exploring Graph URLs Part 4 - Get-BearerToken Part 5 - Heavy Lifting Part 6 - Get-Devices We&amp;rsquo;re going to explore the Microsoft Graph URLs, the structure of them, how to obtain what we need and some tools to test them to ensure we&amp;rsquo;ve got them correct.</description>
+    </item>
+    <item>
+      <title>Intune and PowerBI Deep Dive - Part 2 - Application Registration</title>
+      <link>https://deploymentshare.com/articles/bp-2-pbi-intune/</link>
+      <pubDate>Sat, 13 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>https://deploymentshare.com/articles/bp-2-pbi-intune/</guid>
+      <description>Continuing from Part 1 , our next step is to establish an application registration in Azure. This registration will enable us to utilise its permissions for accessing data on the Microsoft Graph and hopefully then, importing that data into PowerBI. This setup is essential as it serves as a global prerequisite for accomplishing our ultimate objective.&#xA;Quick Links Series Menu Part 1 - Where to Start Part 2 - Application Registration Part 3 - Exploring Graph URLs Part 4 - Get-BearerToken Part 5 - Heavy Lifting Part 6 - Get-Devices Creating the App Reg This is going to be a &amp;lsquo;whistle stop tour&amp;rsquo; of setting up an application registration.</description>
+    </item>
+    <item>
+      <title>Intune and PowerBI Deep Dive - Part 1 - Where to Start</title>
+      <link>https://deploymentshare.com/articles/bp-1-pbi-intune/</link>
+      <pubDate>Wed, 10 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>https://deploymentshare.com/articles/bp-1-pbi-intune/</guid>
+      <description>In this series, I will guide you through the process of extracting data from Microsoft Graph, specifically Microsoft Intune, and integrating it into PowerBI. We will explore different approaches, considering their advantages and disadvantages, in order to provide you with a solid foundation for creating your own reports within your specific environment. Its intent is to take you on a journey as I discover what to do, so please do take the time to read them in order to ensure you come along for the ride! I have invested significant time and effort into studying this subject and understanding the potential pitfalls associated with various approaches.</description>
+    </item>
     <item>
       <title>Setting a Group Tag During a Configuration Manager Task Sequence</title>
       <link>https://deploymentshare.com/articles/bp-apgrouptagts/</link>
