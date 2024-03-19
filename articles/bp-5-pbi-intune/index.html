@@ -19628,7 +19628,6 @@ header {
 
 >in a previous post</a>
  to obtain a Bearer token for access and passes this token instead, replacing the need to pass individual variables. The final method is similar to the second in that it also uses the bearer token for authorisation, however, instead of using a Logic App we use an OData.Feed power query. The third method shares similarities with the second in that they both utilise a Bearer token for authorization. OData.Feeds support pagination so this removed the output processing element of our queries where we must convert or translate the results from the Logic App. There is no right or wrong approach, I would suggest examining them all in the following post and deciding which one suite your needs best.</p>
-<p>{{ $image := resources.Get &ldquo;images/gifs/letusbegin.gif&rdquo; }}</p>
 <h3 id="method-1---logic-apps--passing-variables">Method 1 - Logic Apps &amp; Passing variables</h3>
 <p>Previously we gathered the TenantID, the AppID and the SecretID after creating an application registration in Entra. Those details were stored into variables inside PowerBI, so we can call them using a Power Query. Lets first dive into the Logic App and start configuring it to recieve these properties. Luckily this  is quite simple. Just three steps. A hat tip to <a href="https://janbakker.tech/use-graph-api-data-in-power-bi-using-logicapps/"
 
