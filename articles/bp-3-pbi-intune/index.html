@@ -72,7 +72,7 @@
 
 
 
-  <base href="https://deploymentshare.com/articles/bp-3-pbi-intune/" />
+  <base href="https://www.deploymentshare.com/articles/bp-3-pbi-intune/" />
 
 
 
@@ -163,8 +163,8 @@
       
       
       
-        <meta property="og:image" content="https://deploymentshare.com/images/title/pbi-intune.jpg" />
-        <meta name="twitter:image" content="https://deploymentshare.com/images/title/pbi-intune.jpg" />
+        <meta property="og:image" content="https://www.deploymentshare.com/images/title/pbi-intune.jpg" />
+        <meta name="twitter:image" content="https://www.deploymentshare.com/images/title/pbi-intune.jpg" />
         <meta
           name="twitter:card"
           content="summary
@@ -195,7 +195,7 @@
 <meta property="og:title" content="Intune and PowerBI Deep Dive - Part 3 - Exploring Graph URLs" />
 <meta property="og:description" content="Visit www.deploymentshare.com to find out more" />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="https://deploymentshare.com/articles/bp-3-pbi-intune/" />
+<meta property="og:url" content="https://www.deploymentshare.com/articles/bp-3-pbi-intune/" />
 
 
 <meta name="twitter:title" content="Intune and PowerBI Deep Dive - Part 3 - Exploring Graph URLs" />
@@ -295,7 +295,7 @@ if (!doNotTrack) {
 
 
 <script>
-  let indexURL = "https://deploymentshare.com/searchindex.json";
+  let indexURL = "https://www.deploymentshare.com/searchindex.json";
   let includeSectionsInSearch = ["articles","apps"];
   let no_results_for = "0 results for";
   let empty_search_results_placeholder = "Type something to search..";
@@ -19290,7 +19290,7 @@ header {
               
                 
                   <li class="nav-item">
-                    <a class="nav-link" href="https://deploymentshare.com/categories/intune/"
+                    <a class="nav-link" href="https://www.deploymentshare.com/categories/intune/"
                       >Intune</a
                     >
                   </li>
@@ -19298,7 +19298,7 @@ header {
               
                 
                   <li class="nav-item">
-                    <a class="nav-link" href="https://deploymentshare.com/categories/powerbi/"
+                    <a class="nav-link" href="https://www.deploymentshare.com/categories/powerbi/"
                       >PowerBI</a
                     >
                   </li>
@@ -19306,7 +19306,7 @@ header {
               
                 
                   <li class="nav-item">
-                    <a class="nav-link" href="https://deploymentshare.com/categories/configuration-manager/"
+                    <a class="nav-link" href="https://www.deploymentshare.com/categories/configuration-manager/"
                       >ConfigMgr</a
                     >
                   </li>
@@ -19363,7 +19363,7 @@ header {
               
                 
                   <li class="nav-item">
-                    <a class="nav-link" href="https://deploymentshare.com/apps/"
+                    <a class="nav-link" href="https://www.deploymentshare.com/apps/"
                       >Apps</a
                     >
                   </li>
@@ -19371,7 +19371,7 @@ header {
               
                 
                   <li class="nav-item">
-                    <a class="nav-link" href="https://deploymentshare.com/author/jonathan-fallis/"
+                    <a class="nav-link" href="https://www.deploymentshare.com/author/jonathan-fallis/"
                       >About</a
                     >
                   </li>
@@ -19814,7 +19814,7 @@ header {
       title=""
       loading="lazy"
       decoding="async"
-      src="https://deploymentshare.com/simages/bp-3-pbi-intune-2.png"
+      src="https://www.deploymentshare.com/simages/bp-3-pbi-intune-2.png"
       alt=""
       class="img  img-center "
       width=""
@@ -19893,7 +19893,7 @@ Lets break this down for you:</p>
 
 >documentation for this Graph Call</a>
 , here are the permissions it needs;</p>
-<p><img src="https://deploymentshare.com/articles/bp-3-pbi-intune/articles/bp-3-pbi-intune/img/BP-3-PBI-Intune-3_hu002c60d7f77ffe0538569794608448bf_20321_filter_6693870371605185493.png#centre" alt="Alt Text"  /></p>
+<p><img src="https://www.deploymentshare.com/articles/bp-3-pbi-intune/articles/bp-3-pbi-intune/img/BP-3-PBI-Intune-3_hu002c60d7f77ffe0538569794608448bf_20321_filter_6693870371605185493.png#centre" alt="Alt Text"  /></p>
 <p>&hellip; now we&rsquo;re not using application permissions here because the Graph explorer is authenticated against you, the user&hellip;  but for the purposes of our PowerBI report we will be taking note of the application permissions, so you can see here this particular graph call requires <strong>User.Read.All</strong> permissions as a minimum for application permissions.  The read permissions are normally sufficient for reading the data (or performing a GET API Call) should you wish to perform other tasks, such as PATCH (updating) POST (Usually Creating something) or DELETE (Self-explanatory) you may need higher permissions, such as *.ReadWrite.All.</p>
 <hr>
 <h5 id="lets-see-what-happens-when-we-put-this-into-graph-explorer">Lets see what happens when we put this into Graph Explorer</h5>
@@ -19908,7 +19908,7 @@ Lets break this down for you:</p>
 
 >https://graph.microsoft.com</a>
 </strong>/v1.0/<strong>users</strong>?$select=displayName,id..  when I run that in Graph Explorer I get back the following message (this will show in section (7) from the image above):</p>
-<p><img src="https://deploymentshare.com/articles/bp-3-pbi-intune/articles/bp-3-pbi-intune/img/BP-3-PBI-Intune-4_hu704678eb63b661f22d794be0e0422a22_10086_filter_16096384638768550225.png#centre" alt="Alt Text"  /></p>
+<p><img src="https://www.deploymentshare.com/articles/bp-3-pbi-intune/articles/bp-3-pbi-intune/img/BP-3-PBI-Intune-4_hu704678eb63b661f22d794be0e0422a22_10086_filter_16096384638768550225.png#centre" alt="Alt Text"  /></p>
 <p>&hellip;If I then click on <strong>Modify Permissions</strong>&hellip;  I can see that I am able to Grant <strong>User.Read.All</strong>, so I&rsquo;m going to go ahead and select to <strong>Consent</strong> for that.  Like so..</p>
 <p><a href="/simages/bp-3-pbi-intune-5.png"
 
@@ -19947,7 +19947,7 @@ Lets break this down for you:</p>
       title=""
       loading="lazy"
       decoding="async"
-      src="https://deploymentshare.com/simages/bp-3-pbi-intune-5.png"
+      src="https://www.deploymentshare.com/simages/bp-3-pbi-intune-5.png"
       alt=""
       class="img  img-center "
       width=""
@@ -19963,9 +19963,9 @@ Lets break this down for you:</p>
 </a>
 </p>
 <p>Once done I see a success message
-<img src="https://deploymentshare.com/articles/bp-3-pbi-intune/articles/bp-3-pbi-intune/img/BP-3-PBI-Intune-6_hubfe322a8143120538ed18740cdb3b48a_1378_filter_13495297429060150795.png#centre" alt="Alt Text"  /></p>
+<img src="https://www.deploymentshare.com/articles/bp-3-pbi-intune/articles/bp-3-pbi-intune/img/BP-3-PBI-Intune-6_hubfe322a8143120538ed18740cdb3b48a_1378_filter_13495297429060150795.png#centre" alt="Alt Text"  /></p>
 <p>If I then click on <strong>Run Query</strong> now that the permission has been granted I will now see results in my results pane!
-<img src="https://deploymentshare.com/articles/bp-3-pbi-intune/articles/bp-3-pbi-intune/img/BP-3-PBI-Intune-7_hud92b71b35f71169a8938dee60b8f3f1f_21299_filter_597571211891560761.png#centre" alt="Alt Text"  /></p>
+<img src="https://www.deploymentshare.com/articles/bp-3-pbi-intune/articles/bp-3-pbi-intune/img/BP-3-PBI-Intune-7_hud92b71b35f71169a8938dee60b8f3f1f_21299_filter_597571211891560761.png#centre" alt="Alt Text"  /></p>
 
 
 
@@ -20022,7 +20022,7 @@ Lets break this down for you:</p>
 <li>You may need to click on the &raquo; arrows on the top menu to see Graph Xray.</li>
 <li>Once displayed, your friends are &lsquo;Clear Session&rsquo; before you click on something and then just look at the results.</li>
 <li>In the below example, I first cleared the session and then clicked on <strong>users</strong> within the Intune console.
-<img src="https://deploymentshare.com/articles/bp-3-pbi-intune/articles/bp-3-pbi-intune/img/BP-3-PBI-Intune-8_hufaddea56a25e105d7439f618a8f72232_14532_filter_361231180672294782.png#centre" alt="Alt Text"  /></li>
+<img src="https://www.deploymentshare.com/articles/bp-3-pbi-intune/articles/bp-3-pbi-intune/img/BP-3-PBI-Intune-8_hufaddea56a25e105d7439f618a8f72232_14532_filter_361231180672294782.png#centre" alt="Alt Text"  /></li>
 </ol>
 <p>This lines up with what I see in Intune.  Its a users resource with some query parameters to show the properties I see in the Intune console.  I can, of course, remove the query parameters to show the full results, rather than using the &lsquo;select&rsquo; query to pick out certain fields too.  If I was using this query to pull data into PowerBI, I would pull in the full query to get all the data, and I would be able to manipulate that data right in PowerBI desktop. It is safe to say though, that if you omit what you dont need, you&rsquo;ll save processing time.  From my own experience in the majority of small to medium sized businesses, this isnt worth worrying about.  For large scale businesses, it absolutely is a consideration.</p>
 <p>There is plenty of documentation surrounding Graph Xray, I&rsquo;m not going to go into great detail here as there are other, more informative posts on the subject but I highly recommend you have this in your arsenal of Microsoft Graph tools.  You can use this tool to explore around the Intune or Azure portal, for example, and collect up a list of Microsoft Graph resources and their relevant permissions so you can start to &lsquo;story-board&rsquo; or think about how you want to build up your PowerBI dashboard.  Very very useful indeed.</p>
@@ -20098,7 +20098,7 @@ Lets break this down for you:</p>
       title=""
       loading="lazy"
       decoding="async"
-      src="https://deploymentshare.com/simages/bp-3-pbi-intune-9.png"
+      src="https://www.deploymentshare.com/simages/bp-3-pbi-intune-9.png"
       alt=""
       class="img  img-center "
       width=""
@@ -20159,7 +20159,7 @@ Lets break this down for you:</p>
       title=""
       loading="lazy"
       decoding="async"
-      src="https://deploymentshare.com/simages/bp-3-pbi-intune-10.png"
+      src="https://www.deploymentshare.com/simages/bp-3-pbi-intune-10.png"
       alt=""
       class="img  img-center "
       width=""
@@ -20183,7 +20183,7 @@ Lets break this down for you:</p>
 </ol>
 <p>The first thing we are going to do is a POST call to login.microsoft.com, this is in order to obtain an access (bearer) token to authenticate against the graph with.  The Token will come from the app registration, so whatever permissions the app registration has, thats the permissions the bearer token will have.  Bear that in mind because with each new permission you add, you will need to POST for a token.</p>
 <p>It requires a few things to be set up.  From the collection you made, click on the &ldquo;+&rdquo; symbol to create a new API call.
-<img src="https://deploymentshare.com/articles/bp-3-pbi-intune/articles/bp-3-pbi-intune/img/BP-3-PBI-Intune-11_hu22b17d1298b983c4360e828851ed26e8_24228_filter_8645737379631011145.png#centre" alt="Alt Text"  /></p>
+<img src="https://www.deploymentshare.com/articles/bp-3-pbi-intune/articles/bp-3-pbi-intune/img/BP-3-PBI-Intune-11_hu22b17d1298b983c4360e828851ed26e8_24228_filter_8645737379631011145.png#centre" alt="Alt Text"  /></p>
 <p>Set it up as follows:</p>
 <p><a href="/simages/bp-3-pbi-intune-12.png"
 
@@ -20222,7 +20222,7 @@ Lets break this down for you:</p>
       title=""
       loading="lazy"
       decoding="async"
-      src="https://deploymentshare.com/simages/bp-3-pbi-intune-12.png"
+      src="https://www.deploymentshare.com/simages/bp-3-pbi-intune-12.png"
       alt=""
       class="img  img-center "
       width=""
@@ -20284,7 +20284,7 @@ Lets break this down for you:</p>
       title=""
       loading="lazy"
       decoding="async"
-      src="https://deploymentshare.com/simages/bp-3-pbi-intune-13.png"
+      src="https://www.deploymentshare.com/simages/bp-3-pbi-intune-13.png"
       alt=""
       class="img  img-center "
       width=""
@@ -20376,7 +20376,7 @@ In order to do that we need to put some tests on the call and tell it to set a v
       title=""
       loading="lazy"
       decoding="async"
-      src="https://deploymentshare.com/simages/bp-3-pbi-intune-14.png"
+      src="https://www.deploymentshare.com/simages/bp-3-pbi-intune-14.png"
       alt=""
       class="img  img-center "
       width=""
@@ -20455,7 +20455,7 @@ In order to do that we need to put some tests on the call and tell it to set a v
       title=""
       loading="lazy"
       decoding="async"
-      src="https://deploymentshare.com/simages/bp-3-pbi-intune-15.png"
+      src="https://www.deploymentshare.com/simages/bp-3-pbi-intune-15.png"
       alt=""
       class="img  img-center "
       width=""
@@ -21016,7 +21016,7 @@ Thanks for reading <br>
     "@type": "Article",
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": "https:\/\/deploymentshare.com\/articles\/bp-3-pbi-intune\/"
+      "@id": "https:\/\/www.deploymentshare.com\/articles\/bp-3-pbi-intune\/"
     },
     "headline": "Intune and PowerBI Deep Dive - Part 3 - Exploring Graph URLs",
     "description": "",
@@ -21125,15 +21125,15 @@ Thanks for reading <br>
         <h6 class="mb-4 fw-semibold">Quick Links</h6>
         <ul class="list-unstyled footer-list">
           
-          <li><a href="https://deploymentshare.com/apps/">Apps</a></li>
+          <li><a href="https://www.deploymentshare.com/apps/">Apps</a></li>
           
-          <li><a href="https://deploymentshare.com/categories/configuration-manager/">ConfigMgr</a></li>
+          <li><a href="https://www.deploymentshare.com/categories/configuration-manager/">ConfigMgr</a></li>
           
-          <li><a href="https://deploymentshare.com/categories/intune/">Intune</a></li>
+          <li><a href="https://www.deploymentshare.com/categories/intune/">Intune</a></li>
           
-          <li><a href="https://deploymentshare.com/categories/powerbi/">PowerBI</a></li>
+          <li><a href="https://www.deploymentshare.com/categories/powerbi/">PowerBI</a></li>
           
-          <li><a href="https://deploymentshare.com/privacy-policy/">Privacy Policy</a></li>
+          <li><a href="https://www.deploymentshare.com/privacy-policy/">Privacy Policy</a></li>
           
         </ul>
       </div>

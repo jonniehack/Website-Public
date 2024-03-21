@@ -2,38 +2,38 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>PowerShell on Deploymentshare | Personal Tech Blog</title>
-    <link>https://deploymentshare.com/categories/powershell/</link>
+    <link>https://www.deploymentshare.com/categories/powershell/</link>
     <description>Recent content in PowerShell on Deploymentshare | Personal Tech Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 27 Mar 2021 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://deploymentshare.com/categories/powershell/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://www.deploymentshare.com/categories/powershell/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>How to build apps in Endpoint Manager</title>
-      <link>https://deploymentshare.com/articles/bp-applications/</link>
+      <link>https://www.deploymentshare.com/articles/bp-applications/</link>
       <pubDate>Sat, 27 Mar 2021 00:00:00 +0000</pubDate>
-      <guid>https://deploymentshare.com/articles/bp-applications/</guid>
+      <guid>https://www.deploymentshare.com/articles/bp-applications/</guid>
       <description>Hello everyone, I hope you are all safe and well.&#xA;I’ve been thinking about writing this for a while and I hope it helps some of you new to app packaging.&#xA;How do I build apps? It never hurts to brush up if you’re a seasoned app-packager. App packaging isn’t going away any time soon, everyone needs apps. The Microsoft app store has gotten better but I don’t feel it’s quite there yet in terms of broadly available applications. Sometimes, companies can have line-of-business applications that they build in-house and as system administrators, you may be responsible for packaging and distributing those applications.</description>
     </item>
     <item>
       <title>Logon to Autopilot HAADJ Devices Using FortiClient VPN</title>
-      <link>https://deploymentshare.com/articles/bp-forticlient/</link>
+      <link>https://www.deploymentshare.com/articles/bp-forticlient/</link>
       <pubDate>Tue, 15 Sep 2020 00:00:00 +0100</pubDate>
-      <guid>https://deploymentshare.com/articles/bp-forticlient/</guid>
+      <guid>https://www.deploymentshare.com/articles/bp-forticlient/</guid>
       <description>I recently had a customer who uses FortiClient as their VPN solution, and they have recently embarked on setting up Hybrid AAD. We set their tenant up, sorted out licensing and I started to put in the fundamental elements to begin the journey to using Autopilot for provisioning devices. I had undertaken setting up AAD connect and using IDFix to remediate any issues, such as UPN suffixes for end-users via PowerShell, and we were ready to go. Equally, I had made them an Intune Win32app for FortiClient, and this installed and removed just fine using PSADT. I had already tested the Autopilot process and things were looking good.</description>
     </item>
     <item>
       <title>PowerShell App Deployment Toolkit and Intune Win32 Apps</title>
-      <link>https://deploymentshare.com/articles/bp-psadtintune/</link>
+      <link>https://www.deploymentshare.com/articles/bp-psadtintune/</link>
       <pubDate>Fri, 11 Sep 2020 00:00:00 +0100</pubDate>
-      <guid>https://deploymentshare.com/articles/bp-psadtintune/</guid>
+      <guid>https://www.deploymentshare.com/articles/bp-psadtintune/</guid>
       <description>Hi Folks! Leading on from this post about getting started with PSADT, and as promised, I’m writing up my experience with it and creating Win32 Intune apps. So firstly, I’m assuming by now that you read and absorbed the first write up I did, you should have noticed that a couple of things I did in that post can actually be done differently and be eager and armed with understanding the format and have a good idea about what to do. Combine that with great ‘google-fu’ and you’re ready to continue your decent app packaging journey. Using this with ConfigMgr applications is quite simple because once you’ve prepared your application you use the root folder as the source content for the application and the rest is pretty straight forward (holler at me if you want that blogging too).</description>
     </item>
     <item>
       <title>PowerShell App Deployment Toolkit Write Up</title>
-      <link>https://deploymentshare.com/articles/bp-psadt/</link>
+      <link>https://www.deploymentshare.com/articles/bp-psadt/</link>
       <pubDate>Wed, 19 Aug 2020 00:00:00 +0100</pubDate>
-      <guid>https://deploymentshare.com/articles/bp-psadt/</guid>
+      <guid>https://www.deploymentshare.com/articles/bp-psadt/</guid>
       <description>Hi all, thought I’d write up what I’ve been working on recently, which is re-visiting PowerShell App Deployment Toolkit. A great Resource for ConfigMgr apps, but equally it is supported in Intune so I will be doing a follow-up post on using this with Intune. I know there are plenty of blogs out there on this so this is just my interpretation and is intended to get people started. I know, for example, that the kit comes with a wide variety cmdlets that you can utilise to achieve tasks but this write up is based around getting those a little familiar with PowerShell up to speed with it.</description>
     </item>
   </channel>

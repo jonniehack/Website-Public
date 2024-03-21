@@ -72,7 +72,7 @@
 
 
 
-  <base href="https://deploymentshare.com/articles/bp-forticlient/" />
+  <base href="https://www.deploymentshare.com/articles/bp-forticlient/" />
 
 
 
@@ -163,8 +163,8 @@
       
       
       
-        <meta property="og:image" content="https://deploymentshare.com/images/title/bp-forticlient.png" />
-        <meta name="twitter:image" content="https://deploymentshare.com/images/title/bp-forticlient.png" />
+        <meta property="og:image" content="https://www.deploymentshare.com/images/title/bp-forticlient.png" />
+        <meta name="twitter:image" content="https://www.deploymentshare.com/images/title/bp-forticlient.png" />
         <meta
           name="twitter:card"
           content="summary
@@ -195,7 +195,7 @@
 <meta property="og:title" content="Logon to Autopilot HAADJ Devices Using FortiClient VPN" />
 <meta property="og:description" content="Visit www.deploymentshare.com to find out more" />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="https://deploymentshare.com/articles/bp-forticlient/" />
+<meta property="og:url" content="https://www.deploymentshare.com/articles/bp-forticlient/" />
 
 
 <meta name="twitter:title" content="Logon to Autopilot HAADJ Devices Using FortiClient VPN" />
@@ -295,7 +295,7 @@ if (!doNotTrack) {
 
 
 <script>
-  let indexURL = "https://deploymentshare.com/searchindex.json";
+  let indexURL = "https://www.deploymentshare.com/searchindex.json";
   let includeSectionsInSearch = ["articles","apps"];
   let no_results_for = "0 results for";
   let empty_search_results_placeholder = "Type something to search..";
@@ -19290,7 +19290,7 @@ header {
               
                 
                   <li class="nav-item">
-                    <a class="nav-link" href="https://deploymentshare.com/categories/intune/"
+                    <a class="nav-link" href="https://www.deploymentshare.com/categories/intune/"
                       >Intune</a
                     >
                   </li>
@@ -19298,7 +19298,7 @@ header {
               
                 
                   <li class="nav-item">
-                    <a class="nav-link" href="https://deploymentshare.com/categories/powerbi/"
+                    <a class="nav-link" href="https://www.deploymentshare.com/categories/powerbi/"
                       >PowerBI</a
                     >
                   </li>
@@ -19306,7 +19306,7 @@ header {
               
                 
                   <li class="nav-item">
-                    <a class="nav-link" href="https://deploymentshare.com/categories/configuration-manager/"
+                    <a class="nav-link" href="https://www.deploymentshare.com/categories/configuration-manager/"
                       >ConfigMgr</a
                     >
                   </li>
@@ -19363,7 +19363,7 @@ header {
               
                 
                   <li class="nav-item">
-                    <a class="nav-link" href="https://deploymentshare.com/apps/"
+                    <a class="nav-link" href="https://www.deploymentshare.com/apps/"
                       >Apps</a
                     >
                   </li>
@@ -19371,7 +19371,7 @@ header {
               
                 
                   <li class="nav-item">
-                    <a class="nav-link" href="https://deploymentshare.com/author/jonathan-fallis/"
+                    <a class="nav-link" href="https://www.deploymentshare.com/author/jonathan-fallis/"
                       >About</a
                     >
                   </li>
@@ -19595,51 +19595,51 @@ header {
           <div class="content"><p>I recently had a customer who uses FortiClient as their VPN solution, and they have recently embarked on setting up Hybrid AAD.  We set their tenant up, sorted out licensing and I started to put in the fundamental elements to begin the journey to using Autopilot for provisioning devices.  I had undertaken setting up AAD connect and using IDFix to remediate any issues, such as UPN suffixes for end-users via PowerShell, and we were ready to go.  Equally, I had made them an Intune Win32app for FortiClient, and this installed and removed just fine using PSADT.  I had already tested the Autopilot process and things were looking good.</p>
 <p>Navigating to endpoint.microsoft.com and under “Windows Autopilot deployment profiles” I have two Hybrid Azure AD Joined profiles set up for the two scenarios my customer has unique to them.  I have packaged up some apps (all using PSADT) and they have all been tested as working so I now want to run through the Autopilot process, have the apps install, join the machine to the domain using the Intune Connector and be faced with a login screen.
 I can only do this however if I use the optional feature (currently public preview at the time of writing this article) of “Skip AD Connectivity check (preview)”</p>
-<p><img src="https://deploymentshare.com/articles/bp-forticlient/articles/bp-forticlient/img/Fortinet1_huc6e0d95d01669b381177d73b02724e97_8810_filter_10231270277966898346.png#centre" alt="Alt Text"  /></p>
+<p><img src="https://www.deploymentshare.com/articles/bp-forticlient/articles/bp-forticlient/img/Fortinet1_huc6e0d95d01669b381177d73b02724e97_8810_filter_10231270277966898346.png#centre" alt="Alt Text"  /></p>
 <p>Essentially all this does is to ignore looking for a domain controller and continue through the rest of the autopilot process.  Normally, its going to need to be able to see a domain controller to authenticate me for the first time and thus create me a local profile which, in future, I can use to log on to the machine, offline, should there not be a domain controller in sight.  And so historically, it looks for one and bombs the Autopilot process if it doesn’t find one.  This option will skip that check and let it run through right to the login page. Although remember, if you cant connect some sort of VPN or have that line-of-sight, you simply wont be able to log on with your domain credentials outside of the corporate network.</p>
 <p>I tested this.  It works.  I cant log in.</p>
 <p>So now I need to work on the FortiClient App which I intend to use to connect a VPN before logon.  Its in Intune as a Win32 app so any configurations I need I should be able to just add to the script, redo the content and have it deploy.  I need to ensure my settings are retained and deployed with the Intune app so I start digging around and trying to find out where they are stored.</p>
 <p>I install a clean version of Fortinet Client (in my case its version 6.0.9) onto a test VM and I configure it to how I want it.  I load up the client and select to unlock the settings first..</p>
-<p><img src="https://deploymentshare.com/articles/bp-forticlient/articles/bp-forticlient/img/Fortinet2_hu2069cca1dc2ef9dc42621a171c7e3ff8_59784_filter_13411032974091526952.png#centre" alt="Alt Text"  /></p>
+<p><img src="https://www.deploymentshare.com/articles/bp-forticlient/articles/bp-forticlient/img/Fortinet2_hu2069cca1dc2ef9dc42621a171c7e3ff8_59784_filter_13411032974091526952.png#centre" alt="Alt Text"  /></p>
 <p>Then I proceed to untick what options I don’t require and making sure to tick the box for “Enable VPN before logon” (Vital!)</p>
-<p><img src="https://deploymentshare.com/articles/bp-forticlient/articles/bp-forticlient/img/Fortinet3_hu413bdce357b5fca8c599e8268d032729_89128_filter_10709131083816279907.png#centre" alt="Alt Text"  /></p>
+<p><img src="https://www.deploymentshare.com/articles/bp-forticlient/articles/bp-forticlient/img/Fortinet3_hu413bdce357b5fca8c599e8268d032729_89128_filter_10709131083816279907.png#centre" alt="Alt Text"  /></p>
 <p>It is stated in the Microsoft Documentation that if your VPN solution supports connection before logon, then you should be able to make this work with any VPN solution.  Previously there were named supported vendors.  Worth noting.</p>
 <p>Next we’re going to go to “Remote Access” and then “Configure VPN” to set up our base details for the VPN Connection</p>
-<p><img src="https://deploymentshare.com/articles/bp-forticlient/articles/bp-forticlient/img/Fortinet4_hua59eebb0d795e97d866f45ee45b94306_67519_filter_3742702490277752336.png#centre" alt="Alt Text"  /></p>
+<p><img src="https://www.deploymentshare.com/articles/bp-forticlient/articles/bp-forticlient/img/Fortinet4_hua59eebb0d795e97d866f45ee45b94306_67519_filter_3742702490277752336.png#centre" alt="Alt Text"  /></p>
 <p>Then I’m going to configure my VPN, give it a name, the gateway IP and the port number.  I just made up the below for illustration purposes so don’t shoot me if I cant use that port or that 1.2.3.4 isn’t a true IP address , you get the idea.  I’m also going to leave “Prompt on login” selected rather than saving credentials.</p>
-<p><img src="https://deploymentshare.com/articles/bp-forticlient/articles/bp-forticlient/img/Fortinet5_hu953ddf135395a111d3f96e520106c085_6685_filter_10091584329822813984.png#centre" alt="Alt Text"  /></p>
+<p><img src="https://www.deploymentshare.com/articles/bp-forticlient/articles/bp-forticlient/img/Fortinet5_hu953ddf135395a111d3f96e520106c085_6685_filter_10091584329822813984.png#centre" alt="Alt Text"  /></p>
 <p>And finally hit save.</p>
 <p>So we now have the basics configured.</p>
 <p>Next job was top somehow export that setup and have it deploy with the app deployed to the Autopilot profile.  So I searched the registry and found where it was, the details are stored in <strong>HKEY_LOCAL_MACHINE\SOFTWARE\Fortinet\FortiClient\Sslvpn\Tunnels\My Test VPN</strong></p>
 <p>Great! So I export the key to a .reg file (the one pointed to in this image) and using my PSADT app I made I will add this during the “post-Installation” section.</p>
-<p><img src="https://deploymentshare.com/articles/bp-forticlient/articles/bp-forticlient/img/Fortinet6_huf308e7f7b88b9c7c43a7d607126229ac_46614_filter_9778168364898729693.png#centre" alt="Alt Text"  /></p>
+<p><img src="https://www.deploymentshare.com/articles/bp-forticlient/articles/bp-forticlient/img/Fortinet6_huf308e7f7b88b9c7c43a7d607126229ac_46614_filter_9778168364898729693.png#centre" alt="Alt Text"  /></p>
 <p>Here is the code in my PSADT Script..</p>
-<p><img src="https://deploymentshare.com/articles/bp-forticlient/articles/bp-forticlient/img/Fortinet7_hu7b9a298fd5bb63ddd5fdbfa7eb711d63_37423_filter_7684620160839673343.png#centre" alt="Alt Text"  /></p>
+<p><img src="https://www.deploymentshare.com/articles/bp-forticlient/articles/bp-forticlient/img/Fortinet7_hu7b9a298fd5bb63ddd5fdbfa7eb711d63_37423_filter_7684620160839673343.png#centre" alt="Alt Text"  /></p>
 <p>So essentially using the existing reg.exe to import the .reg file you exported.  You could break this down and have the keys created with PowerShell, but I was lazy and used this method.  There are a few ways this can improve, I’m sure.</p>
 <p>I tested this with my PSADT script and it worked, so it now needs testing with Autopilot.  I updated the Intune app content by creating a new .intunewin file and uploaded it ready to go. I added the app deployment where it needed to be and reset a laptop ready for the autopilot test.  Next few pictures were taken from my phone so not the greatest. but here is the experience.</p>
 <p>On the test device I added it to my network</p>
-<p><img src="https://deploymentshare.com/articles/bp-forticlient/articles/bp-forticlient/img/Fortinet8_hu0626ef9c021c705e7c383a7256e12009_1008194_filter_1935712679009144811.png#centre" alt="Alt Text"  /></p>
+<p><img src="https://www.deploymentshare.com/articles/bp-forticlient/articles/bp-forticlient/img/Fortinet8_hu0626ef9c021c705e7c383a7256e12009_1008194_filter_1935712679009144811.png#centre" alt="Alt Text"  /></p>
 <p>I can see the Autopilot profile has pulled in and it requests I logon</p>
-<p><img src="https://deploymentshare.com/articles/bp-forticlient/articles/bp-forticlient/img/Fortinet9_hu52d74c7e370e9bc1ee8f20e165b22430_1253653_filter_13163453388872268430.png#centre" alt="Alt Text"  /></p>
+<p><img src="https://www.deploymentshare.com/articles/bp-forticlient/articles/bp-forticlient/img/Fortinet9_hu52d74c7e370e9bc1ee8f20e165b22430_1253653_filter_13163453388872268430.png#centre" alt="Alt Text"  /></p>
 <p>Autopilot kicks off doing its thing…</p>
-<p><img src="https://deploymentshare.com/articles/bp-forticlient/articles/bp-forticlient/img/Fortinet10_hu805d5026b428e8233239a8f365722981_996645_filter_7922797552570807459.png#centre" alt="Alt Text"  /></p>
+<p><img src="https://www.deploymentshare.com/articles/bp-forticlient/articles/bp-forticlient/img/Fortinet10_hu805d5026b428e8233239a8f365722981_996645_filter_7922797552570807459.png#centre" alt="Alt Text"  /></p>
 <p>OK, so now that’s finished I’m faced with a logon screen, first thing I do is click on sign on options</p>
-<p><img src="https://deploymentshare.com/articles/bp-forticlient/articles/bp-forticlient/img/Fortinet11_huab848642d9d01cb060ed3fb54b6b6f80_1560179_filter_7342647360522466305.png#centre" alt="Alt Text"  /></p>
+<p><img src="https://www.deploymentshare.com/articles/bp-forticlient/articles/bp-forticlient/img/Fortinet11_huab848642d9d01cb060ed3fb54b6b6f80_1560179_filter_7342647360522466305.png#centre" alt="Alt Text"  /></p>
 <p>I can see here FortiClient has indeed installed during autopilot (WIN!)</p>
-<p><img src="https://deploymentshare.com/articles/bp-forticlient/articles/bp-forticlient/img/Fortinet12_hude897cd3508165be2deaf244bec1866c_1564723_filter_13398690886796359384.png#centre" alt="Alt Text"  /></p>
+<p><img src="https://www.deploymentshare.com/articles/bp-forticlient/articles/bp-forticlient/img/Fortinet12_hude897cd3508165be2deaf244bec1866c_1564723_filter_13398690886796359384.png#centre" alt="Alt Text"  /></p>
 <p>I have to scroll down and untick the box for “Use my Windows credentials for VPN” because my username and password for the VPN is indeed, separate to my windows creds</p>
-<p><img src="https://deploymentshare.com/articles/bp-forticlient/articles/bp-forticlient/img/Fortinet13_hu6631d04bf9f5ac80749e0a1429788fd3_1395423_filter_4898193319066755649.png#centre" alt="Alt Text"  /></p>
+<p><img src="https://www.deploymentshare.com/articles/bp-forticlient/articles/bp-forticlient/img/Fortinet13_hu6631d04bf9f5ac80749e0a1429788fd3_1395423_filter_4898193319066755649.png#centre" alt="Alt Text"  /></p>
 <p>This opens up the creds box for the VPN</p>
-<p><img src="https://deploymentshare.com/articles/bp-forticlient/articles/bp-forticlient/img/Fortinet14_hufa2f3e13641f851f8562cb1d4ccc9752_1255600_filter_12578305046950144739.png#centre" alt="Alt Text"  /></p>
+<p><img src="https://www.deploymentshare.com/articles/bp-forticlient/articles/bp-forticlient/img/Fortinet14_hufa2f3e13641f851f8562cb1d4ccc9752_1255600_filter_12578305046950144739.png#centre" alt="Alt Text"  /></p>
 <p>Then I scroll back up and input my windows credentials for my on prem domain account and attempt to log in (fingers crossed)</p>
-<p><img src="https://deploymentshare.com/articles/bp-forticlient/articles/bp-forticlient/img/Fortinet15_hu67522684a4a2bce0b633aaf0e377425c_1004365_filter_7004496267333561791.png#centre" alt="Alt Text"  /></p>
-<p><img src="https://deploymentshare.com/articles/bp-forticlient/articles/bp-forticlient/img/Fortinet16_hua88a348f99a260fc1f78d13c10b4964b_994018_filter_6527366902697209522.png#centre" alt="Alt Text"  /></p>
-<p><img src="https://deploymentshare.com/articles/bp-forticlient/articles/bp-forticlient/img/Fortinet17_huda698e0936cae6fd2cb6ffeee78b093f_888744_filter_1186849928882363169.png#centre" alt="Alt Text"  /></p>
+<p><img src="https://www.deploymentshare.com/articles/bp-forticlient/articles/bp-forticlient/img/Fortinet15_hu67522684a4a2bce0b633aaf0e377425c_1004365_filter_7004496267333561791.png#centre" alt="Alt Text"  /></p>
+<p><img src="https://www.deploymentshare.com/articles/bp-forticlient/articles/bp-forticlient/img/Fortinet16_hua88a348f99a260fc1f78d13c10b4964b_994018_filter_6527366902697209522.png#centre" alt="Alt Text"  /></p>
+<p><img src="https://www.deploymentshare.com/articles/bp-forticlient/articles/bp-forticlient/img/Fortinet17_huda698e0936cae6fd2cb6ffeee78b093f_888744_filter_1186849928882363169.png#centre" alt="Alt Text"  /></p>
 <p>(I worked with the network provider to get the certificate on the machines during AP which stops this message but this is the message I got before I did this)</p>
-<p><img src="https://deploymentshare.com/articles/bp-forticlient/articles/bp-forticlient/img/Fortinet18_hue521e75c47af1d05de016f8c64a75b52_609813_filter_1826347261449547415.png#centre" alt="Alt Text"  /></p>
+<p><img src="https://www.deploymentshare.com/articles/bp-forticlient/articles/bp-forticlient/img/Fortinet18_hue521e75c47af1d05de016f8c64a75b52_609813_filter_1826347261449547415.png#centre" alt="Alt Text"  /></p>
 <p>BIG WIN!!!</p>
 <p>Aaaaand Boom…..  I’m logged in.</p>
-<p><img src="https://deploymentshare.com/articles/bp-forticlient/articles/bp-forticlient/img/Fortinet19_hue253c26fdc33019e3661d09753faaf09_978491_filter_6451378970313135575.png#centre" alt="Alt Text"  /></p>
+<p><img src="https://www.deploymentshare.com/articles/bp-forticlient/articles/bp-forticlient/img/Fortinet19_hue253c26fdc33019e3661d09753faaf09_978491_filter_6451378970313135575.png#centre" alt="Alt Text"  /></p>
 <p>Very happy with this.  What I would like you to take away from this blog post is that this methodology, in theory, could be used for any VPN provider.  As long as you can export your profile and have it install with the client during Autopilot and it support connection before logon, this could be implemented for any VPN solution.</p>
 <p>I would love to hear if you have got this working with any other VPN client</p>
 <p>Thanks for reading <br>
@@ -20061,7 +20061,7 @@ Jonathan.</p>
     "@type": "Article",
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": "https:\/\/deploymentshare.com\/articles\/bp-forticlient\/"
+      "@id": "https:\/\/www.deploymentshare.com\/articles\/bp-forticlient\/"
     },
     "headline": "Logon to Autopilot HAADJ Devices Using FortiClient VPN",
     "description": "",
@@ -20170,15 +20170,15 @@ Jonathan.</p>
         <h6 class="mb-4 fw-semibold">Quick Links</h6>
         <ul class="list-unstyled footer-list">
           
-          <li><a href="https://deploymentshare.com/apps/">Apps</a></li>
+          <li><a href="https://www.deploymentshare.com/apps/">Apps</a></li>
           
-          <li><a href="https://deploymentshare.com/categories/configuration-manager/">ConfigMgr</a></li>
+          <li><a href="https://www.deploymentshare.com/categories/configuration-manager/">ConfigMgr</a></li>
           
-          <li><a href="https://deploymentshare.com/categories/intune/">Intune</a></li>
+          <li><a href="https://www.deploymentshare.com/categories/intune/">Intune</a></li>
           
-          <li><a href="https://deploymentshare.com/categories/powerbi/">PowerBI</a></li>
+          <li><a href="https://www.deploymentshare.com/categories/powerbi/">PowerBI</a></li>
           
-          <li><a href="https://deploymentshare.com/privacy-policy/">Privacy Policy</a></li>
+          <li><a href="https://www.deploymentshare.com/privacy-policy/">Privacy Policy</a></li>
           
         </ul>
       </div>
