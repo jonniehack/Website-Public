@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Forticlient on Deploymentshare | Personal Tech Blog</title>
-    <link>https://www.deploymentshare.com/tags/forticlient/</link>
+    <link>https://deploymentshare.com/tags/forticlient/</link>
     <description>Recent content in Forticlient on Deploymentshare | Personal Tech Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 15 Sep 2020 00:00:00 +0100</lastBuildDate>
-    <atom:link href="https://www.deploymentshare.com/tags/forticlient/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://deploymentshare.com/tags/forticlient/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Logon to Autopilot HAADJ Devices Using FortiClient VPN</title>
-      <link>https://www.deploymentshare.com/articles/bp-forticlient/</link>
+      <link>https://deploymentshare.com/articles/bp-forticlient/</link>
       <pubDate>Tue, 15 Sep 2020 00:00:00 +0100</pubDate>
-      <guid>https://www.deploymentshare.com/articles/bp-forticlient/</guid>
+      <guid>https://deploymentshare.com/articles/bp-forticlient/</guid>
       <description>I recently had a customer who uses FortiClient as their VPN solution, and they have recently embarked on setting up Hybrid AAD. We set their tenant up, sorted out licensing and I started to put in the fundamental elements to begin the journey to using Autopilot for provisioning devices. I had undertaken setting up AAD connect and using IDFix to remediate any issues, such as UPN suffixes for end-users via PowerShell, and we were ready to go. Equally, I had made them an Intune Win32app for FortiClient, and this installed and removed just fine using PSADT. I had already tested the Autopilot process and things were looking good.</description>
     </item>
   </channel>
