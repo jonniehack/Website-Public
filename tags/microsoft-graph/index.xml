@@ -6,28 +6,35 @@
     <description>Recent content in Microsoft Graph on Deploymentshare - Personal Tech Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 19 Mar 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 17 May 2024 00:00:00 +0100</lastBuildDate>
     <atom:link href="https://deploymentshare.com/tags/microsoft-graph/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Intune and PowerBI Deep Dive - Part 8 - Autopilot Devices</title>
+      <link>https://deploymentshare.com/articles/bp-8-pbi-intune/</link>
+      <pubDate>Fri, 17 May 2024 00:00:00 +0100</pubDate>
+      <guid>https://deploymentshare.com/articles/bp-8-pbi-intune/</guid>
+      <description>In this post we&amp;rsquo;ll look at pulling in details about Autopilot devices. Our list call from Managed Devices, covered in part 6 , gives us a column to tell us whether that device is autopilot enrolled but what if we want more information than that? What if we want to know the group tag it uses or whether it has an autopilot profile assigned to it. Lets go get that!&#xA;Quick Links Series Menu Part 1 - Where to Start Part 2 - Application Registration Part 3 - Exploring Graph URLs Part 4 - Get-BearerToken Part 5 - Heavy Lifting Part 6 - Managed Devices Part 7 - Managed Applications Part 8 - Autopilot Devices Coming soon!</description>
+    </item>
     <item>
       <title>Intune and PowerBI Deep Dive - Part 7 - Managed Applications</title>
       <link>https://deploymentshare.com/articles/bp-7-pbi-intune/</link>
       <pubDate>Tue, 19 Mar 2024 00:00:00 +0000</pubDate>
       <guid>https://deploymentshare.com/articles/bp-7-pbi-intune/</guid>
-      <description>In this post we&amp;rsquo;ll look at Applications within Intune. The Graph response for this will have some additions for applications at the bottom for cross referencing purposes so check those out too. Especially if you use PatchMyPC.&#xA;Lets get to it!&#xA;Quick Links Series Menu Part 1 - Where to Start Part 2 - Application Registration Part 3 - Exploring Graph URLs Part 4 - Get-BearerToken Part 5 - Heavy Lifting Part 6 - Managed Devices Part 7 - Managed Applications Coming soon! - Autopilot Devices Table Of Contents Graph URL Global Pre-requisites Chose your method Create the query Explanation Relationships Supported Product Lists Additional Next post Graph URL The graph URL we are using in this section is deviceAppManagement/mobileApps/.</description>
+      <description>In this post we&amp;rsquo;ll look at Applications within Intune. The Graph response for this will have some additions for applications at the bottom for cross referencing purposes so check those out too. Especially if you use PatchMyPC.&#xA;Lets get to it!&#xA;Quick Links Series Menu Part 1 - Where to Start Part 2 - Application Registration Part 3 - Exploring Graph URLs Part 4 - Get-BearerToken Part 5 - Heavy Lifting Part 6 - Managed Devices Part 7 - Managed Applications Part 8 - Autopilot Devices Coming soon! - Connectors and Tokens Table Of Contents Graph URL Global Pre-requisites Chose your method Create the query Explanation Relationships Supported Product Lists Additional Next post Graph URL The graph URL we are using in this section is deviceAppManagement/mobileApps/.</description>
     </item>
     <item>
       <title>Intune and PowerBI Deep Dive - Part 6 - Managed Devices</title>
       <link>https://deploymentshare.com/articles/bp-6-pbi-intune/</link>
       <pubDate>Sat, 17 Feb 2024 00:00:00 +0000</pubDate>
       <guid>https://deploymentshare.com/articles/bp-6-pbi-intune/</guid>
-      <description>In this post we are finally going to look at getting some data into PowerBI to play around with. We are going to use a query in PowerBI to go and retrieve our managed devices information. Remember discussing pagination for APIs? Should you have more than 1000 devices we&amp;rsquo;re also going to need to consider Pagination but don&amp;rsquo;t worry there are three methods to do this discussed below.&#xA;Quick Links Series Menu Part 1 - Where to Start Part 2 - Application Registration Part 3 - Exploring Graph URLs Part 4 - Get-BearerToken Part 5 - Heavy Lifting Part 6 - Managed Devices Part 7 - Managed Applications Coming soon!</description>
+      <description>In this post we are finally going to look at getting some data into PowerBI to play around with. We are going to use a query in PowerBI to go and retrieve our managed devices information. Remember discussing pagination for APIs? Should you have more than 1000 devices we&amp;rsquo;re also going to need to consider Pagination but don&amp;rsquo;t worry there are three methods to do this discussed below.&#xA;Quick Links Series Menu Part 1 - Where to Start Part 2 - Application Registration Part 3 - Exploring Graph URLs Part 4 - Get-BearerToken Part 5 - Heavy Lifting Part 6 - Managed Devices Part 7 - Managed Applications Part 8 - Autopilot Devices Coming soon!</description>
     </item>
     <item>
       <title>Intune and PowerBI Deep Dive - Part 5 - Heavy Lifting</title>
       <link>https://deploymentshare.com/articles/bp-5-pbi-intune/</link>
       <pubDate>Mon, 05 Feb 2024 00:00:00 +0000</pubDate>
       <guid>https://deploymentshare.com/articles/bp-5-pbi-intune/</guid>
-      <description>In this post we&amp;rsquo;ll take a look at using Logic Apps and OData.Feed to do the &amp;lsquo;heavy lifting&amp;rsquo; for us. By heavy lifting, essentially this is handling pagination of the Microsoft Graph Call. Using the app registration permissions for authorisation to the data, then processing the result in order to make sure we have all the data we need and finally passing the results back to PowerBI so that its handled outside of PowerBI. PowerBI only cares about the data.&#xA;Quick Links Series Menu Part 1 - Where to Start Part 2 - Application Registration Part 3 - Exploring Graph URLs Part 4 - Get-BearerToken Part 5 - Heavy Lifting Part 6 - Managed Devices Part 7 - Managed Applications Coming soon!</description>
+      <description>In this post we&amp;rsquo;ll take a look at using Logic Apps and OData.Feed to do the &amp;lsquo;heavy lifting&amp;rsquo; for us. By heavy lifting, essentially this is handling pagination of the Microsoft Graph Call. Using the app registration permissions for authorisation to the data, then processing the result in order to make sure we have all the data we need and finally passing the results back to PowerBI so that its handled outside of PowerBI. PowerBI only cares about the data.&#xA;Quick Links Series Menu Part 1 - Where to Start Part 2 - Application Registration Part 3 - Exploring Graph URLs Part 4 - Get-BearerToken Part 5 - Heavy Lifting Part 6 - Managed Devices Part 7 - Managed Applications Part 8 - Autopilot Devices Coming soon!</description>
     </item>
     <item>
       <title>Intune and PowerBI Deep Dive - Part 4 - Get-BearerToken</title>
@@ -41,14 +48,14 @@
       <link>https://deploymentshare.com/articles/bp-3-pbi-intune/</link>
       <pubDate>Sat, 20 Jan 2024 00:00:00 +0000</pubDate>
       <guid>https://deploymentshare.com/articles/bp-3-pbi-intune/</guid>
-      <description>Next up, we&amp;rsquo;re going to explore the Graph and the URLs and permissions, in this post, continuing on from Part 1 and Part 2 , our next step is begin to firstly understand our path to getting Intune Data into PowerBI, which is going to be via direct Microsoft Graph calls - Remembering of course that the Intune Data warehouse did not meet our requirements. We are also going to leverage an application registration to access the data we want to see. This is gonna be a BIG post, so make sure you have plenty of time to read.&#xA;Quick Links Series Menu Part 1 - Where to Start Part 2 - Application Registration Part 3 - Exploring Graph URLs Part 4 - Get-BearerToken Part 5 - Heavy Lifting Part 6 - Managed Devices Part 7 - Managed Applications Coming soon!</description>
+      <description>Next up, we&amp;rsquo;re going to explore the Graph and the URLs and permissions, in this post, continuing on from Part 1 and Part 2 , our next step is begin to firstly understand our path to getting Intune Data into PowerBI, which is going to be via direct Microsoft Graph calls - Remembering of course that the Intune Data warehouse did not meet our requirements. We are also going to leverage an application registration to access the data we want to see. This is gonna be a BIG post, so make sure you have plenty of time to read.&#xA;Quick Links Series Menu Part 1 - Where to Start Part 2 - Application Registration Part 3 - Exploring Graph URLs Part 4 - Get-BearerToken Part 5 - Heavy Lifting Part 6 - Managed Devices Part 7 - Managed Applications Part 8 - Autopilot Devices Coming soon!</description>
     </item>
     <item>
       <title>Intune and PowerBI Deep Dive - Part 2 - Application Registration</title>
       <link>https://deploymentshare.com/articles/bp-2-pbi-intune/</link>
       <pubDate>Sat, 13 Jan 2024 00:00:00 +0000</pubDate>
       <guid>https://deploymentshare.com/articles/bp-2-pbi-intune/</guid>
-      <description>Continuing from Part 1 , our next step is to establish an application registration in Azure. This registration will enable us to utilise its permissions for accessing data on the Microsoft Graph and hopefully then, importing that data into PowerBI. This setup is essential as it serves as a global prerequisite for accomplishing our ultimate objective.&#xA;Quick Links Series Menu Part 1 - Where to Start Part 2 - Application Registration Part 3 - Exploring Graph URLs Part 4 - Get-BearerToken Part 5 - Heavy Lifting Part 6 - Managed Devices Part 7 - Managed Applications Coming soon! - Autopilot Devices Creating the App Reg This is going to be a &amp;lsquo;whistle stop tour&amp;rsquo; of setting up an application registration.</description>
+      <description>Continuing from Part 1 , our next step is to establish an application registration in Azure. This registration will enable us to utilise its permissions for accessing data on the Microsoft Graph and hopefully then, importing that data into PowerBI. This setup is essential as it serves as a global prerequisite for accomplishing our ultimate objective.&#xA;Quick Links Series Menu Part 1 - Where to Start Part 2 - Application Registration Part 3 - Exploring Graph URLs Part 4 - Get-BearerToken Part 5 - Heavy Lifting Part 6 - Managed Devices Part 7 - Managed Applications Part 8 - Autopilot Devices Coming soon!</description>
     </item>
     <item>
       <title>Intune and PowerBI Deep Dive - Part 1 - Where to Start</title>
