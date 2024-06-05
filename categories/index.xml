@@ -6,13 +6,27 @@
     <description>Recent content in Categories on Deploymentshare - Personal Tech Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 17 May 2024 00:00:00 +0100</lastBuildDate>
+    <lastBuildDate>Thu, 23 May 2024 00:00:00 +0100</lastBuildDate>
     <atom:link href="https://deploymentshare.com/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CIS</title>
+      <link>https://deploymentshare.com/categories/cis/</link>
+      <pubDate>Thu, 23 May 2024 00:00:00 +0100</pubDate>
+      <guid>https://deploymentshare.com/categories/cis/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Intune</title>
       <link>https://deploymentshare.com/categories/intune/</link>
-      <pubDate>Fri, 17 May 2024 00:00:00 +0100</pubDate>
+      <pubDate>Thu, 23 May 2024 00:00:00 +0100</pubDate>
       <guid>https://deploymentshare.com/categories/intune/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Security</title>
+      <link>https://deploymentshare.com/categories/security/</link>
+      <pubDate>Thu, 23 May 2024 00:00:00 +0100</pubDate>
+      <guid>https://deploymentshare.com/categories/security/</guid>
       <description></description>
     </item>
     <item>

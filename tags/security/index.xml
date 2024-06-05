@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Security on Deploymentshare - Personal Tech Blog</title>
+    <link>https://deploymentshare.com/tags/security/</link>
+    <description>Recent content in Security on Deploymentshare - Personal Tech Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 23 May 2024 00:00:00 +0100</lastBuildDate>
+    <atom:link href="https://deploymentshare.com/tags/security/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CIS Intune Baselines - What do they break?</title>
+      <link>https://deploymentshare.com/articles/bp-cis/</link>
+      <pubDate>Thu, 23 May 2024 00:00:00 +0100</pubDate>
+      <guid>https://deploymentshare.com/articles/bp-cis/</guid>
+      <description>(And yes I know&amp;hellip;. AI Generated blog post images are beginning to get a bit cringe&amp;hellip; but I actually liked this one so I rolled with it)&#xA;Hello again folks, today we&amp;rsquo;re talking CIS. What is it and more specifically what doe sit break? Here in the UK, everyone talks about NCSC baselines and adhering to Cyber Essentials or Cyber Essentials Plus and for both of these there is some guidance you can follow with suggestions that help you improve your security posture. NCSC even provide some (old) JSON files for Windows Configuration for configuration profiles you can download and import to Intune to get you started.</description>
+    </item>
+  </channel>
+</rss>
