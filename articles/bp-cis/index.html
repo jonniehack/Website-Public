@@ -19408,8 +19408,6 @@ header {
                 href="/categories/security/" class="ms-1">Security </a>
               ,<a
                 href="/categories/intune/" class="ms-1">Intune </a>
-              ,<a
-                href="/categories/cis/" class="ms-1">Cis </a>
               </li>
             <li class="list-inline-item">Tags : <a
                 href="/tags/security/" class="ms-1">Security </a> ,<a
@@ -19566,9 +19564,9 @@ header {
 
 >JSON files for Windows Configuration</a>
  for configuration profiles you can download and import to Intune to get you started. Great!</p>
-<p>With Center for Internet Security (CIS), however, the settings (as far as I know) are non-negotiable. You cant tweak them. Its a fixed configuration, and you either are or are not CIS compliant. So it got me thinking, &ldquo;but what if I don&rsquo;t agree with the settings you mandate? What if, I put this into my organisation and its too restrictive?&rdquo; Where do we draw the line and say &ldquo;actually, I agree that setting X is more secure than setting Y, but setting Y allows our staff to work better and faster and even though its less secure, its not insecure&rdquo;. Is it subjective? There is a fine line between security and productivity, I suppose.</p>
-<p>(A very silly) Example, my car is safer if I take all four wheels off. It wont crash. I wont get injured and it wont get stolen. This makes the security team happy! But if I need to deliver a pizza before it gets cold and the destination is 10 miles away, this isnt helpful. Staff and customers will be unhappy with this situation, let alone the pineapple on this Pizza (I like it, come at me!). As I now walk to deliver this pizza, in the rain because my car is unusable thanks to the security team, the pizza gets cold and the whole situation is pretty miserable, plus I&rsquo;m never 100% secure. I could get mugged for the pizza or someone could steal my cars shell for scrap metal.</p>
-<p>You get the idea. I digress.</p>
+<p>With Center for Internet Security (CIS), however, the settings (as far as I know) are non-negotiable. You cant tweak them. Its a fixed configuration, and you either are or are not CIS compliant. So it got me thinking, &ldquo;but what if I don&rsquo;t agree with the settings you mandate? What if, I put this into my organisation and its too restrictive?&rdquo; Where do we draw the line? There is a fine line between security and productivity, I suppose.</p>
+<p>Silly Example, my car is safer if I take all four wheels off. It wont crash. I wont get injured and it wont get stolen. This makes the security team happy! But if I need to deliver a pizza before it gets cold and the destination is 10 miles away, this isn&rsquo;t helpful. Staff and customers will be unhappy with this situation.</p>
+<p>You get the idea.</p>
 <p>Looking on the CIS website (at the time I was investigating this) there was a lovely (horrible) spreadsheet you could download with hundreds of settings in it that you would have to configure in Microsoft Intune and deploy to your managed devices, should you want to become CIS compliant. There are now downloadable benchmark policies you can go get and import, wonderful (more on this later).</p>
 <p>I did however, discover this community post: <a href="https://www.everything365.online/2023/09/18/cis-microsoft-intune-for-windows-11-benchmark-in-settings-catalog-json/"
 
@@ -19582,13 +19580,14 @@ header {
 >https://www.everything365.online/2023/09/18/cis-microsoft-intune-for-windows-11-benchmark-in-settings-catalog-json/</a>
 . Here, the author has taken the time to go through that spreadsheet I mentioned earlier and create policies that are available for you to go grab. I decided to go grab these and merge them into 6 policies as I wasn&rsquo;t a fan of the separation.</p>
 <p><img src="https://deploymentshare.com/articles/bp-cis/img/policies_hud6c0358863851e04275ebdac86fcc07e_14689_filter_8914224988673659854.png#centre" alt="CIS policies"  /></p>
-<p>Great! Now I had them condensed, nice and neat and we&rsquo;re ready to prod and poke these to test what works. So for those that don&rsquo;t know, CIS has levels, the idea is that in order to be level two you have level one and two policies together, layered. You may notice I&rsquo;ve named two of my condensed policies level zero, this is because there were two profiles that were not marked as having a level, but seem to contain some basic security. Level zero covers technology like BitLocker, System Guard, Credential Guard Virtualization based security and platform security such as Direct Memory Access (DMA) protection. All these are pretty standard things so level zero should be your baseline, then layer on Level one and two respectively to achieve your desired security posture strength. This is my interpretation, I&rsquo;m not 100% on whether you can be level one compliant, if you dont use level zero but given they are pretty basic, I see no harm in drawing this conclusion.</p>
+<p>Great! Now they are condensed, I was ready to test what works.</p>
+<p>CIS has levels, the idea is that in order to be level two you have level one and two policies together, layered. You may notice I&rsquo;ve named two of my condensed policies level zero, this is because there were two profiles that were not marked as having a level, but seem to contain some basic security. Level zero covers technology like BitLocker, System Guard, Credential Guard Virtualization based security and platform security such as Direct Memory Access (DMA) protection. All these are pretty standard things so level zero should be your baseline, then layer on Level one and two respectively to achieve your desired security posture strength. This is my interpretation, I&rsquo;m not 100% on whether you can be level one compliant, if you don&rsquo;t use level zero but given they are pretty basic, I see no harm in drawing this conclusion.</p>
 <p>The following isn&rsquo;t comprehensive its just what I noticed. There might be other settings that break something important to you so I am going to disclaimer this with <strong>do your own testing</strong> please and to state that I don&rsquo;t work in security. I am happy to take advice from anyone working in this area if they have improvement suggestions for this post.</p>
 <ins>
 <h3 id="level-0---issues">Level 0 - Issues</h3>
 </ins>
 <p>During my testing, the following items were discovered to potentially cause problems to someone who manages Intune Devices;</p>
-<h5 id="policy---cis-l0-bitlocker">Policy - CIS L0 BitLocker</h5>
+<h4 id="policy---cis-l0-bitlocker">Policy - CIS L0 BitLocker</h4>
 <p>This policy <strong>does not</strong> silently encrypt the device. By default this policy requires manual effort from the end user to set a PIN before the device will encrypt. You cannot automate the PIN either, perhaps by setting as the device serial number as per <a href="https://katystech.blog/mem/bitlocker-with-pin"
 
 
@@ -19600,7 +19599,7 @@ header {
 
 >this post</a>
 , and this is because enhanced PINs are not enabled. Now, to me this is a problem, I dont want my end users to have to do something I can automate. It is however, procedural over technical. There will be arguments for and against any automation of BitLocker PINs I&rsquo;m sure, people will not want a pattern that could be worked out, but some folks will not want their end users to take full control because they will forget their PIN, lose their data and hold technical staff responsible. You can fight amongst yourselves on that one.</p>
-<h5 id="policy---cis-l0-nextgeneration">Policy - CIS L0 NextGeneration</h5>
+<h4 id="policy---cis-l0-nextgeneration">Policy - CIS L0 NextGeneration</h4>
 <p>From the Next Generation Policy, the settings in here mostly trigger reboots during the enrollment status page in Autopilot, evidenced by searching out event ID 2800 from the event viewer. Here is a useful reference for this <a href="https://techcommunity.microsoft.com/t5/intune-customer-success/support-tip-troubleshooting-unexpected-reboots-during-new-pc/ba-p/3896960"
 
 
@@ -19612,7 +19611,7 @@ header {
 
 >https://techcommunity.microsoft.com/t5/intune-customer-success/support-tip-troubleshooting-unexpected-reboots-during-new-pc/ba-p/3896960</a>
 .</p>
-<p>
+
 
 
   
@@ -19637,8 +19636,7 @@ header {
   <div class="notice-body"><p>Reboot trigger images from Event Viewer are linked to a CSP so I have made these images clickable.</p></div>
 </div>
 
-<br>
-<a href="https://learn.microsoft.com/en-us/windows/client-management/mdm/policy-csp-deviceguard#configuresystemguardlaunch"
+<p><a href="https://learn.microsoft.com/en-us/windows/client-management/mdm/policy-csp-deviceguard#configuresystemguardlaunch"
 
 
 
@@ -19682,17 +19680,24 @@ header {
 
 ><img src="https://deploymentshare.com/articles/bp-cis/img/4_hubffd8fdfddf85f6779796d8d67eb04ba_3840_filter_17614209524560168200.png#centre" alt="4.png"  /></a>
 </p>
+<p><code>./Device/Vendor/MSFT/Policy/Config/DeviceGuard/ConfigureSystemGuardLaunch</code>
+<code>./Device/Vendor/MSFT/Policy/Config/DeviceGuard/LsaCfgFlag</code>
+<code>./Device/Vendor/MSFT/Policy/Config/DeviceGuard/RequirePlatformSecurityFeatures</code>
+<code>./Device/Vendor/MSFT/Policy/Config/DeviceGuard/EnableVirtualizationBasedSecurity</code></p>
 <p>Despite the number of reboots triggered here however, I did not experience any issues with these. The reboots are triggered and recorded but there are no negative affects.</p>
 <ins>
 <h3 id="level-1---issues">Level 1 - Issues</h3>
 </ins>
 This level includes the base form of security and is rather comprehensive on its own (that is Level 0 and Level 1). During testing, the following items were discovered to potentially cause problems; <br> <br>
-<h5 id="policy---cis-l1-computer">Policy - CIS L1 Computer</h5>
-<p><strong>Setting - Require Private Store Only</strong> - Blocks Microsoft store from working, however, it did not block the deployment of Company Portal and a UWP apps used during testing. This might be historical from the WSfB set up and could be a cause for concern as it has the potential to cause issues. The end user experience was that as soon as you loaded the Microsoft Store, you received a blocked message.
+<h4 id="policy---cis-l1-computer">Policy - CIS L1 Computer</h4>
+<h5 id="setting---require-private-store-only"><strong>Setting - Require Private Store Only</strong></h5>
+<p>Blocks Microsoft store from working, however, it did not block the deployment of Company Portal and a UWP apps used during testing. This might be historical from the WSfB set up and could be a cause for concern as it has the potential to cause issues. The end user experience was that as soon as you loaded the Microsoft Store, you received a blocked message.
 <img src="https://deploymentshare.com/articles/bp-cis/img/5_hu4208a2dc43c9cfec18d7150e09281bd2_18506_filter_15095193780177733496.png#centre" alt="5.png"  /></p>
-<p><strong>Setting - Disable One Drive File Sync</strong> - Blocks Microsoft OneDrive from launching or syncing. Clearly this poses an issue because a lot of customers are using OneDrive to store data, and if they are paying for it via their license agreement it seems wasteful to turn it off. Removing this configuration or setting it to <strong>Sync Enabled</strong>, allows the OneDrive app to launch and silently log in <em>after</em> a reboot.</p>
-<p><strong>Setting - Manage Preview Builds</strong> - This triggers a reboot during ESP.
-<a href="https://learn.microsoft.com/en-us/windows/client-management/mdm/policy-csp-update#managepreviewbuilds"
+<h5 id="setting---disable-one-drive-file-sync"><strong>Setting - Disable One Drive File Sync</strong></h5>
+<p>Blocks Microsoft OneDrive from launching or syncing. Clearly this poses an issue because a lot of customers are using OneDrive to store data, and if they are paying for it via their license agreement it seems wasteful to turn it off. Removing this configuration or setting it to <strong>Sync Enabled</strong>, allows the OneDrive app to launch and silently log in <em>after</em> a reboot.</p>
+<h5 id="setting---manage-preview-builds"><strong>Setting - Manage Preview Builds</strong></h5>
+<p>This triggers a reboot during ESP.</p>
+<p><a href="https://learn.microsoft.com/en-us/windows/client-management/mdm/policy-csp-update#managepreviewbuilds"
 
 
 
@@ -19703,7 +19708,8 @@ This level includes the base form of security and is rather comprehensive on its
 
 ><img src="https://deploymentshare.com/articles/bp-cis/img/6_hub038b33d224b5afdf6014d8f1033bec0_3420_filter_6973148534075766850.png#centre" alt="6.png"  /></a>
 </p>
-<p><strong>Setting - MSS: (AutoAdminLogon) Enable Automatic Logon</strong> - This one did break autopilot and after a very very long battle, I asked online and got help from the community (shout out to <a href="https://x.com/heyradu"
+<h5 id="setting---mss-autoadminlogon-enable-automatic-logon"><strong>Setting - MSS: (AutoAdminLogon) Enable Automatic Logon</strong></h5>
+<p>This one did break autopilot and after a very very long battle, I asked online and got help from the community (shout out to <a href="https://x.com/heyradu"
 
 
 
@@ -19727,10 +19733,12 @@ This level includes the base form of security and is rather comprehensive on its
 </p>
 <p>I believe this is going to be a huge cause for concern, so watch out.</p>
 <h3 id="level-2---issues">Level 2 - Issues</h3>
-<h5 id="policy---cis-l2-computer">Policy - CIS L2 Computer</h5>
-<p><strong>Setting - Turn off access to the store</strong> - Blocks Microsoft store from working, completely. Users will receive the following message whether they try to launch the store or install an app from the store in a web console
+<h4 id="policy---cis-l2-computer">Policy - CIS L2 Computer</h4>
+<h5 id="setting---turn-off-access-to-the-store"><strong>Setting - Turn off access to the store</strong></h5>
+<p>Blocks Microsoft store from working, completely. Users will receive the following message whether they try to launch the store or install an app from the store in a web console
 <img src="https://deploymentshare.com/articles/bp-cis/img/8_hu6c4db5132794d475ab44c9dc7e8b2777_65529_filter_17592523236456562870.png#centre" alt="8.png"  /></p>
-<p><strong>Setting - Disallow Cloud Notification</strong> - Triggers a reboot during Autopilot, which may or may not cause issues. Interesting then that this is called out on the documentation as <strong>No reboots or service restarts are required for this policy to take effect</strong>, however, the reboot trigger is recorded in the event viewer. One to watch out for.
+<h5 id="setting---disallow-cloud-notification"><strong>Setting - Disallow Cloud Notification</strong></h5>
+<p>Triggers a reboot during Autopilot, which may or may not cause issues. Interesting then that this is called out on the documentation as <strong>No reboots or service restarts are required for this policy to take effect</strong>, however, the reboot trigger is recorded in the event viewer. One to watch out for.
 <a href="https://learn.microsoft.com/en-us/windows/client-management/mdm/policy-csp-notifications#disallowcloudnotification"
 
 
@@ -19742,7 +19750,8 @@ This level includes the base form of security and is rather comprehensive on its
 
 ><img src="https://deploymentshare.com/articles/bp-cis/img/9_hu0b9fafac7dc3215823b7e9c1080845b1_3878_filter_10382981317203053872.png#centre" alt="9.png"  /></a>
 </p>
-<p><strong>Setting - Disable Store Originated Apps</strong> - Causes Company Portal to not load for available apps
+<h5 id="setting---disable-store-originated-apps"><strong>Setting - Disable Store Originated Apps</strong></h5>
+<p>Causes Company Portal to not load for available apps
 As above shows a &ldquo;The app has been blocked by your administrator&rdquo; message. Stopping this from loading prevents the user from launching any store originated app, including the Company Portal app so if using the Company Portal is important to you, one to look out for if you stick rigidly to the settings here in CIS</p>
 <h3 id="conclusion">Conclusion</h3>
 <p>In the UK, the uptake for CIS (from my own consultancy experience at least) is rare. If you are considering adhering to CIS I would advise rigorous testing before you jump in. Before I finished my testing and pain with the community policies above, CIS released the <a href="https://workbench.cisecurity.org/files/5179"
@@ -19901,14 +19910,6 @@ Please give it a share for me. <br>
 <div class="widget">
   <h5 class="widget-title"><span>Categories</span></h5>
       <ul class="list-unstyled widget-list">
-          <li>
-            <a
-              href="/categories/cis/"
-              class="d-flex"
-              >Cis
-              <small class="ms-auto">(1)</small></a
-            >
-          </li>
           <li>
             <a
               href="/categories/configuration-manager/"
