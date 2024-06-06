@@ -169,5 +169,12 @@
       <guid>https://deploymentshare.com/tags/deployment/</guid>
       <description></description>
     </item>
+    <item>
+      <title>Test</title>
+      <link>https://deploymentshare.com/tags/test/</link>
+      <pubDate>Fri, 01 Jan 2010 00:00:00 +0000</pubDate>
+      <guid>https://deploymentshare.com/tags/test/</guid>
+      <description></description>
+    </item>
   </channel>
 </rss>
