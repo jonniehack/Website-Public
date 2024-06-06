@@ -106,12 +106,5 @@
       <guid>https://deploymentshare.com/articles/bp-psadt/</guid>
       <description>Hi all, thought I’d write up what I’ve been working on recently, which is re-visiting PowerShell App Deployment Toolkit. A great Resource for ConfigMgr apps, but equally it is supported in Intune so I will be doing a follow-up post on using this with Intune. I know there are plenty of blogs out there on this so this is just my interpretation and is intended to get people started. I know, for example, that the kit comes with a wide variety cmdlets that you can utilise to achieve tasks but this write up is based around getting those a little familiar with PowerShell up to speed with it.</description>
     </item>
-    <item>
-      <title>Test Blog Post</title>
-      <link>https://deploymentshare.com/articles/bp-test/</link>
-      <pubDate>Fri, 01 Jan 2010 00:00:00 +0000</pubDate>
-      <guid>https://deploymentshare.com/articles/bp-test/</guid>
-      <description>Testing Title page for Twitter card.</description>
-    </item>
   </channel>
 </rss>
