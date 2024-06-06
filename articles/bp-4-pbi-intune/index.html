@@ -19602,7 +19602,7 @@ header {
 <hr>
 <h4 id="concept">Concept</h4>
 <p>Here is my a visualisation of where we are so far in this journey</p>
-<p><img src="https://deploymentshare.com/articles/bp-4-pbi-intune/articles/bp-4-pbi-intune/img/PBI-Graph_hue301bd74053ed31a73ca11e5e7c61117_114049_filter_12401691157747517143.png#centre" alt="Alt Text"  /></p>
+<p><img src="https://deploymentshare.com/articles/bp-4-pbi-intune/articles/bp-4-pbi-intune/img/PBI-Graph_hue301bd74053ed31a73ca11e5e7c61117_114049_filter_7055194600751617213.png#centre" alt="Alt Text"  /></p>
 <ul>
 <li>We have three discovery tools at hand to collect data from Intune for our PowerBI report.  <strong>Microsoft Graph Explorer</strong> is our first port of call to get used to the way things are formatted, get used to adding permissions, and formulating a query. <strong>Graph Xray</strong> lets us see what graph urls are needed to see the same data in the Intune console as we browse around, it gives us a great starting block for building up what we want to put into our PowerBI report. And finally <strong>Postman</strong>, a API tool that we set up to use on our environment, giving us the ability to quickly prod the Graph, test calls and see the data after we move on from Graph Explorer.  Remember that Postman will leverage the Application Registration we have in Azure (which inturn uses the Graph) to go get data so isn&rsquo;t tied to a user.  This is what we want to use.</li>
 <li>Our application Registration sits in Azure and acts as the go-between communicating with the Microsoft Graph on our behalf as long as we provide the key authentication elements needed.  These are the <strong>TenantID</strong>, <strong>AppID</strong>, <strong>SecretID</strong>.  We can use these to get an access token to give us access to the data.</li>
@@ -19615,7 +19615,7 @@ header {
 <li>AppID (Text)</li>
 <li>SecretID (Text)</li>
 </ul>
-<p><img src="https://deploymentshare.com/articles/bp-4-pbi-intune/articles/bp-4-pbi-intune/img/Parameters_hu9f4d2f9aabbbf21a8771dee0f674896a_10133_filter_12178820506930664862.png#centre" alt="Alt Text"  /></p>
+<p><img src="https://deploymentshare.com/articles/bp-4-pbi-intune/articles/bp-4-pbi-intune/img/Parameters_hu9f4d2f9aabbbf21a8771dee0f674896a_10133_filter_16896591638677784565.png#centre" alt="Alt Text"  /></p>
 <p>You should have these values from creating your app registration in <a href="/articles/2023/bp-2-pbi-intune"
 
 
@@ -19627,7 +19627,7 @@ header {
 .</p>
 <p>This way we can change the variables if we need to and also reference them in our queries.</p>
 <p>Create a new Group called <strong>Parameters</strong> and place the three parameters within it.</p>
-<p><img src="https://deploymentshare.com/articles/bp-4-pbi-intune/articles/bp-4-pbi-intune/img/Parameters2_hu7b6514aa0191da91eab6145f2d7e890e_3360_filter_9496646853159272469.png#centre" alt="Alt Text"  /></p>
+<p><img src="https://deploymentshare.com/articles/bp-4-pbi-intune/articles/bp-4-pbi-intune/img/Parameters2_hu7b6514aa0191da91eab6145f2d7e890e_3360_filter_14376342401788519895.png#centre" alt="Alt Text"  /></p>
 <p>Next lets create a blank query in PowerBI, then go into advanced editor and paste in the following code (Notice this code references the variables which must be created and populated to work)</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powerquery" data-lang="powerquery"><span style="display:flex;"><span>  <span style="color:#007020;font-weight:bold">let</span>
 </span></span><span style="display:flex;"><span>    Source <span style="color:#666">=</span> (TenantID <span style="color:#007020;font-weight:bold">as</span> text<span style="color:#666">,</span> AppID <span style="color:#007020;font-weight:bold">as</span> text<span style="color:#666">,</span> SecretID <span style="color:#007020;font-weight:bold">as</span> text<span style="color:#666">,</span> Resource <span style="color:#007020;font-weight:bold">as</span> text) <span style="color:#666">=&gt;</span> <span style="color:#007020;font-weight:bold">let</span>
@@ -19773,7 +19773,7 @@ Rename the function to <em><strong>Get-BearerToken</strong></em>, you may notice
 <li>Secret</li>
 <li>Resource (this represents what you want to authenticate against)</li>
 </ul>
-<p><img src="https://deploymentshare.com/articles/bp-4-pbi-intune/articles/bp-4-pbi-intune/img/Function2_hu59c07f28f0a507b8a84cd87653606bf3_4410_filter_9432485236986928432.png#centre" alt="Alt Text"  /></p>
+<p><img src="https://deploymentshare.com/articles/bp-4-pbi-intune/articles/bp-4-pbi-intune/img/Function2_hu59c07f28f0a507b8a84cd87653606bf3_4410_filter_14235003388479098726.png#centre" alt="Alt Text"  /></p>
 <p>Now we&rsquo;ll need to build a query to call this function and return a bearer token for us to use for a graph call.
 Lets create a new query and place the following code at the top of it</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powerquery" data-lang="powerquery"><span style="display:flex;"><span><span style="color:#007020;font-weight:bold">let</span>
@@ -19795,7 +19795,7 @@ Lets create a new query and place the following code at the top of it</p>
 
 >https://graph.microsoft.com/</a>
  when attempting to get a bearer token.  The attempt uses the function and, as you will see, it does indeed return a bearer token.</p>
-<p><img src="https://deploymentshare.com/articles/bp-4-pbi-intune/articles/bp-4-pbi-intune/img/Get-Token_hu61522488b264a469093811af3afbccbe_55677_filter_5283270271445593652.png#centre" alt="Alt Text"  /></p>
+<p><img src="https://deploymentshare.com/articles/bp-4-pbi-intune/articles/bp-4-pbi-intune/img/Get-Token_hu61522488b264a469093811af3afbccbe_55677_filter_4489699600248942888.png#centre" alt="Alt Text"  /></p>
 <p><strong>EXCELLENT!</strong> Now we have code to call for a token, the token is what we need to authenticate against the Graph and bring into PowerBI data from Intune (or any other resource).</p>
 <p>Now, in the <a href="/articles/bp-5-pbi-intune/"
 
