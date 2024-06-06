@@ -19580,7 +19580,17 @@ header {
 >https://www.everything365.online/2023/09/18/cis-microsoft-intune-for-windows-11-benchmark-in-settings-catalog-json/</a>
 . Here, the author has taken the time to go through that spreadsheet I mentioned earlier and create policies that are available for you to go grab. I decided to go grab these and merge them into 6 policies as I wasn&rsquo;t a fan of the separation.</p>
 <p><img src="https://deploymentshare.com/articles/bp-cis/img/policies_hud6c0358863851e04275ebdac86fcc07e_14689_filter_8914224988673659854.png#centre" alt="CIS policies"  /></p>
-<p>Great! Now they are condensed, I was ready to test what works.</p>
+<p>Great! Now they are condensed, I was ready to test what works.  The ones I used are <a href="https://github.com/jonniehack/Website-Content/tree/master/Security%20Baselines/CIS"
+
+
+
+
+ target="_blank"
+ 
+
+
+>on my GitHub</a>
+</p>
 <p>CIS has levels, the idea is that in order to be level two you have level one and two policies together, layered. You may notice I&rsquo;ve named two of my condensed policies level zero, this is because there were two profiles that were not marked as having a level, but seem to contain some basic security. Level zero covers technology like BitLocker, System Guard, Credential Guard Virtualization based security and platform security such as Direct Memory Access (DMA) protection. All these are pretty standard things so level zero should be your baseline, then layer on Level one and two respectively to achieve your desired security posture strength. This is my interpretation, I&rsquo;m not 100% on whether you can be level one compliant, if you don&rsquo;t use level zero but given they are pretty basic, I see no harm in drawing this conclusion.</p>
 <p>The following isn&rsquo;t comprehensive its just what I noticed. There might be other settings that break something important to you so I am going to disclaimer this with <strong>do your own testing</strong> please and to state that I don&rsquo;t work in security. I am happy to take advice from anyone working in this area if they have improvement suggestions for this post.</p>
 <ins>
