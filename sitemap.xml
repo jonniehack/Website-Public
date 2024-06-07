@@ -3,7 +3,10 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://deploymentshare.com/articles/</loc>
-    <lastmod>2024-05-23T00:00:00+01:00</lastmod>
+    <lastmod>2024-06-06T00:00:00+01:00</lastmod>
+  </url><url>
+    <loc>https://deploymentshare.com/</loc>
+    <lastmod>2024-06-06T00:00:00+01:00</lastmod>
   </url><url>
     <loc>https://deploymentshare.com/categories/</loc>
     <lastmod>2024-05-23T00:00:00+01:00</lastmod>
@@ -12,9 +15,6 @@
     <lastmod>2024-05-23T00:00:00+01:00</lastmod>
   </url><url>
     <loc>https://deploymentshare.com/articles/bp-cis/</loc>
-    <lastmod>2024-05-23T00:00:00+01:00</lastmod>
-  </url><url>
-    <loc>https://deploymentshare.com/</loc>
     <lastmod>2024-05-23T00:00:00+01:00</lastmod>
   </url><url>
     <loc>https://deploymentshare.com/tags/intune/</loc>
