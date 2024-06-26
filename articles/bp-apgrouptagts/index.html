@@ -42,7 +42,6 @@
 
 
 
-
 <link rel="manifest" href="/manifest.webmanifest" />
 <meta
   name="msapplication-TileColor"
@@ -50,8 +49,6 @@
 <meta
   name="theme-color"
   content="#fff" />
-
-
 
 
 
@@ -206,8 +203,6 @@
 
 
 
-
-
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-H36JXQVDWY"></script>
 <script>
 var doNotTrack = false;
@@ -218,7 +213,6 @@ if (!doNotTrack) {
 	gtag('config', 'G-H36JXQVDWY', { 'anonymize_ip': false });
 }
 </script>
-
 
 
 
@@ -258,7 +252,6 @@ if (!doNotTrack) {
 
 
 
-
   
 
 
@@ -273,18 +266,13 @@ if (!doNotTrack) {
 
 
 
-
-
-
   
 
 
 
 
 
-
   
-
 
 
 
@@ -296,7 +284,6 @@ if (!doNotTrack) {
   let search_no_results = "0 results for";
   let search_initial_message = "";
 </script>
-
 
 
 
@@ -14374,6 +14361,10 @@ textarea.form-control-lg {
   margin-right: auto !important;
   margin-left: auto !important; }
 
+.my-0 {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important; }
+
 .my-auto {
   margin-top: auto !important;
   margin-bottom: auto !important; }
@@ -17600,7 +17591,7 @@ a:hover {
 
 .content table td,
 .content table th {
-  padding: 0.75rem;
+  padding: 0.25rem;
   vertical-align: top;
   margin-bottom: 0; }
 
@@ -17689,13 +17680,13 @@ a:hover {
 
 .content blockquote {
   color: #696c6d;
-  padding: 1.25rem 2.5rem;
-  border-left: 2px solid #3498db;
-  margin: 2.5rem 0;
+  padding: 0.25rem 1.25rem;
+  border-left: 3px solid #3498db;
+  margin: 1.25rem 0;
   font-weight: bold;
   background: #f0f0f0; }
   .content blockquote p {
-    font-size: 1.25rem !important;
+    font-size: 0.90rem !important;
     margin-bottom: 0 !important; }
 
 .content pre {
@@ -19553,8 +19544,7 @@ header {
  
 
 
->Windows autopilot deployment for existing devices Task sequence</a>
- in configuration manager and modifying that task sequence to set a <a href="https://learn.microsoft.com/en-us/autopilot/enrollment-autopilot"
+>Windows autopilot deployment for existing devices Task sequence</a> in configuration manager and modifying that task sequence to set a <a href="https://learn.microsoft.com/en-us/autopilot/enrollment-autopilot"
 
 
 
@@ -19563,8 +19553,7 @@ header {
  
 
 
->group tag</a>
- during the process.  You may know that traditionally this tasks sequence is used to &lsquo;build&rsquo; devices and have them ready to start the autopilot process.  I had a customer recently that had that very need.  They had purchased a large number of machines that were delivered with Windows 10 installed and not Windows 11.  As the customer was on their Windows 11 uplift journey already they were a bit disappointed to say the least and they opted to create a Configuration Manager task sequence to prep them for autopilot.  That prep process was to include wiping the device and re-loading with Windows 11, adding the device to the tenants autopilot devices AND setting a group tag to drop the device into pre-created groups that control the apps and configurations the devices are going to receive during autopilot.
+>group tag</a> during the process.  You may know that traditionally this tasks sequence is used to &lsquo;build&rsquo; devices and have them ready to start the autopilot process.  I had a customer recently that had that very need.  They had purchased a large number of machines that were delivered with Windows 10 installed and not Windows 11.  As the customer was on their Windows 11 uplift journey already they were a bit disappointed to say the least and they opted to create a Configuration Manager task sequence to prep them for autopilot.  That prep process was to include wiping the device and re-loading with Windows 11, adding the device to the tenants autopilot devices AND setting a group tag to drop the device into pre-created groups that control the apps and configurations the devices are going to receive during autopilot.
 <br /></p>
 <p>So&hellip; lets get started&hellip;
 <br /></p>
@@ -19578,8 +19567,7 @@ header {
  
 
 
->application registration</a>
-.  This app registration allows you to add devices to autopilot and set a group tag.  We will work on the basis of least privilege and only allow the app registration a singular permission.  The application registration will be called upon during out task sequence where we will pass our secret key to allow us to use it.</p>
+>application registration</a>.  This app registration allows you to add devices to autopilot and set a group tag.  We will work on the basis of least privilege and only allow the app registration a singular permission.  The application registration will be called upon during out task sequence where we will pass our secret key to allow us to use it.</p>
 <ul>
 <li>Within the Microsoft Entra ID portal, navigate to App Registrations.</li>
 <li>Create a new Registration and name it as you see fit, in my case I called it &ldquo;Autopilot GroupTag&rdquo; you know, because I&rsquo;m super inventive.
@@ -19607,8 +19595,7 @@ header {
  
 
 
->from here</a>
-.</p>
+>from here</a>.</p>
 <p>I wont regurgitate the task sequence configuration steps from the above documentation, however once you have the task sequence set up we&rsquo;re going to make some adjustments.  We are firstly going to create four variables</p>
 <p><img src="https://deploymentshare.com/articles/bp-apgrouptagts/articles/bp-apgrouptagts/img/BP-APGroupTagTS-8_huef47cc788442ae0003f11ef2023602c6_11321_filter_372627238377315626.png#centre" alt="Alt Text"  /></p>
 <table>
@@ -19639,8 +19626,7 @@ header {
  
 
 
->Get-WindowsAuotpiloInfo</a>
- script during the sequence to &lsquo;just get it done&rsquo;.  But I ran into multiple issues. Namely, installing modules during WinPE because no matter what I tried, I was unable to leverage &ldquo;Install-Module&rdquo; correctly.  The original script has some pre-req modules and so wouldn&rsquo;t run without them present.  This was causing me a headache.  I then found the Recast Software community post (see references) where they used Invoke-Webrequest to pull in the module and then essentially move it to the correct location. This worked a treat.</p>
+>Get-WindowsAuotpiloInfo</a> script during the sequence to &lsquo;just get it done&rsquo;.  But I ran into multiple issues. Namely, installing modules during WinPE because no matter what I tried, I was unable to leverage &ldquo;Install-Module&rdquo; correctly.  The original script has some pre-req modules and so wouldn&rsquo;t run without them present.  This was causing me a headache.  I then found the Recast Software community post (see references) where they used Invoke-Webrequest to pull in the module and then essentially move it to the correct location. This worked a treat.</p>
 <p>Here is the script I used.  Explanation below.</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#60a0b0;font-style:italic">&lt;#
 </span></span></span><span style="display:flex;"><span><span style="color:#60a0b0;font-style:italic">.</span><span style="color:#4070a0;font-style:italic">SYNOPSIS</span><span style="color:#60a0b0;font-style:italic">
@@ -19885,8 +19871,7 @@ Jonathan.</p>
  
 
 
->Upload Autopilot Hardware Hash</a>
-</td>
+>Upload Autopilot Hardware Hash</a></td>
 </tr>
 <tr>
 <td style="text-align:center">Recast Software</td>
@@ -19899,8 +19884,7 @@ Jonathan.</p>
  
 
 
->Enable PSGallery in a Task Sequence</a>
-</td>
+>Enable PSGallery in a Task Sequence</a></td>
 </tr>
 </tbody>
 </table>
@@ -19968,10 +19952,18 @@ Jonathan.</p>
           </li>
           <li>
             <a
+              href="/categories/elements/"
+              class="d-flex"
+              >Elements
+              <small class="ms-auto">(1)</small></a
+            >
+          </li>
+          <li>
+            <a
               href="/categories/intune/"
               class="d-flex"
               >Intune
-              <small class="ms-auto">(14)</small></a
+              <small class="ms-auto">(15)</small></a
             >
           </li>
           <li>
@@ -20011,7 +20003,7 @@ Jonathan.</p>
               href="/categories/security/"
               class="d-flex"
               >Security
-              <small class="ms-auto">(1)</small></a
+              <small class="ms-auto">(2)</small></a
             >
           </li>
           <li>
@@ -20069,8 +20061,18 @@ Jonathan.</p>
             >
           </li>
           <li class="list-inline-item">
+            <a href="/tags/defender/"
+              >Defender</a
+            >
+          </li>
+          <li class="list-inline-item">
             <a href="/tags/deployment/"
               >Deployment</a
+            >
+          </li>
+          <li class="list-inline-item">
+            <a href="/tags/elements/"
+              >Elements</a
             >
           </li>
           <li class="list-inline-item">
@@ -20307,6 +20309,12 @@ Jonathan.</p>
         (Incentive varies) <br>
         <a href="http://aklam.io/gW7TnR">
           <img src="https://th.bing.com/th/id/OIP.uYduACTQfa4YdfPZoBayAgAAAA?rs=1&pid=ImgDetMain" height="50" width="150">  
+        </a>
+        <br>
+        <br>
+        (£100 free shares) <br>
+        <a href="https://www.trading212.com/invite/17tL1b4nlz">
+          <img src="https://mejor.broker/wp-content/uploads/2019/02/trading212-logo.jpg" height="50" width="150">  
         </a>
       </p>      
   </div></div>
@@ -20966,8 +20974,7 @@ background-color: #FF6600
  
 
 
->https://www.deploymentshare.com</a>
- | Built on <a href="https://gohugo.io/"
+>https://www.deploymentshare.com</a> | Built on <a href="https://gohugo.io/"
 
 
 
@@ -20976,8 +20983,7 @@ background-color: #FF6600
  
 
 
->HUGO</a>
- with <a href="https://gethugothemes.com/products/logbook"
+>HUGO</a> with <a href="https://gethugothemes.com/products/logbook"
 
 
 
@@ -20986,8 +20992,7 @@ background-color: #FF6600
  
 
 
->Logbook</a>
- Theme
+>Logbook</a> Theme
         
         | Theme by
         <a target="_blank" rel="noopener noreferrer" href="https://gethugothemes.com/">GetHugoThemes</a>

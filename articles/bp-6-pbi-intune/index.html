@@ -42,7 +42,6 @@
 
 
 
-
 <link rel="manifest" href="/manifest.webmanifest" />
 <meta
   name="msapplication-TileColor"
@@ -50,8 +49,6 @@
 <meta
   name="theme-color"
   content="#fff" />
-
-
 
 
 
@@ -207,8 +204,6 @@
 
 
 
-
-
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-H36JXQVDWY"></script>
 <script>
 var doNotTrack = false;
@@ -219,7 +214,6 @@ if (!doNotTrack) {
 	gtag('config', 'G-H36JXQVDWY', { 'anonymize_ip': false });
 }
 </script>
-
 
 
 
@@ -259,7 +253,6 @@ if (!doNotTrack) {
 
 
 
-
   
 
 
@@ -274,18 +267,13 @@ if (!doNotTrack) {
 
 
 
-
-
-
   
 
 
 
 
 
-
   
-
 
 
 
@@ -297,7 +285,6 @@ if (!doNotTrack) {
   let search_no_results = "0 results for";
   let search_initial_message = "";
 </script>
-
 
 
 
@@ -14375,6 +14362,10 @@ textarea.form-control-lg {
   margin-right: auto !important;
   margin-left: auto !important; }
 
+.my-0 {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important; }
+
 .my-auto {
   margin-top: auto !important;
   margin-bottom: auto !important; }
@@ -17601,7 +17592,7 @@ a:hover {
 
 .content table td,
 .content table th {
-  padding: 0.75rem;
+  padding: 0.25rem;
   vertical-align: top;
   margin-bottom: 0; }
 
@@ -17690,13 +17681,13 @@ a:hover {
 
 .content blockquote {
   color: #696c6d;
-  padding: 1.25rem 2.5rem;
-  border-left: 2px solid #3498db;
-  margin: 2.5rem 0;
+  padding: 0.25rem 1.25rem;
+  border-left: 3px solid #3498db;
+  margin: 1.25rem 0;
   font-weight: bold;
   background: #f0f0f0; }
   .content blockquote p {
-    font-size: 1.25rem !important;
+    font-size: 0.90rem !important;
     margin-bottom: 0 !important; }
 
 .content pre {
@@ -19597,8 +19588,7 @@ header {
  
 
 
->part 1</a>
-)</p>
+>part 1</a>)</p>
 <p><img src="https://deploymentshare.com/articles/bp-6-pbi-intune/articles/bp-6-pbi-intune/img/HandAuthored_hubc08327695612f287237005c45d04fdd_30394_filter_6376394386407354958.png#centre" alt="Alt Text"  /></p>
 <p>We&rsquo;ve already discussed why we don&rsquo;t want to do that, how we should use one of a number of ways to grab our data and even how to discover what we need beforehand. So lets make a start getting some data into PowerBI using those methods.  This first Graph URL is going to get us our managed devices from Intune and use a list call to pull in hardware information.</p>
 
@@ -19728,8 +19718,7 @@ Here is the documentation links;</p>
  
 
 
->v1.0</a>
-</li>
+>v1.0</a></li>
 <li><a href="https://learn.microsoft.com/en-us/graph/api/intune-devices-manageddevice-get?view=graph-rest-beta&amp;tabs=http"
 
 
@@ -19739,8 +19728,7 @@ Here is the documentation links;</p>
  
 
 
->beta</a>
-</li>
+>beta</a></li>
 </ul>
 <h3 id="global-pre-requisites">Global Pre-requisites</h3>
 <ul>
@@ -19751,8 +19739,7 @@ Here is the documentation links;</p>
  
 
 
->Application Registration</a>
- and it is granted <strong>DeviceManagementManagedDevices.Read.All</strong> permissions.</li>
+>Application Registration</a> and it is granted <strong>DeviceManagementManagedDevices.Read.All</strong> permissions.</li>
 <li><a href="https://learn.microsoft.com/en-us/power-query/power-query-query-parameters"
 
 
@@ -19762,8 +19749,7 @@ Here is the documentation links;</p>
  
 
 
->PowerBI parameter</a>
- called <strong>TenantID</strong> is set</li>
+>PowerBI parameter</a> called <strong>TenantID</strong> is set</li>
 <li><a href="https://learn.microsoft.com/en-us/power-query/power-query-query-parameters"
 
 
@@ -19773,8 +19759,7 @@ Here is the documentation links;</p>
  
 
 
->PowerBI parameter</a>
- called <strong>AppID</strong> is set</li>
+>PowerBI parameter</a> called <strong>AppID</strong> is set</li>
 <li><a href="https://learn.microsoft.com/en-us/power-query/power-query-query-parameters"
 
 
@@ -19784,8 +19769,7 @@ Here is the documentation links;</p>
  
 
 
->PowerBI parameter</a>
- called <strong>SecretID</strong> is set</li>
+>PowerBI parameter</a> called <strong>SecretID</strong> is set</li>
 </ul>
 
 
@@ -19869,8 +19853,7 @@ Here is the documentation links;</p>
  
 
 
->Web.Contents</a>
- to call the logic app that does not require a bearer token and instead pass in the parameters  <strong>TenantID</strong>, <strong>AppID</strong> and <strong>SecretID</strong>.  We are also going to build two variables called in our query called <strong>GraphURL</strong> and <strong>Audience</strong>.  The GraphURL we create, is made up of 4 parts.  The <strong>Audience</strong> variable is going to contain one of the four parts, namely the <strong>Endpoint</strong> part. We will need the logic app call URL storing in a Parameter called <strong>MSGraphCall-NoBearer</strong>.  This is the URL we will pass the parameters to and then the logic app will process the call and pass the data back to PowerBI so we can transform the data in order to form a report.
+>Web.Contents</a> to call the logic app that does not require a bearer token and instead pass in the parameters  <strong>TenantID</strong>, <strong>AppID</strong> and <strong>SecretID</strong>.  We are also going to build two variables called in our query called <strong>GraphURL</strong> and <strong>Audience</strong>.  The GraphURL we create, is made up of 4 parts.  The <strong>Audience</strong> variable is going to contain one of the four parts, namely the <strong>Endpoint</strong> part. We will need the logic app call URL storing in a Parameter called <strong>MSGraphCall-NoBearer</strong>.  This is the URL we will pass the parameters to and then the logic app will process the call and pass the data back to PowerBI so we can transform the data in order to form a report.
 <br>
 <br></p>
 <h6 id="pre-requisites">Pre-Requisites</h6>
@@ -19882,8 +19865,7 @@ Here is the documentation links;</p>
  
 
 
->Logic App from this post</a>
- described in <strong>Method 1</strong>, which will handle pagination of the Microsoft Graph call for you.</li>
+>Logic App from this post</a> described in <strong>Method 1</strong>, which will handle pagination of the Microsoft Graph call for you.</li>
 <li>You will need to create a new PowerBI Parameter called <strong>MSGraphCall-NoBearer</strong> and in it, place the HTTP POST URL from the &ldquo;When a HTTP request is received&rdquo; step of your Logic App.</li>
 </ul>
 <h6 id="power-query">Power Query</h6>
@@ -19957,16 +19939,14 @@ Here is the documentation links;</p>
  
 
 
->Web.Contents</a>
- to call the logic app that <strong>does</strong> require a bearer token and pass in the parameters <strong>GraphURL</strong> and <strong>Bearer</strong>. The GraphURL we create, is made up of 4 parts. The bearer token is the result of calling the function we created in <a href="/articles/BP-4-PBI-Intune/"
+>Web.Contents</a> to call the logic app that <strong>does</strong> require a bearer token and pass in the parameters <strong>GraphURL</strong> and <strong>Bearer</strong>. The GraphURL we create, is made up of 4 parts. The bearer token is the result of calling the function we created in <a href="/articles/BP-4-PBI-Intune/"
 
 
 
  
 
 
->part 4</a>
-.  We will need the logic app call URL storing in a Parameter called <strong>MSGraphCall</strong>. This is the URL we will pass the parameters to and then the logic app will process the call and pass the data back to PowerBI so we can transform the data in order to form a report.
+>part 4</a>.  We will need the logic app call URL storing in a Parameter called <strong>MSGraphCall</strong>. This is the URL we will pass the parameters to and then the logic app will process the call and pass the data back to PowerBI so we can transform the data in order to form a report.
 <br>
 <br></p>
 <h6 id="pre-requisites">Pre-Requisites</h6>
@@ -19978,8 +19958,7 @@ Here is the documentation links;</p>
  
 
 
->Get-BearerToken function from this post</a>
-.</li>
+>Get-BearerToken function from this post</a>.</li>
 <li>You have created <a href="/articles/bp-5-pbi-intune"
 
 
@@ -19987,8 +19966,7 @@ Here is the documentation links;</p>
  
 
 
->Logic App from this post</a>
- described in <strong>Method 2</strong>, which will handle pagination of the Microsoft Graph call for you.</li>
+>Logic App from this post</a> described in <strong>Method 2</strong>, which will handle pagination of the Microsoft Graph call for you.</li>
 <li>You will need to create a new PowerBI Parameter called <strong>MSGraphCall</strong> and in it, place the HTTP POST URL from the &ldquo;When a HTTP request is received&rdquo; step of your Logic App.</li>
 </ul>
 <h6 id="power-query">Power Query</h6>
@@ -20063,8 +20041,7 @@ Here is the documentation links;</p>
  
 
 
->OData.Feed v4</a>
- Power Query to call the Graph API.  The OData.Feed support pagination, so the feeds itself will will process the call and then pass the data back to PowerBI (no Logic Apps!) so we can transform the data in order to form a report.</p>
+>OData.Feed v4</a> Power Query to call the Graph API.  The OData.Feed support pagination, so the feeds itself will will process the call and then pass the data back to PowerBI (no Logic Apps!) so we can transform the data in order to form a report.</p>
 <p>First we set up our GraphURL, as we have done with other queries building it with the four elements. Then we call the Get-BearerToken function to get a token for authorisation. Finally we use the OData.Feed (with the bearer token) to authenticate and pull in our results.</p>
 <p>I tend to find, whilst OData.Feeds are OK, I have found them to be a bit hit and miss.  Most of the time, 95% I would say, you&rsquo;ll be fine.  However I have noticed that the OData.Feed doesn&rsquo;t always support everything you could need, sometimes you get errors on columns straight away.  Sometimes you get columns that you need to expand within PowerBI, you get excited about what you might get and then everything comes back as an error.  But don&rsquo;t let that put you off, this is a great way to handle pagination.
 <br>
@@ -20078,8 +20055,7 @@ Here is the documentation links;</p>
  
 
 
->Get-BearerToken function from this post</a>
-.</li>
+>Get-BearerToken function from this post</a>.</li>
 </ul>
 <h6 id="power-query">Power Query</h6>
 <div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-PowerQuery" data-lang="PowerQuery"><span style="display:flex;"><span><span style="color:#007020;font-weight:bold">let</span>
@@ -20183,8 +20159,7 @@ Here is the documentation links;</p>
  
 
 
->Web.Contents</a>
- Power Query.  We can do this because the Logic app can return a JSON format we require, and it is using URLs (or rather, web contents).  In our use case we pass parameters to the call to facilitate one method or the other.  Don&rsquo;t forget you can hard-configure these variables in the Logic app instead of passing them up from PowerBI</li>
+>Web.Contents</a> Power Query.  We can do this because the Logic app can return a JSON format we require, and it is using URLs (or rather, web contents).  In our use case we pass parameters to the call to facilitate one method or the other.  Don&rsquo;t forget you can hard-configure these variables in the Logic app instead of passing them up from PowerBI</li>
 <li>There is a cost involved in using and calling logic apps, please investigate this and see if you are comfortable.  OData.Feeds are free to use.</li>
 <li>From PowerBI&rsquo;s perspective, its undertaking a weblink call and getting back results.  Precisely what it would do if you pointed the console to a cloud hosted CSV, for example, or any other web URL.  This means that from PowerBI&rsquo;s perspective the call is direct to a web link and does not form part of a hand-authored query.</li>
 <li>Finally, data sanitisation may be required after you get the output.  This can take the form of changing the title of columns, changing the type of data or replacing values in the columns.  The more work you put into data sanitisation, the less stress you&rsquo;ll put on the report as the data is santitised before the visuals are created.</li>
@@ -20197,8 +20172,7 @@ Here is the documentation links;</p>
  
 
 
->part 8</a>
- for a relationship with autopilot devices once the query is added to your report.</p>
+>part 8</a> for a relationship with autopilot devices once the query is added to your report.</p>
 <h3 id="next-post">Next post</h3>
 <p>Up next <a href="/articles/bp-7-pbi-intune"
 
@@ -20207,8 +20181,7 @@ Here is the documentation links;</p>
  
 
 
->Applications</a>
-.</p>
+>Applications</a>.</p>
 I appreciate you taking the time to read my blog.<br>
 Please give it a share for me. <br>
 <b>Jonathan</b>
@@ -20282,10 +20255,18 @@ Please give it a share for me. <br>
           </li>
           <li>
             <a
+              href="/categories/elements/"
+              class="d-flex"
+              >Elements
+              <small class="ms-auto">(1)</small></a
+            >
+          </li>
+          <li>
+            <a
               href="/categories/intune/"
               class="d-flex"
               >Intune
-              <small class="ms-auto">(14)</small></a
+              <small class="ms-auto">(15)</small></a
             >
           </li>
           <li>
@@ -20325,7 +20306,7 @@ Please give it a share for me. <br>
               href="/categories/security/"
               class="d-flex"
               >Security
-              <small class="ms-auto">(1)</small></a
+              <small class="ms-auto">(2)</small></a
             >
           </li>
           <li>
@@ -20383,8 +20364,18 @@ Please give it a share for me. <br>
             >
           </li>
           <li class="list-inline-item">
+            <a href="/tags/defender/"
+              >Defender</a
+            >
+          </li>
+          <li class="list-inline-item">
             <a href="/tags/deployment/"
               >Deployment</a
+            >
+          </li>
+          <li class="list-inline-item">
+            <a href="/tags/elements/"
+              >Elements</a
             >
           </li>
           <li class="list-inline-item">
@@ -20621,6 +20612,12 @@ Please give it a share for me. <br>
         (Incentive varies) <br>
         <a href="http://aklam.io/gW7TnR">
           <img src="https://th.bing.com/th/id/OIP.uYduACTQfa4YdfPZoBayAgAAAA?rs=1&pid=ImgDetMain" height="50" width="150">  
+        </a>
+        <br>
+        <br>
+        (£100 free shares) <br>
+        <a href="https://www.trading212.com/invite/17tL1b4nlz">
+          <img src="https://mejor.broker/wp-content/uploads/2019/02/trading212-logo.jpg" height="50" width="150">  
         </a>
       </p>      
   </div></div>
@@ -21280,8 +21277,7 @@ background-color: #FF6600
  
 
 
->https://www.deploymentshare.com</a>
- | Built on <a href="https://gohugo.io/"
+>https://www.deploymentshare.com</a> | Built on <a href="https://gohugo.io/"
 
 
 
@@ -21290,8 +21286,7 @@ background-color: #FF6600
  
 
 
->HUGO</a>
- with <a href="https://gethugothemes.com/products/logbook"
+>HUGO</a> with <a href="https://gethugothemes.com/products/logbook"
 
 
 
@@ -21300,8 +21295,7 @@ background-color: #FF6600
  
 
 
->Logbook</a>
- Theme
+>Logbook</a> Theme
         
         | Theme by
         <a target="_blank" rel="noopener noreferrer" href="https://gethugothemes.com/">GetHugoThemes</a>

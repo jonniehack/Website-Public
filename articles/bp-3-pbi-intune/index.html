@@ -42,7 +42,6 @@
 
 
 
-
 <link rel="manifest" href="/manifest.webmanifest" />
 <meta
   name="msapplication-TileColor"
@@ -50,8 +49,6 @@
 <meta
   name="theme-color"
   content="#fff" />
-
-
 
 
 
@@ -207,8 +204,6 @@
 
 
 
-
-
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-H36JXQVDWY"></script>
 <script>
 var doNotTrack = false;
@@ -219,7 +214,6 @@ if (!doNotTrack) {
 	gtag('config', 'G-H36JXQVDWY', { 'anonymize_ip': false });
 }
 </script>
-
 
 
 
@@ -259,7 +253,6 @@ if (!doNotTrack) {
 
 
 
-
   
 
 
@@ -274,18 +267,13 @@ if (!doNotTrack) {
 
 
 
-
-
-
   
 
 
 
 
 
-
   
-
 
 
 
@@ -297,7 +285,6 @@ if (!doNotTrack) {
   let search_no_results = "0 results for";
   let search_initial_message = "";
 </script>
-
 
 
 
@@ -14375,6 +14362,10 @@ textarea.form-control-lg {
   margin-right: auto !important;
   margin-left: auto !important; }
 
+.my-0 {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important; }
+
 .my-auto {
   margin-top: auto !important;
   margin-bottom: auto !important; }
@@ -17601,7 +17592,7 @@ a:hover {
 
 .content table td,
 .content table th {
-  padding: 0.75rem;
+  padding: 0.25rem;
   vertical-align: top;
   margin-bottom: 0; }
 
@@ -17690,13 +17681,13 @@ a:hover {
 
 .content blockquote {
   color: #696c6d;
-  padding: 1.25rem 2.5rem;
-  border-left: 2px solid #3498db;
-  margin: 2.5rem 0;
+  padding: 0.25rem 1.25rem;
+  border-left: 3px solid #3498db;
+  margin: 1.25rem 0;
   font-weight: bold;
   background: #f0f0f0; }
   .content blockquote p {
-    font-size: 1.25rem !important;
+    font-size: 0.90rem !important;
     margin-bottom: 0 !important; }
 
 .content pre {
@@ -19553,16 +19544,14 @@ header {
  
 
 
->Part 1</a>
- and <a href="/articles/bp-2-pbi-intune/"
+>Part 1</a> and <a href="/articles/bp-2-pbi-intune/"
 
 
 
  
 
 
->Part 2</a>
-, our next step is begin to firstly understand our path to getting Intune Data into PowerBI, which is going to be via direct Microsoft Graph calls - Remembering of course that the Intune Data warehouse did not meet our requirements. We are also going to leverage an application registration to access the data we want to see.  This is gonna be a BIG post, so make sure you have plenty of time to read.</p>
+>Part 2</a>, our next step is begin to firstly understand our path to getting Intune Data into PowerBI, which is going to be via direct Microsoft Graph calls - Remembering of course that the Intune Data warehouse did not meet our requirements. We are also going to leverage an application registration to access the data we want to see.  This is gonna be a BIG post, so make sure you have plenty of time to read.</p>
 <hr>
 <h5 id="quick-links">Quick Links</h5>
 
@@ -19618,8 +19607,7 @@ header {
  
 
 
->Beta</a>
-</li>
+>Beta</a></li>
 <li><a href="https://learn.microsoft.com/en-us/graph/api/overview?view=graph-rest-1.0"
 
 
@@ -19629,8 +19617,7 @@ header {
  
 
 
->v1.0</a>
-</li>
+>v1.0</a></li>
 </ul>
 <p>For arguments sake you can think of these as Test (beta) and Production (v1.0) versions. In test, we have new additions, the urls may work perfectly but there may be limited documentation, or, they may have bugs that are not ironed out yet.  I have lost an hour of my life trying to use a Graph URL from Beta, copied and pasted the url from the documentation and it didn&rsquo;t work.  After the hour, I discovered that changing one upper case &ldquo;D&rdquo; in the Graph URL to a lower case &ldquo;d&rdquo; made it work.  This is the sort of crap you <strong>may</strong> have to deal with using Beta URLs.  Dont let that put you off though, you&rsquo;ll likely use Beta more that v1.0 to be honest but during your testing and building up of your own PowerBI queries, you might find you get the same results using v1.0 and if you do, use that where you can.</p>
 
@@ -19737,8 +19724,7 @@ header {
  
 
 
->Microsoft Graph Explorer</a>
-</h3>
+>Microsoft Graph Explorer</a></h3>
 <p>OK, this is your first port of call if you&rsquo;re new to Graph.  Authenticate to this tool using your <strong>user</strong> account.  Below I will orientate you through the console.</p>
 <p><a href="/simages/bp-3-pbi-intune-2.png"
 
@@ -19790,8 +19776,7 @@ header {
 
 
 
-</a>
-</p>
+</a></p>
 <ol>
 <li>This is where you sign in.</li>
 <li>Once signed in, your account wil be used to generate an access (Bearer) token that is used to authenticate againstMicrosoft Graph with, it can be seen here.</li>
@@ -19818,8 +19803,7 @@ Lets break this down for you:</p>
  
 
 
->https://graph.microsoft.com</a>
-</strong>/v1.0/<strong>users</strong>?$select=displayName,id</li>
+>https://graph.microsoft.com</a></strong>/v1.0/<strong>users</strong>?$select=displayName,id</li>
 <li><strong><a href="https://graph.microsoft.com"
 
 
@@ -19829,8 +19813,7 @@ Lets break this down for you:</p>
  
 
 
->https://graph.microsoft.com</a>
-</strong> - This is the Endpoint</li>
+>https://graph.microsoft.com</a></strong> - This is the Endpoint</li>
 <li><strong>/v1.0</strong> - This is the Version</li>
 <li><strong>/users</strong> - This is the Resource</li>
 <li><strong>?$select=displayName,id</strong> - These are the query parameters <a href="https://learn.microsoft.com/en-us/odata/concepts/queryoptions-overview"
@@ -19842,8 +19825,7 @@ Lets break this down for you:</p>
  
 
 
->odata query parameters</a>
-</li>
+>odata query parameters</a></li>
 </ul>
 <p>From the <a href="https://learn.microsoft.com/en-us/graph/api/user-list?view=graph-rest-1.0&amp;tabs=http"
 
@@ -19854,8 +19836,7 @@ Lets break this down for you:</p>
  
 
 
->documentation for this Graph Call</a>
-, here are the permissions it needs;</p>
+>documentation for this Graph Call</a>, here are the permissions it needs;</p>
 <p><img src="https://deploymentshare.com/articles/bp-3-pbi-intune/articles/bp-3-pbi-intune/img/BP-3-PBI-Intune-3_hu002c60d7f77ffe0538569794608448bf_20321_filter_3492331261915427489.png#centre" alt="Alt Text"  /></p>
 <p>&hellip; now we&rsquo;re not using application permissions here because the Graph explorer is authenticated against you, the user&hellip;  but for the purposes of our PowerBI report we will be taking note of the application permissions, so you can see here this particular graph call requires <strong>User.Read.All</strong> permissions as a minimum for application permissions.  The read permissions are normally sufficient for reading the data (or performing a GET API Call) should you wish to perform other tasks, such as PATCH (updating) POST (Usually Creating something) or DELETE (Self-explanatory) you may need higher permissions, such as *.ReadWrite.All.</p>
 <hr>
@@ -19869,8 +19850,7 @@ Lets break this down for you:</p>
  
 
 
->https://graph.microsoft.com</a>
-</strong>/v1.0/<strong>users</strong>?$select=displayName,id..  when I run that in Graph Explorer I get back the following message (this will show in section (7) from the image above):</p>
+>https://graph.microsoft.com</a></strong>/v1.0/<strong>users</strong>?$select=displayName,id..  when I run that in Graph Explorer I get back the following message (this will show in section (7) from the image above):</p>
 <p><img src="https://deploymentshare.com/articles/bp-3-pbi-intune/articles/bp-3-pbi-intune/img/BP-3-PBI-Intune-4_hu704678eb63b661f22d794be0e0422a22_10086_filter_11134955843247413107.png#centre" alt="Alt Text"  /></p>
 <p>&hellip;If I then click on <strong>Modify Permissions</strong>&hellip;  I can see that I am able to Grant <strong>User.Read.All</strong>, so I&rsquo;m going to go ahead and select to <strong>Consent</strong> for that.  Like so..</p>
 <p><a href="/simages/bp-3-pbi-intune-5.png"
@@ -19923,8 +19903,7 @@ Lets break this down for you:</p>
 
 
 
-</a>
-</p>
+</a></p>
 <p>Once done I see a success message
 <img src="https://deploymentshare.com/articles/bp-3-pbi-intune/articles/bp-3-pbi-intune/img/BP-3-PBI-Intune-6_hubfe322a8143120538ed18740cdb3b48a_1378_filter_13681905037787099986.png#centre" alt="Alt Text"  /></p>
 <p>If I then click on <strong>Run Query</strong> now that the permission has been granted I will now see results in my results pane!
@@ -19964,8 +19943,7 @@ Lets break this down for you:</p>
  
 
 
->Graph Xray</a>
-</h3>
+>Graph Xray</a></h3>
 <p>Next I want to show you <a href="https://microsoftedge.microsoft.com/addons/detail/graph-xray/oplgganppgjhpihgciiifejplnnpodak"
 
 
@@ -19975,8 +19953,7 @@ Lets break this down for you:</p>
  
 
 
->Graph Xray</a>
-.  This Edge plug in will show you the graph calls required to get the information you&rsquo;re looking at.  So, once its installed and loaded, you can browse around the Intune console and see the graph calls you need.  Thereafter you can decipher the resource required and start investigating the documentation for the call to build up the information you need to build your report.</p>
+>Graph Xray</a>.  This Edge plug in will show you the graph calls required to get the information you&rsquo;re looking at.  So, once its installed and loaded, you can browse around the Intune console and see the graph calls you need.  Thereafter you can decipher the resource required and start investigating the documentation for the call to build up the information you need to build your report.</p>
 <p>Honestly, this tool is great.</p>
 <ol>
 <li>Install the plug in.</li>
@@ -19999,8 +19976,7 @@ Lets break this down for you:</p>
  
 
 
->PostMan</a>
-</h3>
+>PostMan</a></h3>
 <p>Finally in this blog post we are going to discuss <a href="https://www.postman.com/"
 
 
@@ -20010,8 +19986,7 @@ Lets break this down for you:</p>
  
 
 
->PostMan</a>
-.  An API tool that will be very handy to you on your Microsoft Graph journey.</p>
+>PostMan</a>.  An API tool that will be very handy to you on your Microsoft Graph journey.</p>
 <p>Postman, can assist you in undertaking any API calls, not just the Microsoft Graph API, its a vast and complicated program far out of the scope of this blog post to explain, however I am going to show you how to set this up to work with the application registration you should have set up in <a href="/articles/bp-2-pbi-intune/"
 
 
@@ -20019,8 +19994,7 @@ Lets break this down for you:</p>
  
 
 
->Part 2</a>
-.  From that post, you should have three key points of Information:  The TenantID, the ClientID of the app registration, hereafter referred to as the AppID, and finally the SecretID which is the value portion of the secret you set up and is only valid for the period of time you configured when creating the secret.</p>
+>Part 2</a>.  From that post, you should have three key points of Information:  The TenantID, the ClientID of the app registration, hereafter referred to as the AppID, and finally the SecretID which is the value portion of the secret you set up and is only valid for the period of time you configured when creating the secret.</p>
 <p>OK, do what you have to do to register for an account and download the program, this process changes from time to time so visit the website and see what the deal is. Once you have it installed locally on your device, lets set this up to use that Application registration.  It works as a cloud app, so set up an account and things you configure will sync and follow you around if you install on another machine and log in, boom all your API work will be there waiting for you.</p>
 <h5 id="environments">Environments</h5>
 <p>Postman has this concept of &ldquo;environments&rdquo; where you can set up some common parameters for the environment you wish to access.  In our case we want to access the Microsoft Graph Environment of our Intune Tenant (in order to build a PowerBI report from the Data) and we&rsquo;re going to do that via the app reg. So lets go ahead and set up an environment with those details. <br> <br></p>
@@ -20074,8 +20048,7 @@ Lets break this down for you:</p>
 
 
 
-</a>
-</p>
+</a></p>
 <ol>
 <li>From the left hand side menu, click on <strong>Environments</strong>.</li>
 <li>Click <strong>New</strong> (you may be asked what you want to create, if asked select <strong>Environments</strong>).</li>
@@ -20135,8 +20108,7 @@ Lets break this down for you:</p>
 
 
 
-</a>
-</p>
+</a></p>
 <ol>
 <li>From the let hand side menu, click on <strong>Collections</strong>.</li>
 <li>Click <strong>New</strong> (you may be asked what you want to create, if asked select <strong>Collection</strong>).</li>
@@ -20198,8 +20170,7 @@ Lets break this down for you:</p>
 
 
 
-</a>
-</p>
+</a></p>
 <ol>
 <li>Opt for a POST, this is because we&rsquo;re going to POST the request to get our bearer Token.</li>
 <li>Fill out the  URL as specified here, notice the <strong>{{TenantID}}</strong> this is going to be populated by the TenantID specified in our Environment.</li>
@@ -20260,8 +20231,7 @@ Lets break this down for you:</p>
 
 
 
-</a>
-</p>
+</a></p>
 <ol>
 <li>Notice the status of the call was <strong>200 OK</strong>, so all good.</li>
 <li>Its a token type of <strong>Bearer</strong>.</li>
@@ -20352,8 +20322,7 @@ In order to do that we need to put some tests on the call and tell it to set a v
 
 
 
-</a>
-</p>
+</a></p>
 <p>Essentially what this does it sets a new value called <strong>AppAccessToken</strong> in your current environment.  The token will be set until it expires and then you&rsquo;ll need to post the call again to refresh it.  If you do that (POST the call again) after saving the test you should see a Test Pass status in the Test Results.</p>
 
 
@@ -20431,8 +20400,7 @@ In order to do that we need to put some tests on the call and tell it to set a v
 
 
 
-</a>
-</p>
+</a></p>
 <ol>
 <li>Here you can see the folders and how I&rsquo;ve separated the calls out.</li>
 <li>Here you can see how I&rsquo;ve structured the call.</li>
@@ -20448,8 +20416,7 @@ In order to do that we need to put some tests on the call and tell it to set a v
  
 
 
->Part 4</a>
- we will first look at creating a function to obtain a Bearer token.  We need that token to pull in data from PowerBI using the Microsoft Graph, as that is our authentication method.</p>
+>Part 4</a> we will first look at creating a function to obtain a Bearer token.  We need that token to pull in data from PowerBI using the Microsoft Graph, as that is our authentication method.</p>
 I appreciate you taking the time to read my blog.<br>
 Please give it a share for me. <br>
 <b>Jonathan</b>
@@ -20480,8 +20447,7 @@ Please give it a share for me. <br>
  
 
 
->Microsoft Graph REST API beta endpoint reference</a>
-</td>
+>Microsoft Graph REST API beta endpoint reference</a></td>
 </tr>
 <tr>
 <td style="text-align:center">Microsoft Learn</td>
@@ -20494,8 +20460,7 @@ Please give it a share for me. <br>
  
 
 
->Microsoft Graph REST API v1.0 endpoint reference</a>
-</td>
+>Microsoft Graph REST API v1.0 endpoint reference</a></td>
 </tr>
 <tr>
 <td style="text-align:center">Microsoft Graph</td>
@@ -20508,8 +20473,7 @@ Please give it a share for me. <br>
  
 
 
->Microsoft Graph Explorer</a>
-</td>
+>Microsoft Graph Explorer</a></td>
 </tr>
 <tr>
 <td style="text-align:center">Microsoft Learn</td>
@@ -20522,8 +20486,7 @@ Please give it a share for me. <br>
  
 
 
->OData : Query options overview</a>
-</td>
+>OData : Query options overview</a></td>
 </tr>
 <tr>
 <td style="text-align:center">Edge Add-Ons</td>
@@ -20536,8 +20499,7 @@ Please give it a share for me. <br>
  
 
 
->Graph X-Ray</a>
-</td>
+>Graph X-Ray</a></td>
 </tr>
 <tr>
 <td style="text-align:center">PostMan</td>
@@ -20550,8 +20512,7 @@ Please give it a share for me. <br>
  
 
 
->Postman App</a>
-</td>
+>Postman App</a></td>
 </tr>
 <tr>
 <td style="text-align:center">SCCMentor</td>
@@ -20564,8 +20525,7 @@ Please give it a share for me. <br>
  
 
 
->Automating Windows 365 Part 2 – Using Graph XRay</a>
-</td>
+>Automating Windows 365 Part 2 – Using Graph XRay</a></td>
 </tr>
 </tbody>
 </table>
@@ -20633,10 +20593,18 @@ Please give it a share for me. <br>
           </li>
           <li>
             <a
+              href="/categories/elements/"
+              class="d-flex"
+              >Elements
+              <small class="ms-auto">(1)</small></a
+            >
+          </li>
+          <li>
+            <a
               href="/categories/intune/"
               class="d-flex"
               >Intune
-              <small class="ms-auto">(14)</small></a
+              <small class="ms-auto">(15)</small></a
             >
           </li>
           <li>
@@ -20676,7 +20644,7 @@ Please give it a share for me. <br>
               href="/categories/security/"
               class="d-flex"
               >Security
-              <small class="ms-auto">(1)</small></a
+              <small class="ms-auto">(2)</small></a
             >
           </li>
           <li>
@@ -20734,8 +20702,18 @@ Please give it a share for me. <br>
             >
           </li>
           <li class="list-inline-item">
+            <a href="/tags/defender/"
+              >Defender</a
+            >
+          </li>
+          <li class="list-inline-item">
             <a href="/tags/deployment/"
               >Deployment</a
+            >
+          </li>
+          <li class="list-inline-item">
+            <a href="/tags/elements/"
+              >Elements</a
             >
           </li>
           <li class="list-inline-item">
@@ -20972,6 +20950,12 @@ Please give it a share for me. <br>
         (Incentive varies) <br>
         <a href="http://aklam.io/gW7TnR">
           <img src="https://th.bing.com/th/id/OIP.uYduACTQfa4YdfPZoBayAgAAAA?rs=1&pid=ImgDetMain" height="50" width="150">  
+        </a>
+        <br>
+        <br>
+        (£100 free shares) <br>
+        <a href="https://www.trading212.com/invite/17tL1b4nlz">
+          <img src="https://mejor.broker/wp-content/uploads/2019/02/trading212-logo.jpg" height="50" width="150">  
         </a>
       </p>      
   </div></div>
@@ -21631,8 +21615,7 @@ background-color: #FF6600
  
 
 
->https://www.deploymentshare.com</a>
- | Built on <a href="https://gohugo.io/"
+>https://www.deploymentshare.com</a> | Built on <a href="https://gohugo.io/"
 
 
 
@@ -21641,8 +21624,7 @@ background-color: #FF6600
  
 
 
->HUGO</a>
- with <a href="https://gethugothemes.com/products/logbook"
+>HUGO</a> with <a href="https://gethugothemes.com/products/logbook"
 
 
 
@@ -21651,8 +21633,7 @@ background-color: #FF6600
  
 
 
->Logbook</a>
- Theme
+>Logbook</a> Theme
         
         | Theme by
         <a target="_blank" rel="noopener noreferrer" href="https://gethugothemes.com/">GetHugoThemes</a>

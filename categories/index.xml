@@ -6,19 +6,19 @@
     <description>Recent content in Categories on Deploymentshare - Personal Tech Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 23 May 2024 00:00:00 +0100</lastBuildDate>
+    <lastBuildDate>Wed, 26 Jun 2024 00:00:00 +0100</lastBuildDate>
     <atom:link href="https://deploymentshare.com/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Intune</title>
       <link>https://deploymentshare.com/categories/intune/</link>
-      <pubDate>Thu, 23 May 2024 00:00:00 +0100</pubDate>
+      <pubDate>Wed, 26 Jun 2024 00:00:00 +0100</pubDate>
       <guid>https://deploymentshare.com/categories/intune/</guid>
       <description></description>
     </item>
     <item>
       <title>Security</title>
       <link>https://deploymentshare.com/categories/security/</link>
-      <pubDate>Thu, 23 May 2024 00:00:00 +0100</pubDate>
+      <pubDate>Wed, 26 Jun 2024 00:00:00 +0100</pubDate>
       <guid>https://deploymentshare.com/categories/security/</guid>
       <description></description>
     </item>
@@ -62,6 +62,13 @@
       <link>https://deploymentshare.com/categories/windows-10/</link>
       <pubDate>Sat, 27 Mar 2021 00:00:00 +0000</pubDate>
       <guid>https://deploymentshare.com/categories/windows-10/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Elements</title>
+      <link>https://deploymentshare.com/categories/elements/</link>
+      <pubDate>Sun, 15 Mar 2020 15:40:24 +0600</pubDate>
+      <guid>https://deploymentshare.com/categories/elements/</guid>
       <description></description>
     </item>
   </channel>

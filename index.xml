@@ -6,8 +6,15 @@
     <description>Recent content on Deploymentshare - Personal Tech Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 23 May 2024 00:00:00 +0100</lastBuildDate>
+    <lastBuildDate>Wed, 26 Jun 2024 00:00:00 +0100</lastBuildDate>
     <atom:link href="https://deploymentshare.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Intune Defender for Endpoint Connector</title>
+      <link>https://deploymentshare.com/articles/bp-dfec/</link>
+      <pubDate>Wed, 26 Jun 2024 00:00:00 +0100</pubDate>
+      <guid>https://deploymentshare.com/articles/bp-dfec/</guid>
+      <description>Defender for Endpoint, are you licensed for it? Are you using it? Are you using Intune? Then why are you not using the Intune Connector for Microsoft Defender for Endpoint (MDE)? In this article I will hope to explore this on your behalf and share my findings. Microsoft Defender for Endpoint and Intune can be integrated to enhance your organisation&amp;rsquo;s security posture by enabling endpoint protection, threat detection, and response capabilities across all managed devices. This integration allows for the sharing of security information and the application of compliance policies based on threat intelligence.&#xA;So, what do we need to be able to use this?</description>
+    </item>
     <item>
       <title>CIS Intune Baselines - What do they break?</title>
       <link>https://deploymentshare.com/articles/bp-cis/</link>
@@ -20,7 +27,7 @@
       <link>https://deploymentshare.com/articles/bp-8-pbi-intune/</link>
       <pubDate>Fri, 17 May 2024 00:00:00 +0100</pubDate>
       <guid>https://deploymentshare.com/articles/bp-8-pbi-intune/</guid>
-      <description>In this post we&amp;rsquo;ll look at pulling in details about Autopilot devices. Our list call from Managed Devices, covered in part 6 , gives us a column to tell us whether that device is autopilot enrolled but what if we want more information than that? What if we want to know the group tag it uses or whether it has an autopilot profile assigned to it. Lets go get that!&#xA;Quick Links Series Menu Part 1 - Where to Start Part 2 - Application Registration Part 3 - Exploring Graph URLs Part 4 - Get-BearerToken Part 5 - Heavy Lifting Part 6 - Managed Devices Part 7 - Managed Applications Part 8 - Autopilot Devices Coming soon!</description>
+      <description>In this post we&amp;rsquo;ll look at pulling in details about Autopilot devices. Our list call from Managed Devices, covered in part 6, gives us a column to tell us whether that device is autopilot enrolled but what if we want more information than that? What if we want to know the group tag it uses or whether it has an autopilot profile assigned to it. Lets go get that!&#xA;Quick Links Series Menu Part 1 - Where to Start Part 2 - Application Registration Part 3 - Exploring Graph URLs Part 4 - Get-BearerToken Part 5 - Heavy Lifting Part 6 - Managed Devices Part 7 - Managed Applications Part 8 - Autopilot Devices Coming soon!</description>
     </item>
     <item>
       <title>Intune and PowerBI Deep Dive - Part 7 - Managed Applications</title>
@@ -55,14 +62,14 @@
       <link>https://deploymentshare.com/articles/bp-3-pbi-intune/</link>
       <pubDate>Sat, 20 Jan 2024 00:00:00 +0000</pubDate>
       <guid>https://deploymentshare.com/articles/bp-3-pbi-intune/</guid>
-      <description>Next up, we&amp;rsquo;re going to explore the Graph and the URLs and permissions, in this post, continuing on from Part 1 and Part 2 , our next step is begin to firstly understand our path to getting Intune Data into PowerBI, which is going to be via direct Microsoft Graph calls - Remembering of course that the Intune Data warehouse did not meet our requirements. We are also going to leverage an application registration to access the data we want to see. This is gonna be a BIG post, so make sure you have plenty of time to read.&#xA;Quick Links Series Menu Part 1 - Where to Start Part 2 - Application Registration Part 3 - Exploring Graph URLs Part 4 - Get-BearerToken Part 5 - Heavy Lifting Part 6 - Managed Devices Part 7 - Managed Applications Part 8 - Autopilot Devices Coming soon!</description>
+      <description>Next up, we&amp;rsquo;re going to explore the Graph and the URLs and permissions, in this post, continuing on from Part 1 and Part 2, our next step is begin to firstly understand our path to getting Intune Data into PowerBI, which is going to be via direct Microsoft Graph calls - Remembering of course that the Intune Data warehouse did not meet our requirements. We are also going to leverage an application registration to access the data we want to see. This is gonna be a BIG post, so make sure you have plenty of time to read.&#xA;Quick Links Series Menu Part 1 - Where to Start Part 2 - Application Registration Part 3 - Exploring Graph URLs Part 4 - Get-BearerToken Part 5 - Heavy Lifting Part 6 - Managed Devices Part 7 - Managed Applications Part 8 - Autopilot Devices Coming soon!</description>
     </item>
     <item>
       <title>Intune and PowerBI Deep Dive - Part 2 - Application Registration</title>
       <link>https://deploymentshare.com/articles/bp-2-pbi-intune/</link>
       <pubDate>Sat, 13 Jan 2024 00:00:00 +0000</pubDate>
       <guid>https://deploymentshare.com/articles/bp-2-pbi-intune/</guid>
-      <description>Continuing from Part 1 , our next step is to establish an application registration in Azure. This registration will enable us to utilise its permissions for accessing data on the Microsoft Graph and hopefully then, importing that data into PowerBI. This setup is essential as it serves as a global prerequisite for accomplishing our ultimate objective.&#xA;Quick Links Series Menu Part 1 - Where to Start Part 2 - Application Registration Part 3 - Exploring Graph URLs Part 4 - Get-BearerToken Part 5 - Heavy Lifting Part 6 - Managed Devices Part 7 - Managed Applications Part 8 - Autopilot Devices Coming soon!</description>
+      <description>Continuing from Part 1, our next step is to establish an application registration in Azure. This registration will enable us to utilise its permissions for accessing data on the Microsoft Graph and hopefully then, importing that data into PowerBI. This setup is essential as it serves as a global prerequisite for accomplishing our ultimate objective.&#xA;Quick Links Series Menu Part 1 - Where to Start Part 2 - Application Registration Part 3 - Exploring Graph URLs Part 4 - Get-BearerToken Part 5 - Heavy Lifting Part 6 - Managed Devices Part 7 - Managed Applications Part 8 - Autopilot Devices Coming soon!</description>
     </item>
     <item>
       <title>Intune and PowerBI Deep Dive - Part 1 - Where to Start</title>
@@ -105,6 +112,13 @@
       <pubDate>Wed, 19 Aug 2020 00:00:00 +0100</pubDate>
       <guid>https://deploymentshare.com/articles/bp-psadt/</guid>
       <description>Hi all, thought I’d write up what I’ve been working on recently, which is re-visiting PowerShell App Deployment Toolkit. A great Resource for ConfigMgr apps, but equally it is supported in Intune so I will be doing a follow-up post on using this with Intune. I know there are plenty of blogs out there on this so this is just my interpretation and is intended to get people started. I know, for example, that the kit comes with a wide variety cmdlets that you can utilise to achieve tasks but this write up is based around getting those a little familiar with PowerShell up to speed with it.</description>
+    </item>
+    <item>
+      <title>Elements That You Can Use To Create A New Post On This Template.</title>
+      <link>https://deploymentshare.com/articles/elements/</link>
+      <pubDate>Sun, 15 Mar 2020 15:40:24 +0600</pubDate>
+      <guid>https://deploymentshare.com/articles/elements/</guid>
+      <description>Heading example Here is example of hedings. You can use this heading by following markdownify rules. For example: use # for heading 1 and use ###### for heading 6.&#xA;Heading 1 Heading 2 Heading 3 Heading 4 Heading 5 Heading 6 Emphasis Emphasis, aka italics, with asterisks or underscores.&#xA;Strong emphasis, aka bold, with asterisks or underscores.&#xA;Combined emphasis with asterisks and underscores.&#xA;Strikethrough uses two tildes. Scratch this.&#xA;Link I&amp;rsquo;m an inline-style link&#xA;I&amp;rsquo;m an inline-style link with title&#xA;I&amp;rsquo;m a reference-style link&#xA;I&amp;rsquo;m a relative reference to a repository file&#xA;You can use numbers for reference-style link definitions</description>
     </item>
     <item>
       <title>1Password</title>
@@ -202,14 +216,14 @@
       <link>https://deploymentshare.com/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://deploymentshare.com/about/</guid>
-      <description>https://deploymentshare.com/Images/AboutMe/banner.jpg does not exist&#xD;Hi, I&amp;rsquo;m Jonathan. I am currently working as a Technical Consultant in the Intune practice at Phoenix Software (who, in recognition for outstanding achievements, have been awarded Microsoft Partner of the Year for 2023 ), specialising in the deployment and management of Microsoft Intune, a pivotal tool for modern device management and application deployment.&#xA;Beyond working with Microsoft Intune, I am passionate about PowerShell scripting and PowerBI reporting. This interest extends beyond professional obligation, reflecting a genuine enthusiasm for the products and trying to apply them to everyday life. Whether supporting clients on their cloud journey, crafting PowerShell scripts to automate complex tasks day-to-day or harnessing PowerBI for insightful data reporting, I&amp;rsquo;m normally geeking out somewhere.</description>
+      <description>https://deploymentshare.com/Images/AboutMe/banner.jpg does not exist&#xD;Hi, I&amp;rsquo;m Jonathan. I am currently working as a Technical Consultant in the Intune practice at Phoenix Software (who, in recognition for outstanding achievements, have been awarded Microsoft Partner of the Year for 2023), specialising in the deployment and management of Microsoft Intune, a pivotal tool for modern device management and application deployment.&#xA;Beyond working with Microsoft Intune, I am passionate about PowerShell scripting and PowerBI reporting. This interest extends beyond professional obligation, reflecting a genuine enthusiasm for the products and trying to apply them to everyday life. Whether supporting clients on their cloud journey, crafting PowerShell scripts to automate complex tasks day-to-day or harnessing PowerBI for insightful data reporting, I&amp;rsquo;m normally geeking out somewhere.</description>
     </item>
     <item>
       <title>Jonathan Fallis</title>
       <link>https://deploymentshare.com/author/jonathan-fallis/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://deploymentshare.com/author/jonathan-fallis/</guid>
-      <description>Hi, I&amp;rsquo;m Jonathan. I am currently working as a Technical Consultant in the Cloud Endpoint practice at Phoenix Software (who, in recognition for outstanding achievements, have been awarded Microsoft Partner of the Year for 2023 ), specialising in the deployment and management of Microsoft Intune, a pivotal tool for modern device management and application deployment.&#xA;Beyond working with Microsoft Intune , I am passionate about PowerBI Reporting and PowerShell scripting . This interest extends beyond professional obligation, reflecting a genuine enthusiasm for the products and trying to apply them to everyday life. Whether supporting clients on their cloud journey, harnessing PowerBI for insightful data reporting or crafting PowerShell scripts to automate complex tasks day-to-day, I&amp;rsquo;m normally geeking out somewhere.</description>
+      <description>Hi, I&amp;rsquo;m Jonathan. I am currently working as a Technical Consultant in the Cloud Endpoint practice at Phoenix Software (who, in recognition for outstanding achievements, have been awarded Microsoft Partner of the Year for 2023), specialising in the deployment and management of Microsoft Intune, a pivotal tool for modern device management and application deployment.&#xA;Beyond working with Microsoft Intune, I am passionate about PowerBI Reporting and PowerShell scripting. This interest extends beyond professional obligation, reflecting a genuine enthusiasm for the products and trying to apply them to everyday life. Whether supporting clients on their cloud journey, harnessing PowerBI for insightful data reporting or crafting PowerShell scripts to automate complex tasks day-to-day, I&amp;rsquo;m normally geeking out somewhere.</description>
     </item>
     <item>
       <title>No Search Found</title>

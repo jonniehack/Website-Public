@@ -42,7 +42,6 @@
 
 
 
-
 <link rel="manifest" href="/manifest.webmanifest" />
 <meta
   name="msapplication-TileColor"
@@ -50,8 +49,6 @@
 <meta
   name="theme-color"
   content="#fff" />
-
-
 
 
 
@@ -206,8 +203,6 @@
 
 
 
-
-
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-H36JXQVDWY"></script>
 <script>
 var doNotTrack = false;
@@ -218,7 +213,6 @@ if (!doNotTrack) {
 	gtag('config', 'G-H36JXQVDWY', { 'anonymize_ip': false });
 }
 </script>
-
 
 
 
@@ -258,7 +252,6 @@ if (!doNotTrack) {
 
 
 
-
   
 
 
@@ -273,18 +266,13 @@ if (!doNotTrack) {
 
 
 
-
-
-
   
 
 
 
 
 
-
   
-
 
 
 
@@ -296,7 +284,6 @@ if (!doNotTrack) {
   let search_no_results = "0 results for";
   let search_initial_message = "";
 </script>
-
 
 
 
@@ -14374,6 +14361,10 @@ textarea.form-control-lg {
   margin-right: auto !important;
   margin-left: auto !important; }
 
+.my-0 {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important; }
+
 .my-auto {
   margin-top: auto !important;
   margin-bottom: auto !important; }
@@ -17600,7 +17591,7 @@ a:hover {
 
 .content table td,
 .content table th {
-  padding: 0.75rem;
+  padding: 0.25rem;
   vertical-align: top;
   margin-bottom: 0; }
 
@@ -17689,13 +17680,13 @@ a:hover {
 
 .content blockquote {
   color: #696c6d;
-  padding: 1.25rem 2.5rem;
-  border-left: 2px solid #3498db;
-  margin: 2.5rem 0;
+  padding: 0.25rem 1.25rem;
+  border-left: 3px solid #3498db;
+  margin: 1.25rem 0;
   font-weight: bold;
   background: #f0f0f0; }
   .content blockquote p {
-    font-size: 1.25rem !important;
+    font-size: 0.90rem !important;
     margin-bottom: 0 !important; }
 
 .content pre {
@@ -19583,8 +19574,7 @@ header {
  
 
 
->Deploy applications – Configuration Manager | Microsoft Docs</a>
- <br>
+>Deploy applications – Configuration Manager | Microsoft Docs</a> <br>
 <a href="https://docs.microsoft.com/en-us/mem/configmgr/apps/deploy-use/packages-and-programs"
 
 
@@ -19594,8 +19584,7 @@ header {
  
 
 
->Packages and programs – Configuration Manager | Microsoft Docs</a>
- <br>
+>Packages and programs – Configuration Manager | Microsoft Docs</a> <br>
 <a href="hhttps://docs.microsoft.com/en-us/mem/intune/apps/apps-win32-app-management"
 
 
@@ -19603,8 +19592,7 @@ header {
  
 
 
->Win32 app management in Microsoft Intune | Microsoft Docs</a>
- <br>
+>Win32 app management in Microsoft Intune | Microsoft Docs</a> <br>
 <a href="https://docs.microsoft.com/en-us/mem/intune/apps/windows-store-for-business"
 
 
@@ -19614,8 +19602,7 @@ header {
  
 
 
->Manage VPP apps from Microsoft Store for Business – Microsoft Intune | Microsoft Docs</a>
-</p>
+>Manage VPP apps from Microsoft Store for Business – Microsoft Intune | Microsoft Docs</a></p>
 <ins>
 <h5 id="discovery">Discovery</h5>
 </ins>
@@ -19674,8 +19661,7 @@ Like this:  msiexec /x {XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX} /qn</p>
  
 
 
->Command-Line Options – Win32 apps | Microsoft Docs</a>
-</p>
+>Command-Line Options – Win32 apps | Microsoft Docs</a></p>
 <p>.. sometimes, even MSI’s can take extra switches for items such as registration or activation code, or you may be able to customise the install, for example with a company name.  These extra switches can normally be found in the documentation for the software, via internet research or if you wish, you can even examine the database for the MSI and see if there are any switches you can find.  Out of scope for this article, but there is a program inside Microsoft’s Software Development Kit (SDK) called Orca, that you may wish to take a look at if you get stuck. Using Orca, you can open the MSI database and search for fields that can be taken as parameters.  I’ve used this right back from the early days, but it can be confusing.  I’m sure there are others available too. Vendor documentation normally has them.</p>
 <p>Worth noting, never underestimate looking in the vendor’s documentation, you will normally get what you need.  I say normally, but those well versed at app packaging will start to recognise companies that do better at this than others.</p>
 <p>Let’s think about the components we now have.  We have the source files (see below about Intune source files), we have identified a silent install string and a silent uninstall string.  We have tested that these work as expected on a throw-away virtual machine and we’re ready to place those items into our deployment tool to be pushed out across our estate.  But which one?  Well, that totally depends on you really.  What tools do you have at your disposal?  What are you licensed for? (Intune requires licenses) Is this going to be for on-premises, or will your users be ‘in the wild’?  Once you know you will be able to decipher which will be the best tool to use to meet those requirements.</p>
@@ -19689,8 +19675,7 @@ Like this:  msiexec /x {XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX} /qn</p>
  
 
 
->Win32 Content Prep Tool</a>
-, that will take your raw source files and concern them into a single .intunewin file which you then upload to Intune.  This will compress and encrypt the source files for a quicker transfer.  You may have noticed I have linked some documents in this paragraph, those will help you.</p>
+>Win32 Content Prep Tool</a>, that will take your raw source files and concern them into a single .intunewin file which you then upload to Intune.  This will compress and encrypt the source files for a quicker transfer.  You may have noticed I have linked some documents in this paragraph, those will help you.</p>
 </blockquote>
 <p>Next up, Detection Clauses, these are quite important to your packaging journey, you need to identify a way to detect that the software is installed.  Most of the time, this will be the existence of a registry key.  Using the example from above, we could set the following key to be our detection clause:</p>
 <p><img src="https://deploymentshare.com/articles/bp-applications/articles/bp-applications/img/APPS6_hucff0987b8b25caefa6c6eed321839ae5_23970_filter_12339289185622681435.png#centre" alt="Alt Text"  /></p>
@@ -19768,10 +19753,18 @@ Jonathan.</p>
           </li>
           <li>
             <a
+              href="/categories/elements/"
+              class="d-flex"
+              >Elements
+              <small class="ms-auto">(1)</small></a
+            >
+          </li>
+          <li>
+            <a
               href="/categories/intune/"
               class="d-flex"
               >Intune
-              <small class="ms-auto">(14)</small></a
+              <small class="ms-auto">(15)</small></a
             >
           </li>
           <li>
@@ -19811,7 +19804,7 @@ Jonathan.</p>
               href="/categories/security/"
               class="d-flex"
               >Security
-              <small class="ms-auto">(1)</small></a
+              <small class="ms-auto">(2)</small></a
             >
           </li>
           <li>
@@ -19869,8 +19862,18 @@ Jonathan.</p>
             >
           </li>
           <li class="list-inline-item">
+            <a href="/tags/defender/"
+              >Defender</a
+            >
+          </li>
+          <li class="list-inline-item">
             <a href="/tags/deployment/"
               >Deployment</a
+            >
+          </li>
+          <li class="list-inline-item">
+            <a href="/tags/elements/"
+              >Elements</a
             >
           </li>
           <li class="list-inline-item">
@@ -20107,6 +20110,12 @@ Jonathan.</p>
         (Incentive varies) <br>
         <a href="http://aklam.io/gW7TnR">
           <img src="https://th.bing.com/th/id/OIP.uYduACTQfa4YdfPZoBayAgAAAA?rs=1&pid=ImgDetMain" height="50" width="150">  
+        </a>
+        <br>
+        <br>
+        (£100 free shares) <br>
+        <a href="https://www.trading212.com/invite/17tL1b4nlz">
+          <img src="https://mejor.broker/wp-content/uploads/2019/02/trading212-logo.jpg" height="50" width="150">  
         </a>
       </p>      
   </div></div>
@@ -20766,8 +20775,7 @@ background-color: #FF6600
  
 
 
->https://www.deploymentshare.com</a>
- | Built on <a href="https://gohugo.io/"
+>https://www.deploymentshare.com</a> | Built on <a href="https://gohugo.io/"
 
 
 
@@ -20776,8 +20784,7 @@ background-color: #FF6600
  
 
 
->HUGO</a>
- with <a href="https://gethugothemes.com/products/logbook"
+>HUGO</a> with <a href="https://gethugothemes.com/products/logbook"
 
 
 
@@ -20786,8 +20793,7 @@ background-color: #FF6600
  
 
 
->Logbook</a>
- Theme
+>Logbook</a> Theme
         
         | Theme by
         <a target="_blank" rel="noopener noreferrer" href="https://gethugothemes.com/">GetHugoThemes</a>
