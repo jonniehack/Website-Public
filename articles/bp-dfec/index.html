@@ -19534,39 +19534,12 @@ header {
         
         <div class="">
           <div class="content"><p>Defender for Endpoint, are you licensed for it?  Are you using it?  Are you using Intune?  Then why are you not using the Intune Connector for Microsoft Defender for Endpoint (MDE)?  In this article I will hope to explore this on your behalf and share my findings. Microsoft Defender for Endpoint and Intune can be integrated to enhance your organisation&rsquo;s security posture by enabling endpoint protection, threat detection, and response capabilities across all managed devices. This integration allows for the sharing of security information and the application of compliance policies based on threat intelligence.</p>
-<p>So, what do we need to be able to use this?  Lets take a look at the <a href="https://learn.microsoft.com/defender-endpoint/minimum-requirements"
-
-
-
-
- target="_blank"
- 
-
-
->minimum requirements</a> for Defender for Endpoint?</p>
+<p>So, what do we need to be able to use this?  Lets take a look at the minimum requirements for Defender for Endpoint?</p>
 <ul>
 <li>Licenses</li>
 <li>Microsoft Edge (or Chrome)</li>
-<li>A <a href="https://learn.microsoft.com/defender-endpoint/minimum-requirements#supported-windows-versions"
-
-
-
-
- target="_blank"
- 
-
-
->supported version of windows</a>, other platforms are supported but wont be discussed here.</li>
-<li>Meet the <a href="https://learn.microsoft.com/defender-endpoint/minimum-requirements#hardware-requirements"
-
-
-
-
- target="_blank"
- 
-
-
->minimum spec</a></li>
+<li>A supported version of windows, other platforms are supported but wont be discussed here.</li>
+<li>Meet the minimum spec</li>
 <li>Ideally be using IPv4 (IPV6 needs a bit more configuration but yet to meet anyone using IPv6 fully)</li>
 </ul>
 <p>Starting January 14 2024, Microsoft Defender for Endpoint Plan 1 (P1) is automatically included in Microsoft 365 E3/A3 licenses. This means that all existing Microsoft 365 E3/A3 customers now have access to Defender for Endpoint P1. Additionally, customers with Microsoft 365 E5 licenses are already entitled to the comprehensive Microsoft Defender for Endpoint Plan 2 (P2) solution.</p>
@@ -19618,11 +19591,20 @@ header {
 >Establishing a Link</a></h4>
 <p>To set up the connection, navigate to the Microsoft Intune &gt; Tenant Administration &gt; Connectors and Tokens &gt; Microsoft Defender for Endpoint and then, like me, you may notice you don&rsquo;t have one set up yet.  Lets fix that.</p>
 <p><img src="https://deploymentshare.com/articles/bp-dfec/img/dfe1_hu643b60e6dba7664d5f389dbfdddc8274_79275_filter_14232205539769012949.png#centre" alt="Connector and Token Configuration for MDE"  /></p>
-<p>If you click on the link &ldquo;Connect Microsoft Defender for Endpoint to Microsoft Intune in the Microsoft Defender Security Center&rdquo; the Security Centre portal will open in a new window. In the Microsoft Defender Security Center, go to Settings &gt; Endpoints &gt; Advanced features, and turn on the Microsoft Intune connection.</p>
+<p>If you click on the link &ldquo;<a href="https://security.microsoft.com/"
+
+
+
+
+ target="_blank"
+ 
+
+
+>Connect Microsoft Defender for Endpoint to Microsoft Intune in the Microsoft Defender Security Center</a>&rdquo; the Security Centre portal will open in a new window. In the Microsoft Defender Security Center, go to Settings &gt; Endpoints &gt; Advanced features, and turn on the Microsoft Intune connection.</p>
 <p><img src="https://deploymentshare.com/articles/bp-dfec/img/dfe2_hu6cc9f585f2577eb508ea3851d04c7ba1_10609_filter_18372259726916385701.png#centre" alt="Toggle Connector"  /></p>
 <p>This integration enables Intune to receive risk signals from Defender for Endpoint, which can then be used to create and enforce compliance policies.  Once established the Intune console will update. You can see here I have also enabled some settings related to Windows Devices.</p>
 <p><img src="https://deploymentshare.com/articles/bp-dfec/img/dfe3_huce07d372e0b616a24295b061f1c3a3e2_78515_filter_9988624983985298049.png#centre" alt="Successful Connector"  /></p>
-<p>Because Microsoft Defender for Endpoint can be used independently to Intune, the first setting allows devices to report their status to Intune, which we would like them to do. Also, the</p>
+<p>Because Microsoft Defender for Endpoint can be used independently to Intune, the first setting allows devices to report their status to Intune, which we would like them to do. Also, the setting to connect versions of Windows 10.0.15063 or above has been selected.  This version refers to Windows 10 Version 1703, released in April 2017. It does not, however, meet the minimum requirement for supporting Microsoft Defender for Endpoint, which starts from version 1709 (10.0.16299.15). So watch out for that, also.</p>
 <h3 id="onboarding-devices">Onboarding Devices</h3>
 <p>Onboarding devices to Microsoft Defender for Endpoint through Intune allows for comprehensive threat detection and response capabilities on each device. When devices are onboarded, Defender for Endpoint can monitor them for suspicious activities and provide detailed insights into potential threats.</p>
 <p>To onboard devices, first, navigate to the Microsoft Intune Console. Go to Endpoint security &gt; Endpoint detection and response.  Notice here it tells you the connector is established.</p>
@@ -19632,7 +19614,14 @@ header {
 <p>Devices will automatically onboard to Defender for Endpoint upon receiving and applying this configuration, beginning real-time protection and threat monitoring.</p>
 <p><img src="https://deploymentshare.com/articles/bp-dfec/img/dfe6_hu8141957ac1bcc3a651641a10b3dcec3b_11661_filter_15228656618699603193.png#centre" alt="Onboarded Devices"  /></p>
 <h3 id="compliance-policy">Compliance Policy</h3>
-<p>We can now use a compliance policy in Intune that leverages the integration with Microsoft Defender for Endpoint to mark devices as compliant or not based upon their risk score.</p>
+<p>We can now use a compliance policy in Intune that leverages the integration with Microsoft Defender for Endpoint to mark devices as compliant or not based upon their risk score. It assigns a risk score to each device, categorising the risk as:</p>
+<ul>
+<li>Clear: No known threats or vulnerabilities.</li>
+<li>Low: Minor issues that do not pose a significant threat.</li>
+<li>Medium: Notable issues that could potentially harm the device or network.</li>
+<li>High: Serious issues that pose a significant threat to the device or network.</li>
+</ul>
+<p>Defender for Endpoint continuously monitors devices for security threats and vulnerabilities. It analyses telemetry data, including malware detection, suspicious activity and security configurations, to assign this risk score.</p>
 <p><img src="https://deploymentshare.com/articles/bp-dfec/img/dfe7_hue71edc6c3bad6c959bc6484080c87c8b_9417_filter_5495249938452901048.png#centre" alt="Risk Score"  /></p>
 <p>I&rsquo;m not going to talk about what compliance policies are and how to set them up but you can read more here: <a href="https://learn.microsoft.com/mem/intune/protect/advanced-threat-protection-configure#create-and-assign-compliance-policy-to-set-device-risk-level"
 
@@ -19645,7 +19634,7 @@ header {
 
 >https://learn.microsoft.com/mem/intune/protect/advanced-threat-protection-configure#create-and-assign-compliance-policy-to-set-device-risk-level</a>.  Of course in this article I have only discussed Windows Devices but other platforms are supported for this.</p>
 <h3 id="conditional-access">Conditional Access</h3>
-<p>Conditional Access policies in Azure AD can be enhanced using signals from Microsoft Defender for Endpoint, ensuring that only devices meeting specific security conditions can access corporate resources. This approach protects against compromised devices and reduces the risk of unauthorized access by incorporating real-time threat intelligence into access decisions.</p>
+<p>Conditional Access policies in Entra ID can be enhanced using signals from Microsoft Defender for Endpoint, ensuring that only devices meeting specific security conditions can access corporate resources. This approach protects against compromised devices and reduces the risk of unauthorized access by incorporating real-time threat intelligence into access decisions.</p>
 <p>Now that we have a compliance policy configured to look for devices with a specific risk score its entirely possible to configure a policy to block access to corporate resources for non-compliant devices.  Conditional Access is a large and complex topic I am not going to cover here in any depth, it has been covered lots of times before but I will recommend you go and read the Conditional Access framework and polices link in the links at the end of this article to familiarise yourself with a standardised naming convention.</p>
 I appreciate you taking the time to read my blog.<br>
 Please give it a share for me. <br>
