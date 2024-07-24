@@ -2,34 +2,55 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://deploymentshare.com/tags/applications/</loc>
+    <lastmod>2024-07-23T00:00:00+01:00</lastmod>
+  </url><url>
     <loc>https://deploymentshare.com/articles/</loc>
-    <lastmod>2024-06-26T00:00:00+01:00</lastmod>
+    <lastmod>2024-07-23T00:00:00+01:00</lastmod>
+  </url><url>
+    <loc>https://deploymentshare.com/tags/autopilot/</loc>
+    <lastmod>2024-07-23T00:00:00+01:00</lastmod>
   </url><url>
     <loc>https://deploymentshare.com/categories/</loc>
-    <lastmod>2024-06-26T00:00:00+01:00</lastmod>
-  </url><url>
-    <loc>https://deploymentshare.com/tags/defender/</loc>
-    <lastmod>2024-06-26T00:00:00+01:00</lastmod>
+    <lastmod>2024-07-23T00:00:00+01:00</lastmod>
   </url><url>
     <loc>https://deploymentshare.com/</loc>
-    <lastmod>2024-06-26T00:00:00+01:00</lastmod>
+    <lastmod>2024-07-23T00:00:00+01:00</lastmod>
+  </url><url>
+    <loc>https://deploymentshare.com/tags/forticlient/</loc>
+    <lastmod>2024-07-23T00:00:00+01:00</lastmod>
   </url><url>
     <loc>https://deploymentshare.com/tags/intune/</loc>
-    <lastmod>2024-06-26T00:00:00+01:00</lastmod>
+    <lastmod>2024-07-23T00:00:00+01:00</lastmod>
   </url><url>
     <loc>https://deploymentshare.com/categories/intune/</loc>
+    <lastmod>2024-07-23T00:00:00+01:00</lastmod>
+  </url><url>
+    <loc>https://deploymentshare.com/tags/ncsc/</loc>
+    <lastmod>2024-07-23T00:00:00+01:00</lastmod>
+  </url><url>
+    <loc>https://deploymentshare.com/categories/security/</loc>
+    <lastmod>2024-07-23T00:00:00+01:00</lastmod>
+  </url><url>
+    <loc>https://deploymentshare.com/tags/</loc>
+    <lastmod>2024-07-23T00:00:00+01:00</lastmod>
+  </url><url>
+    <loc>https://deploymentshare.com/articles/bp-forticlient-ts/</loc>
+    <lastmod>2024-07-23T00:00:00+01:00</lastmod>
+  </url><url>
+    <loc>https://deploymentshare.com/tags/vpn/</loc>
+    <lastmod>2024-07-23T00:00:00+01:00</lastmod>
+  </url><url>
+    <loc>https://deploymentshare.com/categories/vpn/</loc>
+    <lastmod>2024-07-23T00:00:00+01:00</lastmod>
+  </url><url>
+    <loc>https://deploymentshare.com/tags/defender/</loc>
     <lastmod>2024-06-26T00:00:00+01:00</lastmod>
   </url><url>
     <loc>https://deploymentshare.com/articles/bp-dfec/</loc>
     <lastmod>2024-06-26T00:00:00+01:00</lastmod>
   </url><url>
     <loc>https://deploymentshare.com/tags/security/</loc>
-    <lastmod>2024-06-26T00:00:00+01:00</lastmod>
-  </url><url>
-    <loc>https://deploymentshare.com/categories/security/</loc>
-    <lastmod>2024-06-26T00:00:00+01:00</lastmod>
-  </url><url>
-    <loc>https://deploymentshare.com/tags/</loc>
     <lastmod>2024-06-26T00:00:00+01:00</lastmod>
   </url><url>
     <loc>https://deploymentshare.com/tags/cis/</loc>
@@ -77,9 +98,6 @@
     <loc>https://deploymentshare.com/articles/bp-1-pbi-intune/</loc>
     <lastmod>2024-01-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://deploymentshare.com/tags/autopilot/</loc>
-    <lastmod>2023-12-14T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://deploymentshare.com/tags/configmgr/</loc>
     <lastmod>2023-12-14T00:00:00+00:00</lastmod>
   </url><url>
@@ -96,9 +114,6 @@
     <lastmod>2023-12-14T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://deploymentshare.com/tags/app-packaging/</loc>
-    <lastmod>2021-03-27T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://deploymentshare.com/tags/applications/</loc>
     <lastmod>2021-03-27T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://deploymentshare.com/articles/bp-applications/</loc>
@@ -122,9 +137,6 @@
     <loc>https://deploymentshare.com/tags/azure-ad/</loc>
     <lastmod>2020-09-15T00:00:00+01:00</lastmod>
   </url><url>
-    <loc>https://deploymentshare.com/tags/forticlient/</loc>
-    <lastmod>2020-09-15T00:00:00+01:00</lastmod>
-  </url><url>
     <loc>https://deploymentshare.com/tags/hybrid/</loc>
     <lastmod>2020-09-15T00:00:00+01:00</lastmod>
   </url><url>
@@ -132,9 +144,6 @@
     <lastmod>2020-09-15T00:00:00+01:00</lastmod>
   </url><url>
     <loc>https://deploymentshare.com/articles/bp-forticlient/</loc>
-    <lastmod>2020-09-15T00:00:00+01:00</lastmod>
-  </url><url>
-    <loc>https://deploymentshare.com/tags/vpn/</loc>
     <lastmod>2020-09-15T00:00:00+01:00</lastmod>
   </url><url>
     <loc>https://deploymentshare.com/tags/cloud/</loc>
@@ -154,15 +163,6 @@
   </url><url>
     <loc>https://deploymentshare.com/articles/bp-psadt/</loc>
     <lastmod>2020-08-19T00:00:00+01:00</lastmod>
-  </url><url>
-    <loc>https://deploymentshare.com/tags/elements/</loc>
-    <lastmod>2020-03-15T15:40:24+06:00</lastmod>
-  </url><url>
-    <loc>https://deploymentshare.com/categories/elements/</loc>
-    <lastmod>2020-03-15T15:40:24+06:00</lastmod>
-  </url><url>
-    <loc>https://deploymentshare.com/articles/elements/</loc>
-    <lastmod>2020-03-15T15:40:24+06:00</lastmod>
   </url><url>
     <loc>https://deploymentshare.com/apps/1password/</loc>
   </url><url>

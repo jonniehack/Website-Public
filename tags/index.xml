@@ -6,20 +6,55 @@
     <description>Recent content in Tags on Deploymentshare - Personal Tech Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 26 Jun 2024 00:00:00 +0100</lastBuildDate>
+    <lastBuildDate>Tue, 23 Jul 2024 00:00:00 +0100</lastBuildDate>
     <atom:link href="https://deploymentshare.com/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Defender</title>
-      <link>https://deploymentshare.com/tags/defender/</link>
-      <pubDate>Wed, 26 Jun 2024 00:00:00 +0100</pubDate>
-      <guid>https://deploymentshare.com/tags/defender/</guid>
+      <title>Applications</title>
+      <link>https://deploymentshare.com/tags/applications/</link>
+      <pubDate>Tue, 23 Jul 2024 00:00:00 +0100</pubDate>
+      <guid>https://deploymentshare.com/tags/applications/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Autopilot</title>
+      <link>https://deploymentshare.com/tags/autopilot/</link>
+      <pubDate>Tue, 23 Jul 2024 00:00:00 +0100</pubDate>
+      <guid>https://deploymentshare.com/tags/autopilot/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Forticlient</title>
+      <link>https://deploymentshare.com/tags/forticlient/</link>
+      <pubDate>Tue, 23 Jul 2024 00:00:00 +0100</pubDate>
+      <guid>https://deploymentshare.com/tags/forticlient/</guid>
       <description></description>
     </item>
     <item>
       <title>Intune</title>
       <link>https://deploymentshare.com/tags/intune/</link>
-      <pubDate>Wed, 26 Jun 2024 00:00:00 +0100</pubDate>
+      <pubDate>Tue, 23 Jul 2024 00:00:00 +0100</pubDate>
       <guid>https://deploymentshare.com/tags/intune/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>NCSC</title>
+      <link>https://deploymentshare.com/tags/ncsc/</link>
+      <pubDate>Tue, 23 Jul 2024 00:00:00 +0100</pubDate>
+      <guid>https://deploymentshare.com/tags/ncsc/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>VPN</title>
+      <link>https://deploymentshare.com/tags/vpn/</link>
+      <pubDate>Tue, 23 Jul 2024 00:00:00 +0100</pubDate>
+      <guid>https://deploymentshare.com/tags/vpn/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Defender</title>
+      <link>https://deploymentshare.com/tags/defender/</link>
+      <pubDate>Wed, 26 Jun 2024 00:00:00 +0100</pubDate>
+      <guid>https://deploymentshare.com/tags/defender/</guid>
       <description></description>
     </item>
     <item>
@@ -58,13 +93,6 @@
       <description></description>
     </item>
     <item>
-      <title>Autopilot</title>
-      <link>https://deploymentshare.com/tags/autopilot/</link>
-      <pubDate>Thu, 14 Dec 2023 00:00:00 +0000</pubDate>
-      <guid>https://deploymentshare.com/tags/autopilot/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>ConfigMgr</title>
       <link>https://deploymentshare.com/tags/configmgr/</link>
       <pubDate>Thu, 14 Dec 2023 00:00:00 +0000</pubDate>
@@ -93,13 +121,6 @@
       <description></description>
     </item>
     <item>
-      <title>Applications</title>
-      <link>https://deploymentshare.com/tags/applications/</link>
-      <pubDate>Sat, 27 Mar 2021 00:00:00 +0000</pubDate>
-      <guid>https://deploymentshare.com/tags/applications/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>Packaging</title>
       <link>https://deploymentshare.com/tags/packaging/</link>
       <pubDate>Sat, 27 Mar 2021 00:00:00 +0000</pubDate>
@@ -121,13 +142,6 @@
       <description></description>
     </item>
     <item>
-      <title>Forticlient</title>
-      <link>https://deploymentshare.com/tags/forticlient/</link>
-      <pubDate>Tue, 15 Sep 2020 00:00:00 +0100</pubDate>
-      <guid>https://deploymentshare.com/tags/forticlient/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>Hybrid</title>
       <link>https://deploymentshare.com/tags/hybrid/</link>
       <pubDate>Tue, 15 Sep 2020 00:00:00 +0100</pubDate>
@@ -139,13 +153,6 @@
       <link>https://deploymentshare.com/tags/hybrid-aad/</link>
       <pubDate>Tue, 15 Sep 2020 00:00:00 +0100</pubDate>
       <guid>https://deploymentshare.com/tags/hybrid-aad/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>VPN</title>
-      <link>https://deploymentshare.com/tags/vpn/</link>
-      <pubDate>Tue, 15 Sep 2020 00:00:00 +0100</pubDate>
-      <guid>https://deploymentshare.com/tags/vpn/</guid>
       <description></description>
     </item>
     <item>
@@ -174,13 +181,6 @@
       <link>https://deploymentshare.com/tags/deployment/</link>
       <pubDate>Wed, 19 Aug 2020 00:00:00 +0100</pubDate>
       <guid>https://deploymentshare.com/tags/deployment/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Elements</title>
-      <link>https://deploymentshare.com/tags/elements/</link>
-      <pubDate>Sun, 15 Mar 2020 15:40:24 +0600</pubDate>
-      <guid>https://deploymentshare.com/tags/elements/</guid>
       <description></description>
     </item>
   </channel>

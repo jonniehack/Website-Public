@@ -14362,10 +14362,6 @@ textarea.form-control-lg {
   margin-right: auto !important;
   margin-left: auto !important; }
 
-.my-0 {
-  margin-top: 0 !important;
-  margin-bottom: 0 !important; }
-
 .my-auto {
   margin-top: auto !important;
   margin-bottom: auto !important; }
@@ -17735,6 +17731,13 @@ a {
 .w-100 {
   width: 100%; }
 
+/* This is the code that overwrites the codeblock colours */
+.content code {
+  --bs-code-color: #1fc8f3;
+  background-color: hwb(0 0% 100%);
+  margin-bottom: 0 !important;
+  font-size: 100%; }
+
 header {
   z-index: 50;
   top: 0px; }
@@ -18919,7 +18922,7 @@ header {
   transform: rotate(0deg); }
 
 .accordion.active .accordion-content {
-  max-height: 100vh; }
+  max-height: max-content; }
 
 .notice {
   margin-bottom: 1.5rem;
@@ -19397,17 +19400,17 @@ header {
             <li class="list-inline-item">Date : February 5, 2024</li>
             <li class="list-inline-item">Categories :
               <a
-                href="/categories/powerbi/" class="ms-1">Power bi </a>
+                href="/categories/powerbi/" class="ms-1">PowerBi </a>
               ,<a
                 href="/categories/intune/" class="ms-1">Intune </a>
               ,<a
-                href="/categories/microsoft-graph/" class="ms-1">Microsoft graph </a>
+                href="/categories/microsoft-graph/" class="ms-1">Microsoft Graph </a>
               </li>
             <li class="list-inline-item">Tags : <a
                 href="/tags/microsoft/" class="ms-1">Microsoft </a> ,<a
                 href="/tags/intune/" class="ms-1">Intune </a> ,<a
-                href="/tags/powerbi/" class="ms-1">Power bi </a> ,<a
-                href="/tags/microsoft-graph/" class="ms-1">Microsoft graph </a> 
+                href="/tags/powerbi/" class="ms-1">PowerBI </a> ,<a
+                href="/tags/microsoft-graph/" class="ms-1">Microsoft Graph </a> 
             </li>
           </ul>
         </div>
@@ -20115,9 +20118,12 @@ Your tab choice will be forgotten if you refresh the page <strong>make sure you&
 
 
 >Part 6</a> I will demonstrate how to form your Power Queries using the three methods, allowing you to choose the one that best suits your needs and circumstances.  These queries will be hosted on my Github for you to go and use yourself.  Work through the posts one by one and we should have a good data set built by the end of the series.</p>
+<i>
 I appreciate you taking the time to read my blog.<br>
-Please give it a share for me. <br>
-<b>Jonathan</b>
+Your interest and support keep me motivated to create more content. <br>
+If you think others might benefit from this content, please consider sharing it<br>
+</i>
+<b>... Jonathan</b>
 
 
 
@@ -20291,18 +20297,10 @@ Please give it a share for me. <br>
           </li>
           <li>
             <a
-              href="/categories/elements/"
-              class="d-flex"
-              >Elements
-              <small class="ms-auto">(1)</small></a
-            >
-          </li>
-          <li>
-            <a
               href="/categories/intune/"
               class="d-flex"
               >Intune
-              <small class="ms-auto">(15)</small></a
+              <small class="ms-auto">(16)</small></a
             >
           </li>
           <li>
@@ -20342,6 +20340,14 @@ Please give it a share for me. <br>
               href="/categories/security/"
               class="d-flex"
               >Security
+              <small class="ms-auto">(3)</small></a
+            >
+          </li>
+          <li>
+            <a
+              href="/categories/vpn/"
+              class="d-flex"
+              >VPN
               <small class="ms-auto">(2)</small></a
             >
           </li>
@@ -20410,11 +20416,6 @@ Please give it a share for me. <br>
             >
           </li>
           <li class="list-inline-item">
-            <a href="/tags/elements/"
-              >Elements</a
-            >
-          </li>
-          <li class="list-inline-item">
             <a href="/tags/endpoint-manager/"
               >Endpoint manager</a
             >
@@ -20452,6 +20453,11 @@ Please give it a share for me. <br>
           <li class="list-inline-item">
             <a href="/tags/microsoft-graph/"
               >Microsoft graph</a
+            >
+          </li>
+          <li class="list-inline-item">
+            <a href="/tags/ncsc/"
+              >Ncsc</a
             >
           </li>
           <li class="list-inline-item">
@@ -21164,7 +21170,7 @@ background-color: #FF6600
     },
     "headline": "Intune and PowerBI Deep Dive - Part 5 - Heavy Lifting",
     "description": "Visit www.deploymentshare.com to find out more",
-    "image": "",
+    "image": "\/images\/title\/pbi-intune.jpg",
     "author": {
       "@type": "Person",
       "name": "Jonathan Fallis"

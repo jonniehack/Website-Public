@@ -14361,10 +14361,6 @@ textarea.form-control-lg {
   margin-right: auto !important;
   margin-left: auto !important; }
 
-.my-0 {
-  margin-top: 0 !important;
-  margin-bottom: 0 !important; }
-
 .my-auto {
   margin-top: auto !important;
   margin-bottom: auto !important; }
@@ -17734,6 +17730,13 @@ a {
 .w-100 {
   width: 100%; }
 
+/* This is the code that overwrites the codeblock colours */
+.content code {
+  --bs-code-color: #1fc8f3;
+  background-color: hwb(0 0% 100%);
+  margin-bottom: 0 !important;
+  font-size: 100%; }
+
 header {
   z-index: 50;
   top: 0px; }
@@ -18918,7 +18921,7 @@ header {
   transform: rotate(0deg); }
 
 .accordion.active .accordion-content {
-  max-height: 100vh; }
+  max-height: max-content; }
 
 .notice {
   margin-bottom: 1.5rem;
@@ -19396,17 +19399,17 @@ header {
             <li class="list-inline-item">Date : May 17, 2024</li>
             <li class="list-inline-item">Categories :
               <a
-                href="/categories/powerbi/" class="ms-1">Power bi </a>
+                href="/categories/powerbi/" class="ms-1">PowerBi </a>
               ,<a
                 href="/categories/intune/" class="ms-1">Intune </a>
               ,<a
-                href="/categories/microsoft-graph/" class="ms-1">Microsoft graph </a>
+                href="/categories/microsoft-graph/" class="ms-1">Microsoft Graph </a>
               </li>
             <li class="list-inline-item">Tags : <a
                 href="/tags/microsoft/" class="ms-1">Microsoft </a> ,<a
                 href="/tags/intune/" class="ms-1">Intune </a> ,<a
-                href="/tags/powerbi/" class="ms-1">Power bi </a> ,<a
-                href="/tags/microsoft-graph/" class="ms-1">Microsoft graph </a> 
+                href="/tags/powerbi/" class="ms-1">PowerBI </a> ,<a
+                href="/tags/microsoft-graph/" class="ms-1">Microsoft Graph </a> 
             </li>
           </ul>
         </div>
@@ -20144,9 +20147,12 @@ Here is the documentation links;</p>
 
 
 >Connectors and Tokens</a>. This one will be a slightly different layout as we can get away without using pagination for these so we&rsquo;ll use direct queries instead.  Therefore there will only be direct queries for you to copy and use and not three tabs for approaches as we&rsquo;ve been used to over the last couple of posts.</p>
+<i>
 I appreciate you taking the time to read my blog.<br>
-Please give it a share for me. <br>
-<b>Jonathan</b>
+Your interest and support keep me motivated to create more content. <br>
+If you think others might benefit from this content, please consider sharing it<br>
+</i>
+<b>... Jonathan</b>
 
 
 
@@ -20165,7 +20171,7 @@ Please give it a share for me. <br>
 <tbody>
 <tr>
 <td style="text-align:center">Microsoft Learn</td>
-<td style="text-align:left"><a href="https://learn.microsoft.com/en-us/power-bi/transform-model/desktop-create-and-manage-relationships"
+<td style="text-align:left"><a href="https://learn.microsoft.com/power-bi/transform-model/desktop-create-and-manage-relationships"
 
 
 
@@ -20242,18 +20248,10 @@ Please give it a share for me. <br>
           </li>
           <li>
             <a
-              href="/categories/elements/"
-              class="d-flex"
-              >Elements
-              <small class="ms-auto">(1)</small></a
-            >
-          </li>
-          <li>
-            <a
               href="/categories/intune/"
               class="d-flex"
               >Intune
-              <small class="ms-auto">(15)</small></a
+              <small class="ms-auto">(16)</small></a
             >
           </li>
           <li>
@@ -20293,6 +20291,14 @@ Please give it a share for me. <br>
               href="/categories/security/"
               class="d-flex"
               >Security
+              <small class="ms-auto">(3)</small></a
+            >
+          </li>
+          <li>
+            <a
+              href="/categories/vpn/"
+              class="d-flex"
+              >VPN
               <small class="ms-auto">(2)</small></a
             >
           </li>
@@ -20361,11 +20367,6 @@ Please give it a share for me. <br>
             >
           </li>
           <li class="list-inline-item">
-            <a href="/tags/elements/"
-              >Elements</a
-            >
-          </li>
-          <li class="list-inline-item">
             <a href="/tags/endpoint-manager/"
               >Endpoint manager</a
             >
@@ -20403,6 +20404,11 @@ Please give it a share for me. <br>
           <li class="list-inline-item">
             <a href="/tags/microsoft-graph/"
               >Microsoft graph</a
+            >
+          </li>
+          <li class="list-inline-item">
+            <a href="/tags/ncsc/"
+              >Ncsc</a
             >
           </li>
           <li class="list-inline-item">
@@ -21115,7 +21121,7 @@ background-color: #FF6600
     },
     "headline": "Intune and PowerBI Deep Dive - Part 8 - Autopilot Devices",
     "description": "",
-    "image": "",
+    "image": "\/images\/title\/pbi-intune.jpg",
     "author": {
       "@type": "Person",
       "name": "Jonathan Fallis"

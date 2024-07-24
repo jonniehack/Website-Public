@@ -6,8 +6,15 @@
     <description>Recent content on Deploymentshare - Personal Tech Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 26 Jun 2024 00:00:00 +0100</lastBuildDate>
+    <lastBuildDate>Tue, 23 Jul 2024 00:00:00 +0100</lastBuildDate>
     <atom:link href="https://deploymentshare.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Troubleshooting SAML Auth on FortiClient VPN when applying NCSC Baselines</title>
+      <link>https://deploymentshare.com/articles/bp-forticlient-ts/</link>
+      <pubDate>Tue, 23 Jul 2024 00:00:00 +0100</pubDate>
+      <guid>https://deploymentshare.com/articles/bp-forticlient-ts/</guid>
+      <description>Dearest gentle reader&amp;hellip; (Yes, my wife is making me watch that Bridgerton series on netflix, so I may speak like a 19th century gentlemen during this blog post&amp;hellip; or not&amp;hellip;) I recently blogged about the implementation of Center for Information Security (CIS) and how those configurations broke Windows Autopilot. It then developed into a series on CIS with another gentleman of the manor, Nick Benton. And so, speaking of security posture, I recently undertook a customer engagement that wanted to modernise their Windows Management and explore Entra joined only devices using Autopilot, but also, to align all their security configuration to National Cyber Security Centre (NCSC) - which of course I did but in doing so this broke their SAML authentication on Forticlient VPN - so here&amp;rsquo;s the story of how I fixed it.</description>
+    </item>
     <item>
       <title>Intune Defender for Endpoint Connector</title>
       <link>https://deploymentshare.com/articles/bp-dfec/</link>
@@ -112,13 +119,6 @@
       <pubDate>Wed, 19 Aug 2020 00:00:00 +0100</pubDate>
       <guid>https://deploymentshare.com/articles/bp-psadt/</guid>
       <description>Hi all, thought I’d write up what I’ve been working on recently, which is re-visiting PowerShell App Deployment Toolkit. A great Resource for ConfigMgr apps, but equally it is supported in Intune so I will be doing a follow-up post on using this with Intune. I know there are plenty of blogs out there on this so this is just my interpretation and is intended to get people started. I know, for example, that the kit comes with a wide variety cmdlets that you can utilise to achieve tasks but this write up is based around getting those a little familiar with PowerShell up to speed with it.</description>
-    </item>
-    <item>
-      <title>Elements That You Can Use To Create A New Post On This Template.</title>
-      <link>https://deploymentshare.com/articles/elements/</link>
-      <pubDate>Sun, 15 Mar 2020 15:40:24 +0600</pubDate>
-      <guid>https://deploymentshare.com/articles/elements/</guid>
-      <description>Heading example Here is example of hedings. You can use this heading by following markdownify rules. For example: use # for heading 1 and use ###### for heading 6.&#xA;Heading 1 Heading 2 Heading 3 Heading 4 Heading 5 Heading 6 Emphasis Emphasis, aka italics, with asterisks or underscores.&#xA;Strong emphasis, aka bold, with asterisks or underscores.&#xA;Combined emphasis with asterisks and underscores.&#xA;Strikethrough uses two tildes. Scratch this.&#xA;Link I&amp;rsquo;m an inline-style link&#xA;I&amp;rsquo;m an inline-style link with title&#xA;I&amp;rsquo;m a reference-style link&#xA;I&amp;rsquo;m a relative reference to a repository file&#xA;You can use numbers for reference-style link definitions</description>
     </item>
     <item>
       <title>1Password</title>

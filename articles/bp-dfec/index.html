@@ -14361,10 +14361,6 @@ textarea.form-control-lg {
   margin-right: auto !important;
   margin-left: auto !important; }
 
-.my-0 {
-  margin-top: 0 !important;
-  margin-bottom: 0 !important; }
-
 .my-auto {
   margin-top: auto !important;
   margin-bottom: auto !important; }
@@ -17734,6 +17730,13 @@ a {
 .w-100 {
   width: 100%; }
 
+/* This is the code that overwrites the codeblock colours */
+.content code {
+  --bs-code-color: #1fc8f3;
+  background-color: hwb(0 0% 100%);
+  margin-bottom: 0 !important;
+  font-size: 100%; }
+
 header {
   z-index: 50;
   top: 0px; }
@@ -18918,7 +18921,7 @@ header {
   transform: rotate(0deg); }
 
 .accordion.active .accordion-content {
-  max-height: 100vh; }
+  max-height: max-content; }
 
 .notice {
   margin-bottom: 1.5rem;
@@ -19572,7 +19575,7 @@ header {
 
 
 >Setup</a></h3>
-<p>There are four main we need to look at to get this going.</p>
+<p>There are four main steps we need to look at to get this going.</p>
 <ul>
 <li>Establish a link between Intune and Defender for Endpoint</li>
 <li>Onboard Devices</li>
@@ -19636,9 +19639,12 @@ header {
 <h3 id="conditional-access">Conditional Access</h3>
 <p>Conditional Access policies in Entra ID can be enhanced using signals from Microsoft Defender for Endpoint, ensuring that only devices meeting specific security conditions can access corporate resources. This approach protects against compromised devices and reduces the risk of unauthorized access by incorporating real-time threat intelligence into access decisions.</p>
 <p>Now that we have a compliance policy configured to look for devices with a specific risk score its entirely possible to configure a policy to block access to corporate resources for non-compliant devices.  Conditional Access is a large and complex topic I am not going to cover here in any depth, it has been covered lots of times before but I will recommend you go and read the Conditional Access framework and polices link in the links at the end of this article to familiarise yourself with a standardised naming convention.</p>
+<i>
 I appreciate you taking the time to read my blog.<br>
-Please give it a share for me. <br>
-<b>Jonathan</b>
+Your interest and support keep me motivated to create more content. <br>
+If you think others might benefit from this content, please consider sharing it<br>
+</i>
+<b>... Jonathan</b>
 
 
 
@@ -19812,18 +19818,10 @@ Please give it a share for me. <br>
           </li>
           <li>
             <a
-              href="/categories/elements/"
-              class="d-flex"
-              >Elements
-              <small class="ms-auto">(1)</small></a
-            >
-          </li>
-          <li>
-            <a
               href="/categories/intune/"
               class="d-flex"
               >Intune
-              <small class="ms-auto">(15)</small></a
+              <small class="ms-auto">(16)</small></a
             >
           </li>
           <li>
@@ -19863,6 +19861,14 @@ Please give it a share for me. <br>
               href="/categories/security/"
               class="d-flex"
               >Security
+              <small class="ms-auto">(3)</small></a
+            >
+          </li>
+          <li>
+            <a
+              href="/categories/vpn/"
+              class="d-flex"
+              >VPN
               <small class="ms-auto">(2)</small></a
             >
           </li>
@@ -19931,11 +19937,6 @@ Please give it a share for me. <br>
             >
           </li>
           <li class="list-inline-item">
-            <a href="/tags/elements/"
-              >Elements</a
-            >
-          </li>
-          <li class="list-inline-item">
             <a href="/tags/endpoint-manager/"
               >Endpoint manager</a
             >
@@ -19973,6 +19974,11 @@ Please give it a share for me. <br>
           <li class="list-inline-item">
             <a href="/tags/microsoft-graph/"
               >Microsoft graph</a
+            >
+          </li>
+          <li class="list-inline-item">
+            <a href="/tags/ncsc/"
+              >Ncsc</a
             >
           </li>
           <li class="list-inline-item">
@@ -20685,7 +20691,7 @@ background-color: #FF6600
     },
     "headline": "Intune Defender for Endpoint Connector",
     "description": "",
-    "image": "",
+    "image": "\/images\/title\/mde.png",
     "author": {
       "@type": "Person",
       "name": "Jonathan Fallis"

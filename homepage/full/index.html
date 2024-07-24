@@ -14356,10 +14356,6 @@ textarea.form-control-lg {
   margin-right: auto !important;
   margin-left: auto !important; }
 
-.my-0 {
-  margin-top: 0 !important;
-  margin-bottom: 0 !important; }
-
 .my-auto {
   margin-top: auto !important;
   margin-bottom: auto !important; }
@@ -17729,6 +17725,13 @@ a {
 .w-100 {
   width: 100%; }
 
+/* This is the code that overwrites the codeblock colours */
+.content code {
+  --bs-code-color: #1fc8f3;
+  background-color: hwb(0 0% 100%);
+  margin-bottom: 0 !important;
+  font-size: 100%; }
+
 header {
   z-index: 50;
   top: 0px; }
@@ -18913,7 +18916,7 @@ header {
   transform: rotate(0deg); }
 
 .accordion.active .accordion-content {
-  max-height: 100vh; }
+  max-height: max-content; }
 
 .notice {
   margin-bottom: 1.5rem;
@@ -21041,6 +21044,228 @@ header {
           
 
             
+            
+              <article class="row mb-5">
+                
+                
+                  <div class="col-12">
+                    
+                      <div class="post-slider mb-4 slider-sm">
+                        
+                          <a href="/articles/bp-forticlient-ts/">
+                            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+  
+    
+      
+    
+
+
+    
+    
+
+
+    
+    
+      
+      
+    
+    
+    
+
+
+    
+    
+      
+      
+        
+
+        
+        
+        
+        
+        
+        
+        
+
+
+        
+        
+
+
+        <picture>
+          <source
+            
+              srcset="/images/title/bp-forticlient-ts_hucdfb0e6988df8a8782bfcc77fa0a0f7e_2668998_545x0_resize_q90_h2_lanczos_3.webp"
+            
+            media="(max-width: 575px)" />
+          <source
+            
+              srcset="/images/title/bp-forticlient-ts_hucdfb0e6988df8a8782bfcc77fa0a0f7e_2668998_600x0_resize_q90_h2_lanczos_3.webp"
+            
+            media="(max-width: 767px)" />
+          <source
+            
+              srcset="/images/title/bp-forticlient-ts_hucdfb0e6988df8a8782bfcc77fa0a0f7e_2668998_700x0_resize_q90_h2_lanczos_3.webp"
+            
+            media="(max-width: 991px)" />
+          <source
+            
+              srcset="/images/title/bp-forticlient-ts_hucdfb0e6988df8a8782bfcc77fa0a0f7e_2668998_1110x0_resize_q90_h2_lanczos_3.webp"
+             />
+          <img
+            
+              loading="lazy" decoding="async"
+              src="/images/title/bp-forticlient-ts_hucdfb0e6988df8a8782bfcc77fa0a0f7e_2668998_1110x0_resize_lanczos_3.png"
+            class=" w-100 h-100 img"
+            alt="post-thumb"
+            width="1499"
+            height="775" />
+        </picture>
+      
+      
+    
+    
+  
+
+
+  
+
+
+                          </a>
+                        
+                      </div>
+                    
+                  </div>
+                
+
+
+                <div
+                  class="
+                    col-lg-10
+                   mx-auto">
+                  <h3>
+                    <a class="post-title" href="/articles/bp-forticlient-ts/"
+                      >Troubleshooting SAML Auth on FortiClient VPN when applying NCSC Baselines</a
+                    >
+                  </h3>
+                  <ul class="list-inline post-meta mb-4">
+                    <li class="list-inline-item">
+                      <i class="fas fa-user me-2"></i
+                      ><a
+                        href="/author/jonathan-fallis/"
+                        >Jonathan Fallis</a
+                      >
+                    </li>
+                    <li class="list-inline-item">
+                      Date :
+                      July 23, 2024
+                    </li>
+                    <li class="list-inline-item">
+                      Categories :
+                      
+                        <a
+                          href="/categories/intune/"
+                          class="ms-1"
+                          >Intune
+                        </a>
+                      
+                        ,<a
+                          href="/categories/vpn/"
+                          class="ms-1"
+                          >VPN
+                        </a>
+                      
+                        ,<a
+                          href="/categories/security/"
+                          class="ms-1"
+                          >Security
+                        </a>
+                      
+                    </li>
+                    <li class="list-inline-item">
+                      Tags :
+                      
+                        <a
+                          href="/tags/applications/"
+                          class="ms-1"
+                          >Applications
+                        </a>
+                      
+                        ,<a
+                          href="/tags/autopilot/"
+                          class="ms-1"
+                          >Autopilot
+                        </a>
+                      
+                        ,<a
+                          href="/tags/forticlient/"
+                          class="ms-1"
+                          >Forticlient
+                        </a>
+                      
+                        ,<a
+                          href="/tags/intune/"
+                          class="ms-1"
+                          >Intune
+                        </a>
+                      
+                        ,<a
+                          href="/tags/vpn/"
+                          class="ms-1"
+                          >VPN
+                        </a>
+                      
+                        ,<a
+                          href="/tags/ncsc/"
+                          class="ms-1"
+                          >Ncsc
+                        </a>
+                      
+                    </li>
+                  </ul>
+                  <p>Dearest gentle reader&hellip; (Yes, my wife is making me watch that Bridgerton series on netflix, so I may speak like a 19th century gentlemen during this blog post&hellip; or not&hellip;) I recently blogged about the implementation of Center for Information Security (CIS) and how those configurations broke Windows Autopilot. It then developed into a series on CIS with another gentleman of the manor, Nick Benton. And so, speaking of security posture, I recently undertook a customer engagement that wanted to modernise their Windows Management and explore Entra joined only devices using Autopilot, but also, to align all their security configuration to National Cyber Security Centre (NCSC) - which of course I did but in doing so this broke their SAML authentication on Forticlient VPN - so here&rsquo;s the story of how I fixed it.</p>
+                  <a href="/articles/bp-forticlient-ts/" class="btn btn-outline-primary"
+                    >Continue Reading</a
+                  >
+                </div>
+              </article>
             
               <article class="row mb-5">
                 
@@ -23723,6 +23948,12 @@ How do I build apps? It never hurts to brush up if you’re a seasoned app-packa
                         </a>
                       
                         ,<a
+                          href="/categories/vpn/"
+                          class="ms-1"
+                          >VPN
+                        </a>
+                      
+                        ,<a
                           href="/categories/powershell/"
                           class="ms-1"
                           >Power shell
@@ -24228,228 +24459,6 @@ How do I build apps? It never hurts to brush up if you’re a seasoned app-packa
                   </ul>
                   <p>Hi all, thought I’d write up what I’ve been working on recently, which is re-visiting PowerShell App Deployment Toolkit. A great Resource for ConfigMgr apps, but equally it is supported in Intune so I will be doing a follow-up post on using this with Intune. I know there are plenty of blogs out there on this so this is just my interpretation and is intended to get people started. I know, for example, that the kit comes with a wide variety cmdlets that you can utilise to achieve tasks but this write up is based around getting those a little familiar with PowerShell up to speed with it.</p>
                   <a href="/articles/bp-psadt/" class="btn btn-outline-primary"
-                    >Continue Reading</a
-                  >
-                </div>
-              </article>
-            
-              <article class="row mb-5">
-                
-                
-                  <div class="col-12">
-                    
-                      <div class="swiper post-slider mb-4 slider-sm w-100">
-                        <div class="swiper-wrapper">
-                          
-                            <div class="swiper-slide">
-                              <a href="/articles/elements/">
-                                
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-  
-  
-
-
-  
-
-
-                              </a>
-                            </div>
-                          
-                            <div class="swiper-slide">
-                              <a href="/articles/elements/">
-                                
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-  
-  
-
-
-  
-
-
-                              </a>
-                            </div>
-                          
-                            <div class="swiper-slide">
-                              <a href="/articles/elements/">
-                                
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-  
-  
-
-
-  
-
-
-                              </a>
-                            </div>
-                          
-                        </div>
-                        <div class="swiper-navigation">
-                          <button
-                            class="swiper-button-prev"
-                            aria-label="navigation button"></button>
-                          <button
-                            class="swiper-button-next"
-                            aria-label="navigation button"></button>
-                        </div>
-                      </div>
-                    
-                  </div>
-                
-
-
-                <div
-                  class="
-                    col-lg-10
-                   mx-auto">
-                  <h3>
-                    <a class="post-title" href="/articles/elements/"
-                      >Elements That You Can Use To Create A New Post On This Template.</a
-                    >
-                  </h3>
-                  <ul class="list-inline post-meta mb-4">
-                    <li class="list-inline-item">
-                      <i class="fas fa-user me-2"></i
-                      ><a
-                        href="/author/john-doe/"
-                        >John Doe</a
-                      >
-                    </li>
-                    <li class="list-inline-item">
-                      Date :
-                      March 15, 2020
-                    </li>
-                    <li class="list-inline-item">
-                      Categories :
-                      
-                        <a
-                          href="/categories/elements/"
-                          class="ms-1"
-                          >Elements
-                        </a>
-                      
-                    </li>
-                    <li class="list-inline-item">
-                      Tags :
-                      
-                        <a
-                          href="/tags/elements/"
-                          class="ms-1"
-                          >Elements
-                        </a>
-                      
-                    </li>
-                  </ul>
-                  <p>Heading example Here is example of hedings. You can use this heading by following markdownify rules. For example: use # for heading 1 and use ###### for heading 6.
-Heading 1 Heading 2 Heading 3 Heading 4 Heading 5 Heading 6 Emphasis Emphasis, aka italics, with asterisks or underscores.
-Strong emphasis, aka bold, with asterisks or underscores.
-Combined emphasis with asterisks and underscores.
-Strikethrough uses two tildes. Scratch this.
-Link I&rsquo;m an inline-style link
-I&rsquo;m an inline-style link with title
-I&rsquo;m a reference-style link
-I&rsquo;m a relative reference to a repository file
-You can use numbers for reference-style link definitions</p>
-                  <a href="/articles/elements/" class="btn btn-outline-primary"
                     >Continue Reading</a
                   >
                 </div>

@@ -14354,10 +14354,6 @@ textarea.form-control-lg {
   margin-right: auto !important;
   margin-left: auto !important; }
 
-.my-0 {
-  margin-top: 0 !important;
-  margin-bottom: 0 !important; }
-
 .my-auto {
   margin-top: auto !important;
   margin-bottom: auto !important; }
@@ -17727,6 +17723,13 @@ a {
 .w-100 {
   width: 100%; }
 
+/* This is the code that overwrites the codeblock colours */
+.content code {
+  --bs-code-color: #1fc8f3;
+  background-color: hwb(0 0% 100%);
+  margin-bottom: 0 !important;
+  font-size: 100%; }
+
 header {
   z-index: 50;
   top: 0px; }
@@ -18911,7 +18914,7 @@ header {
   transform: rotate(0deg); }
 
 .accordion.active .accordion-content {
-  max-height: 100vh; }
+  max-height: max-content; }
 
 .notice {
   margin-bottom: 1.5rem;
