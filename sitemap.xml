@@ -2,37 +2,55 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://deploymentshare.com/tags/applications/</loc>
-    <lastmod>2024-07-23T00:00:00+01:00</lastmod>
-  </url><url>
     <loc>https://deploymentshare.com/articles/</loc>
+    <lastmod>2024-07-26T00:00:00+01:00</lastmod>
+  </url><url>
+    <loc>https://deploymentshare.com/categories/</loc>
+    <lastmod>2024-07-26T00:00:00+01:00</lastmod>
+  </url><url>
+    <loc>https://deploymentshare.com/</loc>
+    <lastmod>2024-07-26T00:00:00+01:00</lastmod>
+  </url><url>
+    <loc>https://deploymentshare.com/tags/intune/</loc>
+    <lastmod>2024-07-26T00:00:00+01:00</lastmod>
+  </url><url>
+    <loc>https://deploymentshare.com/categories/intune/</loc>
+    <lastmod>2024-07-26T00:00:00+01:00</lastmod>
+  </url><url>
+    <loc>https://deploymentshare.com/articles/bp-9-pbi-intune/</loc>
+    <lastmod>2024-07-26T00:00:00+01:00</lastmod>
+  </url><url>
+    <loc>https://deploymentshare.com/tags/microsoft/</loc>
+    <lastmod>2024-07-26T00:00:00+01:00</lastmod>
+  </url><url>
+    <loc>https://deploymentshare.com/tags/microsoft-graph/</loc>
+    <lastmod>2024-07-26T00:00:00+01:00</lastmod>
+  </url><url>
+    <loc>https://deploymentshare.com/categories/microsoft-graph/</loc>
+    <lastmod>2024-07-26T00:00:00+01:00</lastmod>
+  </url><url>
+    <loc>https://deploymentshare.com/categories/powerbi/</loc>
+    <lastmod>2024-07-26T00:00:00+01:00</lastmod>
+  </url><url>
+    <loc>https://deploymentshare.com/tags/powerbi/</loc>
+    <lastmod>2024-07-26T00:00:00+01:00</lastmod>
+  </url><url>
+    <loc>https://deploymentshare.com/tags/</loc>
+    <lastmod>2024-07-26T00:00:00+01:00</lastmod>
+  </url><url>
+    <loc>https://deploymentshare.com/tags/applications/</loc>
     <lastmod>2024-07-23T00:00:00+01:00</lastmod>
   </url><url>
     <loc>https://deploymentshare.com/tags/autopilot/</loc>
     <lastmod>2024-07-23T00:00:00+01:00</lastmod>
   </url><url>
-    <loc>https://deploymentshare.com/categories/</loc>
-    <lastmod>2024-07-23T00:00:00+01:00</lastmod>
-  </url><url>
-    <loc>https://deploymentshare.com/</loc>
-    <lastmod>2024-07-23T00:00:00+01:00</lastmod>
-  </url><url>
     <loc>https://deploymentshare.com/tags/forticlient/</loc>
-    <lastmod>2024-07-23T00:00:00+01:00</lastmod>
-  </url><url>
-    <loc>https://deploymentshare.com/tags/intune/</loc>
-    <lastmod>2024-07-23T00:00:00+01:00</lastmod>
-  </url><url>
-    <loc>https://deploymentshare.com/categories/intune/</loc>
     <lastmod>2024-07-23T00:00:00+01:00</lastmod>
   </url><url>
     <loc>https://deploymentshare.com/tags/security/</loc>
     <lastmod>2024-07-23T00:00:00+01:00</lastmod>
   </url><url>
     <loc>https://deploymentshare.com/categories/security/</loc>
-    <lastmod>2024-07-23T00:00:00+01:00</lastmod>
-  </url><url>
-    <loc>https://deploymentshare.com/tags/</loc>
     <lastmod>2024-07-23T00:00:00+01:00</lastmod>
   </url><url>
     <loc>https://deploymentshare.com/articles/bp-forticlient-ts/</loc>
@@ -57,21 +75,6 @@
     <lastmod>2024-05-23T00:00:00+01:00</lastmod>
   </url><url>
     <loc>https://deploymentshare.com/articles/bp-8-pbi-intune/</loc>
-    <lastmod>2024-05-17T00:00:00+01:00</lastmod>
-  </url><url>
-    <loc>https://deploymentshare.com/tags/microsoft/</loc>
-    <lastmod>2024-05-17T00:00:00+01:00</lastmod>
-  </url><url>
-    <loc>https://deploymentshare.com/tags/microsoft-graph/</loc>
-    <lastmod>2024-05-17T00:00:00+01:00</lastmod>
-  </url><url>
-    <loc>https://deploymentshare.com/categories/microsoft-graph/</loc>
-    <lastmod>2024-05-17T00:00:00+01:00</lastmod>
-  </url><url>
-    <loc>https://deploymentshare.com/categories/powerbi/</loc>
-    <lastmod>2024-05-17T00:00:00+01:00</lastmod>
-  </url><url>
-    <loc>https://deploymentshare.com/tags/powerbi/</loc>
     <lastmod>2024-05-17T00:00:00+01:00</lastmod>
   </url><url>
     <loc>https://deploymentshare.com/articles/bp-7-pbi-intune/</loc>

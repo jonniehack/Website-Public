@@ -6,8 +6,15 @@
     <description>Recent content in Microsoft Graph on Deploymentshare - Personal Tech Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 17 May 2024 00:00:00 +0100</lastBuildDate>
+    <lastBuildDate>Fri, 26 Jul 2024 00:00:00 +0100</lastBuildDate>
     <atom:link href="https://deploymentshare.com/tags/microsoft-graph/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Intune and PowerBI Deep Dive - Part 9 - Connectors and Tokens</title>
+      <link>https://deploymentshare.com/articles/bp-9-pbi-intune/</link>
+      <pubDate>Fri, 26 Jul 2024 00:00:00 +0100</pubDate>
+      <guid>https://deploymentshare.com/articles/bp-9-pbi-intune/</guid>
+      <description>In this post I&amp;rsquo;m going to cover (some) connectors and tokens in Microsoft Intune. In particular, how we pull in the data from them into PowerBI. These are going to be slightly different to the preceding posts as these will only take one form, a direct call. The difference here is that we&amp;rsquo;re not using a logic app, we&amp;rsquo;re just calling the API and processing the result. This is what I mean by a &amp;ldquo;direct Microsoft Graph call&amp;rdquo;, no pagination required so the Power Query M will take the form of first getting a bearer token for authorisation and then using the token to authenticate against the graph and ultimately passing the data back for us.</description>
+    </item>
     <item>
       <title>Intune and PowerBI Deep Dive - Part 8 - Autopilot Devices</title>
       <link>https://deploymentshare.com/articles/bp-8-pbi-intune/</link>
