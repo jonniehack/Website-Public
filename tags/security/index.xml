@@ -6,8 +6,15 @@
     <description>Recent content in Security on Deploymentshare - Personal Tech Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 26 Jun 2024 00:00:00 +0100</lastBuildDate>
+    <lastBuildDate>Tue, 23 Jul 2024 00:00:00 +0100</lastBuildDate>
     <atom:link href="https://deploymentshare.com/tags/security/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Troubleshooting SAML Auth on FortiClient VPN when applying Microsoft Security Baselines</title>
+      <link>https://deploymentshare.com/articles/bp-forticlient-ts/</link>
+      <pubDate>Tue, 23 Jul 2024 00:00:00 +0100</pubDate>
+      <guid>https://deploymentshare.com/articles/bp-forticlient-ts/</guid>
+      <description>Dearest gentle reader&amp;hellip; (Yes, my wife is making me watch that Bridgerton series on netflix, so I may speak like a 19th century gentlemen during this blog post&amp;hellip; or not&amp;hellip;) I recently wrote about Center for Information Security (CIS) and how those configurations broke Windows Autopilot. It then developed into a series on CIS with another gentleman of the manor, Nick Benton. And so, speaking of security posture, on my latest customer engagement they wanted to modernise their Windows Management and explore Entra joined only devices using Autopilot, but also, to improve their security configuration by using Microsoft Security Baselines - which of course I did but in doing so this broke their SAML authentication on Forticlient VPN - so here&amp;rsquo;s the story of how I fixed it.</description>
+    </item>
     <item>
       <title>Intune Defender for Endpoint Connector</title>
       <link>https://deploymentshare.com/articles/bp-dfec/</link>
