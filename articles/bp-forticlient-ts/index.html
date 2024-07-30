@@ -19670,14 +19670,14 @@ header {
 <p><img src="https://deploymentshare.com/articles/bp-forticlient-ts/img/bp-forticlient-ts1_hudc625f6ef7d53d78242f0491ec51ee06_25608_filter_13417149144224408057.png#centre" alt="SAML Connection"  /></p>
 <p>..an error was showing..</p>
 <p><img src="https://deploymentshare.com/articles/bp-forticlient-ts/img/bp-forticlient-ts3_hu34d5dee3980cb432a77be481733dc784_7638_filter_2682286697350971627.png#centre" alt="Script Error"  /></p>
-<p>My instincts here screamed Internet Explorer error. It had a somewhat familiar look to it.  But.. Windows 11.. and we use Edge now, right? If you search this online, you will see one person suspect this and get shot down, but lots of people using a work around (which works by the way) of using the following option on your configuration:</p>
+<p>My instincts here screamed Internet Explorer error. It had a somewhat familiar look to it.  But.. Windows 11.. and we use Edge now, right? If you search this online, you will see one person suspected this and get shot down, but lots of people using a work around (which works by the way) of using the following option on your configuration:</p>
 <p><img src="https://deploymentshare.com/articles/bp-forticlient-ts/img/bp-forticlient-ts4_hu7b984e34c0c75656244b56f8e5489685_22879_filter_1934427700124516184.png#centre" alt="External Browser"  /></p>
 <p>This forces &ldquo;some element&rdquo; of the VPN to use Edge, and thus connects successfully.  I say &ldquo;some element&rdquo;, because in truth, I&rsquo;m not sure. There are no local logs and nothing recorded in event viewer so this is good old fashioned guess work. When you use this option and you try to connect your SAML VPN, it opens an Edge window showing this, and connects.</p>
 <p><img src="https://deploymentshare.com/articles/bp-forticlient-ts/img/bp-forticlient-ts5_hub9526fca5538938d9be3280dd796c543_11958_filter_16074339285591417788.png#centre" alt="Edge Browser Connection"  /></p>
 <p>You can be forgiven for thinking &ldquo;<em>why not just export a new profile with this in</em>&rdquo; because if it works, it works, right? Looking online at some of the community posts, some have done this, some have even logged tickets with Fortinet and been told to do this as a workaround. One post claimed the problem was fixed in version <strong>7.2.3</strong>, however, one said the problem had returned in version <strong>7.2.4</strong>. Comedy. Rather than use workarounds, my customer wanted a fix or at least to identify the problem so the sleeves were rolled up and I began a trial-and-error process to figure out what was causing it.</p>
 <h3 id="approach">Approach</h3>
 <p>My approach was simple, find out which policy setting causes it by stripping out sub categories one by one until it works and finally narrowing down the setting within the sub category.  I thought this was going to be quick and easy. It was not, by any stretch of the imagination, quick.  Hopefully my efforts will save you time.</p>
-<p>Because I&rsquo;m cocky, and my &lsquo;spidey-sense&rsquo; was telling me it was an Internet Explorer error, thats the thing I removed.  BINGO! So we certainly had our culprit.</p>
+<p>Because I&rsquo;m cocky, and my &lsquo;spidey-sense&rsquo; was telling me it was an Internet Explorer error, thats the thing I removed first.  BINGO! So we certainly had our culprit.</p>
 <p>Next I started to remove the sub categories one by one.  Here is a list of the policy sub categories all of which sit under the category of &ldquo;Administrative Templates:</p>
 <table>
 <thead>
@@ -19759,7 +19759,7 @@ header {
 <p>Eventually, I narrowed it down to this</p>
 <p><img src="https://deploymentshare.com/articles/bp-forticlient-ts/img/bp-forticlient-ts7_hu4dbb1d4d05cffadc8aeb69b9fd0bb92c_7126_filter_18267954117777437171.png#centre" alt="Policy Setting"  /></p>
 <p>Change to this and it works!</p>
-<p><img src="https://deploymentshare.com/articles/bp-forticlient-ts/img/bp-forticlient-ts6_hu0d6bb3d89f2c22d18585c0400c23dc2f_6950_filter_15146520843317252339.png#centre" alt="Policy Setting"  /></p>
+<p><img src="https://deploymentshare.com/articles/bp-forticlient-ts/img/bp-forticlient-ts6_huf527a9fdc4799e9ac31e8489c6305009_6655_filter_15278624126356406654.png#centre" alt="Policy Setting"  /></p>
 
 
 
@@ -19848,7 +19848,7 @@ header {
 
 
 
-<p>Given how long it takes to change something, wait for that change to be processed AND reported back to the Intune console I can&rsquo;t quite tell you how long this fix took me to find (nah, its longer than what you&rsquo;re thinking).</p>
+<p>Given how long it takes to change something, wait for that change to be processed AND be reported back to the Intune console I can&rsquo;t quite tell you how long this fix took me to find (nah, its longer than what you&rsquo;re thinking).</p>
 <p><img src="https://deploymentshare.com/articles/bp-forticlient-ts/img/bp-forticlient-ts2_hudb1be6e2c7abddd80290ea75b3f71bbb_16242_filter_2267163777202055584.png#centre" alt="VPN Connected"  /></p>
 
 
@@ -19886,7 +19886,7 @@ header {
  
 
 
->Group Policy Search</a> and searching for part of the text &ldquo;Web sites in less privileged Web content zones&rdquo; you can see that you can set this is MANY locations in Group Policy so finding the right one in your Group Policies if you&rsquo;re still domain joined (why though?) and experimenting with enabling it may yield the same results as my Settings Catalog policy tests (update me if it does please!)</p>
+>Group Policy Search</a> and searching for part of the text &ldquo;Web sites in less privileged Web content zones&rdquo; you can see that you can set this is MANY locations in Group Policy so finding the right one in your Group Policies if you&rsquo;re still domain joined (why though?) and experimenting with enabling it may yield the same results as my Settings Catalog policy tests (update me if it does please!).</p>
 <h3 id="risks">Risks</h3>
 <p>According to my research, the <strong>Web sites in less privileged Web content zones can navigate into this zone</strong> setting in Internet Explorer (IE) controls the ability of websites from lower security zones to navigate into and interact with content in higher security zones. Erm, ok. This setting is a part of IE&rsquo;s security features designed to prevent malicious websites from leveraging content in more trusted zones to execute attacks. So what does this mean in laymans terms?</p>
 <p>Essentially, when this setting is <strong>enabled</strong>, it allows websites from less privileged zones (such as the Internet or Restricted zones that we want to keep under control) to navigate into more privileged zones (such as the Local Intranet or Trusted sites zones). This can include accessing resources, executing scripts, or submitting forms within the more privileged zones. When this setting is <strong>disabled</strong>, it restricts websites in less privileged zones from navigating into more privileged zones. This restriction helps to mitigate cross-zone scripting attacks and prevents potentially malicious websites from leveraging the security context of more trusted zones to perform harmful actions.</p>
@@ -19897,7 +19897,7 @@ header {
 <li><strong>Elevation of Privileges</strong> : Attackers may leverage the trust level of a higher privileged zone to perform actions with elevated permissions.</li>
 </ul>
 <h3 id="disclaimer">Disclaimer</h3>
-<p>It would be foolish of me to write this entire post about what is essentially an old version of the Forticlient app, without highlighting the obvious issue that <strong>you should always run the latest version of applications to reduce your security risk</strong>. Third party patching <strong>is</strong> part of your security posture that will come under scrutiny in an audit and you must try to keep up to date with patches and bug fixes. I have not tested this using the latest version, yet - but I may drop back in to update this post later given I have read community comments about the same thing happening on newer versions. It may also be pertinent to know that the SAML authentication element within FortiClient, does not support the Always ON element of the product so will leave you tied to a user-initiated VPN.</p>
+<p>It would be foolish of me to write this entire post about what is essentially an old version of the Forticlient app, without highlighting the obvious issue that <strong>you should always run the latest version of applications to reduce your security risk</strong>. Third party patching <strong>is</strong> part of your security posture that will come under scrutiny in an audit and you must try to keep up to date with patches and bug fixes. I have not yet tested this using the latest version (as of the time of writing), but, I have read the same error is present anyway. I did not have an option to test it.</p>
 <i>
 I appreciate you taking the time to read my blog.<br>
 Your interest and support keep me motivated to create more content. <br>
