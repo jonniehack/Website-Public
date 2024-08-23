@@ -203,16 +203,25 @@
 
 
 
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-H36JXQVDWY"></script>
-<script>
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.dataLayer = window.dataLayer || [];
-	function gtag(){dataLayer.push(arguments);}
-	gtag('js', new Date());
-	gtag('config', 'G-H36JXQVDWY', { 'anonymize_ip': false });
-}
-</script>
+  
+    
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-H36JXQVDWY"></script>
+      <script>
+        var doNotTrack = false;
+        if ( false ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-H36JXQVDWY');
+        }
+      </script>
+    
+  
+
 
 
 
@@ -19754,14 +19763,58 @@ header {
 >bearer token first</a>.  Please be aware of that and ensure you&rsquo;ve read part 4 and are clear on the requirements for both creating and calling this function.  This is because we get the bearer token for authorisation and pass it to the <strong>Json.Document(Web.Contents</strong> in our query.  Remember, we&rsquo;re not using a logic app here as we dont need pagination (direct query), so its much easier to go grab this bearer token and use it to authenticate against our tenant directly.</p></div>
 </div>
 
-<p>All of the subsequent queries are inside collapsing menus and as ever <a href="%22https://github.com/jonniehack/Website-Content/tree/master/PowerQuery%22"
+<p>All of the subsequent queries are inside collapsing menus</p>
+<p>
 
 
 
- 
 
 
->Power Queries available from my Github</a></p>
+
+  
+
+  
+
+  
+
+
+
+  
+
+  
+
+  
+
+
+
+  
+
+  
+
+  
+
+
+
+  
+
+  
+
+  
+
+
+
+  
+
+  
+
+  
+
+
+
+<a href="https://github.com/jonniehack/Website-Content/tree/master/PowerQuery" class="btn btn-outline-primary "  target="_blank" rel="noopener " >Power Queries available from my Github</a>
+
+<br>
+<br></p>
 <ins>
 <h3 id="windows"><strong>Windows</strong></h3>
 </ins>
@@ -20188,11 +20241,12 @@ header {
 
 
 >beta</a></li>
-<li>Requires the following permissions: DeviceManagementManagedDevices.Read.All</li>
+<li>Requires the following permissions: DeviceManagementManagedDevices.Read.All, DeviceManagementServiceConfig.ReadWrite.All</li>
 </ul>
 <div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-PowerQuery" data-lang="PowerQuery"><span style="display:flex;"><span><span style="color:#007020;font-weight:bold">let</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#60a0b0;font-style:italic">// Application Registration Permissions needed to make this call : DeviceManagementServiceConfig.Read.All
+</span></span><span style="display:flex;"><span><span style="color:#60a0b0;font-style:italic">// Application Registration Permissions needed to make this call : DeviceManagementServiceConfig.ReadWrite.All
+</span></span></span><span style="display:flex;"><span><span style="color:#60a0b0;font-style:italic">//                                                                 DeviceManagementManagedDevices.Read.All
 </span></span></span><span style="display:flex;"><span><span style="color:#60a0b0;font-style:italic"></span>
 </span></span><span style="display:flex;"><span><span style="color:#60a0b0;font-style:italic">// Microsoft Graph URL
 </span></span></span><span style="display:flex;"><span><span style="color:#60a0b0;font-style:italic"></span>    Endpoint <span style="color:#666">=</span> <span style="color:#4070a0">&#34;https://graph.microsoft.com/&#34;</span><span style="color:#666">,</span>
@@ -21460,7 +21514,7 @@ background-color: #FF6600
 
   
 
-<script crossorigin="anonymous" defer integrity="sha512-beWnscHiz3RV5LBPWAm/qImsSiZCl/QkqTjTsHzYpwh2eI/Lna&#43;lHBlFYot&#43;/vbeB4W5kyJmMuOg2Mfx6KkaDA==" type="application/javascript">(() => {
+<script crossorigin="anonymous" defer integrity="sha512-nC6OuLXx6PuwKW3Iaa7qZYukEuZYtcbyjvR/9HbkcW/SCH6CzZodcrQnj7rS/N87au4/ibKDjHkcwpUfkM2ufw==" type="application/javascript">(() => {
   var __create = Object.create;
   var __defProp = Object.defineProperty;
   var __getOwnPropDesc = Object.getOwnPropertyDescriptor;
@@ -22697,8 +22751,7 @@ background-color: #FF6600
           };
           for (var _i = numberOfChecks; _i > 0; _i--) {
             var _ret = _loop(_i);
-            if (_ret === "break")
-              break;
+            if (_ret === "break") break;
           }
         }
         if (state.placement !== firstFittingPlacement) {

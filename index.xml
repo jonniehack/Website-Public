@@ -4,7 +4,7 @@
     <title>Deploymentshare - Personal Tech Blog</title>
     <link>https://deploymentshare.com/</link>
     <description>Recent content on Deploymentshare - Personal Tech Blog</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 26 Jul 2024 00:00:00 +0100</lastBuildDate>
     <atom:link href="https://deploymentshare.com/index.xml" rel="self" type="application/rss+xml" />
@@ -142,6 +142,13 @@
       <description>7-Zip is free software with open source. The most of the code is under the GNU LGPL license. Some parts of the code are under the BSD 3-clause License. Also there is unRAR license restriction for some parts of the code. Read 7-Zip License information.&#xA;You can use 7-Zip on any computer, including a computer in a commercial organization. You don&amp;rsquo;t need to register or pay for 7-Zip. This is an external link, no content is served from this website Download Here </description>
     </item>
     <item>
+      <title>Forticlient VPN</title>
+      <link>https://deploymentshare.com/apps/forticlient/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://deploymentshare.com/apps/forticlient/</guid>
+      <description>The VPN-only version of FortiClient offers SSL VPN and IPSecVPN, but does not include any support. Download the best VPN software for multiple devices.&#xA;Tip! Scroll to the bottom of the page for the VPN Product download.&#xA;This is an external link, no content is served from this website Download Here </description>
+    </item>
+    <item>
       <title>Graph Xray</title>
       <link>https://deploymentshare.com/apps/graphxray/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -217,13 +224,6 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://deploymentshare.com/homepage/list-right/</guid>
       <description></description>
-    </item>
-    <item>
-      <title>Jonathan Fallis</title>
-      <link>https://deploymentshare.com/about/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://deploymentshare.com/about/</guid>
-      <description>https://deploymentshare.com/Images/AboutMe/banner.jpg does not exist&#xD;Hi, I&amp;rsquo;m Jonathan. I am currently working as a Technical Consultant in the Intune practice at Phoenix Software (who, in recognition for outstanding achievements, have been awarded Microsoft Partner of the Year for 2023), specialising in the deployment and management of Microsoft Intune, a pivotal tool for modern device management and application deployment.&#xA;Beyond working with Microsoft Intune, I am passionate about PowerShell scripting and PowerBI reporting. This interest extends beyond professional obligation, reflecting a genuine enthusiasm for the products and trying to apply them to everyday life. Whether supporting clients on their cloud journey, crafting PowerShell scripts to automate complex tasks day-to-day or harnessing PowerBI for insightful data reporting, I&amp;rsquo;m normally geeking out somewhere.</description>
     </item>
     <item>
       <title>Jonathan Fallis</title>

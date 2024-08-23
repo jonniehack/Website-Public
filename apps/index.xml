@@ -4,7 +4,7 @@
     <title>Apps on Deploymentshare - Personal Tech Blog</title>
     <link>https://deploymentshare.com/apps/</link>
     <description>Recent content in Apps on Deploymentshare - Personal Tech Blog</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en-us</language>
     <atom:link href="https://deploymentshare.com/apps/index.xml" rel="self" type="application/rss+xml" />
     <item>
@@ -20,6 +20,13 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://deploymentshare.com/apps/7zip/</guid>
       <description>7-Zip is free software with open source. The most of the code is under the GNU LGPL license. Some parts of the code are under the BSD 3-clause License. Also there is unRAR license restriction for some parts of the code. Read 7-Zip License information.&#xA;You can use 7-Zip on any computer, including a computer in a commercial organization. You don&amp;rsquo;t need to register or pay for 7-Zip. This is an external link, no content is served from this website Download Here </description>
+    </item>
+    <item>
+      <title>Forticlient VPN</title>
+      <link>https://deploymentshare.com/apps/forticlient/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://deploymentshare.com/apps/forticlient/</guid>
+      <description>The VPN-only version of FortiClient offers SSL VPN and IPSecVPN, but does not include any support. Download the best VPN software for multiple devices.&#xA;Tip! Scroll to the bottom of the page for the VPN Product download.&#xA;This is an external link, no content is served from this website Download Here </description>
     </item>
     <item>
       <title>Graph Xray</title>
