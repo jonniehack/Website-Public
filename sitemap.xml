@@ -3,10 +3,10 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://deploymentshare.com/articles/</loc>
-    <lastmod>2025-02-06T00:00:00+00:00</lastmod>
+    <lastmod>2025-03-26T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://deploymentshare.com/</loc>
-    <lastmod>2025-02-06T00:00:00+00:00</lastmod>
+    <lastmod>2025-03-26T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://deploymentshare.com/categories/</loc>
     <lastmod>2024-07-26T00:00:00+01:00</lastmod>
@@ -172,11 +172,15 @@
   </url><url>
     <loc>https://deploymentshare.com/author/</loc>
   </url><url>
+    <loc>https://deploymentshare.com/elements/</loc>
+  </url><url>
     <loc>https://deploymentshare.com/apps/forticlient/</loc>
   </url><url>
     <loc>https://deploymentshare.com/apps/graphxray/</loc>
   </url><url>
     <loc>https://deploymentshare.com/apps/greenshot/</loc>
+  </url><url>
+    <loc>https://deploymentshare.com/about/</loc>
   </url><url>
     <loc>https://deploymentshare.com/homepage/full/</loc>
   </url><url>

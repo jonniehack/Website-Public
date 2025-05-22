@@ -42,6 +42,7 @@
 
 
 
+
 <link rel="manifest" href="/manifest.webmanifest" />
 <meta
   name="msapplication-TileColor"
@@ -49,6 +50,8 @@
 <meta
   name="theme-color"
   content="#fff" />
+
+
 
 
 
@@ -196,6 +199,7 @@
 
 
 
+  <meta name="twitter:creator" content="@Jonathan Fallis" />
 
 
 
@@ -203,6 +207,10 @@
 
 
 
+
+
+
+  
   
     
       <script async src="https://www.googletagmanager.com/gtag/js?id=G-H36JXQVDWY"></script>
@@ -221,6 +229,8 @@
       </script>
     
   
+
+
 
 
 
@@ -261,19 +271,6 @@
 
 
 
-  
-
-
-
-
-
-
-
-
-
-
-
-
 
   
 
@@ -281,7 +278,26 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
   
+
+
+
+
+
+
+  
+
 
 
 
@@ -293,6 +309,7 @@
   let search_no_results = "0 results for";
   let search_initial_message = "";
 </script>
+
 
 
 
@@ -9817,8 +9834,8 @@ iframe.wait-autoplay {
   }
 }
 /*!
-   * Bootstrap  v5.3.3 (https://getbootstrap.com/)
-   * Copyright 2011-2024 The Bootstrap Authors
+   * Bootstrap  v5.3.2 (https://getbootstrap.com/)
+   * Copyright 2011-2023 The Bootstrap Authors
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    */
 :root,
@@ -12162,8 +12179,6 @@ textarea.form-control-lg {
     border-color: var(--bs-btn-active-border-color); }
     .btn-check:checked + .btn:focus-visible, :not(.btn-check) + .btn:active:focus-visible, .btn:first-child:active:focus-visible, .btn.active:focus-visible, .btn.show:focus-visible {
       box-shadow: var(--bs-btn-focus-box-shadow); }
-  .btn-check:checked:focus-visible + .btn {
-    box-shadow: var(--bs-btn-focus-box-shadow); }
   .btn:disabled, .btn.disabled, fieldset:disabled .btn {
     color: var(--bs-btn-disabled-color);
     pointer-events: none;
@@ -13386,11 +13401,12 @@ textarea.form-control-lg {
   --bs-accordion-btn-padding-y: 1rem;
   --bs-accordion-btn-color: var(--bs-body-color);
   --bs-accordion-btn-bg: var(--bs-accordion-bg);
-  --bs-accordion-btn-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='%23212529' stroke-linecap='round' stroke-linejoin='round'%3e%3cpath d='M2 5L8 11L14 5'/%3e%3c/svg%3e");
+  --bs-accordion-btn-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23212529'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
   --bs-accordion-btn-icon-width: 1.25rem;
   --bs-accordion-btn-icon-transform: rotate(-180deg);
   --bs-accordion-btn-icon-transition: transform 0.2s ease-in-out;
-  --bs-accordion-btn-active-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='%23052c65' stroke-linecap='round' stroke-linejoin='round'%3e%3cpath d='M2 5L8 11L14 5'/%3e%3c/svg%3e");
+  --bs-accordion-btn-active-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23052c65'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+  --bs-accordion-btn-focus-border-color: #86b7fe;
   --bs-accordion-btn-focus-box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
   --bs-accordion-body-padding-x: 1.25rem;
   --bs-accordion-body-padding-y: 1rem;
@@ -13438,6 +13454,7 @@ textarea.form-control-lg {
     z-index: 2; }
   .accordion-button:focus {
     z-index: 3;
+    border-color: var(--bs-accordion-btn-focus-border-color);
     outline: 0;
     box-shadow: var(--bs-accordion-btn-focus-box-shadow); }
 
@@ -13451,7 +13468,7 @@ textarea.form-control-lg {
   .accordion-item:first-of-type {
     border-top-left-radius: var(--bs-accordion-border-radius);
     border-top-right-radius: var(--bs-accordion-border-radius); }
-    .accordion-item:first-of-type > .accordion-header .accordion-button {
+    .accordion-item:first-of-type .accordion-button {
       border-top-left-radius: var(--bs-accordion-inner-border-radius);
       border-top-right-radius: var(--bs-accordion-inner-border-radius); }
   .accordion-item:not(:first-of-type) {
@@ -13459,27 +13476,28 @@ textarea.form-control-lg {
   .accordion-item:last-of-type {
     border-bottom-right-radius: var(--bs-accordion-border-radius);
     border-bottom-left-radius: var(--bs-accordion-border-radius); }
-    .accordion-item:last-of-type > .accordion-header .accordion-button.collapsed {
+    .accordion-item:last-of-type .accordion-button.collapsed {
       border-bottom-right-radius: var(--bs-accordion-inner-border-radius);
       border-bottom-left-radius: var(--bs-accordion-inner-border-radius); }
-    .accordion-item:last-of-type > .accordion-collapse {
+    .accordion-item:last-of-type .accordion-collapse {
       border-bottom-right-radius: var(--bs-accordion-border-radius);
       border-bottom-left-radius: var(--bs-accordion-border-radius); }
 
 .accordion-body {
   padding: var(--bs-accordion-body-padding-y) var(--bs-accordion-body-padding-x); }
 
-.accordion-flush > .accordion-item {
+.accordion-flush .accordion-collapse {
+  border-width: 0; }
+
+.accordion-flush .accordion-item {
   border-right: 0;
   border-left: 0;
   border-radius: 0; }
-  .accordion-flush > .accordion-item:first-child {
+  .accordion-flush .accordion-item:first-child {
     border-top: 0; }
-  .accordion-flush > .accordion-item:last-child {
+  .accordion-flush .accordion-item:last-child {
     border-bottom: 0; }
-  .accordion-flush > .accordion-item > .accordion-header .accordion-button, .accordion-flush > .accordion-item > .accordion-header .accordion-button.collapsed {
-    border-radius: 0; }
-  .accordion-flush > .accordion-item > .accordion-collapse {
+  .accordion-flush .accordion-item .accordion-button, .accordion-flush .accordion-item .accordion-button.collapsed {
     border-radius: 0; }
 
 [data-bs-theme="dark"] .accordion-button::after {
@@ -18238,16 +18256,16 @@ header {
   max-width: 100%;
   height: auto; }
 
-.logo-light {
+.img-light {
   display: initial; }
 
-.logo-dark {
+.img-dark {
   display: none; }
 
-.dark .logo-light {
+.dark .img-light {
   display: none; }
 
-.dark .logo-dark {
+.dark .img-dark {
   display: initial; }
 
 .content img {
@@ -19214,10 +19232,6 @@ header {
                     </a>
                     <div class="dropdown-menu">
                       
-                        <a class="dropdown-item" href="https://learn.microsoft.com/en-us/mem/configmgr/core/plan-design/changes/whats-new-incremental-versions"
-                          >Configuration Manager</a
-                        >
-                      
                         <a class="dropdown-item" href="https://learn.microsoft.com/en-us/officeupdates/release-notes-microsoft365-apps"
                           >Microsoft 365</a
                         >
@@ -19242,6 +19256,10 @@ header {
                           >Windows 11</a
                         >
                       
+                        <a class="dropdown-item" href="https://learn.microsoft.com/en-us/windows-365/enterprise/whats-new"
+                          >Windows 365</a
+                        >
+                      
                         <a class="dropdown-item" href="https://learn.microsoft.com/en-us/windows-server/get-started/windows-server-release-info"
                           >Windows Server</a
                         >
@@ -19251,26 +19269,35 @@ header {
                 
               
                 
-                  <li class="nav-item">
-                    <a class="nav-link" href="https://deploymentshare.com/categories/intune/"
-                      >Intune</a
-                    >
-                  </li>
-                
-              
-                
-                  <li class="nav-item">
-                    <a class="nav-link" href="https://deploymentshare.com/categories/powerbi/"
-                      >PowerBI</a
-                    >
-                  </li>
-                
-              
-                
-                  <li class="nav-item">
-                    <a class="nav-link" href="https://deploymentshare.com/categories/configuration-manager/"
-                      >ConfigMgr</a
-                    >
+                  <li class="nav-item dropdown">
+                    <a
+                      class="nav-link"
+                      href="#"
+                      role="button"
+                      data-bs-toggle="dropdown"
+                      aria-haspopup="true"
+                      aria-expanded="false">
+                      Categories <i class="fas fa-angle-down ms-1"></i>
+                    </a>
+                    <div class="dropdown-menu">
+                      
+                        <a class="dropdown-item" href="https://deploymentshare.com/apps/"
+                          >Apps Used</a
+                        >
+                      
+                        <a class="dropdown-item" href="https://deploymentshare.com/categories/configuration-manager/"
+                          >Configuration Manager</a
+                        >
+                      
+                        <a class="dropdown-item" href="https://deploymentshare.com/categories/intune/"
+                          >Intune</a
+                        >
+                      
+                        <a class="dropdown-item" href="https://deploymentshare.com/categories/powerbi/"
+                          >PowerBI</a
+                        >
+                      
+                    </div>
                   </li>
                 
               
@@ -19293,6 +19320,14 @@ header {
                       
                         <a class="dropdown-item" href="https://endpointmgt.com/"
                           >Chris Sellar</a
+                        >
+                      
+                        <a class="dropdown-item" href="https://www.youtube.com/@DeanEllerbyMVP"
+                          >Dean Ellerby</a
+                        >
+                      
+                        <a class="dropdown-item" href="https://skiptotheendpoint.co.uk/"
+                          >James Robinson</a
                         >
                       
                         <a class="dropdown-item" href="https://www.deploymentresearch.com/"
@@ -19332,10 +19367,43 @@ header {
                 
               
                 
-                  <li class="nav-item">
-                    <a class="nav-link" href="https://deploymentshare.com/apps/"
-                      >Apps</a
-                    >
+                  <li class="nav-item dropdown">
+                    <a
+                      class="nav-link"
+                      href="#"
+                      role="button"
+                      data-bs-toggle="dropdown"
+                      aria-haspopup="true"
+                      aria-expanded="false">
+                      Homepage Layout <i class="fas fa-angle-down ms-1"></i>
+                    </a>
+                    <div class="dropdown-menu">
+                      
+                        <a class="dropdown-item" href="https://deploymentshare.com/homepage/full/"
+                          >Full Width</a
+                        >
+                      
+                        <a class="dropdown-item" href="https://deploymentshare.com/homepage/full-left/"
+                          >Full With Left Sidebar</a
+                        >
+                      
+                        <a class="dropdown-item" href="https://deploymentshare.com/homepage/full-right/"
+                          >Full With Right Sidebar</a
+                        >
+                      
+                        <a class="dropdown-item" href="https://deploymentshare.com/homepage/grid/"
+                          >Grid Style</a
+                        >
+                      
+                        <a class="dropdown-item" href="https://deploymentshare.com/homepage/grid-left/"
+                          >Grid With Left Sidebar</a
+                        >
+                      
+                        <a class="dropdown-item" href="https://deploymentshare.com/homepage/grid-right/"
+                          >Grid With Right Sidebar</a
+                        >
+                      
+                    </div>
                   </li>
                 
               
@@ -19613,7 +19681,7 @@ header {
 
 >Establishing a Link</a></h4>
 <p>To set up the connection, navigate to the Microsoft Intune &gt; Tenant Administration &gt; Connectors and Tokens &gt; Microsoft Defender for Endpoint and then, like me, you may notice you don&rsquo;t have one set up yet.  Lets fix that.</p>
-<p><img src="https://deploymentshare.com/articles/bp-dfec/img/dfe1_hu643b60e6dba7664d5f389dbfdddc8274_79275_filter_14232205539769012949.png#centre" alt="Connector and Token Configuration for MDE"  /></p>
+<p><img alt="Connector and Token Configuration for MDE" src="/articles/bp-dfec/img/dfe1.png#centre"></p>
 <p>If you click on the link &ldquo;<a href="https://security.microsoft.com/"
 
 
@@ -19624,18 +19692,18 @@ header {
 
 
 >Connect Microsoft Defender for Endpoint to Microsoft Intune in the Microsoft Defender Security Center</a>&rdquo; the Security Centre portal will open in a new window. In the Microsoft Defender Security Center, go to Settings &gt; Endpoints &gt; Advanced features, and turn on the Microsoft Intune connection.</p>
-<p><img src="https://deploymentshare.com/articles/bp-dfec/img/dfe2_hu6cc9f585f2577eb508ea3851d04c7ba1_10609_filter_18372259726916385701.png#centre" alt="Toggle Connector"  /></p>
+<p><img alt="Toggle Connector" src="/articles/bp-dfec/img/dfe2.png#centre"></p>
 <p>This integration enables Intune to receive risk signals from Defender for Endpoint, which can then be used to create and enforce compliance policies.  Once established the Intune console will update. You can see here I have also enabled some settings related to Windows Devices.</p>
-<p><img src="https://deploymentshare.com/articles/bp-dfec/img/dfe3_huce07d372e0b616a24295b061f1c3a3e2_78515_filter_9988624983985298049.png#centre" alt="Successful Connector"  /></p>
+<p><img alt="Successful Connector" src="/articles/bp-dfec/img/dfe3.png#centre"></p>
 <p>Because Microsoft Defender for Endpoint can be used independently to Intune, the first setting allows devices to report their status to Intune, which we would like them to do. Also, the setting to connect versions of Windows 10.0.15063 or above has been selected.  This version refers to Windows 10 Version 1703, released in April 2017. It does not, however, meet the minimum requirement for supporting Microsoft Defender for Endpoint, which starts from version 1709 (10.0.16299.15). So watch out for that, also.</p>
 <h3 id="onboarding-devices">Onboarding Devices</h3>
 <p>Onboarding devices to Microsoft Defender for Endpoint through Intune allows for comprehensive threat detection and response capabilities on each device. When devices are onboarded, Defender for Endpoint can monitor them for suspicious activities and provide detailed insights into potential threats.</p>
 <p>To onboard devices, first, navigate to the Microsoft Intune Console. Go to Endpoint security &gt; Endpoint detection and response.  Notice here it tells you the connector is established.</p>
-<p><img src="https://deploymentshare.com/articles/bp-dfec/img/dfe4_hu05d5e69c42ae5f3acddf2818e1b673c0_13007_filter_11992551498167193911.png#centre" alt="Endpoint Security Detection and Response"  /></p>
+<p><img alt="Endpoint Security Detection and Response" src="/articles/bp-dfec/img/dfe4.png#centre"></p>
 <p>Create a policy. Choose a platform (e.g., Windows 10, Windows 11 and WIndows Server) and select Endpoint detection and response under profile type. Configure the profile with your required settings and deploy it to the targeted device groups (the settings I opted for are in the below image).</p>
-<p><img src="https://deploymentshare.com/articles/bp-dfec/img/dfe5_hu7edcd4b2643b5a2f42fb3fd07460ddec_7600_filter_4427371420385388017.png#centre" alt="Endpoint Security Detection and Response Settings for Onboarding"  /></p>
+<p><img alt="Endpoint Security Detection and Response Settings for Onboarding" src="/articles/bp-dfec/img/dfe5.png#centre"></p>
 <p>Devices will automatically onboard to Defender for Endpoint upon receiving and applying this configuration, beginning real-time protection and threat monitoring.</p>
-<p><img src="https://deploymentshare.com/articles/bp-dfec/img/dfe6_hu8141957ac1bcc3a651641a10b3dcec3b_11661_filter_15228656618699603193.png#centre" alt="Onboarded Devices"  /></p>
+<p><img alt="Onboarded Devices" src="/articles/bp-dfec/img/dfe6.png#centre"></p>
 <h3 id="compliance-policy">Compliance Policy</h3>
 <p>We can now use a compliance policy in Intune that leverages the integration with Microsoft Defender for Endpoint to mark devices as compliant or not based upon their risk score. It assigns a risk score to each device, categorising the risk as:</p>
 <ul>
@@ -19645,7 +19713,7 @@ header {
 <li>High: Serious issues that pose a significant threat to the device or network.</li>
 </ul>
 <p>Defender for Endpoint continuously monitors devices for security threats and vulnerabilities. It analyses telemetry data, including malware detection, suspicious activity and security configurations, to assign this risk score.</p>
-<p><img src="https://deploymentshare.com/articles/bp-dfec/img/dfe7_hue71edc6c3bad6c959bc6484080c87c8b_9417_filter_5495249938452901048.png#centre" alt="Risk Score"  /></p>
+<p><img alt="Risk Score" src="/articles/bp-dfec/img/dfe7.png#centre"></p>
 <p>I&rsquo;m not going to talk about what compliance policies are and how to set them up but you can read more here: <a href="https://learn.microsoft.com/mem/intune/protect/advanced-threat-protection-configure#create-and-assign-compliance-policy-to-set-device-risk-level"
 
 
@@ -19824,210 +19892,187 @@ If you think others might benefit from this content, please consider sharing it<
     
   </ul>
 </div>
-<!-- categories -->
-<div class="widget">
-  <h5 class="widget-title"><span>Categories</span></h5>
+
+
+  
+    <div class="widget">
+      <h5 class="widget-title"><span>Categories</span></h5>
       <ul class="list-unstyled widget-list">
+        
           <li>
-            <a
-              href="/categories/configuration-manager/"
-              class="d-flex"
-              >Configuration manager
+            <a href="/categories/configuration-manager/" class="d-flex"
+              >Configuration Manager
               <small class="ms-auto">(3)</small></a
             >
           </li>
+        
           <li>
-            <a
-              href="/categories/intune/"
-              class="d-flex"
+            <a href="/categories/intune/" class="d-flex"
               >Intune
               <small class="ms-auto">(17)</small></a
             >
           </li>
+        
           <li>
-            <a
-              href="/categories/microsoft-deployment-toolkit/"
-              class="d-flex"
-              >Microsoft deployment toolkit
+            <a href="/categories/microsoft-deployment-toolkit/" class="d-flex"
+              >Microsoft Deployment Toolkit
               <small class="ms-auto">(1)</small></a
             >
           </li>
+        
           <li>
-            <a
-              href="/categories/microsoft-graph/"
-              class="d-flex"
-              >Microsoft graph
+            <a href="/categories/microsoft-graph/" class="d-flex"
+              >Microsoft Graph
               <small class="ms-auto">(9)</small></a
             >
           </li>
+        
           <li>
-            <a
-              href="/categories/powerbi/"
-              class="d-flex"
-              >Powerbi
+            <a href="/categories/powerbi/" class="d-flex"
+              >PowerBi
               <small class="ms-auto">(9)</small></a
             >
           </li>
+        
           <li>
-            <a
-              href="/categories/powershell/"
-              class="d-flex"
-              >Powershell
+            <a href="/categories/powershell/" class="d-flex"
+              >PowerShell
               <small class="ms-auto">(4)</small></a
             >
           </li>
+        
           <li>
-            <a
-              href="/categories/security/"
-              class="d-flex"
+            <a href="/categories/security/" class="d-flex"
               >Security
               <small class="ms-auto">(3)</small></a
             >
           </li>
+        
           <li>
-            <a
-              href="/categories/vpn/"
-              class="d-flex"
+            <a href="/categories/vpn/" class="d-flex"
               >VPN
               <small class="ms-auto">(2)</small></a
             >
           </li>
+        
           <li>
-            <a
-              href="/categories/windows-10/"
-              class="d-flex"
+            <a href="/categories/windows-10/" class="d-flex"
               >Windows 10
               <small class="ms-auto">(1)</small></a
             >
           </li>
+        
       </ul>
-</div>
-<!-- tags -->
-<div class="widget">
-  <h5 class="widget-title"><span>Tags</span></h5>
+    </div>
+  
+
+
+
+  
+    <div class="widget">
+      <h5 class="widget-title"><span>Tags</span></h5>
       <ul class="list-inline widget-list-inline">
+        
           <li class="list-inline-item">
-            <a href="/tags/app-packaging/"
-              >App packaging</a
-            >
+            <a href="/tags/app-packaging/">App Packaging</a>
           </li>
+        
           <li class="list-inline-item">
-            <a href="/tags/applications/"
-              >Applications</a
-            >
+            <a href="/tags/applications/">Applications</a>
           </li>
+        
           <li class="list-inline-item">
-            <a href="/tags/autopilot/"
-              >Autopilot</a
-            >
+            <a href="/tags/autopilot/">Autopilot</a>
           </li>
+        
           <li class="list-inline-item">
-            <a href="/tags/azure-ad/"
-              >Azure ad</a
-            >
+            <a href="/tags/azure-ad/">Azure AD</a>
           </li>
+        
           <li class="list-inline-item">
-            <a href="/tags/cis/"
-              >Cis</a
-            >
+            <a href="/tags/cis/">CIS</a>
           </li>
+        
           <li class="list-inline-item">
-            <a href="/tags/cloud/"
-              >Cloud</a
-            >
+            <a href="/tags/cloud/">Cloud</a>
           </li>
+        
           <li class="list-inline-item">
-            <a href="/tags/configmgr/"
-              >Configmgr</a
-            >
+            <a href="/tags/configmgr/">ConfigMgr</a>
           </li>
+        
           <li class="list-inline-item">
-            <a href="/tags/configuration-manager/"
-              >Configuration manager</a
-            >
+            <a href="/tags/configuration-manager/">Configuration Manager</a>
           </li>
+        
           <li class="list-inline-item">
-            <a href="/tags/defender/"
-              >Defender</a
-            >
+            <a href="/tags/defender/">Defender</a>
           </li>
+        
           <li class="list-inline-item">
-            <a href="/tags/deployment/"
-              >Deployment</a
-            >
+            <a href="/tags/deployment/">Deployment</a>
           </li>
+        
           <li class="list-inline-item">
-            <a href="/tags/endpoint-manager/"
-              >Endpoint manager</a
-            >
+            <a href="/tags/endpoint-manager/">Endpoint Manager</a>
           </li>
+        
           <li class="list-inline-item">
-            <a href="/tags/forticlient/"
-              >Forticlient</a
-            >
+            <a href="/tags/forticlient/">Forticlient</a>
           </li>
+        
           <li class="list-inline-item">
-            <a href="/tags/group-tag/"
-              >Group tag</a
-            >
+            <a href="/tags/group-tag/">Group Tag</a>
           </li>
+        
           <li class="list-inline-item">
-            <a href="/tags/hybrid/"
-              >Hybrid</a
-            >
+            <a href="/tags/hybrid/">Hybrid</a>
           </li>
+        
           <li class="list-inline-item">
-            <a href="/tags/hybrid-aad/"
-              >Hybrid aad</a
-            >
+            <a href="/tags/hybrid-aad/">Hybrid AAD</a>
           </li>
+        
           <li class="list-inline-item">
-            <a href="/tags/intune/"
-              >Intune</a
-            >
+            <a href="/tags/intune/">Intune</a>
           </li>
+        
           <li class="list-inline-item">
-            <a href="/tags/microsoft/"
-              >Microsoft</a
-            >
+            <a href="/tags/microsoft/">Microsoft</a>
           </li>
+        
           <li class="list-inline-item">
-            <a href="/tags/microsoft-graph/"
-              >Microsoft graph</a
-            >
+            <a href="/tags/microsoft-graph/">Microsoft Graph</a>
           </li>
+        
           <li class="list-inline-item">
-            <a href="/tags/packaging/"
-              >Packaging</a
-            >
+            <a href="/tags/packaging/">Packaging</a>
           </li>
+        
           <li class="list-inline-item">
-            <a href="/tags/powerbi/"
-              >Powerbi</a
-            >
+            <a href="/tags/powerbi/">PowerBI</a>
           </li>
+        
           <li class="list-inline-item">
-            <a href="/tags/powershell/"
-              >Powershell</a
-            >
+            <a href="/tags/powershell/">PowerShell</a>
           </li>
+        
           <li class="list-inline-item">
-            <a href="/tags/sccm/"
-              >Sccm</a
-            >
+            <a href="/tags/sccm/">SCCM</a>
           </li>
+        
           <li class="list-inline-item">
-            <a href="/tags/security/"
-              >Security</a
-            >
+            <a href="/tags/security/">Security</a>
           </li>
+        
           <li class="list-inline-item">
-            <a href="/tags/vpn/"
-              >VPN</a
-            >
+            <a href="/tags/vpn/">VPN</a>
           </li>
+        
       </ul>
-</div>
+    </div>
+  
+
 <!-- Promotion -->
 
   <div class="promotion">
@@ -20147,8 +20192,8 @@ If you think others might benefit from this content, please consider sharing it<
 
 
     <div class="promotion-content">
-      <h5 class="text-white mb-3">Currently Rocking</h5>
-      <p class="text-white mb-4">HP ZBook 15 G6 -i9 <br> 64GB Ram / 4TB SSD</p>
+      <h5 class="text-white mb-3">My Laptop</h5>
+      <p class="text-white mb-4">HP ZBook 15 G6 <br> Intel(R) Core(TM) i9-9880H CPU <br> 64GB Ram / 4TB SSD</p>
       <a href="https://www8.hp.com/h20195/v2/GetPDF.aspx/c06305136.pdf" class="btn btn-primary"
         >HP Zbook</a
       >
@@ -20746,7 +20791,7 @@ background-color: #FF6600
 
 
 
-   
+
     </main>
 
     
@@ -20825,7 +20870,7 @@ background-color: #FF6600
 
 
         </a>
-        <p></p>
+        <p>Please like and share on social medai and dont forget to tag me, it is really appreciated and helps my drive to create more content</p>
       </div>
       <div class="col-lg-2 col-md-3 col-6 mb-4">
         <h6 class="mb-4 fw-semibold">Quick Links</h6>
@@ -20911,7 +20956,7 @@ background-color: #FF6600
 
   
 
-<script crossorigin="anonymous" defer integrity="sha512-nC6OuLXx6PuwKW3Iaa7qZYukEuZYtcbyjvR/9HbkcW/SCH6CzZodcrQnj7rS/N87au4/ibKDjHkcwpUfkM2ufw==" type="application/javascript">(() => {
+<script crossorigin="anonymous" defer integrity="sha512-PvmhRVExWPGPWMT1YeuEq0TG3izBtQf4dbjWXhb4o2JsUqtJdX&#43;E5xxHAqE/mXODgcmduh3iI6qIecv3cWNPvA==" type="application/javascript">(() => {
   var __create = Object.create;
   var __defProp = Object.defineProperty;
   var __getOwnPropDesc = Object.getOwnPropertyDescriptor;
@@ -22413,7 +22458,7 @@ background-color: #FF6600
     }
   });
 
-  // ns-hugo:/home/runner/.cache/hugo_cache/modules/filecache/modules/pkg/mod/github.com/twbs/bootstrap@v5.3.3+incompatible/js/src/dom/data.js
+  // ns-hugo:/home/runner/.cache/hugo_cache/modules/filecache/modules/pkg/mod/github.com/twbs/bootstrap@v5.3.2+incompatible/js/src/dom/data.js
   var elementMap = /* @__PURE__ */ new Map();
   var data_default = {
     set(element, key, instance) {
@@ -22445,7 +22490,7 @@ background-color: #FF6600
     }
   };
 
-  // ns-hugo:/home/runner/.cache/hugo_cache/modules/filecache/modules/pkg/mod/github.com/twbs/bootstrap@v5.3.3+incompatible/js/src/util/index.js
+  // ns-hugo:/home/runner/.cache/hugo_cache/modules/filecache/modules/pkg/mod/github.com/twbs/bootstrap@v5.3.2+incompatible/js/src/util/index.js
   var MILLISECONDS_MULTIPLIER = 1e3;
   var TRANSITION_END = "transitionend";
   var parseSelector = (selector) => {
@@ -22608,7 +22653,7 @@ background-color: #FF6600
     return list[Math.max(0, Math.min(index, listLength - 1))];
   };
 
-  // ns-hugo:/home/runner/.cache/hugo_cache/modules/filecache/modules/pkg/mod/github.com/twbs/bootstrap@v5.3.3+incompatible/js/src/dom/event-handler.js
+  // ns-hugo:/home/runner/.cache/hugo_cache/modules/filecache/modules/pkg/mod/github.com/twbs/bootstrap@v5.3.2+incompatible/js/src/dom/event-handler.js
   var namespaceRegex = /[^.]*(?=\..*)\.|.*/;
   var stripNameRegex = /\..*/;
   var stripUidRegex = /::\d+$/;
@@ -22847,7 +22892,7 @@ background-color: #FF6600
   }
   var event_handler_default = EventHandler;
 
-  // ns-hugo:/home/runner/.cache/hugo_cache/modules/filecache/modules/pkg/mod/github.com/twbs/bootstrap@v5.3.3+incompatible/js/src/dom/manipulator.js
+  // ns-hugo:/home/runner/.cache/hugo_cache/modules/filecache/modules/pkg/mod/github.com/twbs/bootstrap@v5.3.2+incompatible/js/src/dom/manipulator.js
   function normalizeData(value) {
     if (value === "true") {
       return true;
@@ -22899,7 +22944,7 @@ background-color: #FF6600
   };
   var manipulator_default = Manipulator;
 
-  // ns-hugo:/home/runner/.cache/hugo_cache/modules/filecache/modules/pkg/mod/github.com/twbs/bootstrap@v5.3.3+incompatible/js/src/util/config.js
+  // ns-hugo:/home/runner/.cache/hugo_cache/modules/filecache/modules/pkg/mod/github.com/twbs/bootstrap@v5.3.2+incompatible/js/src/util/config.js
   var Config = class {
     // Getters
     static get Default() {
@@ -22943,8 +22988,8 @@ background-color: #FF6600
   };
   var config_default = Config;
 
-  // ns-hugo:/home/runner/.cache/hugo_cache/modules/filecache/modules/pkg/mod/github.com/twbs/bootstrap@v5.3.3+incompatible/js/src/base-component.js
-  var VERSION = "5.3.3";
+  // ns-hugo:/home/runner/.cache/hugo_cache/modules/filecache/modules/pkg/mod/github.com/twbs/bootstrap@v5.3.2+incompatible/js/src/base-component.js
+  var VERSION = "5.3.2";
   var BaseComponent = class extends config_default {
     constructor(element, config) {
       super();
@@ -22995,7 +23040,7 @@ background-color: #FF6600
   };
   var base_component_default = BaseComponent;
 
-  // ns-hugo:/home/runner/.cache/hugo_cache/modules/filecache/modules/pkg/mod/github.com/twbs/bootstrap@v5.3.3+incompatible/js/src/dom/selector-engine.js
+  // ns-hugo:/home/runner/.cache/hugo_cache/modules/filecache/modules/pkg/mod/github.com/twbs/bootstrap@v5.3.2+incompatible/js/src/dom/selector-engine.js
   var getSelector = (element) => {
     let selector = element.getAttribute("data-bs-target");
     if (!selector || selector === "#") {
@@ -23006,9 +23051,9 @@ background-color: #FF6600
       if (hrefAttribute.includes("#") && !hrefAttribute.startsWith("#")) {
         hrefAttribute = `#${hrefAttribute.split("#")[1]}`;
       }
-      selector = hrefAttribute && hrefAttribute !== "#" ? hrefAttribute.trim() : null;
+      selector = hrefAttribute && hrefAttribute !== "#" ? parseSelector(hrefAttribute.trim()) : null;
     }
-    return selector ? selector.split(",").map((sel) => parseSelector(sel)).join(",") : null;
+    return selector;
   };
   var SelectorEngine = {
     find(selector, element = document.documentElement) {
@@ -23081,7 +23126,7 @@ background-color: #FF6600
   };
   var selector_engine_default = SelectorEngine;
 
-  // ns-hugo:/home/runner/.cache/hugo_cache/modules/filecache/modules/pkg/mod/github.com/twbs/bootstrap@v5.3.3+incompatible/js/src/collapse.js
+  // ns-hugo:/home/runner/.cache/hugo_cache/modules/filecache/modules/pkg/mod/github.com/twbs/bootstrap@v5.3.2+incompatible/js/src/collapse.js
   var NAME = "collapse";
   var DATA_KEY = "bs.collapse";
   var EVENT_KEY = `.${DATA_KEY}`;
@@ -23277,7 +23322,7 @@ background-color: #FF6600
   });
   defineJQueryPlugin(Collapse);
 
-  // ns-hugo:/home/runner/.cache/hugo_cache/modules/filecache/modules/pkg/mod/github.com/twbs/bootstrap@v5.3.3+incompatible/js/src/dropdown.js
+  // ns-hugo:/home/runner/.cache/hugo_cache/modules/filecache/modules/pkg/mod/github.com/twbs/bootstrap@v5.3.2+incompatible/js/src/dropdown.js
   var Popper = __toESM(require_popper());
   var NAME2 = "dropdown";
   var DATA_KEY2 = "bs.dropdown";
@@ -23586,7 +23631,7 @@ background-color: #FF6600
   });
   defineJQueryPlugin(Dropdown);
 
-  // ns-hugo:/home/runner/.cache/hugo_cache/modules/filecache/modules/pkg/mod/github.com/twbs/bootstrap@v5.3.3+incompatible/js/src/util/backdrop.js
+  // ns-hugo:/home/runner/.cache/hugo_cache/modules/filecache/modules/pkg/mod/github.com/twbs/bootstrap@v5.3.2+incompatible/js/src/util/backdrop.js
   var NAME3 = "backdrop";
   var CLASS_NAME_FADE = "fade";
   var CLASS_NAME_SHOW3 = "show";
@@ -23692,7 +23737,7 @@ background-color: #FF6600
   };
   var backdrop_default = Backdrop;
 
-  // ns-hugo:/home/runner/.cache/hugo_cache/modules/filecache/modules/pkg/mod/github.com/twbs/bootstrap@v5.3.3+incompatible/js/src/util/component-functions.js
+  // ns-hugo:/home/runner/.cache/hugo_cache/modules/filecache/modules/pkg/mod/github.com/twbs/bootstrap@v5.3.2+incompatible/js/src/util/component-functions.js
   var enableDismissTrigger = (component, method = "hide") => {
     const clickEvent = `click.dismiss${component.EVENT_KEY}`;
     const name = component.NAME;
@@ -23709,7 +23754,7 @@ background-color: #FF6600
     });
   };
 
-  // ns-hugo:/home/runner/.cache/hugo_cache/modules/filecache/modules/pkg/mod/github.com/twbs/bootstrap@v5.3.3+incompatible/js/src/util/focustrap.js
+  // ns-hugo:/home/runner/.cache/hugo_cache/modules/filecache/modules/pkg/mod/github.com/twbs/bootstrap@v5.3.2+incompatible/js/src/util/focustrap.js
   var NAME4 = "focustrap";
   var DATA_KEY3 = "bs.focustrap";
   var EVENT_KEY3 = `.${DATA_KEY3}`;
@@ -23788,7 +23833,7 @@ background-color: #FF6600
   };
   var focustrap_default = FocusTrap;
 
-  // ns-hugo:/home/runner/.cache/hugo_cache/modules/filecache/modules/pkg/mod/github.com/twbs/bootstrap@v5.3.3+incompatible/js/src/util/scrollbar.js
+  // ns-hugo:/home/runner/.cache/hugo_cache/modules/filecache/modules/pkg/mod/github.com/twbs/bootstrap@v5.3.2+incompatible/js/src/util/scrollbar.js
   var SELECTOR_FIXED_CONTENT = ".fixed-top, .fixed-bottom, .is-fixed, .sticky-top";
   var SELECTOR_STICKY_CONTENT = ".sticky-top";
   var PROPERTY_PADDING = "padding-right";
@@ -23865,7 +23910,7 @@ background-color: #FF6600
   };
   var scrollbar_default = ScrollBarHelper;
 
-  // ns-hugo:/home/runner/.cache/hugo_cache/modules/filecache/modules/pkg/mod/github.com/twbs/bootstrap@v5.3.3+incompatible/js/src/modal.js
+  // ns-hugo:/home/runner/.cache/hugo_cache/modules/filecache/modules/pkg/mod/github.com/twbs/bootstrap@v5.3.2+incompatible/js/src/modal.js
   var NAME5 = "modal";
   var DATA_KEY4 = "bs.modal";
   var EVENT_KEY4 = `.${DATA_KEY4}`;

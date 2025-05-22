@@ -42,6 +42,7 @@
 
 
 
+
 <link rel="manifest" href="/manifest.webmanifest" />
 <meta
   name="msapplication-TileColor"
@@ -49,6 +50,8 @@
 <meta
   name="theme-color"
   content="#fff" />
+
+
 
 
 
@@ -196,6 +199,7 @@
 
 
 
+  <meta name="twitter:creator" content="@Jonathan Fallis" />
 
 
 
@@ -203,6 +207,10 @@
 
 
 
+
+
+
+  
   
     
       <script async src="https://www.googletagmanager.com/gtag/js?id=G-H36JXQVDWY"></script>
@@ -221,6 +229,8 @@
       </script>
     
   
+
+
 
 
 
@@ -261,19 +271,6 @@
 
 
 
-  
-
-
-
-
-
-
-
-
-
-
-
-
 
   
 
@@ -281,7 +278,26 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
   
+
+
+
+
+
+
+  
+
 
 
 
@@ -293,6 +309,7 @@
   let search_no_results = "0 results for";
   let search_initial_message = "";
 </script>
+
 
 
 
@@ -9817,8 +9834,8 @@ iframe.wait-autoplay {
   }
 }
 /*!
-   * Bootstrap  v5.3.3 (https://getbootstrap.com/)
-   * Copyright 2011-2024 The Bootstrap Authors
+   * Bootstrap  v5.3.2 (https://getbootstrap.com/)
+   * Copyright 2011-2023 The Bootstrap Authors
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    */
 :root,
@@ -12162,8 +12179,6 @@ textarea.form-control-lg {
     border-color: var(--bs-btn-active-border-color); }
     .btn-check:checked + .btn:focus-visible, :not(.btn-check) + .btn:active:focus-visible, .btn:first-child:active:focus-visible, .btn.active:focus-visible, .btn.show:focus-visible {
       box-shadow: var(--bs-btn-focus-box-shadow); }
-  .btn-check:checked:focus-visible + .btn {
-    box-shadow: var(--bs-btn-focus-box-shadow); }
   .btn:disabled, .btn.disabled, fieldset:disabled .btn {
     color: var(--bs-btn-disabled-color);
     pointer-events: none;
@@ -13386,11 +13401,12 @@ textarea.form-control-lg {
   --bs-accordion-btn-padding-y: 1rem;
   --bs-accordion-btn-color: var(--bs-body-color);
   --bs-accordion-btn-bg: var(--bs-accordion-bg);
-  --bs-accordion-btn-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='%23212529' stroke-linecap='round' stroke-linejoin='round'%3e%3cpath d='M2 5L8 11L14 5'/%3e%3c/svg%3e");
+  --bs-accordion-btn-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23212529'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
   --bs-accordion-btn-icon-width: 1.25rem;
   --bs-accordion-btn-icon-transform: rotate(-180deg);
   --bs-accordion-btn-icon-transition: transform 0.2s ease-in-out;
-  --bs-accordion-btn-active-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='%23052c65' stroke-linecap='round' stroke-linejoin='round'%3e%3cpath d='M2 5L8 11L14 5'/%3e%3c/svg%3e");
+  --bs-accordion-btn-active-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23052c65'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+  --bs-accordion-btn-focus-border-color: #86b7fe;
   --bs-accordion-btn-focus-box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
   --bs-accordion-body-padding-x: 1.25rem;
   --bs-accordion-body-padding-y: 1rem;
@@ -13438,6 +13454,7 @@ textarea.form-control-lg {
     z-index: 2; }
   .accordion-button:focus {
     z-index: 3;
+    border-color: var(--bs-accordion-btn-focus-border-color);
     outline: 0;
     box-shadow: var(--bs-accordion-btn-focus-box-shadow); }
 
@@ -13451,7 +13468,7 @@ textarea.form-control-lg {
   .accordion-item:first-of-type {
     border-top-left-radius: var(--bs-accordion-border-radius);
     border-top-right-radius: var(--bs-accordion-border-radius); }
-    .accordion-item:first-of-type > .accordion-header .accordion-button {
+    .accordion-item:first-of-type .accordion-button {
       border-top-left-radius: var(--bs-accordion-inner-border-radius);
       border-top-right-radius: var(--bs-accordion-inner-border-radius); }
   .accordion-item:not(:first-of-type) {
@@ -13459,27 +13476,28 @@ textarea.form-control-lg {
   .accordion-item:last-of-type {
     border-bottom-right-radius: var(--bs-accordion-border-radius);
     border-bottom-left-radius: var(--bs-accordion-border-radius); }
-    .accordion-item:last-of-type > .accordion-header .accordion-button.collapsed {
+    .accordion-item:last-of-type .accordion-button.collapsed {
       border-bottom-right-radius: var(--bs-accordion-inner-border-radius);
       border-bottom-left-radius: var(--bs-accordion-inner-border-radius); }
-    .accordion-item:last-of-type > .accordion-collapse {
+    .accordion-item:last-of-type .accordion-collapse {
       border-bottom-right-radius: var(--bs-accordion-border-radius);
       border-bottom-left-radius: var(--bs-accordion-border-radius); }
 
 .accordion-body {
   padding: var(--bs-accordion-body-padding-y) var(--bs-accordion-body-padding-x); }
 
-.accordion-flush > .accordion-item {
+.accordion-flush .accordion-collapse {
+  border-width: 0; }
+
+.accordion-flush .accordion-item {
   border-right: 0;
   border-left: 0;
   border-radius: 0; }
-  .accordion-flush > .accordion-item:first-child {
+  .accordion-flush .accordion-item:first-child {
     border-top: 0; }
-  .accordion-flush > .accordion-item:last-child {
+  .accordion-flush .accordion-item:last-child {
     border-bottom: 0; }
-  .accordion-flush > .accordion-item > .accordion-header .accordion-button, .accordion-flush > .accordion-item > .accordion-header .accordion-button.collapsed {
-    border-radius: 0; }
-  .accordion-flush > .accordion-item > .accordion-collapse {
+  .accordion-flush .accordion-item .accordion-button, .accordion-flush .accordion-item .accordion-button.collapsed {
     border-radius: 0; }
 
 [data-bs-theme="dark"] .accordion-button::after {
@@ -18238,16 +18256,16 @@ header {
   max-width: 100%;
   height: auto; }
 
-.logo-light {
+.img-light {
   display: initial; }
 
-.logo-dark {
+.img-dark {
   display: none; }
 
-.dark .logo-light {
+.dark .img-light {
   display: none; }
 
-.dark .logo-dark {
+.dark .img-dark {
   display: initial; }
 
 .content img {
@@ -19214,10 +19232,6 @@ header {
                     </a>
                     <div class="dropdown-menu">
                       
-                        <a class="dropdown-item" href="https://learn.microsoft.com/en-us/mem/configmgr/core/plan-design/changes/whats-new-incremental-versions"
-                          >Configuration Manager</a
-                        >
-                      
                         <a class="dropdown-item" href="https://learn.microsoft.com/en-us/officeupdates/release-notes-microsoft365-apps"
                           >Microsoft 365</a
                         >
@@ -19242,6 +19256,10 @@ header {
                           >Windows 11</a
                         >
                       
+                        <a class="dropdown-item" href="https://learn.microsoft.com/en-us/windows-365/enterprise/whats-new"
+                          >Windows 365</a
+                        >
+                      
                         <a class="dropdown-item" href="https://learn.microsoft.com/en-us/windows-server/get-started/windows-server-release-info"
                           >Windows Server</a
                         >
@@ -19251,26 +19269,35 @@ header {
                 
               
                 
-                  <li class="nav-item">
-                    <a class="nav-link" href="https://deploymentshare.com/categories/intune/"
-                      >Intune</a
-                    >
-                  </li>
-                
-              
-                
-                  <li class="nav-item">
-                    <a class="nav-link" href="https://deploymentshare.com/categories/powerbi/"
-                      >PowerBI</a
-                    >
-                  </li>
-                
-              
-                
-                  <li class="nav-item">
-                    <a class="nav-link" href="https://deploymentshare.com/categories/configuration-manager/"
-                      >ConfigMgr</a
-                    >
+                  <li class="nav-item dropdown">
+                    <a
+                      class="nav-link"
+                      href="#"
+                      role="button"
+                      data-bs-toggle="dropdown"
+                      aria-haspopup="true"
+                      aria-expanded="false">
+                      Categories <i class="fas fa-angle-down ms-1"></i>
+                    </a>
+                    <div class="dropdown-menu">
+                      
+                        <a class="dropdown-item" href="https://deploymentshare.com/apps/"
+                          >Apps Used</a
+                        >
+                      
+                        <a class="dropdown-item" href="https://deploymentshare.com/categories/configuration-manager/"
+                          >Configuration Manager</a
+                        >
+                      
+                        <a class="dropdown-item" href="https://deploymentshare.com/categories/intune/"
+                          >Intune</a
+                        >
+                      
+                        <a class="dropdown-item" href="https://deploymentshare.com/categories/powerbi/"
+                          >PowerBI</a
+                        >
+                      
+                    </div>
                   </li>
                 
               
@@ -19293,6 +19320,14 @@ header {
                       
                         <a class="dropdown-item" href="https://endpointmgt.com/"
                           >Chris Sellar</a
+                        >
+                      
+                        <a class="dropdown-item" href="https://www.youtube.com/@DeanEllerbyMVP"
+                          >Dean Ellerby</a
+                        >
+                      
+                        <a class="dropdown-item" href="https://skiptotheendpoint.co.uk/"
+                          >James Robinson</a
                         >
                       
                         <a class="dropdown-item" href="https://www.deploymentresearch.com/"
@@ -19332,10 +19367,43 @@ header {
                 
               
                 
-                  <li class="nav-item">
-                    <a class="nav-link" href="https://deploymentshare.com/apps/"
-                      >Apps</a
-                    >
+                  <li class="nav-item dropdown">
+                    <a
+                      class="nav-link"
+                      href="#"
+                      role="button"
+                      data-bs-toggle="dropdown"
+                      aria-haspopup="true"
+                      aria-expanded="false">
+                      Homepage Layout <i class="fas fa-angle-down ms-1"></i>
+                    </a>
+                    <div class="dropdown-menu">
+                      
+                        <a class="dropdown-item" href="https://deploymentshare.com/homepage/full/"
+                          >Full Width</a
+                        >
+                      
+                        <a class="dropdown-item" href="https://deploymentshare.com/homepage/full-left/"
+                          >Full With Left Sidebar</a
+                        >
+                      
+                        <a class="dropdown-item" href="https://deploymentshare.com/homepage/full-right/"
+                          >Full With Right Sidebar</a
+                        >
+                      
+                        <a class="dropdown-item" href="https://deploymentshare.com/homepage/grid/"
+                          >Grid Style</a
+                        >
+                      
+                        <a class="dropdown-item" href="https://deploymentshare.com/homepage/grid-left/"
+                          >Grid With Left Sidebar</a
+                        >
+                      
+                        <a class="dropdown-item" href="https://deploymentshare.com/homepage/grid-right/"
+                          >Grid With Right Sidebar</a
+                        >
+                      
+                    </div>
                   </li>
                 
               
@@ -19594,13 +19662,13 @@ header {
 <ul>
 <li>Within the Microsoft Entra ID portal, navigate to App Registrations.</li>
 <li>Create a new Registration and name it as you see fit, in my case I called it &ldquo;Autopilot GroupTag&rdquo; you know, because I&rsquo;m super inventive.
-<img src="https://deploymentshare.com/articles/bp-apgrouptagts/articles/bp-apgrouptagts/img/BP-APGroupTagTS-11_hu46d84c1b31b1c87ac45865d23d5df805_5695_filter_5601644329076904635.png#centre" alt="Alt Text"  />
-<img src="https://deploymentshare.com/articles/bp-apgrouptagts/articles/bp-apgrouptagts/img/BP-APGroupTagTS-12_hu6183ad985305358f986758e3c5b8182f_35360_filter_4877142530399971583.png#centre" alt="Alt Text"  /></li>
+<img alt="Alt Text" src="/articles/bp-apgrouptagts/articles/bp-apgrouptagts/img/BP-APGroupTagTS-11.png#centre">
+<img alt="Alt Text" src="/articles/bp-apgrouptagts/articles/bp-apgrouptagts/img/BP-APGroupTagTS-12.png#centre"></li>
 <li>You will now need to add the permission <strong>DeviceManagementServiceConfig.ReadWrite.All</strong>, as a Microsoft Graph Application Permission and grant consent.
-<img src="https://deploymentshare.com/articles/bp-apgrouptagts/articles/bp-apgrouptagts/img/BP-APGroupTagTS-13_hue519210b988c6a8b4202e34cecd6d83b_34476_filter_16244743449337846502.png#centre" alt="Alt Text"  />
-<img src="https://deploymentshare.com/articles/bp-apgrouptagts/articles/bp-apgrouptagts/img/BP-APGroupTagTS-14_hu2e868f6ceed874e02334fb6562e7ac1a_8989_filter_18247437906410816601.png#centre" alt="Alt Text"  /></li>
+<img alt="Alt Text" src="/articles/bp-apgrouptagts/articles/bp-apgrouptagts/img/BP-APGroupTagTS-13.png#centre">
+<img alt="Alt Text" src="/articles/bp-apgrouptagts/articles/bp-apgrouptagts/img/BP-APGroupTagTS-14.png#centre"></li>
 <li>Finally you will need to create an application Secret and copy the secret key (Take note of the expiry date and set reminders for yourself and also, ensure to store the key safely)
-<img src="https://deploymentshare.com/articles/bp-apgrouptagts/articles/bp-apgrouptagts/img/BP-APGroupTagTS-15_hu048f45f6a89e321eb495f4ad9c6e5db8_9668_filter_10125597940020978014.png#centre" alt="Alt Text"  /></li>
+<img alt="Alt Text" src="/articles/bp-apgrouptagts/articles/bp-apgrouptagts/img/BP-APGroupTagTS-15.png#centre"></li>
 </ul>
 <p>Before continuing on you will need the following items:</p>
 <ul>
@@ -19620,7 +19688,7 @@ header {
 
 >from here</a>.</p>
 <p>I wont regurgitate the task sequence configuration steps from the above documentation, however once you have the task sequence set up we&rsquo;re going to make some adjustments.  We are firstly going to create four variables</p>
-<p><img src="https://deploymentshare.com/articles/bp-apgrouptagts/articles/bp-apgrouptagts/img/BP-APGroupTagTS-8_huef47cc788442ae0003f11ef2023602c6_11321_filter_372627238377315626.png#centre" alt="Alt Text"  /></p>
+<p><img alt="Alt Text" src="/articles/bp-apgrouptagts/articles/bp-apgrouptagts/img/BP-APGroupTagTS-8.png#centre"></p>
 <table>
 <thead>
 <tr>
@@ -19631,14 +19699,14 @@ header {
 <tbody>
 <tr>
 <td>TenantID <br> AppID <br> SecretID <br> GroupTag</td>
-<td style="text-align:center"><img src="https://deploymentshare.com/articles/bp-apgrouptagts/articles/bp-apgrouptagts/img/BP-APGroupTagTS-1_hu7dcdcdb8b78d21d5a2b8783976abb48c_3660_filter_12437286280943217194.png#centre" alt="Alt Text"  /></td>
+<td style="text-align:center"><img alt="Alt Text" src="/articles/bp-apgrouptagts/articles/bp-apgrouptagts/img/BP-APGroupTagTS-1.png#centre"></td>
 </tr>
 </tbody>
 </table>
 <p>For the SecretID, I strongly suggest you tick the box to &ldquo;Do Not Display this Value&rdquo;.  This at least forms some sort of security for you as the secret is the key to the app registration and what it can do.  Keeping that secure may or may not be important to you:</p>
-<p><img src="https://deploymentshare.com/articles/bp-apgrouptagts/articles/bp-apgrouptagts/img/BP-APGroupTagTS-2_hud911246bbe0a30a0a97ded232617484c_6646_filter_8109763680208583033.png#centre" alt="Alt Text"  /></p>
+<p><img alt="Alt Text" src="/articles/bp-apgrouptagts/articles/bp-apgrouptagts/img/BP-APGroupTagTS-2.png#centre"></p>
 <p>A description containing the expiry date might help in the event of failures too :-)
-<img src="https://deploymentshare.com/articles/bp-apgrouptagts/articles/bp-apgrouptagts/img/BP-APGroupTagTS-6_hu8a6cb9738be7e4b753c09bafea543a51_4922_filter_12101922035935866512.png#centre" alt="Alt Text"  /></p>
+<img alt="Alt Text" src="/articles/bp-apgrouptagts/articles/bp-apgrouptagts/img/BP-APGroupTagTS-6.png#centre"></p>
 <h5 id="the-script">The Script</h5>
 <p>Next comes the fun bit.  I lost a considerable amount of time testing this with numerous faults and errors.  I was hoping that, I could use the <a href="https://www.powershellgallery.com/packages/Get-WindowsAutoPilotInfo/2.3"
 
@@ -19651,169 +19719,221 @@ header {
 
 >Get-WindowsAuotpiloInfo</a> script during the sequence to &lsquo;just get it done&rsquo;.  But I ran into multiple issues. Namely, installing modules during WinPE because no matter what I tried, I was unable to leverage &ldquo;Install-Module&rdquo; correctly.  The original script has some pre-req modules and so wouldn&rsquo;t run without them present.  This was causing me a headache.  I then found the Recast Software community post (see references) where they used Invoke-Webrequest to pull in the module and then essentially move it to the correct location. This worked a treat.</p>
 <p>Here is the script I used.  Explanation below.</p>
+
+
+
+  
+
+
+
+<div class="notice info">
+  <div class="notice-head"><svg
+        width="20"
+        height="20"
+        viewBox="0 0 18 20"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M9.16109 0.993016C9.97971 1.03952 10.6611 1.42989 11.0721 2.22339L17.7981 15.8014C18.4502 17.1739 17.4403 19.0208 15.7832 19.0474H2.23859C0.730337 19.0234 -0.507163 17.3108 0.231587 15.7864L7.08321 2.20877C7.21146 1.96502 7.26996 1.89452 7.38059 1.76664C7.82534 1.25102 8.31171 0.975016 9.16109 0.993016ZM9.05046 2.49189C8.79284 2.50464 8.55696 2.64902 8.42834 2.87327C6.06134 7.36539 3.77946 11.9036 1.56546 16.4734C1.36071 16.9328 1.71209 17.5223 2.22621 17.547C6.74871 17.6201 11.2731 17.6201 15.7956 17.547C16.2925 17.523 16.666 16.953 16.459 16.4783C14.2866 11.9093 12.0471 7.37102 9.72171 2.87814C9.58446 2.63402 9.38309 2.48739 9.05046 2.49189Z"
+          fill="currentColor" />
+        <path
+          d="M9.61323 13.2153H8.35773L8.21973 7.04688H9.75723L9.61323 13.2153ZM8.17773 15.1015C8.17773 14.8731 8.25161 14.6841 8.39973 14.5338C8.54823 14.3838 8.75036 14.3084 9.00648 14.3084C9.26298 14.3084 9.46511 14.3838 9.61323 14.5338C9.76136 14.6841 9.83561 14.8731 9.83561 15.1015C9.83561 15.3216 9.76323 15.5057 9.61923 15.6539C9.47486 15.802 9.27086 15.8762 9.00648 15.8762C8.74211 15.8762 8.53811 15.802 8.39373 15.6539C8.24973 15.5057 8.17773 15.3216 8.17773 15.1015Z"
+          fill="currentColor" />
+      </svg><p>Info</p>
+  </div>
+  <div class="notice-body"><p>Updated 22-05-2025 with new script logic and functions.  Github script updated - Please check .VERSION section of the script header for more details.</p></div>
+</div>
+
 <div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#60a0b0;font-style:italic">&lt;#
 </span></span></span><span style="display:flex;"><span><span style="color:#60a0b0;font-style:italic">.</span><span style="color:#4070a0;font-style:italic">SYNOPSIS</span><span style="color:#60a0b0;font-style:italic">
-</span></span></span><span style="display:flex;"><span><span style="color:#60a0b0;font-style:italic">    Installs Get-WindowsAuopilotInfo.ps1 and calls it using the parameter
+</span></span></span><span style="display:flex;"><span><span style="color:#60a0b0;font-style:italic">    Installs Get-WindowsAutopilotInfoCommunity.ps1 and calls it using the parameter
 </span></span></span><span style="display:flex;"><span><span style="color:#60a0b0;font-style:italic">.</span><span style="color:#4070a0;font-style:italic">DESCRIPTION</span><span style="color:#60a0b0;font-style:italic">
-</span></span></span><span style="display:flex;"><span><span style="color:#60a0b0;font-style:italic">    * Used alongside a task sequence within Configuration Manager, this script was uses to add the device to autopilot and set a GroupTa
+</span></span></span><span style="display:flex;"><span><span style="color:#60a0b0;font-style:italic">    Used alongside a task sequence within Configuration Manager, this script was uses to add the device to autopilot and set a GroupTa
 </span></span></span><span style="display:flex;"><span><span style="color:#60a0b0;font-style:italic">.AUTHOR
 </span></span></span><span style="display:flex;"><span><span style="color:#60a0b0;font-style:italic">    Jonathan Fallis - www.deploymentshare.com
+</span></span></span><span style="display:flex;"><span><span style="color:#60a0b0;font-style:italic">    Nick Benton - www.oddsandendpoints.co.uk
 </span></span></span><span style="display:flex;"><span><span style="color:#60a0b0;font-style:italic">.VERSION
+</span></span></span><span style="display:flex;"><span><span style="color:#60a0b0;font-style:italic">    1.0.7 - Changed WinRM configuration
+</span></span></span><span style="display:flex;"><span><span style="color:#60a0b0;font-style:italic">    1.0.6 - Added Microsoft.Graph.Authentication to the required modules and requirement for WinRM
+</span></span></span><span style="display:flex;"><span><span style="color:#60a0b0;font-style:italic">    1.0.5 - Changed error handling to display in console and use transcript
+</span></span></span><span style="display:flex;"><span><span style="color:#60a0b0;font-style:italic">    1.0.4 - Improved logic
+</span></span></span><span style="display:flex;"><span><span style="color:#60a0b0;font-style:italic">    1.0.3 - Updated so the error handling works
+</span></span></span><span style="display:flex;"><span><span style="color:#60a0b0;font-style:italic">    1.0.2 - Updated to support Get-WindowsAutopilotInfoCommunity and empty groupTags
 </span></span></span><span style="display:flex;"><span><span style="color:#60a0b0;font-style:italic">    1.0.1 - Added Error Logging
 </span></span></span><span style="display:flex;"><span><span style="color:#60a0b0;font-style:italic">    1.0.0 - Original
 </span></span></span><span style="display:flex;"><span><span style="color:#60a0b0;font-style:italic">.</span><span style="color:#4070a0;font-style:italic">EXAMPLE</span><span style="color:#60a0b0;font-style:italic">
-</span></span></span><span style="display:flex;"><span><span style="color:#60a0b0;font-style:italic">    .\Set-AutopilotGroupTag -TenantID &#34;123456&#34; -AppID &#34;234567&#34; -SecretID &#34;345678&#34; -GroupTag &#34;AutopilotDevice&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#60a0b0;font-style:italic">    .\Set-AutopilotGroupTag -tenantId &#34;123456&#34; -appId &#34;234567&#34; -appSecret &#34;345678&#34; -groupTag &#34;AutopilotDevice&#34;
 </span></span></span><span style="display:flex;"><span><span style="color:#60a0b0;font-style:italic">#&gt;</span>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#007020;font-weight:bold">Param</span>(
-</span></span><span style="display:flex;"><span>    [<span style="color:#007020">Parameter</span>(<span style="color:#4070a0">Mandatory</span>=$true)]
-</span></span><span style="display:flex;"><span>    [<span style="color:#60add5">string</span>]<span style="color:#bb60d5">$TenantID</span>,
-</span></span><span style="display:flex;"><span>    [<span style="color:#007020">Parameter</span>(<span style="color:#4070a0">Mandatory</span>=$true)]
-</span></span><span style="display:flex;"><span>    [<span style="color:#60add5">string</span>]<span style="color:#bb60d5">$AppID</span>,
-</span></span><span style="display:flex;"><span>    [<span style="color:#007020">Parameter</span>(<span style="color:#4070a0">Mandatory</span>=$true)]
-</span></span><span style="display:flex;"><span>    [<span style="color:#60add5">string</span>]<span style="color:#bb60d5">$SecretID</span>,
-</span></span><span style="display:flex;"><span>    [<span style="color:#007020">Parameter</span>(<span style="color:#4070a0">Mandatory</span>=$true)]
-</span></span><span style="display:flex;"><span>    [<span style="color:#60add5">string</span>]<span style="color:#bb60d5">$GroupTag</span>
+</span></span><span style="display:flex;"><span>    [<span style="color:#007020">Parameter</span>(<span style="color:#4070a0">Mandatory</span> = $true)]
+</span></span><span style="display:flex;"><span>    [<span style="color:#60add5">string</span>]<span style="color:#bb60d5">$tenantId</span>,
+</span></span><span style="display:flex;"><span>    [<span style="color:#007020">Parameter</span>(<span style="color:#4070a0">Mandatory</span> = $true)]
+</span></span><span style="display:flex;"><span>    [<span style="color:#60add5">string</span>]<span style="color:#bb60d5">$appId</span>,
+</span></span><span style="display:flex;"><span>    [<span style="color:#007020">Parameter</span>(<span style="color:#4070a0">Mandatory</span> = $true)]
+</span></span><span style="display:flex;"><span>    [<span style="color:#60add5">string</span>]<span style="color:#bb60d5">$appSecret</span>,
+</span></span><span style="display:flex;"><span>    [<span style="color:#007020">Parameter</span>(<span style="color:#4070a0">Mandatory</span> = $false)]
+</span></span><span style="display:flex;"><span>    [<span style="color:#60add5">string</span>]<span style="color:#bb60d5">$groupTag</span>
 </span></span><span style="display:flex;"><span>)
 </span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#bb60d5">$ErrorActionPreference</span> = <span style="color:#4070a0">&#39;stop&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#bb60d5">$workingDir</span> = <span style="color:#4070a0">&#34;</span><span style="color:#bb60d5">$env:SystemDrive</span><span style="color:#4070a0">\Windows\Temp&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#bb60d5">$PowerShellDir</span> = <span style="color:#4070a0">&#34;</span><span style="color:#bb60d5">$env:ProgramFiles</span><span style="color:#4070a0">\WindowsPowerShell\Modules&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#bb60d5">$logFile</span> = <span style="color:#4070a0">&#34;</span><span style="color:#bb60d5">$workingDir</span><span style="color:#4070a0">\Set-AutopilotGroupTag.log&#34;</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#bb60d5">$WorkingDir</span> = <span style="color:#bb60d5">$env:TEMP</span>
-</span></span><span style="display:flex;"><span><span style="color:#bb60d5">$LogFilePath</span> = <span style="color:#4070a0">&#34;C:\Windows\Temp\Set-GroupTag.log&#34;</span>
-</span></span><span style="display:flex;"><span>[<span style="color:#60add5">System.Environment</span>]::SetEnvironmentVariable(<span style="color:#4070a0">&#39;LOCALAPPDATA&#39;</span>,<span style="color:#4070a0">&#34;</span><span style="color:#bb60d5">$env:SystemDrive</span><span style="color:#4070a0">\Windows\system32\config\systemprofile\AppData\Local&#34;</span>)
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#60a0b0;font-style:italic">#Function for Error Logging</span>
-</span></span><span style="display:flex;"><span><span style="color:#007020;font-weight:bold">Function</span><span style="color:#bbb"> </span><span style="color:#007020">Write-log</span> {
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    [<span style="color:#007020">CmdletBinding</span>()]
-</span></span><span style="display:flex;"><span>    <span style="color:#007020;font-weight:bold">Param</span>(
-</span></span><span style="display:flex;"><span>        [<span style="color:#007020">parameter</span>(<span style="color:#4070a0">Mandatory</span> = $true)]
-</span></span><span style="display:flex;"><span>        [<span style="color:#60add5">String</span>]<span style="color:#bb60d5">$Path</span>,
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>        [<span style="color:#007020">parameter</span>(<span style="color:#4070a0">Mandatory</span> = $true)]
-</span></span><span style="display:flex;"><span>        [<span style="color:#60add5">String</span>]<span style="color:#bb60d5">$Message</span>,
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>        [<span style="color:#007020">parameter</span>(<span style="color:#4070a0">Mandatory</span> = $true)]
-</span></span><span style="display:flex;"><span>        [<span style="color:#60add5">String</span>]<span style="color:#bb60d5">$Component</span>,
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>        [<span style="color:#007020">Parameter</span>(<span style="color:#4070a0">Mandatory</span> = $true)]
-</span></span><span style="display:flex;"><span>        [<span style="color:#007020">ValidateSet</span>(<span style="color:#4070a0">&#39;Info&#39;</span>, <span style="color:#4070a0">&#39;Warning&#39;</span>, <span style="color:#4070a0">&#39;Error&#39;</span>)]
-</span></span><span style="display:flex;"><span>        [<span style="color:#60add5">String</span>]<span style="color:#bb60d5">$Type</span>
-</span></span><span style="display:flex;"><span>    )
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#007020;font-weight:bold">switch</span> (<span style="color:#bb60d5">$Type</span>) {
-</span></span><span style="display:flex;"><span>        <span style="color:#4070a0">&#39;Info&#39;</span> { [<span style="color:#60add5">int</span>]<span style="color:#bb60d5">$Type</span> = <span style="color:#40a070">1</span> }
-</span></span><span style="display:flex;"><span>        <span style="color:#4070a0">&#39;Warning&#39;</span> { [<span style="color:#60add5">int</span>]<span style="color:#bb60d5">$Type</span> = <span style="color:#40a070">2</span> }
-</span></span><span style="display:flex;"><span>        <span style="color:#4070a0">&#39;Error&#39;</span> { [<span style="color:#60add5">int</span>]<span style="color:#bb60d5">$Type</span> = <span style="color:#40a070">3</span> }
-</span></span><span style="display:flex;"><span>    }
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#60a0b0;font-style:italic"># Create a log entry</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#bb60d5">$Content</span> = <span style="color:#4070a0">&#34;&lt;![LOG[</span><span style="color:#bb60d5">$Message</span><span style="color:#4070a0">]LOG]!&gt;&#34;</span> + `
-</span></span><span style="display:flex;"><span>        <span style="color:#4070a0">&#34;&lt;time=</span><span style="color:#4070a0;font-weight:bold">`&#34;</span>$(<span style="color:#007020">Get-Date</span> -Format <span style="color:#4070a0">&#39;HH:mm:ss.ffffff&#39;</span>)<span style="color:#4070a0;font-weight:bold">`&#34;</span><span style="color:#4070a0"> &#34;</span> + `
-</span></span><span style="display:flex;"><span>        <span style="color:#4070a0">&#34;date=</span><span style="color:#4070a0;font-weight:bold">`&#34;</span>$(<span style="color:#007020">Get-Date</span> -Format <span style="color:#4070a0">&#39;M-d-yyyy&#39;</span>)<span style="color:#4070a0;font-weight:bold">`&#34;</span><span style="color:#4070a0"> &#34;</span> + `
-</span></span><span style="display:flex;"><span>        <span style="color:#4070a0">&#34;component=</span><span style="color:#4070a0;font-weight:bold">`&#34;</span><span style="color:#bb60d5">$Component</span><span style="color:#4070a0;font-weight:bold">`&#34;</span><span style="color:#4070a0"> &#34;</span> + `
-</span></span><span style="display:flex;"><span>        <span style="color:#4070a0">&#34;context=</span><span style="color:#4070a0;font-weight:bold">`&#34;</span>$([<span style="color:#60add5">System.Security.Principal.WindowsIdentity</span>]::GetCurrent().Name)<span style="color:#4070a0;font-weight:bold">`&#34;</span><span style="color:#4070a0"> &#34;</span> + `
-</span></span><span style="display:flex;"><span>        <span style="color:#4070a0">&#34;type=</span><span style="color:#4070a0;font-weight:bold">`&#34;</span><span style="color:#bb60d5">$Type</span><span style="color:#4070a0;font-weight:bold">`&#34;</span><span style="color:#4070a0"> &#34;</span> + `
-</span></span><span style="display:flex;"><span>        <span style="color:#4070a0">&#34;thread=</span><span style="color:#4070a0;font-weight:bold">`&#34;</span>$([<span style="color:#60add5">Threading.Thread</span>]::CurrentThread.ManagedThreadId)<span style="color:#4070a0;font-weight:bold">`&#34;</span><span style="color:#4070a0"> &#34;</span> + `
-</span></span><span style="display:flex;"><span>        <span style="color:#4070a0">&#34;file=</span><span style="color:#4070a0;font-weight:bold">`&#34;`&#34;</span><span style="color:#4070a0">&gt;&#34;</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#60a0b0;font-style:italic"># Write the line to the log file</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#007020">Add-Content</span> -Path <span style="color:#bb60d5">$Path</span> -Value <span style="color:#bb60d5">$Content</span>
+</span></span><span style="display:flex;"><span><span style="color:#007020;font-weight:bold">try</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#007020">Stop-Transcript</span> | <span style="color:#007020">Out-Null</span>
 </span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#007020;font-weight:bold">catch</span> [<span style="color:#60add5">System.InvalidOperationException</span>]
+</span></span><span style="display:flex;"><span>{}
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#60a0b0;font-style:italic">#Test for internet connectivty using 8.8.8.8</span>
-</span></span><span style="display:flex;"><span><span style="color:#007020;font-weight:bold">If</span> (<span style="color:#007020">Test-Connection</span> <span style="color:#40a070">8.8</span>.8.8 -quiet) {
-</span></span><span style="display:flex;"><span>    <span style="color:#007020">Write-Log</span> -Type Info -Message <span style="color:#4070a0">&#34;Internet Connection OK&#34;</span> -Component <span style="color:#4070a0">&#34;Internet Check&#34;</span> -Path <span style="color:#bb60d5">$LogFilePath</span>
+</span></span><span style="display:flex;"><span><span style="color:#007020">Start-Transcript</span> -Path <span style="color:#bb60d5">$logFile</span> -Append
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>[<span style="color:#60add5">System.Environment</span>]::SetEnvironmentVariable(<span style="color:#4070a0">&#39;LOCALAPPDATA&#39;</span>, <span style="color:#4070a0">&#34;</span><span style="color:#bb60d5">$env:SystemDrive</span><span style="color:#4070a0">\Windows\system32\config\systemprofile\AppData\Local&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#60a0b0;font-style:italic">#Test for internet connectivity using 8.8.8.8</span>
+</span></span><span style="display:flex;"><span><span style="color:#007020;font-weight:bold">If</span> (<span style="color:#007020">Test-Connection</span> <span style="color:#40a070">8.8</span>.8.8 -Quiet) {
+</span></span><span style="display:flex;"><span>    <span style="color:#007020">Write-Output</span> <span style="color:#4070a0">&#39;Internet Connection OK&#39;</span>
 </span></span><span style="display:flex;"><span>}
 </span></span><span style="display:flex;"><span><span style="color:#007020;font-weight:bold">Else</span> {
-</span></span><span style="display:flex;"><span>    <span style="color:#007020">Write-Log</span> -Type Error -Message <span style="color:#4070a0">&#34;Internet Connection check failed&#34;</span> -Component <span style="color:#4070a0">&#34;Internet Check&#34;</span> -Path <span style="color:#bb60d5">$LogFilePath</span> ; Exit <span style="color:#40a070">1</span> 
+</span></span><span style="display:flex;"><span>    <span style="color:#007020">Write-Error</span> <span style="color:#4070a0">&#39;Internet Connection check failed&#39;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#007020">Stop-Transcript</span>
+</span></span><span style="display:flex;"><span>    Exit <span style="color:#40a070">1</span>
 </span></span><span style="display:flex;"><span>}
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#60a0b0;font-style:italic">#Enable TLS 1.2</span>
 </span></span><span style="display:flex;"><span><span style="color:#007020;font-weight:bold">Try</span> {
-</span></span><span style="display:flex;"><span>        [<span style="color:#60add5">Net.ServicePointManager</span>]::SecurityProtocol = [<span style="color:#60add5">Net.SecurityProtocolType</span>]::Tls12
-</span></span><span style="display:flex;"><span>        <span style="color:#007020">Write-Log</span> -Type Info -Message <span style="color:#4070a0">&#34;Setting TLS1.2 Completed Successfully&#34;</span> -Component <span style="color:#4070a0">&#34;TLS 1.2 Check&#34;</span> -Path <span style="color:#bb60d5">$LogFilePath</span>
+</span></span><span style="display:flex;"><span>    [<span style="color:#60add5">Net.ServicePointManager</span>]::SecurityProtocol = [<span style="color:#60add5">Net.SecurityProtocolType</span>]::Tls12
+</span></span><span style="display:flex;"><span>    <span style="color:#007020">Write-Output</span> <span style="color:#4070a0">&#39;Setting TLS1.2&#39;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#007020;font-weight:bold">Catch</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#007020">Write-Error</span> <span style="color:#4070a0">&#34;Setting TLS1.2 - </span>$(<span style="color:#bb60d5">$_</span>.Exception | <span style="color:#007020">Out-String</span>)<span style="color:#4070a0">&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#007020">Stop-Transcript</span>
+</span></span><span style="display:flex;"><span>    Exit <span style="color:#40a070">1</span>
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#60a0b0;font-style:italic">#Modules</span>
+</span></span><span style="display:flex;"><span><span style="color:#bb60d5">$PowerShellModules</span> = @(<span style="color:#4070a0">&#39;PackageManagement&#39;</span>, <span style="color:#4070a0">&#39;PowerShellGet&#39;</span>, <span style="color:#4070a0">&#39;Microsoft.Graph.Authentication&#39;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#007020;font-weight:bold">foreach</span> (<span style="color:#bb60d5">$PowerShellModule</span> <span style="color:#007020;font-weight:bold">in</span> <span style="color:#bb60d5">$PowerShellModules</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#bb60d5">$PowerShellModuleVer</span> = <span style="color:#007020;font-weight:bold">Switch</span> (<span style="color:#bb60d5">$PowerShellModule</span>) {
+</span></span><span style="display:flex;"><span>        PackageManagement { <span style="color:#4070a0">&#39;1.4.8.1&#39;</span> }
+</span></span><span style="display:flex;"><span>        PowerShellGet { <span style="color:#4070a0">&#39;2.2.5&#39;</span> }
+</span></span><span style="display:flex;"><span>        Microsoft.Graph.Authentication { <span style="color:#4070a0">&#39;2.9.1&#39;</span> }
+</span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>    }
-</span></span><span style="display:flex;"><span><span style="color:#007020;font-weight:bold">Catch</span> {
-</span></span><span style="display:flex;"><span>        <span style="color:#007020">Write-Log</span> -Type Error -Message (<span style="color:#bb60d5">$_</span> | <span style="color:#007020">Out-String</span>) -Component <span style="color:#4070a0">&#34;TLS 1.2 Check&#34;</span> -Path <span style="color:#bb60d5">$LogFilePath</span>
-</span></span><span style="display:flex;"><span>}
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#60a0b0;font-style:italic">#PowerShellGet from PSGallery URL</span>
-</span></span><span style="display:flex;"><span><span style="color:#007020;font-weight:bold">Try</span> {
-</span></span><span style="display:flex;"><span>    <span style="color:#007020;font-weight:bold">if</span> (!(<span style="color:#007020">Get-Module</span> -Name PowerShellGet)){
-</span></span><span style="display:flex;"><span>        <span style="color:#bb60d5">$PowerShellGetURL</span> = <span style="color:#4070a0">&#34;https://psg-prod-eastus.azureedge.net/packages/powershellget.2.2.5.nupkg&#34;</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#007020">Write-Log</span> -Type Info -Message <span style="color:#4070a0">&#34;URL set to </span><span style="color:#bb60d5">$PowerShellGetURL</span><span style="color:#4070a0">&#34;</span> -Component <span style="color:#4070a0">&#34;PowerShellGet Check&#34;</span> -Path <span style="color:#bb60d5">$LogFilePath</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#007020">Invoke-WebRequest</span> -UseBasicParsing -Uri <span style="color:#bb60d5">$PowerShellGetURL</span> -OutFile <span style="color:#4070a0">&#34;</span><span style="color:#bb60d5">$WorkingDir</span><span style="color:#4070a0">\powershellget.2.2.5.zip&#34;</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#007020">Write-Log</span> -Type Info -Message <span style="color:#4070a0">&#34;Downloaded PowerShellGet &#34;</span> -Component <span style="color:#4070a0">&#34;PowerShellGet Check&#34;</span> -Path <span style="color:#bb60d5">$LogFilePath</span>
-</span></span><span style="display:flex;"><span>        $Null = <span style="color:#007020">New-Item</span> -Path <span style="color:#4070a0">&#34;</span><span style="color:#bb60d5">$WorkingDir</span><span style="color:#4070a0">\2.2.5&#34;</span> -ItemType Directory -Force
-</span></span><span style="display:flex;"><span>        <span style="color:#007020">Expand-Archive</span> -Path <span style="color:#4070a0">&#34;</span><span style="color:#bb60d5">$WorkingDir</span><span style="color:#4070a0">\powershellget.2.2.5.zip&#34;</span> -DestinationPath <span style="color:#4070a0">&#34;</span><span style="color:#bb60d5">$WorkingDir</span><span style="color:#4070a0">\2.2.5&#34;</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#007020">Write-Log</span> -Type Info -Message <span style="color:#4070a0">&#34;Unzipped PowerShellGet &#34;</span> -Component <span style="color:#4070a0">&#34;PowerShellGet Check&#34;</span> -Path <span style="color:#bb60d5">$LogFilePath</span>
-</span></span><span style="display:flex;"><span>        $Null = <span style="color:#007020">New-Item</span> -Path <span style="color:#4070a0">&#34;</span><span style="color:#bb60d5">$env:ProgramFiles</span><span style="color:#4070a0">\WindowsPowerShell\Modules\PowerShellGet&#34;</span> -ItemType Directory -ErrorAction SilentlyContinue
-</span></span><span style="display:flex;"><span>        <span style="color:#007020">Move-Item</span> -Path <span style="color:#4070a0">&#34;</span><span style="color:#bb60d5">$WorkingDir</span><span style="color:#4070a0">\2.2.5&#34;</span> -Destination <span style="color:#4070a0">&#34;</span><span style="color:#bb60d5">$env:ProgramFiles</span><span style="color:#4070a0">\WindowsPowerShell\Modules\PowerShellGet\2.2.5&#34;</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#007020">Write-Log</span> -Type Info -Message <span style="color:#4070a0">&#34;Moved PowerShellGet to </span><span style="color:#bb60d5">$WorkingDir</span><span style="color:#4070a0">&#34;</span> -Component <span style="color:#4070a0">&#34;PowerShellGet Check&#34;</span> -Path <span style="color:#bb60d5">$LogFilePath</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#bb60d5">$PowerShellModuleURL</span> = <span style="color:#007020;font-weight:bold">Switch</span> (<span style="color:#bb60d5">$PowerShellModule</span>) {
+</span></span><span style="display:flex;"><span>        PackageManagement { <span style="color:#4070a0">&#34;https://psg-prod-eastus.azureedge.net/packages/</span>$(<span style="color:#bb60d5">$PowerShellModule</span>.ToLower())<span style="color:#4070a0">.</span><span style="color:#bb60d5">$PowerShellModuleVer</span><span style="color:#4070a0">.nupkg&#34;</span> }
+</span></span><span style="display:flex;"><span>        PowerShellGet { <span style="color:#4070a0">&#34;https://psg-prod-eastus.azureedge.net/packages/</span>$(<span style="color:#bb60d5">$PowerShellModule</span>.ToLower())<span style="color:#4070a0">.</span><span style="color:#bb60d5">$PowerShellModuleVer</span><span style="color:#4070a0">.nupkg&#34;</span> }
+</span></span><span style="display:flex;"><span>        Microsoft.Graph.Authentication { <span style="color:#4070a0">&#34;https://psg-prod-eastus.azureedge.net/packages/</span>$(<span style="color:#bb60d5">$PowerShellModule</span>.ToLower())<span style="color:#4070a0">.</span><span style="color:#bb60d5">$PowerShellModuleVer</span><span style="color:#4070a0">.nupkg&#34;</span> }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#007020;font-weight:bold">Try</span> {
+</span></span><span style="display:flex;"><span>        <span style="color:#007020;font-weight:bold">if</span> (!(<span style="color:#007020">Get-Module</span> -Name <span style="color:#bb60d5">$PowerShellModule</span>)) {
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            <span style="color:#bb60d5">$PowerShellModuleZip</span> = <span style="color:#4070a0">&#34;</span><span style="color:#bb60d5">$workingDir</span><span style="color:#4070a0">\</span><span style="color:#bb60d5">$PowerShellModule</span><span style="color:#4070a0">.</span><span style="color:#bb60d5">$PowerShellModuleVer</span><span style="color:#4070a0">.zip&#34;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#bb60d5">$PowerShellModulePath</span> = <span style="color:#4070a0">&#34;</span><span style="color:#bb60d5">$workingDir</span><span style="color:#4070a0">\</span><span style="color:#bb60d5">$PowerShellModule</span><span style="color:#4070a0">\</span><span style="color:#bb60d5">$PowerShellModuleVer</span><span style="color:#4070a0">&#34;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#bb60d5">$PowerShellModulePF</span> = <span style="color:#4070a0">&#34;</span><span style="color:#bb60d5">$PowerShellDir</span><span style="color:#4070a0">\</span><span style="color:#bb60d5">$PowerShellModule</span><span style="color:#4070a0">\</span><span style="color:#bb60d5">$PowerShellModuleVer</span><span style="color:#4070a0">&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            <span style="color:#007020">Write-Output</span> <span style="color:#4070a0">&#34;URL set to </span><span style="color:#bb60d5">$PowerShellModuleURL</span><span style="color:#4070a0">&#34;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#007020">Invoke-WebRequest</span> -UseBasicParsing -Uri <span style="color:#bb60d5">$PowerShellModuleURL</span> -OutFile <span style="color:#bb60d5">$PowerShellModuleZip</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#007020">Write-Output</span> <span style="color:#4070a0">&#34;Downloaded PowerShellModule </span><span style="color:#bb60d5">$PowerShellModule</span><span style="color:#4070a0">&#34;</span>
+</span></span><span style="display:flex;"><span>            $Null = <span style="color:#007020">New-Item</span> -Path <span style="color:#4070a0">&#34;</span><span style="color:#bb60d5">$PowerShellModulePath</span><span style="color:#4070a0">&#34;</span> -ItemType Directory -Force
+</span></span><span style="display:flex;"><span>            <span style="color:#007020">Expand-Archive</span> -Path <span style="color:#bb60d5">$PowerShellModuleZip</span> -DestinationPath <span style="color:#4070a0">&#34;</span><span style="color:#bb60d5">$PowerShellModulePath</span><span style="color:#4070a0">&#34;</span> -Force
+</span></span><span style="display:flex;"><span>            <span style="color:#007020">Write-Output</span> <span style="color:#4070a0">&#34;Unzipped </span><span style="color:#bb60d5">$PowerShellModule</span><span style="color:#4070a0">&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            <span style="color:#007020;font-weight:bold">if</span> (!(<span style="color:#007020">Test-Path</span> -Path <span style="color:#4070a0">&#34;</span><span style="color:#bb60d5">$PowerShellDir</span><span style="color:#4070a0">\</span><span style="color:#bb60d5">$PowerShellModule</span><span style="color:#4070a0">&#34;</span> -PathType Container)) {
+</span></span><span style="display:flex;"><span>                $Null = <span style="color:#007020">New-Item</span> -Path <span style="color:#4070a0">&#34;</span><span style="color:#bb60d5">$PowerShellDir</span><span style="color:#4070a0">\</span><span style="color:#bb60d5">$PowerShellModule</span><span style="color:#4070a0">&#34;</span> -ItemType Directory
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            <span style="color:#007020;font-weight:bold">if</span> (<span style="color:#007020">Test-Path</span> -Path <span style="color:#bb60d5">$PowerShellModulePF</span> -PathType Container) {
+</span></span><span style="display:flex;"><span>                <span style="color:#007020">Remove-Item</span> -Path <span style="color:#bb60d5">$PowerShellModulePF</span> -Force -Recurse
+</span></span><span style="display:flex;"><span>                <span style="color:#007020">Write-Output</span> <span style="color:#4070a0">&#34;Removed existing </span><span style="color:#bb60d5">$PowerShellModulePF</span><span style="color:#4070a0">&#34;</span>
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            <span style="color:#007020">Move-Item</span> -Path <span style="color:#4070a0">&#34;</span><span style="color:#bb60d5">$PowerShellModulePath</span><span style="color:#4070a0">&#34;</span> -Destination <span style="color:#bb60d5">$PowerShellModulePF</span> -Force
+</span></span><span style="display:flex;"><span>            <span style="color:#007020">Write-Output</span> <span style="color:#4070a0">&#34;Moved </span><span style="color:#bb60d5">$PowerShellModule</span><span style="color:#4070a0"> to </span><span style="color:#bb60d5">$PowerShellModulePF</span><span style="color:#4070a0">&#34;</span>
 </span></span><span style="display:flex;"><span>        }
-</span></span><span style="display:flex;"><span>}
-</span></span><span style="display:flex;"><span><span style="color:#007020;font-weight:bold">Catch</span> {
-</span></span><span style="display:flex;"><span>    <span style="color:#007020">Write-Log</span> -Type Error -Message (<span style="color:#bb60d5">$_</span> | <span style="color:#007020">Out-String</span>) -Component <span style="color:#4070a0">&#34;PowerShellGet Check&#34;</span> -Path <span style="color:#bb60d5">$LogFilePath</span>
-</span></span><span style="display:flex;"><span>}
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#60a0b0;font-style:italic">#PackageManagement from PSGallery URL</span>
-</span></span><span style="display:flex;"><span><span style="color:#007020;font-weight:bold">Try</span> {
-</span></span><span style="display:flex;"><span>    <span style="color:#007020;font-weight:bold">if</span> (!(<span style="color:#007020">Get-Module</span> -Name PackageManagement)){
-</span></span><span style="display:flex;"><span>        <span style="color:#bb60d5">$PackageManagementURL</span> = <span style="color:#4070a0">&#34;https://psg-prod-eastus.azureedge.net/packages/packagemanagement.1.4.7.nupkg&#34;</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#007020">Write-Log</span> -Type Info -Message <span style="color:#4070a0">&#34;URL set to </span><span style="color:#bb60d5">$PackageManagementURL</span><span style="color:#4070a0">&#34;</span> -Component <span style="color:#4070a0">&#34;PackageManagement Check&#34;</span> -Path <span style="color:#bb60d5">$LogFilePath</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#007020">Invoke-WebRequest</span> -UseBasicParsing -Uri <span style="color:#bb60d5">$PackageManagementURL</span> -OutFile <span style="color:#4070a0">&#34;</span><span style="color:#bb60d5">$WorkingDir</span><span style="color:#4070a0">\packagemanagement.1.4.7.zip&#34;</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#007020">Write-Log</span> -Type Info -Message <span style="color:#4070a0">&#34;Downloaded PackageManagement&#34;</span> -Component <span style="color:#4070a0">&#34;PackageManagement Check&#34;</span> -Path <span style="color:#bb60d5">$LogFilePath</span>
-</span></span><span style="display:flex;"><span>        $Null = <span style="color:#007020">New-Item</span> -Path <span style="color:#4070a0">&#34;</span><span style="color:#bb60d5">$WorkingDir</span><span style="color:#4070a0">\1.4.7&#34;</span> -ItemType Directory -Force
-</span></span><span style="display:flex;"><span>        <span style="color:#007020">Expand-Archive</span> -Path <span style="color:#4070a0">&#34;</span><span style="color:#bb60d5">$WorkingDir</span><span style="color:#4070a0">\packagemanagement.1.4.7.zip&#34;</span> -DestinationPath <span style="color:#4070a0">&#34;</span><span style="color:#bb60d5">$WorkingDir</span><span style="color:#4070a0">\1.4.7&#34;</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#007020">Write-Log</span> -Type Info -Message <span style="color:#4070a0">&#34;Unzipped PackageManagement&#34;</span> -Component <span style="color:#4070a0">&#34;PackageManagement Check&#34;</span> -Path <span style="color:#bb60d5">$LogFilePath</span>
-</span></span><span style="display:flex;"><span>        $Null = <span style="color:#007020">New-Item</span> -Path <span style="color:#4070a0">&#34;</span><span style="color:#bb60d5">$env:ProgramFiles</span><span style="color:#4070a0">\WindowsPowerShell\Modules\PackageManagement&#34;</span> -ItemType Directory -ErrorAction SilentlyContinue
-</span></span><span style="display:flex;"><span>        <span style="color:#007020">Move-Item</span> -Path <span style="color:#4070a0">&#34;</span><span style="color:#bb60d5">$WorkingDir</span><span style="color:#4070a0">\1.4.7&#34;</span> -Destination <span style="color:#4070a0">&#34;</span><span style="color:#bb60d5">$env:ProgramFiles</span><span style="color:#4070a0">\WindowsPowerShell\Modules\PackageManagement\1.4.7&#34;</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#007020">Write-Log</span> -Type Info -Message <span style="color:#4070a0">&#34;Moved PackageManagement to </span><span style="color:#bb60d5">$WorkingDir</span><span style="color:#4070a0">&#34;</span> -Component <span style="color:#4070a0">&#34;PackageManagement Check&#34;</span> -Path <span style="color:#bb60d5">$LogFilePath</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#007020;font-weight:bold">Try</span> {
+</span></span><span style="display:flex;"><span>            <span style="color:#007020">Import-Module</span> <span style="color:#bb60d5">$PowerShellModule</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#007020">Write-Output</span> <span style="color:#4070a0">&#34;</span><span style="color:#bb60d5">$PowerShellModule</span><span style="color:#4070a0"> Module Imported OK&#34;</span>
 </span></span><span style="display:flex;"><span>        }
-</span></span><span style="display:flex;"><span>}
-</span></span><span style="display:flex;"><span><span style="color:#007020;font-weight:bold">Catch</span> {
-</span></span><span style="display:flex;"><span>    <span style="color:#007020">Write-Log</span> -Type Error -Message (<span style="color:#bb60d5">$_</span> | <span style="color:#007020">Out-String</span>) -Component <span style="color:#4070a0">&#34;PackageManagement Check&#34;</span> -Path <span style="color:#bb60d5">$LogFilePath</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#007020;font-weight:bold">Catch</span> {
+</span></span><span style="display:flex;"><span>            <span style="color:#007020">Write-Error</span> <span style="color:#4070a0">&#34;</span><span style="color:#bb60d5">$PowerShellModule</span><span style="color:#4070a0"> Import - </span>$(<span style="color:#bb60d5">$_</span>.Exception | <span style="color:#007020">Out-String</span>)<span style="color:#4070a0">&#34;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#007020">Stop-Transcript</span>
+</span></span><span style="display:flex;"><span>            Exit <span style="color:#40a070">1</span>
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#007020;font-weight:bold">Catch</span> {
+</span></span><span style="display:flex;"><span>        <span style="color:#007020">Write-Error</span> <span style="color:#4070a0">&#34;</span><span style="color:#bb60d5">$PowerShellModule</span><span style="color:#4070a0"> Module - </span>$(<span style="color:#bb60d5">$_</span>.Exception | <span style="color:#007020">Out-String</span>)<span style="color:#4070a0">&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#007020">Stop-Transcript</span>
+</span></span><span style="display:flex;"><span>        Exit <span style="color:#40a070">1</span>
+</span></span><span style="display:flex;"><span>    }
 </span></span><span style="display:flex;"><span>}
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#60a0b0;font-style:italic">#Import PowerShellGet</span>
-</span></span><span style="display:flex;"><span><span style="color:#007020;font-weight:bold">if</span> (<span style="color:#007020">Import-Module</span> PowerShellGet) {
-</span></span><span style="display:flex;"><span>    <span style="color:#007020">Write-Log</span> -Type Info -Message <span style="color:#4070a0">&#34;PowerShellGet Module Imported OK&#34;</span> -Component <span style="color:#4070a0">&#34;PowerShellGet Import&#34;</span> -Path <span style="color:#bb60d5">$LogFilePath</span>
+</span></span><span style="display:flex;"><span><span style="color:#60a0b0;font-style:italic">#enable WinRM</span>
+</span></span><span style="display:flex;"><span><span style="color:#007020;font-weight:bold">Try</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#007020">Set-WSManQuickConfig</span> -Force -SkipNetworkProfileCheck
+</span></span><span style="display:flex;"><span>    <span style="color:#007020">Write-Output</span> <span style="color:#4070a0">&#39;Enabled WinRM&#39;</span>
 </span></span><span style="display:flex;"><span>}
-</span></span><span style="display:flex;"><span><span style="color:#007020;font-weight:bold">Else</span> {
-</span></span><span style="display:flex;"><span>    <span style="color:#007020">Write-Log</span> -Type Error -Message (<span style="color:#bb60d5">$_</span> | <span style="color:#007020">Out-String</span>) -Component <span style="color:#4070a0">&#34;PowerShellGet Import&#34;</span> -Path <span style="color:#bb60d5">$LogFilePath</span> ; Exit <span style="color:#40a070">1</span> 
+</span></span><span style="display:flex;"><span><span style="color:#007020;font-weight:bold">catch</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#007020">Write-Error</span> <span style="color:#4070a0">&#34;WinRM - </span>$(<span style="color:#bb60d5">$_</span>.Exception | <span style="color:#007020">Out-String</span>)<span style="color:#4070a0">&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#007020">Stop-Transcript</span>
+</span></span><span style="display:flex;"><span>    Exit <span style="color:#40a070">1</span>
 </span></span><span style="display:flex;"><span>}
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#60a0b0;font-style:italic">#Install the script</span>
-</span></span><span style="display:flex;"><span><span style="color:#007020;font-weight:bold">if</span> (<span style="color:#007020">Install-Script</span> <span style="color:#007020">Get-WindowsAutopilotinfo</span> -Force) {
-</span></span><span style="display:flex;"><span>    <span style="color:#007020">Write-Log</span> -Type Info -Message <span style="color:#4070a0">&#34;Get-WindowsAutopilotInfo Installed OK&#34;</span> -Component <span style="color:#4070a0">&#34;Get-WindowsAutopilotInfo Install&#34;</span> -Path <span style="color:#bb60d5">$LogFilePath</span>
+</span></span><span style="display:flex;"><span><span style="color:#007020;font-weight:bold">Try</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#007020">Install-Script</span> <span style="color:#007020">Get-WindowsAutopilotInfoCommunity</span> -Force
+</span></span><span style="display:flex;"><span>    <span style="color:#007020">Write-Output</span> <span style="color:#4070a0">&#39;Get-WindowsAutopilotInfoCommunity Installed OK&#39;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#007020;font-weight:bold">Try</span> {
+</span></span><span style="display:flex;"><span>        <span style="color:#007020;font-weight:bold">if</span> (!<span style="color:#bb60d5">$groupTag</span>) {
+</span></span><span style="display:flex;"><span>            <span style="color:#bb60d5">$groupTag</span> = <span style="color:#4070a0">&#39;&#39;</span>
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        <span style="color:#007020">Get-WindowsAutopilotInfoCommunity</span> -Online -tenantId <span style="color:#bb60d5">$tenantId</span> -appId <span style="color:#bb60d5">$appId</span> -appSecret <span style="color:#bb60d5">$appSecret</span> -groupTag <span style="color:#bb60d5">$groupTag</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#007020">Write-Output</span> <span style="color:#4070a0">&#39;Get-WindowsAutopilotInfoCommunity executed successfully&#39;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#007020">Stop-Transcript</span>
+</span></span><span style="display:flex;"><span>        exit <span style="color:#40a070">0</span>
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#007020;font-weight:bold">Catch</span> {
+</span></span><span style="display:flex;"><span>        <span style="color:#007020">Write-Error</span> <span style="color:#4070a0">&#34;Get-WindowsAutopilotInfoCommunity execution - </span>$(<span style="color:#bb60d5">$_</span>.Exception | <span style="color:#007020">Out-String</span>)<span style="color:#4070a0">&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#007020">Stop-Transcript</span>
+</span></span><span style="display:flex;"><span>        Exit <span style="color:#40a070">1</span>
+</span></span><span style="display:flex;"><span>    }
 </span></span><span style="display:flex;"><span>}
-</span></span><span style="display:flex;"><span><span style="color:#007020;font-weight:bold">Else</span> {
-</span></span><span style="display:flex;"><span>    <span style="color:#007020">Write-Log</span> -Type Error -Message (<span style="color:#bb60d5">$_</span> | <span style="color:#007020">Out-String</span>) -Component <span style="color:#4070a0">&#34;Get-WindowsAutopilotInfo Install&#34;</span> -Path <span style="color:#bb60d5">$LogFilePath</span> ; Exit <span style="color:#40a070">1</span> 
-</span></span><span style="display:flex;"><span>}
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#60a0b0;font-style:italic">#Run the script</span>
-</span></span><span style="display:flex;"><span><span style="color:#007020;font-weight:bold">if</span> (<span style="color:#007020">Get-WindowsAutopilotinfo</span> -Online -TenantId <span style="color:#bb60d5">$TenantID</span> -AppId <span style="color:#bb60d5">$AppID</span> -AppSecret <span style="color:#bb60d5">$SecretID</span> -Grouptag <span style="color:#bb60d5">$GroupTag</span>) {
-</span></span><span style="display:flex;"><span>    <span style="color:#007020">Write-Log</span> -Type Info -Message <span style="color:#4070a0">&#34;Get-WindowsAutopilotInfo executed successfully&#34;</span> -Component <span style="color:#4070a0">&#34;Running Get-WindowsAutopilotInfo&#34;</span> -Path <span style="color:#bb60d5">$LogFilePath</span>
-</span></span><span style="display:flex;"><span>}
-</span></span><span style="display:flex;"><span><span style="color:#007020;font-weight:bold">Else</span> {
-</span></span><span style="display:flex;"><span>    <span style="color:#007020">Write-Log</span> -Type Error -Message (<span style="color:#bb60d5">$_</span> | <span style="color:#007020">Out-String</span>) -Component <span style="color:#4070a0">&#34;Get-WindowsAutopilotInfo Install&#34;</span> -Path <span style="color:#bb60d5">$LogFilePath</span> ; Exit <span style="color:#40a070">1</span> 
+</span></span><span style="display:flex;"><span><span style="color:#007020;font-weight:bold">Catch</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#007020">Write-Error</span> <span style="color:#4070a0">&#34;Get-WindowsAutopilotInfoCommunity Install - </span>$(<span style="color:#bb60d5">$_</span>.Exception | <span style="color:#007020">Out-String</span>)<span style="color:#4070a0">&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#007020">Stop-Transcript</span>
+</span></span><span style="display:flex;"><span>    Exit <span style="color:#40a070">1</span>
 </span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div><ul>
-<li>Changes <strong>08/01/2024</strong> - Added Error Logging to the script to output to a log file in C:\Windows\Temp - aids troubleshooting.</li>
+<li>Thank you to <a href="https://www.oddsandendpoints.co.uk"
+
+
+
+
+ target="_blank"
+ 
+
+
+><strong>Nick Benton</strong></a> for his input to the latest revision.</li>
 </ul>
 <h5 id="script-step">Script Step</h5>
 <p>Lets create a PowerShell Script step in our Task sequence.</p>
-<p><img src="https://deploymentshare.com/articles/bp-apgrouptagts/articles/bp-apgrouptagts/img/BP-APGroupTagTS-10_hu199578f2efca099b528e979727f59cee_14253_filter_4260172621761773246.png#centre" alt="Alt Text"  /></p>
+<p><img alt="Alt Text" src="/articles/bp-apgrouptagts/articles/bp-apgrouptagts/img/BP-APGroupTagTS-10.png#centre"></p>
 <p>We will opt to past a script into the step;</p>
-<p><img src="https://deploymentshare.com/articles/bp-apgrouptagts/articles/bp-apgrouptagts/img/BP-APGroupTagTS-9_hu57d1ed77009585b8114dc1855e178873_2815_filter_7492647078990753077.png#centre" alt="Alt Text"  /></p>
+<p><img alt="Alt Text" src="/articles/bp-apgrouptagts/articles/bp-apgrouptagts/img/BP-APGroupTagTS-9.png#centre"></p>
 <p>We will also configure the script to pass in four parameters.</p>
-<p><img src="https://deploymentshare.com/articles/bp-apgrouptagts/articles/bp-apgrouptagts/img/BP-APGroupTagTS-3_hu93d476fde56a29ee5e4649ccd741874e_5815_filter_5301200047571748226.png#centre" alt="Alt Text"  /></p>
+<p><img alt="Alt Text" src="/articles/bp-apgrouptagts/articles/bp-apgrouptagts/img/BP-APGroupTagTS-3.png#centre"></p>
 <p>Notice that the script requires four parameters passing to it and would you believe it!?  they match the task sequence variables we set up earlier.  Wonderful.  to reference a task sequence variable in a task sequence step you surround the text with &ldquo;%&rdquo; like in the above image.</p>
 <p>Within the step you will notice the following;</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>[<span style="color:#60add5">Net.ServicePointManager</span>]::SecurityProtocol = [<span style="color:#60add5">Net.SecurityProtocolType</span>]::Tls12
 </span></span></code></pre></div><p>This enables TLS 1.2.  This is used to overcome networking issues experienced when attempting to go out to the www to receive content.  There are then two sections which manually pull in the modules PowerShellGet and PackageManagement, both required to install the &ldquo;Get-WindowsAutopilotInfo&rdquo; script (which ensures the latest version is always pulled in) and to run it using the parameters we have passed in because&hellip; the script Get-WindowsAutopilotInfo uses the same parameter names we have passed in from our task sequence variables.</p>
 <p>In testing I see the devices appear in Autopilot devices;
-<img src="https://deploymentshare.com/articles/bp-apgrouptagts/articles/bp-apgrouptagts/img/BP-APGroupTagTS-7_hu918bd3f68c7bb89992564bd84bfb7541_7476_filter_14691170685010018042.png#centre" alt="Alt Text"  /></p>
+<img alt="Alt Text" src="/articles/bp-apgrouptagts/articles/bp-apgrouptagts/img/BP-APGroupTagTS-7.png#centre"></p>
 <p>And then shortly after the device that is &ldquo;Not Assigned&rdquo; changes to pending, and lastly - <strong>assigned</strong>
 
 
@@ -19867,7 +19987,7 @@ header {
 <p>Happy Customer.</p>
 <h5 id="testing">Testing</h5>
 <p>Once testing begun there was an issue we noticed.  Shift+F10 was not available in the event of a failure which was odd.  This is controlled by the file <strong>C:\Windows\Setup\Scripts\DisableCMDRequest.TAG</strong> which we can remove with a simple Run Command Line Step.</p>
-<p><img src="https://deploymentshare.com/articles/bp-apgrouptagts/articles/bp-apgrouptagts/img/BP-APGroupTagTS-5_huc399e9bf50a09f5f52d34764bc2d6223_12286_filter_451314246262220718.png#centre" alt="Alt Text"  /></p>
+<p><img alt="Alt Text" src="/articles/bp-apgrouptagts/articles/bp-apgrouptagts/img/BP-APGroupTagTS-5.png#centre"></p>
 <h5 id="improvements--ideas">Improvements / Ideas</h5>
 <ul>
 <li>If you are not too scared about human-error, you could use something like ServiceUI to prompt the end user for text input to set the group tag and configure the variable GroupTag to the input of that.</li>
@@ -19961,210 +20081,187 @@ Jonathan.</p>
     
   </ul>
 </div>
-<!-- categories -->
-<div class="widget">
-  <h5 class="widget-title"><span>Categories</span></h5>
+
+
+  
+    <div class="widget">
+      <h5 class="widget-title"><span>Categories</span></h5>
       <ul class="list-unstyled widget-list">
+        
           <li>
-            <a
-              href="/categories/configuration-manager/"
-              class="d-flex"
-              >Configuration manager
+            <a href="/categories/configuration-manager/" class="d-flex"
+              >Configuration Manager
               <small class="ms-auto">(3)</small></a
             >
           </li>
+        
           <li>
-            <a
-              href="/categories/intune/"
-              class="d-flex"
+            <a href="/categories/intune/" class="d-flex"
               >Intune
               <small class="ms-auto">(17)</small></a
             >
           </li>
+        
           <li>
-            <a
-              href="/categories/microsoft-deployment-toolkit/"
-              class="d-flex"
-              >Microsoft deployment toolkit
+            <a href="/categories/microsoft-deployment-toolkit/" class="d-flex"
+              >Microsoft Deployment Toolkit
               <small class="ms-auto">(1)</small></a
             >
           </li>
+        
           <li>
-            <a
-              href="/categories/microsoft-graph/"
-              class="d-flex"
-              >Microsoft graph
+            <a href="/categories/microsoft-graph/" class="d-flex"
+              >Microsoft Graph
               <small class="ms-auto">(9)</small></a
             >
           </li>
+        
           <li>
-            <a
-              href="/categories/powerbi/"
-              class="d-flex"
-              >Powerbi
+            <a href="/categories/powerbi/" class="d-flex"
+              >PowerBi
               <small class="ms-auto">(9)</small></a
             >
           </li>
+        
           <li>
-            <a
-              href="/categories/powershell/"
-              class="d-flex"
-              >Powershell
+            <a href="/categories/powershell/" class="d-flex"
+              >PowerShell
               <small class="ms-auto">(4)</small></a
             >
           </li>
+        
           <li>
-            <a
-              href="/categories/security/"
-              class="d-flex"
+            <a href="/categories/security/" class="d-flex"
               >Security
               <small class="ms-auto">(3)</small></a
             >
           </li>
+        
           <li>
-            <a
-              href="/categories/vpn/"
-              class="d-flex"
+            <a href="/categories/vpn/" class="d-flex"
               >VPN
               <small class="ms-auto">(2)</small></a
             >
           </li>
+        
           <li>
-            <a
-              href="/categories/windows-10/"
-              class="d-flex"
+            <a href="/categories/windows-10/" class="d-flex"
               >Windows 10
               <small class="ms-auto">(1)</small></a
             >
           </li>
+        
       </ul>
-</div>
-<!-- tags -->
-<div class="widget">
-  <h5 class="widget-title"><span>Tags</span></h5>
+    </div>
+  
+
+
+
+  
+    <div class="widget">
+      <h5 class="widget-title"><span>Tags</span></h5>
       <ul class="list-inline widget-list-inline">
+        
           <li class="list-inline-item">
-            <a href="/tags/app-packaging/"
-              >App packaging</a
-            >
+            <a href="/tags/app-packaging/">App Packaging</a>
           </li>
+        
           <li class="list-inline-item">
-            <a href="/tags/applications/"
-              >Applications</a
-            >
+            <a href="/tags/applications/">Applications</a>
           </li>
+        
           <li class="list-inline-item">
-            <a href="/tags/autopilot/"
-              >Autopilot</a
-            >
+            <a href="/tags/autopilot/">Autopilot</a>
           </li>
+        
           <li class="list-inline-item">
-            <a href="/tags/azure-ad/"
-              >Azure ad</a
-            >
+            <a href="/tags/azure-ad/">Azure AD</a>
           </li>
+        
           <li class="list-inline-item">
-            <a href="/tags/cis/"
-              >Cis</a
-            >
+            <a href="/tags/cis/">CIS</a>
           </li>
+        
           <li class="list-inline-item">
-            <a href="/tags/cloud/"
-              >Cloud</a
-            >
+            <a href="/tags/cloud/">Cloud</a>
           </li>
+        
           <li class="list-inline-item">
-            <a href="/tags/configmgr/"
-              >Configmgr</a
-            >
+            <a href="/tags/configmgr/">ConfigMgr</a>
           </li>
+        
           <li class="list-inline-item">
-            <a href="/tags/configuration-manager/"
-              >Configuration manager</a
-            >
+            <a href="/tags/configuration-manager/">Configuration Manager</a>
           </li>
+        
           <li class="list-inline-item">
-            <a href="/tags/defender/"
-              >Defender</a
-            >
+            <a href="/tags/defender/">Defender</a>
           </li>
+        
           <li class="list-inline-item">
-            <a href="/tags/deployment/"
-              >Deployment</a
-            >
+            <a href="/tags/deployment/">Deployment</a>
           </li>
+        
           <li class="list-inline-item">
-            <a href="/tags/endpoint-manager/"
-              >Endpoint manager</a
-            >
+            <a href="/tags/endpoint-manager/">Endpoint Manager</a>
           </li>
+        
           <li class="list-inline-item">
-            <a href="/tags/forticlient/"
-              >Forticlient</a
-            >
+            <a href="/tags/forticlient/">Forticlient</a>
           </li>
+        
           <li class="list-inline-item">
-            <a href="/tags/group-tag/"
-              >Group tag</a
-            >
+            <a href="/tags/group-tag/">Group Tag</a>
           </li>
+        
           <li class="list-inline-item">
-            <a href="/tags/hybrid/"
-              >Hybrid</a
-            >
+            <a href="/tags/hybrid/">Hybrid</a>
           </li>
+        
           <li class="list-inline-item">
-            <a href="/tags/hybrid-aad/"
-              >Hybrid aad</a
-            >
+            <a href="/tags/hybrid-aad/">Hybrid AAD</a>
           </li>
+        
           <li class="list-inline-item">
-            <a href="/tags/intune/"
-              >Intune</a
-            >
+            <a href="/tags/intune/">Intune</a>
           </li>
+        
           <li class="list-inline-item">
-            <a href="/tags/microsoft/"
-              >Microsoft</a
-            >
+            <a href="/tags/microsoft/">Microsoft</a>
           </li>
+        
           <li class="list-inline-item">
-            <a href="/tags/microsoft-graph/"
-              >Microsoft graph</a
-            >
+            <a href="/tags/microsoft-graph/">Microsoft Graph</a>
           </li>
+        
           <li class="list-inline-item">
-            <a href="/tags/packaging/"
-              >Packaging</a
-            >
+            <a href="/tags/packaging/">Packaging</a>
           </li>
+        
           <li class="list-inline-item">
-            <a href="/tags/powerbi/"
-              >Powerbi</a
-            >
+            <a href="/tags/powerbi/">PowerBI</a>
           </li>
+        
           <li class="list-inline-item">
-            <a href="/tags/powershell/"
-              >Powershell</a
-            >
+            <a href="/tags/powershell/">PowerShell</a>
           </li>
+        
           <li class="list-inline-item">
-            <a href="/tags/sccm/"
-              >Sccm</a
-            >
+            <a href="/tags/sccm/">SCCM</a>
           </li>
+        
           <li class="list-inline-item">
-            <a href="/tags/security/"
-              >Security</a
-            >
+            <a href="/tags/security/">Security</a>
           </li>
+        
           <li class="list-inline-item">
-            <a href="/tags/vpn/"
-              >VPN</a
-            >
+            <a href="/tags/vpn/">VPN</a>
           </li>
+        
       </ul>
-</div>
+    </div>
+  
+
 <!-- Promotion -->
 
   <div class="promotion">
@@ -20284,8 +20381,8 @@ Jonathan.</p>
 
 
     <div class="promotion-content">
-      <h5 class="text-white mb-3">Currently Rocking</h5>
-      <p class="text-white mb-4">HP ZBook 15 G6 -i9 <br> 64GB Ram / 4TB SSD</p>
+      <h5 class="text-white mb-3">My Laptop</h5>
+      <p class="text-white mb-4">HP ZBook 15 G6 <br> Intel(R) Core(TM) i9-9880H CPU <br> 64GB Ram / 4TB SSD</p>
       <a href="https://www8.hp.com/h20195/v2/GetPDF.aspx/c06305136.pdf" class="btn btn-primary"
         >HP Zbook</a
       >
@@ -20883,7 +20980,7 @@ background-color: #FF6600
 
 
 
-   
+
     </main>
 
     
@@ -20962,7 +21059,7 @@ background-color: #FF6600
 
 
         </a>
-        <p></p>
+        <p>Please like and share on social medai and dont forget to tag me, it is really appreciated and helps my drive to create more content</p>
       </div>
       <div class="col-lg-2 col-md-3 col-6 mb-4">
         <h6 class="mb-4 fw-semibold">Quick Links</h6>
@@ -21048,7 +21145,7 @@ background-color: #FF6600
 
   
 
-<script crossorigin="anonymous" defer integrity="sha512-nC6OuLXx6PuwKW3Iaa7qZYukEuZYtcbyjvR/9HbkcW/SCH6CzZodcrQnj7rS/N87au4/ibKDjHkcwpUfkM2ufw==" type="application/javascript">(() => {
+<script crossorigin="anonymous" defer integrity="sha512-PvmhRVExWPGPWMT1YeuEq0TG3izBtQf4dbjWXhb4o2JsUqtJdX&#43;E5xxHAqE/mXODgcmduh3iI6qIecv3cWNPvA==" type="application/javascript">(() => {
   var __create = Object.create;
   var __defProp = Object.defineProperty;
   var __getOwnPropDesc = Object.getOwnPropertyDescriptor;
@@ -22550,7 +22647,7 @@ background-color: #FF6600
     }
   });
 
-  // ns-hugo:/home/runner/.cache/hugo_cache/modules/filecache/modules/pkg/mod/github.com/twbs/bootstrap@v5.3.3+incompatible/js/src/dom/data.js
+  // ns-hugo:/home/runner/.cache/hugo_cache/modules/filecache/modules/pkg/mod/github.com/twbs/bootstrap@v5.3.2+incompatible/js/src/dom/data.js
   var elementMap = /* @__PURE__ */ new Map();
   var data_default = {
     set(element, key, instance) {
@@ -22582,7 +22679,7 @@ background-color: #FF6600
     }
   };
 
-  // ns-hugo:/home/runner/.cache/hugo_cache/modules/filecache/modules/pkg/mod/github.com/twbs/bootstrap@v5.3.3+incompatible/js/src/util/index.js
+  // ns-hugo:/home/runner/.cache/hugo_cache/modules/filecache/modules/pkg/mod/github.com/twbs/bootstrap@v5.3.2+incompatible/js/src/util/index.js
   var MILLISECONDS_MULTIPLIER = 1e3;
   var TRANSITION_END = "transitionend";
   var parseSelector = (selector) => {
@@ -22745,7 +22842,7 @@ background-color: #FF6600
     return list[Math.max(0, Math.min(index, listLength - 1))];
   };
 
-  // ns-hugo:/home/runner/.cache/hugo_cache/modules/filecache/modules/pkg/mod/github.com/twbs/bootstrap@v5.3.3+incompatible/js/src/dom/event-handler.js
+  // ns-hugo:/home/runner/.cache/hugo_cache/modules/filecache/modules/pkg/mod/github.com/twbs/bootstrap@v5.3.2+incompatible/js/src/dom/event-handler.js
   var namespaceRegex = /[^.]*(?=\..*)\.|.*/;
   var stripNameRegex = /\..*/;
   var stripUidRegex = /::\d+$/;
@@ -22984,7 +23081,7 @@ background-color: #FF6600
   }
   var event_handler_default = EventHandler;
 
-  // ns-hugo:/home/runner/.cache/hugo_cache/modules/filecache/modules/pkg/mod/github.com/twbs/bootstrap@v5.3.3+incompatible/js/src/dom/manipulator.js
+  // ns-hugo:/home/runner/.cache/hugo_cache/modules/filecache/modules/pkg/mod/github.com/twbs/bootstrap@v5.3.2+incompatible/js/src/dom/manipulator.js
   function normalizeData(value) {
     if (value === "true") {
       return true;
@@ -23036,7 +23133,7 @@ background-color: #FF6600
   };
   var manipulator_default = Manipulator;
 
-  // ns-hugo:/home/runner/.cache/hugo_cache/modules/filecache/modules/pkg/mod/github.com/twbs/bootstrap@v5.3.3+incompatible/js/src/util/config.js
+  // ns-hugo:/home/runner/.cache/hugo_cache/modules/filecache/modules/pkg/mod/github.com/twbs/bootstrap@v5.3.2+incompatible/js/src/util/config.js
   var Config = class {
     // Getters
     static get Default() {
@@ -23080,8 +23177,8 @@ background-color: #FF6600
   };
   var config_default = Config;
 
-  // ns-hugo:/home/runner/.cache/hugo_cache/modules/filecache/modules/pkg/mod/github.com/twbs/bootstrap@v5.3.3+incompatible/js/src/base-component.js
-  var VERSION = "5.3.3";
+  // ns-hugo:/home/runner/.cache/hugo_cache/modules/filecache/modules/pkg/mod/github.com/twbs/bootstrap@v5.3.2+incompatible/js/src/base-component.js
+  var VERSION = "5.3.2";
   var BaseComponent = class extends config_default {
     constructor(element, config) {
       super();
@@ -23132,7 +23229,7 @@ background-color: #FF6600
   };
   var base_component_default = BaseComponent;
 
-  // ns-hugo:/home/runner/.cache/hugo_cache/modules/filecache/modules/pkg/mod/github.com/twbs/bootstrap@v5.3.3+incompatible/js/src/dom/selector-engine.js
+  // ns-hugo:/home/runner/.cache/hugo_cache/modules/filecache/modules/pkg/mod/github.com/twbs/bootstrap@v5.3.2+incompatible/js/src/dom/selector-engine.js
   var getSelector = (element) => {
     let selector = element.getAttribute("data-bs-target");
     if (!selector || selector === "#") {
@@ -23143,9 +23240,9 @@ background-color: #FF6600
       if (hrefAttribute.includes("#") && !hrefAttribute.startsWith("#")) {
         hrefAttribute = `#${hrefAttribute.split("#")[1]}`;
       }
-      selector = hrefAttribute && hrefAttribute !== "#" ? hrefAttribute.trim() : null;
+      selector = hrefAttribute && hrefAttribute !== "#" ? parseSelector(hrefAttribute.trim()) : null;
     }
-    return selector ? selector.split(",").map((sel) => parseSelector(sel)).join(",") : null;
+    return selector;
   };
   var SelectorEngine = {
     find(selector, element = document.documentElement) {
@@ -23218,7 +23315,7 @@ background-color: #FF6600
   };
   var selector_engine_default = SelectorEngine;
 
-  // ns-hugo:/home/runner/.cache/hugo_cache/modules/filecache/modules/pkg/mod/github.com/twbs/bootstrap@v5.3.3+incompatible/js/src/collapse.js
+  // ns-hugo:/home/runner/.cache/hugo_cache/modules/filecache/modules/pkg/mod/github.com/twbs/bootstrap@v5.3.2+incompatible/js/src/collapse.js
   var NAME = "collapse";
   var DATA_KEY = "bs.collapse";
   var EVENT_KEY = `.${DATA_KEY}`;
@@ -23414,7 +23511,7 @@ background-color: #FF6600
   });
   defineJQueryPlugin(Collapse);
 
-  // ns-hugo:/home/runner/.cache/hugo_cache/modules/filecache/modules/pkg/mod/github.com/twbs/bootstrap@v5.3.3+incompatible/js/src/dropdown.js
+  // ns-hugo:/home/runner/.cache/hugo_cache/modules/filecache/modules/pkg/mod/github.com/twbs/bootstrap@v5.3.2+incompatible/js/src/dropdown.js
   var Popper = __toESM(require_popper());
   var NAME2 = "dropdown";
   var DATA_KEY2 = "bs.dropdown";
@@ -23723,7 +23820,7 @@ background-color: #FF6600
   });
   defineJQueryPlugin(Dropdown);
 
-  // ns-hugo:/home/runner/.cache/hugo_cache/modules/filecache/modules/pkg/mod/github.com/twbs/bootstrap@v5.3.3+incompatible/js/src/util/backdrop.js
+  // ns-hugo:/home/runner/.cache/hugo_cache/modules/filecache/modules/pkg/mod/github.com/twbs/bootstrap@v5.3.2+incompatible/js/src/util/backdrop.js
   var NAME3 = "backdrop";
   var CLASS_NAME_FADE = "fade";
   var CLASS_NAME_SHOW3 = "show";
@@ -23829,7 +23926,7 @@ background-color: #FF6600
   };
   var backdrop_default = Backdrop;
 
-  // ns-hugo:/home/runner/.cache/hugo_cache/modules/filecache/modules/pkg/mod/github.com/twbs/bootstrap@v5.3.3+incompatible/js/src/util/component-functions.js
+  // ns-hugo:/home/runner/.cache/hugo_cache/modules/filecache/modules/pkg/mod/github.com/twbs/bootstrap@v5.3.2+incompatible/js/src/util/component-functions.js
   var enableDismissTrigger = (component, method = "hide") => {
     const clickEvent = `click.dismiss${component.EVENT_KEY}`;
     const name = component.NAME;
@@ -23846,7 +23943,7 @@ background-color: #FF6600
     });
   };
 
-  // ns-hugo:/home/runner/.cache/hugo_cache/modules/filecache/modules/pkg/mod/github.com/twbs/bootstrap@v5.3.3+incompatible/js/src/util/focustrap.js
+  // ns-hugo:/home/runner/.cache/hugo_cache/modules/filecache/modules/pkg/mod/github.com/twbs/bootstrap@v5.3.2+incompatible/js/src/util/focustrap.js
   var NAME4 = "focustrap";
   var DATA_KEY3 = "bs.focustrap";
   var EVENT_KEY3 = `.${DATA_KEY3}`;
@@ -23925,7 +24022,7 @@ background-color: #FF6600
   };
   var focustrap_default = FocusTrap;
 
-  // ns-hugo:/home/runner/.cache/hugo_cache/modules/filecache/modules/pkg/mod/github.com/twbs/bootstrap@v5.3.3+incompatible/js/src/util/scrollbar.js
+  // ns-hugo:/home/runner/.cache/hugo_cache/modules/filecache/modules/pkg/mod/github.com/twbs/bootstrap@v5.3.2+incompatible/js/src/util/scrollbar.js
   var SELECTOR_FIXED_CONTENT = ".fixed-top, .fixed-bottom, .is-fixed, .sticky-top";
   var SELECTOR_STICKY_CONTENT = ".sticky-top";
   var PROPERTY_PADDING = "padding-right";
@@ -24002,7 +24099,7 @@ background-color: #FF6600
   };
   var scrollbar_default = ScrollBarHelper;
 
-  // ns-hugo:/home/runner/.cache/hugo_cache/modules/filecache/modules/pkg/mod/github.com/twbs/bootstrap@v5.3.3+incompatible/js/src/modal.js
+  // ns-hugo:/home/runner/.cache/hugo_cache/modules/filecache/modules/pkg/mod/github.com/twbs/bootstrap@v5.3.2+incompatible/js/src/modal.js
   var NAME5 = "modal";
   var DATA_KEY4 = "bs.modal";
   var EVENT_KEY4 = `.${DATA_KEY4}`;

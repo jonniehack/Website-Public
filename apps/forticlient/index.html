@@ -42,6 +42,7 @@
 
 
 
+
 <link rel="manifest" href="/manifest.webmanifest" />
 <meta
   name="msapplication-TileColor"
@@ -49,6 +50,8 @@
 <meta
   name="theme-color"
   content="#fff" />
+
+
 
 
 
@@ -196,6 +199,7 @@
 
 
 
+  <meta name="twitter:creator" content="@Jonathan Fallis" />
 
 
 
@@ -203,6 +207,10 @@
 
 
 
+
+
+
+  
   
     
       <script async src="https://www.googletagmanager.com/gtag/js?id=G-H36JXQVDWY"></script>
@@ -221,6 +229,8 @@
       </script>
     
   
+
+
 
 
 
@@ -261,19 +271,6 @@
 
 
 
-  
-
-
-
-
-
-
-
-
-
-
-
-
 
   
 
@@ -281,7 +278,26 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
   
+
+
+
+
+
+
+  
+
 
 
 
@@ -293,6 +309,7 @@
   let search_no_results = "0 results for";
   let search_initial_message = "";
 </script>
+
 
 
 
@@ -9817,8 +9834,8 @@ iframe.wait-autoplay {
   }
 }
 /*!
-   * Bootstrap  v5.3.3 (https://getbootstrap.com/)
-   * Copyright 2011-2024 The Bootstrap Authors
+   * Bootstrap  v5.3.2 (https://getbootstrap.com/)
+   * Copyright 2011-2023 The Bootstrap Authors
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    */
 :root,
@@ -12162,8 +12179,6 @@ textarea.form-control-lg {
     border-color: var(--bs-btn-active-border-color); }
     .btn-check:checked + .btn:focus-visible, :not(.btn-check) + .btn:active:focus-visible, .btn:first-child:active:focus-visible, .btn.active:focus-visible, .btn.show:focus-visible {
       box-shadow: var(--bs-btn-focus-box-shadow); }
-  .btn-check:checked:focus-visible + .btn {
-    box-shadow: var(--bs-btn-focus-box-shadow); }
   .btn:disabled, .btn.disabled, fieldset:disabled .btn {
     color: var(--bs-btn-disabled-color);
     pointer-events: none;
@@ -13386,11 +13401,12 @@ textarea.form-control-lg {
   --bs-accordion-btn-padding-y: 1rem;
   --bs-accordion-btn-color: var(--bs-body-color);
   --bs-accordion-btn-bg: var(--bs-accordion-bg);
-  --bs-accordion-btn-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='%23212529' stroke-linecap='round' stroke-linejoin='round'%3e%3cpath d='M2 5L8 11L14 5'/%3e%3c/svg%3e");
+  --bs-accordion-btn-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23212529'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
   --bs-accordion-btn-icon-width: 1.25rem;
   --bs-accordion-btn-icon-transform: rotate(-180deg);
   --bs-accordion-btn-icon-transition: transform 0.2s ease-in-out;
-  --bs-accordion-btn-active-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='%23052c65' stroke-linecap='round' stroke-linejoin='round'%3e%3cpath d='M2 5L8 11L14 5'/%3e%3c/svg%3e");
+  --bs-accordion-btn-active-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23052c65'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+  --bs-accordion-btn-focus-border-color: #86b7fe;
   --bs-accordion-btn-focus-box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
   --bs-accordion-body-padding-x: 1.25rem;
   --bs-accordion-body-padding-y: 1rem;
@@ -13438,6 +13454,7 @@ textarea.form-control-lg {
     z-index: 2; }
   .accordion-button:focus {
     z-index: 3;
+    border-color: var(--bs-accordion-btn-focus-border-color);
     outline: 0;
     box-shadow: var(--bs-accordion-btn-focus-box-shadow); }
 
@@ -13451,7 +13468,7 @@ textarea.form-control-lg {
   .accordion-item:first-of-type {
     border-top-left-radius: var(--bs-accordion-border-radius);
     border-top-right-radius: var(--bs-accordion-border-radius); }
-    .accordion-item:first-of-type > .accordion-header .accordion-button {
+    .accordion-item:first-of-type .accordion-button {
       border-top-left-radius: var(--bs-accordion-inner-border-radius);
       border-top-right-radius: var(--bs-accordion-inner-border-radius); }
   .accordion-item:not(:first-of-type) {
@@ -13459,27 +13476,28 @@ textarea.form-control-lg {
   .accordion-item:last-of-type {
     border-bottom-right-radius: var(--bs-accordion-border-radius);
     border-bottom-left-radius: var(--bs-accordion-border-radius); }
-    .accordion-item:last-of-type > .accordion-header .accordion-button.collapsed {
+    .accordion-item:last-of-type .accordion-button.collapsed {
       border-bottom-right-radius: var(--bs-accordion-inner-border-radius);
       border-bottom-left-radius: var(--bs-accordion-inner-border-radius); }
-    .accordion-item:last-of-type > .accordion-collapse {
+    .accordion-item:last-of-type .accordion-collapse {
       border-bottom-right-radius: var(--bs-accordion-border-radius);
       border-bottom-left-radius: var(--bs-accordion-border-radius); }
 
 .accordion-body {
   padding: var(--bs-accordion-body-padding-y) var(--bs-accordion-body-padding-x); }
 
-.accordion-flush > .accordion-item {
+.accordion-flush .accordion-collapse {
+  border-width: 0; }
+
+.accordion-flush .accordion-item {
   border-right: 0;
   border-left: 0;
   border-radius: 0; }
-  .accordion-flush > .accordion-item:first-child {
+  .accordion-flush .accordion-item:first-child {
     border-top: 0; }
-  .accordion-flush > .accordion-item:last-child {
+  .accordion-flush .accordion-item:last-child {
     border-bottom: 0; }
-  .accordion-flush > .accordion-item > .accordion-header .accordion-button, .accordion-flush > .accordion-item > .accordion-header .accordion-button.collapsed {
-    border-radius: 0; }
-  .accordion-flush > .accordion-item > .accordion-collapse {
+  .accordion-flush .accordion-item .accordion-button, .accordion-flush .accordion-item .accordion-button.collapsed {
     border-radius: 0; }
 
 [data-bs-theme="dark"] .accordion-button::after {
@@ -18238,16 +18256,16 @@ header {
   max-width: 100%;
   height: auto; }
 
-.logo-light {
+.img-light {
   display: initial; }
 
-.logo-dark {
+.img-dark {
   display: none; }
 
-.dark .logo-light {
+.dark .img-light {
   display: none; }
 
-.dark .logo-dark {
+.dark .img-dark {
   display: initial; }
 
 .content img {
@@ -19214,10 +19232,6 @@ header {
                     </a>
                     <div class="dropdown-menu">
                       
-                        <a class="dropdown-item" href="https://learn.microsoft.com/en-us/mem/configmgr/core/plan-design/changes/whats-new-incremental-versions"
-                          >Configuration Manager</a
-                        >
-                      
                         <a class="dropdown-item" href="https://learn.microsoft.com/en-us/officeupdates/release-notes-microsoft365-apps"
                           >Microsoft 365</a
                         >
@@ -19242,6 +19256,10 @@ header {
                           >Windows 11</a
                         >
                       
+                        <a class="dropdown-item" href="https://learn.microsoft.com/en-us/windows-365/enterprise/whats-new"
+                          >Windows 365</a
+                        >
+                      
                         <a class="dropdown-item" href="https://learn.microsoft.com/en-us/windows-server/get-started/windows-server-release-info"
                           >Windows Server</a
                         >
@@ -19251,26 +19269,35 @@ header {
                 
               
                 
-                  <li class="nav-item">
-                    <a class="nav-link" href="https://deploymentshare.com/categories/intune/"
-                      >Intune</a
-                    >
-                  </li>
-                
-              
-                
-                  <li class="nav-item">
-                    <a class="nav-link" href="https://deploymentshare.com/categories/powerbi/"
-                      >PowerBI</a
-                    >
-                  </li>
-                
-              
-                
-                  <li class="nav-item">
-                    <a class="nav-link" href="https://deploymentshare.com/categories/configuration-manager/"
-                      >ConfigMgr</a
-                    >
+                  <li class="nav-item dropdown">
+                    <a
+                      class="nav-link"
+                      href="#"
+                      role="button"
+                      data-bs-toggle="dropdown"
+                      aria-haspopup="true"
+                      aria-expanded="false">
+                      Categories <i class="fas fa-angle-down ms-1"></i>
+                    </a>
+                    <div class="dropdown-menu">
+                      
+                        <a class="dropdown-item" href="https://deploymentshare.com/apps/"
+                          >Apps Used</a
+                        >
+                      
+                        <a class="dropdown-item" href="https://deploymentshare.com/categories/configuration-manager/"
+                          >Configuration Manager</a
+                        >
+                      
+                        <a class="dropdown-item" href="https://deploymentshare.com/categories/intune/"
+                          >Intune</a
+                        >
+                      
+                        <a class="dropdown-item" href="https://deploymentshare.com/categories/powerbi/"
+                          >PowerBI</a
+                        >
+                      
+                    </div>
                   </li>
                 
               
@@ -19293,6 +19320,14 @@ header {
                       
                         <a class="dropdown-item" href="https://endpointmgt.com/"
                           >Chris Sellar</a
+                        >
+                      
+                        <a class="dropdown-item" href="https://www.youtube.com/@DeanEllerbyMVP"
+                          >Dean Ellerby</a
+                        >
+                      
+                        <a class="dropdown-item" href="https://skiptotheendpoint.co.uk/"
+                          >James Robinson</a
                         >
                       
                         <a class="dropdown-item" href="https://www.deploymentresearch.com/"
@@ -19332,10 +19367,43 @@ header {
                 
               
                 
-                  <li class="nav-item">
-                    <a class="nav-link" href="https://deploymentshare.com/apps/"
-                      >Apps</a
-                    >
+                  <li class="nav-item dropdown">
+                    <a
+                      class="nav-link"
+                      href="#"
+                      role="button"
+                      data-bs-toggle="dropdown"
+                      aria-haspopup="true"
+                      aria-expanded="false">
+                      Homepage Layout <i class="fas fa-angle-down ms-1"></i>
+                    </a>
+                    <div class="dropdown-menu">
+                      
+                        <a class="dropdown-item" href="https://deploymentshare.com/homepage/full/"
+                          >Full Width</a
+                        >
+                      
+                        <a class="dropdown-item" href="https://deploymentshare.com/homepage/full-left/"
+                          >Full With Left Sidebar</a
+                        >
+                      
+                        <a class="dropdown-item" href="https://deploymentshare.com/homepage/full-right/"
+                          >Full With Right Sidebar</a
+                        >
+                      
+                        <a class="dropdown-item" href="https://deploymentshare.com/homepage/grid/"
+                          >Grid Style</a
+                        >
+                      
+                        <a class="dropdown-item" href="https://deploymentshare.com/homepage/grid-left/"
+                          >Grid With Left Sidebar</a
+                        >
+                      
+                        <a class="dropdown-item" href="https://deploymentshare.com/homepage/grid-right/"
+                          >Grid With Right Sidebar</a
+                        >
+                      
+                    </div>
                   </li>
                 
               
@@ -19570,7 +19638,7 @@ header {
   <script
     defer
     src="https://cdn.snipcart.com/themes/v3.0.27/default/snipcart.js"></script>
-   
+
     </main>
 
     
@@ -19649,7 +19717,7 @@ header {
 
 
         </a>
-        <p></p>
+        <p>Please like and share on social medai and dont forget to tag me, it is really appreciated and helps my drive to create more content</p>
       </div>
       <div class="col-lg-2 col-md-3 col-6 mb-4">
         <h6 class="mb-4 fw-semibold">Quick Links</h6>
@@ -19735,7 +19803,7 @@ header {
 
   
 
-<script crossorigin="anonymous" defer integrity="sha512-nC6OuLXx6PuwKW3Iaa7qZYukEuZYtcbyjvR/9HbkcW/SCH6CzZodcrQnj7rS/N87au4/ibKDjHkcwpUfkM2ufw==" type="application/javascript">(() => {
+<script crossorigin="anonymous" defer integrity="sha512-PvmhRVExWPGPWMT1YeuEq0TG3izBtQf4dbjWXhb4o2JsUqtJdX&#43;E5xxHAqE/mXODgcmduh3iI6qIecv3cWNPvA==" type="application/javascript">(() => {
   var __create = Object.create;
   var __defProp = Object.defineProperty;
   var __getOwnPropDesc = Object.getOwnPropertyDescriptor;
@@ -21237,7 +21305,7 @@ header {
     }
   });
 
-  // ns-hugo:/home/runner/.cache/hugo_cache/modules/filecache/modules/pkg/mod/github.com/twbs/bootstrap@v5.3.3+incompatible/js/src/dom/data.js
+  // ns-hugo:/home/runner/.cache/hugo_cache/modules/filecache/modules/pkg/mod/github.com/twbs/bootstrap@v5.3.2+incompatible/js/src/dom/data.js
   var elementMap = /* @__PURE__ */ new Map();
   var data_default = {
     set(element, key, instance) {
@@ -21269,7 +21337,7 @@ header {
     }
   };
 
-  // ns-hugo:/home/runner/.cache/hugo_cache/modules/filecache/modules/pkg/mod/github.com/twbs/bootstrap@v5.3.3+incompatible/js/src/util/index.js
+  // ns-hugo:/home/runner/.cache/hugo_cache/modules/filecache/modules/pkg/mod/github.com/twbs/bootstrap@v5.3.2+incompatible/js/src/util/index.js
   var MILLISECONDS_MULTIPLIER = 1e3;
   var TRANSITION_END = "transitionend";
   var parseSelector = (selector) => {
@@ -21432,7 +21500,7 @@ header {
     return list[Math.max(0, Math.min(index, listLength - 1))];
   };
 
-  // ns-hugo:/home/runner/.cache/hugo_cache/modules/filecache/modules/pkg/mod/github.com/twbs/bootstrap@v5.3.3+incompatible/js/src/dom/event-handler.js
+  // ns-hugo:/home/runner/.cache/hugo_cache/modules/filecache/modules/pkg/mod/github.com/twbs/bootstrap@v5.3.2+incompatible/js/src/dom/event-handler.js
   var namespaceRegex = /[^.]*(?=\..*)\.|.*/;
   var stripNameRegex = /\..*/;
   var stripUidRegex = /::\d+$/;
@@ -21671,7 +21739,7 @@ header {
   }
   var event_handler_default = EventHandler;
 
-  // ns-hugo:/home/runner/.cache/hugo_cache/modules/filecache/modules/pkg/mod/github.com/twbs/bootstrap@v5.3.3+incompatible/js/src/dom/manipulator.js
+  // ns-hugo:/home/runner/.cache/hugo_cache/modules/filecache/modules/pkg/mod/github.com/twbs/bootstrap@v5.3.2+incompatible/js/src/dom/manipulator.js
   function normalizeData(value) {
     if (value === "true") {
       return true;
@@ -21723,7 +21791,7 @@ header {
   };
   var manipulator_default = Manipulator;
 
-  // ns-hugo:/home/runner/.cache/hugo_cache/modules/filecache/modules/pkg/mod/github.com/twbs/bootstrap@v5.3.3+incompatible/js/src/util/config.js
+  // ns-hugo:/home/runner/.cache/hugo_cache/modules/filecache/modules/pkg/mod/github.com/twbs/bootstrap@v5.3.2+incompatible/js/src/util/config.js
   var Config = class {
     // Getters
     static get Default() {
@@ -21767,8 +21835,8 @@ header {
   };
   var config_default = Config;
 
-  // ns-hugo:/home/runner/.cache/hugo_cache/modules/filecache/modules/pkg/mod/github.com/twbs/bootstrap@v5.3.3+incompatible/js/src/base-component.js
-  var VERSION = "5.3.3";
+  // ns-hugo:/home/runner/.cache/hugo_cache/modules/filecache/modules/pkg/mod/github.com/twbs/bootstrap@v5.3.2+incompatible/js/src/base-component.js
+  var VERSION = "5.3.2";
   var BaseComponent = class extends config_default {
     constructor(element, config) {
       super();
@@ -21819,7 +21887,7 @@ header {
   };
   var base_component_default = BaseComponent;
 
-  // ns-hugo:/home/runner/.cache/hugo_cache/modules/filecache/modules/pkg/mod/github.com/twbs/bootstrap@v5.3.3+incompatible/js/src/dom/selector-engine.js
+  // ns-hugo:/home/runner/.cache/hugo_cache/modules/filecache/modules/pkg/mod/github.com/twbs/bootstrap@v5.3.2+incompatible/js/src/dom/selector-engine.js
   var getSelector = (element) => {
     let selector = element.getAttribute("data-bs-target");
     if (!selector || selector === "#") {
@@ -21830,9 +21898,9 @@ header {
       if (hrefAttribute.includes("#") && !hrefAttribute.startsWith("#")) {
         hrefAttribute = `#${hrefAttribute.split("#")[1]}`;
       }
-      selector = hrefAttribute && hrefAttribute !== "#" ? hrefAttribute.trim() : null;
+      selector = hrefAttribute && hrefAttribute !== "#" ? parseSelector(hrefAttribute.trim()) : null;
     }
-    return selector ? selector.split(",").map((sel) => parseSelector(sel)).join(",") : null;
+    return selector;
   };
   var SelectorEngine = {
     find(selector, element = document.documentElement) {
@@ -21905,7 +21973,7 @@ header {
   };
   var selector_engine_default = SelectorEngine;
 
-  // ns-hugo:/home/runner/.cache/hugo_cache/modules/filecache/modules/pkg/mod/github.com/twbs/bootstrap@v5.3.3+incompatible/js/src/collapse.js
+  // ns-hugo:/home/runner/.cache/hugo_cache/modules/filecache/modules/pkg/mod/github.com/twbs/bootstrap@v5.3.2+incompatible/js/src/collapse.js
   var NAME = "collapse";
   var DATA_KEY = "bs.collapse";
   var EVENT_KEY = `.${DATA_KEY}`;
@@ -22101,7 +22169,7 @@ header {
   });
   defineJQueryPlugin(Collapse);
 
-  // ns-hugo:/home/runner/.cache/hugo_cache/modules/filecache/modules/pkg/mod/github.com/twbs/bootstrap@v5.3.3+incompatible/js/src/dropdown.js
+  // ns-hugo:/home/runner/.cache/hugo_cache/modules/filecache/modules/pkg/mod/github.com/twbs/bootstrap@v5.3.2+incompatible/js/src/dropdown.js
   var Popper = __toESM(require_popper());
   var NAME2 = "dropdown";
   var DATA_KEY2 = "bs.dropdown";
@@ -22410,7 +22478,7 @@ header {
   });
   defineJQueryPlugin(Dropdown);
 
-  // ns-hugo:/home/runner/.cache/hugo_cache/modules/filecache/modules/pkg/mod/github.com/twbs/bootstrap@v5.3.3+incompatible/js/src/util/backdrop.js
+  // ns-hugo:/home/runner/.cache/hugo_cache/modules/filecache/modules/pkg/mod/github.com/twbs/bootstrap@v5.3.2+incompatible/js/src/util/backdrop.js
   var NAME3 = "backdrop";
   var CLASS_NAME_FADE = "fade";
   var CLASS_NAME_SHOW3 = "show";
@@ -22516,7 +22584,7 @@ header {
   };
   var backdrop_default = Backdrop;
 
-  // ns-hugo:/home/runner/.cache/hugo_cache/modules/filecache/modules/pkg/mod/github.com/twbs/bootstrap@v5.3.3+incompatible/js/src/util/component-functions.js
+  // ns-hugo:/home/runner/.cache/hugo_cache/modules/filecache/modules/pkg/mod/github.com/twbs/bootstrap@v5.3.2+incompatible/js/src/util/component-functions.js
   var enableDismissTrigger = (component, method = "hide") => {
     const clickEvent = `click.dismiss${component.EVENT_KEY}`;
     const name = component.NAME;
@@ -22533,7 +22601,7 @@ header {
     });
   };
 
-  // ns-hugo:/home/runner/.cache/hugo_cache/modules/filecache/modules/pkg/mod/github.com/twbs/bootstrap@v5.3.3+incompatible/js/src/util/focustrap.js
+  // ns-hugo:/home/runner/.cache/hugo_cache/modules/filecache/modules/pkg/mod/github.com/twbs/bootstrap@v5.3.2+incompatible/js/src/util/focustrap.js
   var NAME4 = "focustrap";
   var DATA_KEY3 = "bs.focustrap";
   var EVENT_KEY3 = `.${DATA_KEY3}`;
@@ -22612,7 +22680,7 @@ header {
   };
   var focustrap_default = FocusTrap;
 
-  // ns-hugo:/home/runner/.cache/hugo_cache/modules/filecache/modules/pkg/mod/github.com/twbs/bootstrap@v5.3.3+incompatible/js/src/util/scrollbar.js
+  // ns-hugo:/home/runner/.cache/hugo_cache/modules/filecache/modules/pkg/mod/github.com/twbs/bootstrap@v5.3.2+incompatible/js/src/util/scrollbar.js
   var SELECTOR_FIXED_CONTENT = ".fixed-top, .fixed-bottom, .is-fixed, .sticky-top";
   var SELECTOR_STICKY_CONTENT = ".sticky-top";
   var PROPERTY_PADDING = "padding-right";
@@ -22689,7 +22757,7 @@ header {
   };
   var scrollbar_default = ScrollBarHelper;
 
-  // ns-hugo:/home/runner/.cache/hugo_cache/modules/filecache/modules/pkg/mod/github.com/twbs/bootstrap@v5.3.3+incompatible/js/src/modal.js
+  // ns-hugo:/home/runner/.cache/hugo_cache/modules/filecache/modules/pkg/mod/github.com/twbs/bootstrap@v5.3.2+incompatible/js/src/modal.js
   var NAME5 = "modal";
   var DATA_KEY4 = "bs.modal";
   var EVENT_KEY4 = `.${DATA_KEY4}`;

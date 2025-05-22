@@ -42,6 +42,7 @@
 
 
 
+
 <link rel="manifest" href="/manifest.webmanifest" />
 <meta
   name="msapplication-TileColor"
@@ -49,6 +50,8 @@
 <meta
   name="theme-color"
   content="#fff" />
+
+
 
 
 
@@ -189,6 +192,7 @@
 
 
 
+  <meta name="twitter:creator" content="@Jonathan Fallis" />
 
 
 
@@ -196,6 +200,10 @@
 
 
 
+
+
+
+  
   
     
       <script async src="https://www.googletagmanager.com/gtag/js?id=G-H36JXQVDWY"></script>
@@ -214,6 +222,8 @@
       </script>
     
   
+
+
 
 
 
@@ -254,19 +264,6 @@
 
 
 
-  
-
-
-
-
-
-
-
-
-
-
-
-
 
   
 
@@ -274,7 +271,26 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
   
+
+
+
+
+
+
+  
+
 
 
 
@@ -286,6 +302,7 @@
   let search_no_results = "0 results for";
   let search_initial_message = "";
 </script>
+
 
 
 
@@ -9810,8 +9827,8 @@ iframe.wait-autoplay {
   }
 }
 /*!
-   * Bootstrap  v5.3.3 (https://getbootstrap.com/)
-   * Copyright 2011-2024 The Bootstrap Authors
+   * Bootstrap  v5.3.2 (https://getbootstrap.com/)
+   * Copyright 2011-2023 The Bootstrap Authors
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    */
 :root,
@@ -12155,8 +12172,6 @@ textarea.form-control-lg {
     border-color: var(--bs-btn-active-border-color); }
     .btn-check:checked + .btn:focus-visible, :not(.btn-check) + .btn:active:focus-visible, .btn:first-child:active:focus-visible, .btn.active:focus-visible, .btn.show:focus-visible {
       box-shadow: var(--bs-btn-focus-box-shadow); }
-  .btn-check:checked:focus-visible + .btn {
-    box-shadow: var(--bs-btn-focus-box-shadow); }
   .btn:disabled, .btn.disabled, fieldset:disabled .btn {
     color: var(--bs-btn-disabled-color);
     pointer-events: none;
@@ -13379,11 +13394,12 @@ textarea.form-control-lg {
   --bs-accordion-btn-padding-y: 1rem;
   --bs-accordion-btn-color: var(--bs-body-color);
   --bs-accordion-btn-bg: var(--bs-accordion-bg);
-  --bs-accordion-btn-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='%23212529' stroke-linecap='round' stroke-linejoin='round'%3e%3cpath d='M2 5L8 11L14 5'/%3e%3c/svg%3e");
+  --bs-accordion-btn-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23212529'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
   --bs-accordion-btn-icon-width: 1.25rem;
   --bs-accordion-btn-icon-transform: rotate(-180deg);
   --bs-accordion-btn-icon-transition: transform 0.2s ease-in-out;
-  --bs-accordion-btn-active-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='%23052c65' stroke-linecap='round' stroke-linejoin='round'%3e%3cpath d='M2 5L8 11L14 5'/%3e%3c/svg%3e");
+  --bs-accordion-btn-active-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23052c65'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+  --bs-accordion-btn-focus-border-color: #86b7fe;
   --bs-accordion-btn-focus-box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
   --bs-accordion-body-padding-x: 1.25rem;
   --bs-accordion-body-padding-y: 1rem;
@@ -13431,6 +13447,7 @@ textarea.form-control-lg {
     z-index: 2; }
   .accordion-button:focus {
     z-index: 3;
+    border-color: var(--bs-accordion-btn-focus-border-color);
     outline: 0;
     box-shadow: var(--bs-accordion-btn-focus-box-shadow); }
 
@@ -13444,7 +13461,7 @@ textarea.form-control-lg {
   .accordion-item:first-of-type {
     border-top-left-radius: var(--bs-accordion-border-radius);
     border-top-right-radius: var(--bs-accordion-border-radius); }
-    .accordion-item:first-of-type > .accordion-header .accordion-button {
+    .accordion-item:first-of-type .accordion-button {
       border-top-left-radius: var(--bs-accordion-inner-border-radius);
       border-top-right-radius: var(--bs-accordion-inner-border-radius); }
   .accordion-item:not(:first-of-type) {
@@ -13452,27 +13469,28 @@ textarea.form-control-lg {
   .accordion-item:last-of-type {
     border-bottom-right-radius: var(--bs-accordion-border-radius);
     border-bottom-left-radius: var(--bs-accordion-border-radius); }
-    .accordion-item:last-of-type > .accordion-header .accordion-button.collapsed {
+    .accordion-item:last-of-type .accordion-button.collapsed {
       border-bottom-right-radius: var(--bs-accordion-inner-border-radius);
       border-bottom-left-radius: var(--bs-accordion-inner-border-radius); }
-    .accordion-item:last-of-type > .accordion-collapse {
+    .accordion-item:last-of-type .accordion-collapse {
       border-bottom-right-radius: var(--bs-accordion-border-radius);
       border-bottom-left-radius: var(--bs-accordion-border-radius); }
 
 .accordion-body {
   padding: var(--bs-accordion-body-padding-y) var(--bs-accordion-body-padding-x); }
 
-.accordion-flush > .accordion-item {
+.accordion-flush .accordion-collapse {
+  border-width: 0; }
+
+.accordion-flush .accordion-item {
   border-right: 0;
   border-left: 0;
   border-radius: 0; }
-  .accordion-flush > .accordion-item:first-child {
+  .accordion-flush .accordion-item:first-child {
     border-top: 0; }
-  .accordion-flush > .accordion-item:last-child {
+  .accordion-flush .accordion-item:last-child {
     border-bottom: 0; }
-  .accordion-flush > .accordion-item > .accordion-header .accordion-button, .accordion-flush > .accordion-item > .accordion-header .accordion-button.collapsed {
-    border-radius: 0; }
-  .accordion-flush > .accordion-item > .accordion-collapse {
+  .accordion-flush .accordion-item .accordion-button, .accordion-flush .accordion-item .accordion-button.collapsed {
     border-radius: 0; }
 
 [data-bs-theme="dark"] .accordion-button::after {
@@ -18231,16 +18249,16 @@ header {
   max-width: 100%;
   height: auto; }
 
-.logo-light {
+.img-light {
   display: initial; }
 
-.logo-dark {
+.img-dark {
   display: none; }
 
-.dark .logo-light {
+.dark .img-light {
   display: none; }
 
-.dark .logo-dark {
+.dark .img-dark {
   display: initial; }
 
 .content img {
@@ -19207,10 +19225,6 @@ header {
                     </a>
                     <div class="dropdown-menu">
                       
-                        <a class="dropdown-item" href="https://learn.microsoft.com/en-us/mem/configmgr/core/plan-design/changes/whats-new-incremental-versions"
-                          >Configuration Manager</a
-                        >
-                      
                         <a class="dropdown-item" href="https://learn.microsoft.com/en-us/officeupdates/release-notes-microsoft365-apps"
                           >Microsoft 365</a
                         >
@@ -19235,6 +19249,10 @@ header {
                           >Windows 11</a
                         >
                       
+                        <a class="dropdown-item" href="https://learn.microsoft.com/en-us/windows-365/enterprise/whats-new"
+                          >Windows 365</a
+                        >
+                      
                         <a class="dropdown-item" href="https://learn.microsoft.com/en-us/windows-server/get-started/windows-server-release-info"
                           >Windows Server</a
                         >
@@ -19244,26 +19262,35 @@ header {
                 
               
                 
-                  <li class="nav-item">
-                    <a class="nav-link" href="https://deploymentshare.com/categories/intune/"
-                      >Intune</a
-                    >
-                  </li>
-                
-              
-                
-                  <li class="nav-item">
-                    <a class="nav-link" href="https://deploymentshare.com/categories/powerbi/"
-                      >PowerBI</a
-                    >
-                  </li>
-                
-              
-                
-                  <li class="nav-item">
-                    <a class="nav-link" href="https://deploymentshare.com/categories/configuration-manager/"
-                      >ConfigMgr</a
-                    >
+                  <li class="nav-item dropdown">
+                    <a
+                      class="nav-link"
+                      href="#"
+                      role="button"
+                      data-bs-toggle="dropdown"
+                      aria-haspopup="true"
+                      aria-expanded="false">
+                      Categories <i class="fas fa-angle-down ms-1"></i>
+                    </a>
+                    <div class="dropdown-menu">
+                      
+                        <a class="dropdown-item" href="https://deploymentshare.com/apps/"
+                          >Apps Used</a
+                        >
+                      
+                        <a class="dropdown-item" href="https://deploymentshare.com/categories/configuration-manager/"
+                          >Configuration Manager</a
+                        >
+                      
+                        <a class="dropdown-item" href="https://deploymentshare.com/categories/intune/"
+                          >Intune</a
+                        >
+                      
+                        <a class="dropdown-item" href="https://deploymentshare.com/categories/powerbi/"
+                          >PowerBI</a
+                        >
+                      
+                    </div>
                   </li>
                 
               
@@ -19286,6 +19313,14 @@ header {
                       
                         <a class="dropdown-item" href="https://endpointmgt.com/"
                           >Chris Sellar</a
+                        >
+                      
+                        <a class="dropdown-item" href="https://www.youtube.com/@DeanEllerbyMVP"
+                          >Dean Ellerby</a
+                        >
+                      
+                        <a class="dropdown-item" href="https://skiptotheendpoint.co.uk/"
+                          >James Robinson</a
                         >
                       
                         <a class="dropdown-item" href="https://www.deploymentresearch.com/"
@@ -19325,10 +19360,43 @@ header {
                 
               
                 
-                  <li class="nav-item">
-                    <a class="nav-link" href="https://deploymentshare.com/apps/"
-                      >Apps</a
-                    >
+                  <li class="nav-item dropdown">
+                    <a
+                      class="nav-link"
+                      href="#"
+                      role="button"
+                      data-bs-toggle="dropdown"
+                      aria-haspopup="true"
+                      aria-expanded="false">
+                      Homepage Layout <i class="fas fa-angle-down ms-1"></i>
+                    </a>
+                    <div class="dropdown-menu">
+                      
+                        <a class="dropdown-item" href="https://deploymentshare.com/homepage/full/"
+                          >Full Width</a
+                        >
+                      
+                        <a class="dropdown-item" href="https://deploymentshare.com/homepage/full-left/"
+                          >Full With Left Sidebar</a
+                        >
+                      
+                        <a class="dropdown-item" href="https://deploymentshare.com/homepage/full-right/"
+                          >Full With Right Sidebar</a
+                        >
+                      
+                        <a class="dropdown-item" href="https://deploymentshare.com/homepage/grid/"
+                          >Grid Style</a
+                        >
+                      
+                        <a class="dropdown-item" href="https://deploymentshare.com/homepage/grid-left/"
+                          >Grid With Left Sidebar</a
+                        >
+                      
+                        <a class="dropdown-item" href="https://deploymentshare.com/homepage/grid-right/"
+                          >Grid With Right Sidebar</a
+                        >
+                      
+                    </div>
                   </li>
                 
               
@@ -19389,2261 +19457,23 @@ header {
       
   
   
-    <section class="section-sm pb-0">
+    <section class="section-sm">
       <div class="container">
         <div class="row">
           <div class="col-12">
-            <div class="title-bordered">
-              <h1 class="h4 fw-normal">
-                Showing items from
-                <span class="text-primary">Articles</span>
-              </h1>
+            <div class="title-bordered mb-5 d-flex align-items-center">
+              <h1 class="h4">Articles</h1>
+            </div>
+            <div class="content">
+              
             </div>
           </div>
         </div>
       </div>
     </section>
-
-    
-    
-
-
-
-
-
-
-<section class="section">
-  <div class="container">
-    <div class="row">
-      
-      
-      
-      
-      <div
-        class="
-          col-lg-8
-          mb-5 mb-lg-0">
-        
-          
-          <div class="row">
-            
-              <div
-                class="
-                  col-md-6
-                ">
-                <article class="card mb-4 border-0">
-                  
-                  
-                  
-                    
-                      <div class="post-slider">
-                        
-                          <a href="/articles/bp-9-pbi-intune/">
-                            
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   
 
 
-
-
-
-  
-
-  
-  
-    
-      
-    
-
-
-    
-    
-
-
-    
-    
-      
-      
-    
-    
-    
-
-
-    
-    
-      
-      
-        
-
-        
-        
-        
-        
-        
-        
-        
-
-
-        
-        
-
-
-        <picture>
-          <source
-            
-              srcset="/images/title/pbi-intune_hu93e729ed80f60802b181437f64a553ee_407980_545x0_resize_q90_h2_lanczos.webp"
-            
-            media="(max-width: 575px)" />
-          <source
-            
-              srcset="/images/title/pbi-intune_hu93e729ed80f60802b181437f64a553ee_407980_600x0_resize_q90_h2_lanczos.webp"
-            
-            media="(max-width: 767px)" />
-          <source
-            
-              srcset="/images/title/pbi-intune_hu93e729ed80f60802b181437f64a553ee_407980_700x0_resize_q90_h2_lanczos.webp"
-            
-            media="(max-width: 991px)" />
-          <source
-            
-              srcset="/images/title/pbi-intune_hu93e729ed80f60802b181437f64a553ee_407980_1110x0_resize_q90_h2_lanczos.webp"
-             />
-          <img
-            
-              loading="lazy" decoding="async"
-              src="/images/title/pbi-intune_hu93e729ed80f60802b181437f64a553ee_407980_1110x0_resize_q90_lanczos.jpg"
-            class=" w-100 img"
-            alt="post-thumb"
-            width="1499"
-            height="776" />
-        </picture>
-      
-      
-    
-    
-  
-
-
-  
-
-
-                          </a>
-                        
-                      </div>
-                    
-                  
-                  
-                  <div class="card-body">
-                    <h3 class="h4">
-                      <a class="post-title" href="/articles/bp-9-pbi-intune/"
-                        >Intune and PowerBI Deep Dive - Part 9 - Connectors and Tokens</a
-                      >
-                    </h3>
-                    <ul class="list-inline post-meta mb-4">
-                      <li class="list-inline-item">
-                        <i class="fas fa-user me-2"></i>
-                        <a
-                          href="/author/jonathan-fallis/"
-                          >Jonathan Fallis</a
-                        >
-                      </li>
-                      <li class="list-inline-item">
-                        Date :
-                        July 26, 2024
-                      </li>
-                      <li class="list-inline-item">
-                        Categories :
-                        
-                          <a
-                            href="/categories/powerbi/"
-                            class="ms-1"
-                            >Power bi
-                          </a>
-                        
-                          ,<a
-                            href="/categories/intune/"
-                            class="ms-1"
-                            >Intune
-                          </a>
-                        
-                          ,<a
-                            href="/categories/microsoft-graph/"
-                            class="ms-1"
-                            >Microsoft graph
-                          </a>
-                        
-                      </li>
-                      <li class="list-inline-item">
-                        Tags :
-                        
-                          <a
-                            href="/tags/microsoft/"
-                            class="ms-1"
-                            >Microsoft
-                          </a>
-                        
-                          ,<a
-                            href="/tags/intune/"
-                            class="ms-1"
-                            >Intune
-                          </a>
-                        
-                          ,<a
-                            href="/tags/powerbi/"
-                            class="ms-1"
-                            >Power bi
-                          </a>
-                        
-                          ,<a
-                            href="/tags/microsoft-graph/"
-                            class="ms-1"
-                            >Microsoft graph
-                          </a>
-                        
-                      </li>
-                    </ul>
-                    <p>In this post I&rsquo;m going to cover (some) connectors and tokens in Microsoft Intune. In particular, how we pull in the data from them into PowerBI. …</p>
-                    <a
-                      href="/articles/bp-9-pbi-intune/"
-                      class="btn btn-outline-primary"
-                      >Continue Reading</a
-                    >
-                  </div>
-                </article>
-              </div>
-            
-              <div
-                class="
-                  col-md-6
-                ">
-                <article class="card mb-4 border-0">
-                  
-                  
-                  
-                    
-                      <div class="post-slider">
-                        
-                          <a href="/articles/bp-forticlient-ts/">
-                            
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-
-
-
-
-  
-
-  
-  
-    
-      
-    
-
-
-    
-    
-
-
-    
-    
-      
-      
-    
-    
-    
-
-
-    
-    
-      
-      
-        
-
-        
-        
-        
-        
-        
-        
-        
-
-
-        
-        
-
-
-        <picture>
-          <source
-            
-              srcset="/images/title/bp-forticlient-ts_hucdfb0e6988df8a8782bfcc77fa0a0f7e_2668998_545x0_resize_q90_h2_lanczos_3.webp"
-            
-            media="(max-width: 575px)" />
-          <source
-            
-              srcset="/images/title/bp-forticlient-ts_hucdfb0e6988df8a8782bfcc77fa0a0f7e_2668998_600x0_resize_q90_h2_lanczos_3.webp"
-            
-            media="(max-width: 767px)" />
-          <source
-            
-              srcset="/images/title/bp-forticlient-ts_hucdfb0e6988df8a8782bfcc77fa0a0f7e_2668998_700x0_resize_q90_h2_lanczos_3.webp"
-            
-            media="(max-width: 991px)" />
-          <source
-            
-              srcset="/images/title/bp-forticlient-ts_hucdfb0e6988df8a8782bfcc77fa0a0f7e_2668998_1110x0_resize_q90_h2_lanczos_3.webp"
-             />
-          <img
-            
-              loading="lazy" decoding="async"
-              src="/images/title/bp-forticlient-ts_hucdfb0e6988df8a8782bfcc77fa0a0f7e_2668998_1110x0_resize_lanczos_3.png"
-            class=" w-100 img"
-            alt="post-thumb"
-            width="1499"
-            height="775" />
-        </picture>
-      
-      
-    
-    
-  
-
-
-  
-
-
-                          </a>
-                        
-                      </div>
-                    
-                  
-                  
-                  <div class="card-body">
-                    <h3 class="h4">
-                      <a class="post-title" href="/articles/bp-forticlient-ts/"
-                        >Troubleshooting SAML Auth on FortiClient VPN when applying Microsoft Security Baselines</a
-                      >
-                    </h3>
-                    <ul class="list-inline post-meta mb-4">
-                      <li class="list-inline-item">
-                        <i class="fas fa-user me-2"></i>
-                        <a
-                          href="/author/jonathan-fallis/"
-                          >Jonathan Fallis</a
-                        >
-                      </li>
-                      <li class="list-inline-item">
-                        Date :
-                        July 23, 2024
-                      </li>
-                      <li class="list-inline-item">
-                        Categories :
-                        
-                          <a
-                            href="/categories/intune/"
-                            class="ms-1"
-                            >Intune
-                          </a>
-                        
-                          ,<a
-                            href="/categories/vpn/"
-                            class="ms-1"
-                            >VPN
-                          </a>
-                        
-                          ,<a
-                            href="/categories/security/"
-                            class="ms-1"
-                            >Security
-                          </a>
-                        
-                      </li>
-                      <li class="list-inline-item">
-                        Tags :
-                        
-                          <a
-                            href="/tags/applications/"
-                            class="ms-1"
-                            >Applications
-                          </a>
-                        
-                          ,<a
-                            href="/tags/autopilot/"
-                            class="ms-1"
-                            >Autopilot
-                          </a>
-                        
-                          ,<a
-                            href="/tags/forticlient/"
-                            class="ms-1"
-                            >Forticlient
-                          </a>
-                        
-                          ,<a
-                            href="/tags/intune/"
-                            class="ms-1"
-                            >Intune
-                          </a>
-                        
-                          ,<a
-                            href="/tags/vpn/"
-                            class="ms-1"
-                            >VPN
-                          </a>
-                        
-                          ,<a
-                            href="/tags/security/"
-                            class="ms-1"
-                            >Security
-                          </a>
-                        
-                      </li>
-                    </ul>
-                    <p>Dearest gentle reader&hellip; (Yes, my wife is making me watch that Bridgerton series on netflix, so I may speak like a 19th century gentlemen during …</p>
-                    <a
-                      href="/articles/bp-forticlient-ts/"
-                      class="btn btn-outline-primary"
-                      >Continue Reading</a
-                    >
-                  </div>
-                </article>
-              </div>
-            
-              <div
-                class="
-                  col-md-6
-                ">
-                <article class="card mb-4 border-0">
-                  
-                  
-                  
-                    
-                      <div class="post-slider">
-                        
-                          <a href="/articles/bp-dfec/">
-                            
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-
-
-
-
-  
-
-  
-  
-    
-      
-    
-
-
-    
-    
-
-
-    
-    
-      
-      
-    
-    
-    
-
-
-    
-    
-      
-      
-        
-
-        
-        
-        
-        
-        
-        
-        
-
-
-        
-        
-
-
-        <picture>
-          <source
-            
-              srcset="/images/title/mde_hue2da9ecfe1353fdc10a56f13f8a4f209_2719726_545x0_resize_q90_h2_lanczos_3.webp"
-            
-            media="(max-width: 575px)" />
-          <source
-            
-              srcset="/images/title/mde_hue2da9ecfe1353fdc10a56f13f8a4f209_2719726_600x0_resize_q90_h2_lanczos_3.webp"
-            
-            media="(max-width: 767px)" />
-          <source
-            
-              srcset="/images/title/mde_hue2da9ecfe1353fdc10a56f13f8a4f209_2719726_700x0_resize_q90_h2_lanczos_3.webp"
-            
-            media="(max-width: 991px)" />
-          <source
-            
-              srcset="/images/title/mde_hue2da9ecfe1353fdc10a56f13f8a4f209_2719726_1110x0_resize_q90_h2_lanczos_3.webp"
-             />
-          <img
-            
-              loading="lazy" decoding="async"
-              src="/images/title/mde_hue2da9ecfe1353fdc10a56f13f8a4f209_2719726_1110x0_resize_lanczos_3.png"
-            class=" w-100 img"
-            alt="post-thumb"
-            width="1499"
-            height="776" />
-        </picture>
-      
-      
-    
-    
-  
-
-
-  
-
-
-                          </a>
-                        
-                      </div>
-                    
-                  
-                  
-                  <div class="card-body">
-                    <h3 class="h4">
-                      <a class="post-title" href="/articles/bp-dfec/"
-                        >Intune Defender for Endpoint Connector</a
-                      >
-                    </h3>
-                    <ul class="list-inline post-meta mb-4">
-                      <li class="list-inline-item">
-                        <i class="fas fa-user me-2"></i>
-                        <a
-                          href="/author/jonathan-fallis/"
-                          >Jonathan Fallis</a
-                        >
-                      </li>
-                      <li class="list-inline-item">
-                        Date :
-                        June 26, 2024
-                      </li>
-                      <li class="list-inline-item">
-                        Categories :
-                        
-                          <a
-                            href="/categories/security/"
-                            class="ms-1"
-                            >Security
-                          </a>
-                        
-                          ,<a
-                            href="/categories/intune/"
-                            class="ms-1"
-                            >Intune
-                          </a>
-                        
-                      </li>
-                      <li class="list-inline-item">
-                        Tags :
-                        
-                          <a
-                            href="/tags/security/"
-                            class="ms-1"
-                            >Security
-                          </a>
-                        
-                          ,<a
-                            href="/tags/intune/"
-                            class="ms-1"
-                            >Intune
-                          </a>
-                        
-                          ,<a
-                            href="/tags/defender/"
-                            class="ms-1"
-                            >Defender
-                          </a>
-                        
-                      </li>
-                    </ul>
-                    <p>Defender for Endpoint, are you licensed for it? Are you using it? Are you using Intune? Then why are you not using the Intune Connector for Microsoft …</p>
-                    <a
-                      href="/articles/bp-dfec/"
-                      class="btn btn-outline-primary"
-                      >Continue Reading</a
-                    >
-                  </div>
-                </article>
-              </div>
-            
-              <div
-                class="
-                  col-md-6
-                ">
-                <article class="card mb-4 border-0">
-                  
-                  
-                  
-                    
-                      <div class="post-slider">
-                        
-                          <a href="/articles/bp-cis/">
-                            
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-
-
-
-
-  
-
-  
-  
-    
-      
-    
-
-
-    
-    
-
-
-    
-    
-      
-      
-    
-    
-    
-
-
-    
-    
-      
-      
-        
-
-        
-        
-        
-        
-        
-        
-        
-
-
-        
-        
-
-
-        <picture>
-          <source
-            
-              srcset="/images/title/cis_hu30340bcd1bf5301923174f341e143e85_1578596_545x0_resize_q90_h2_lanczos_3.webp"
-            
-            media="(max-width: 575px)" />
-          <source
-            
-              srcset="/images/title/cis_hu30340bcd1bf5301923174f341e143e85_1578596_600x0_resize_q90_h2_lanczos_3.webp"
-            
-            media="(max-width: 767px)" />
-          <source
-            
-              srcset="/images/title/cis_hu30340bcd1bf5301923174f341e143e85_1578596_700x0_resize_q90_h2_lanczos_3.webp"
-            
-            media="(max-width: 991px)" />
-          <source
-            
-              srcset="/images/title/cis_hu30340bcd1bf5301923174f341e143e85_1578596_1110x0_resize_q90_h2_lanczos_3.webp"
-             />
-          <img
-            
-              loading="lazy" decoding="async"
-              src="/images/title/cis_hu30340bcd1bf5301923174f341e143e85_1578596_1110x0_resize_lanczos_3.png"
-            class=" w-100 img"
-            alt="post-thumb"
-            width="1499"
-            height="776" />
-        </picture>
-      
-      
-    
-    
-  
-
-
-  
-
-
-                          </a>
-                        
-                      </div>
-                    
-                  
-                  
-                  <div class="card-body">
-                    <h3 class="h4">
-                      <a class="post-title" href="/articles/bp-cis/"
-                        >CIS Intune Baselines - What do they break?</a
-                      >
-                    </h3>
-                    <ul class="list-inline post-meta mb-4">
-                      <li class="list-inline-item">
-                        <i class="fas fa-user me-2"></i>
-                        <a
-                          href="/author/jonathan-fallis/"
-                          >Jonathan Fallis</a
-                        >
-                      </li>
-                      <li class="list-inline-item">
-                        Date :
-                        May 23, 2024
-                      </li>
-                      <li class="list-inline-item">
-                        Categories :
-                        
-                          <a
-                            href="/categories/security/"
-                            class="ms-1"
-                            >Security
-                          </a>
-                        
-                          ,<a
-                            href="/categories/intune/"
-                            class="ms-1"
-                            >Intune
-                          </a>
-                        
-                      </li>
-                      <li class="list-inline-item">
-                        Tags :
-                        
-                          <a
-                            href="/tags/security/"
-                            class="ms-1"
-                            >Security
-                          </a>
-                        
-                          ,<a
-                            href="/tags/intune/"
-                            class="ms-1"
-                            >Intune
-                          </a>
-                        
-                          ,<a
-                            href="/tags/cis/"
-                            class="ms-1"
-                            >Cis
-                          </a>
-                        
-                      </li>
-                    </ul>
-                    <p>(And yes I know&hellip;. AI Generated blog post images are beginning to get a bit cringe&hellip; but I actually liked this one so I rolled with it) …</p>
-                    <a
-                      href="/articles/bp-cis/"
-                      class="btn btn-outline-primary"
-                      >Continue Reading</a
-                    >
-                  </div>
-                </article>
-              </div>
-            
-              <div
-                class="
-                  col-md-6
-                ">
-                <article class="card mb-4 border-0">
-                  
-                  
-                  
-                    
-                      <div class="post-slider">
-                        
-                          <a href="/articles/bp-8-pbi-intune/">
-                            
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-
-
-
-
-  
-
-  
-  
-    
-      
-    
-
-
-    
-    
-
-
-    
-    
-      
-      
-    
-    
-    
-
-
-    
-    
-      
-      
-        
-
-        
-        
-        
-        
-        
-        
-        
-
-
-        
-        
-
-
-        <picture>
-          <source
-            
-              srcset="/images/title/pbi-intune_hu93e729ed80f60802b181437f64a553ee_407980_545x0_resize_q90_h2_lanczos.webp"
-            
-            media="(max-width: 575px)" />
-          <source
-            
-              srcset="/images/title/pbi-intune_hu93e729ed80f60802b181437f64a553ee_407980_600x0_resize_q90_h2_lanczos.webp"
-            
-            media="(max-width: 767px)" />
-          <source
-            
-              srcset="/images/title/pbi-intune_hu93e729ed80f60802b181437f64a553ee_407980_700x0_resize_q90_h2_lanczos.webp"
-            
-            media="(max-width: 991px)" />
-          <source
-            
-              srcset="/images/title/pbi-intune_hu93e729ed80f60802b181437f64a553ee_407980_1110x0_resize_q90_h2_lanczos.webp"
-             />
-          <img
-            
-              loading="lazy" decoding="async"
-              src="/images/title/pbi-intune_hu93e729ed80f60802b181437f64a553ee_407980_1110x0_resize_q90_lanczos.jpg"
-            class=" w-100 img"
-            alt="post-thumb"
-            width="1499"
-            height="776" />
-        </picture>
-      
-      
-    
-    
-  
-
-
-  
-
-
-                          </a>
-                        
-                      </div>
-                    
-                  
-                  
-                  <div class="card-body">
-                    <h3 class="h4">
-                      <a class="post-title" href="/articles/bp-8-pbi-intune/"
-                        >Intune and PowerBI Deep Dive - Part 8 - Autopilot Devices</a
-                      >
-                    </h3>
-                    <ul class="list-inline post-meta mb-4">
-                      <li class="list-inline-item">
-                        <i class="fas fa-user me-2"></i>
-                        <a
-                          href="/author/jonathan-fallis/"
-                          >Jonathan Fallis</a
-                        >
-                      </li>
-                      <li class="list-inline-item">
-                        Date :
-                        May 17, 2024
-                      </li>
-                      <li class="list-inline-item">
-                        Categories :
-                        
-                          <a
-                            href="/categories/powerbi/"
-                            class="ms-1"
-                            >Power bi
-                          </a>
-                        
-                          ,<a
-                            href="/categories/intune/"
-                            class="ms-1"
-                            >Intune
-                          </a>
-                        
-                          ,<a
-                            href="/categories/microsoft-graph/"
-                            class="ms-1"
-                            >Microsoft graph
-                          </a>
-                        
-                      </li>
-                      <li class="list-inline-item">
-                        Tags :
-                        
-                          <a
-                            href="/tags/microsoft/"
-                            class="ms-1"
-                            >Microsoft
-                          </a>
-                        
-                          ,<a
-                            href="/tags/intune/"
-                            class="ms-1"
-                            >Intune
-                          </a>
-                        
-                          ,<a
-                            href="/tags/powerbi/"
-                            class="ms-1"
-                            >Power bi
-                          </a>
-                        
-                          ,<a
-                            href="/tags/microsoft-graph/"
-                            class="ms-1"
-                            >Microsoft graph
-                          </a>
-                        
-                      </li>
-                    </ul>
-                    <p>In this post we&rsquo;ll look at pulling in details about Autopilot devices. Our list call from Managed Devices, covered in part 6, gives us a column …</p>
-                    <a
-                      href="/articles/bp-8-pbi-intune/"
-                      class="btn btn-outline-primary"
-                      >Continue Reading</a
-                    >
-                  </div>
-                </article>
-              </div>
-            
-              <div
-                class="
-                  col-md-6
-                ">
-                <article class="card mb-4 border-0">
-                  
-                  
-                  
-                    
-                      <div class="post-slider">
-                        
-                          <a href="/articles/bp-7-pbi-intune/">
-                            
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-
-
-
-
-  
-
-  
-  
-    
-      
-    
-
-
-    
-    
-
-
-    
-    
-      
-      
-    
-    
-    
-
-
-    
-    
-      
-      
-        
-
-        
-        
-        
-        
-        
-        
-        
-
-
-        
-        
-
-
-        <picture>
-          <source
-            
-              srcset="/images/title/pbi-intune_hu93e729ed80f60802b181437f64a553ee_407980_545x0_resize_q90_h2_lanczos.webp"
-            
-            media="(max-width: 575px)" />
-          <source
-            
-              srcset="/images/title/pbi-intune_hu93e729ed80f60802b181437f64a553ee_407980_600x0_resize_q90_h2_lanczos.webp"
-            
-            media="(max-width: 767px)" />
-          <source
-            
-              srcset="/images/title/pbi-intune_hu93e729ed80f60802b181437f64a553ee_407980_700x0_resize_q90_h2_lanczos.webp"
-            
-            media="(max-width: 991px)" />
-          <source
-            
-              srcset="/images/title/pbi-intune_hu93e729ed80f60802b181437f64a553ee_407980_1110x0_resize_q90_h2_lanczos.webp"
-             />
-          <img
-            
-              loading="lazy" decoding="async"
-              src="/images/title/pbi-intune_hu93e729ed80f60802b181437f64a553ee_407980_1110x0_resize_q90_lanczos.jpg"
-            class=" w-100 img"
-            alt="post-thumb"
-            width="1499"
-            height="776" />
-        </picture>
-      
-      
-    
-    
-  
-
-
-  
-
-
-                          </a>
-                        
-                      </div>
-                    
-                  
-                  
-                  <div class="card-body">
-                    <h3 class="h4">
-                      <a class="post-title" href="/articles/bp-7-pbi-intune/"
-                        >Intune and PowerBI Deep Dive - Part 7 - Managed Applications</a
-                      >
-                    </h3>
-                    <ul class="list-inline post-meta mb-4">
-                      <li class="list-inline-item">
-                        <i class="fas fa-user me-2"></i>
-                        <a
-                          href="/author/jonathan-fallis/"
-                          >Jonathan Fallis</a
-                        >
-                      </li>
-                      <li class="list-inline-item">
-                        Date :
-                        March 19, 2024
-                      </li>
-                      <li class="list-inline-item">
-                        Categories :
-                        
-                          <a
-                            href="/categories/powerbi/"
-                            class="ms-1"
-                            >Power bi
-                          </a>
-                        
-                          ,<a
-                            href="/categories/intune/"
-                            class="ms-1"
-                            >Intune
-                          </a>
-                        
-                          ,<a
-                            href="/categories/microsoft-graph/"
-                            class="ms-1"
-                            >Microsoft graph
-                          </a>
-                        
-                      </li>
-                      <li class="list-inline-item">
-                        Tags :
-                        
-                          <a
-                            href="/tags/microsoft/"
-                            class="ms-1"
-                            >Microsoft
-                          </a>
-                        
-                          ,<a
-                            href="/tags/intune/"
-                            class="ms-1"
-                            >Intune
-                          </a>
-                        
-                          ,<a
-                            href="/tags/powerbi/"
-                            class="ms-1"
-                            >Power bi
-                          </a>
-                        
-                          ,<a
-                            href="/tags/microsoft-graph/"
-                            class="ms-1"
-                            >Microsoft graph
-                          </a>
-                        
-                      </li>
-                    </ul>
-                    <p>In this post we&rsquo;ll look at Applications within Intune. The Graph response for this will have some additions for applications at the bottom for …</p>
-                    <a
-                      href="/articles/bp-7-pbi-intune/"
-                      class="btn btn-outline-primary"
-                      >Continue Reading</a
-                    >
-                  </div>
-                </article>
-              </div>
-            
-              <div
-                class="
-                  col-md-6
-                ">
-                <article class="card mb-4 border-0">
-                  
-                  
-                  
-                    
-                      <div class="post-slider">
-                        
-                          <a href="/articles/bp-6-pbi-intune/">
-                            
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-
-
-
-
-  
-
-  
-  
-    
-      
-    
-
-
-    
-    
-
-
-    
-    
-      
-      
-    
-    
-    
-
-
-    
-    
-      
-      
-        
-
-        
-        
-        
-        
-        
-        
-        
-
-
-        
-        
-
-
-        <picture>
-          <source
-            
-              srcset="/images/title/pbi-intune_hu93e729ed80f60802b181437f64a553ee_407980_545x0_resize_q90_h2_lanczos.webp"
-            
-            media="(max-width: 575px)" />
-          <source
-            
-              srcset="/images/title/pbi-intune_hu93e729ed80f60802b181437f64a553ee_407980_600x0_resize_q90_h2_lanczos.webp"
-            
-            media="(max-width: 767px)" />
-          <source
-            
-              srcset="/images/title/pbi-intune_hu93e729ed80f60802b181437f64a553ee_407980_700x0_resize_q90_h2_lanczos.webp"
-            
-            media="(max-width: 991px)" />
-          <source
-            
-              srcset="/images/title/pbi-intune_hu93e729ed80f60802b181437f64a553ee_407980_1110x0_resize_q90_h2_lanczos.webp"
-             />
-          <img
-            
-              loading="lazy" decoding="async"
-              src="/images/title/pbi-intune_hu93e729ed80f60802b181437f64a553ee_407980_1110x0_resize_q90_lanczos.jpg"
-            class=" w-100 img"
-            alt="post-thumb"
-            width="1499"
-            height="776" />
-        </picture>
-      
-      
-    
-    
-  
-
-
-  
-
-
-                          </a>
-                        
-                      </div>
-                    
-                  
-                  
-                  <div class="card-body">
-                    <h3 class="h4">
-                      <a class="post-title" href="/articles/bp-6-pbi-intune/"
-                        >Intune and PowerBI Deep Dive - Part 6 - Managed Devices</a
-                      >
-                    </h3>
-                    <ul class="list-inline post-meta mb-4">
-                      <li class="list-inline-item">
-                        <i class="fas fa-user me-2"></i>
-                        <a
-                          href="/author/jonathan-fallis/"
-                          >Jonathan Fallis</a
-                        >
-                      </li>
-                      <li class="list-inline-item">
-                        Date :
-                        February 17, 2024
-                      </li>
-                      <li class="list-inline-item">
-                        Categories :
-                        
-                          <a
-                            href="/categories/powerbi/"
-                            class="ms-1"
-                            >Power bi
-                          </a>
-                        
-                          ,<a
-                            href="/categories/intune/"
-                            class="ms-1"
-                            >Intune
-                          </a>
-                        
-                          ,<a
-                            href="/categories/microsoft-graph/"
-                            class="ms-1"
-                            >Microsoft graph
-                          </a>
-                        
-                      </li>
-                      <li class="list-inline-item">
-                        Tags :
-                        
-                          <a
-                            href="/tags/microsoft/"
-                            class="ms-1"
-                            >Microsoft
-                          </a>
-                        
-                          ,<a
-                            href="/tags/intune/"
-                            class="ms-1"
-                            >Intune
-                          </a>
-                        
-                          ,<a
-                            href="/tags/powerbi/"
-                            class="ms-1"
-                            >Power bi
-                          </a>
-                        
-                          ,<a
-                            href="/tags/microsoft-graph/"
-                            class="ms-1"
-                            >Microsoft graph
-                          </a>
-                        
-                      </li>
-                    </ul>
-                    <p>In this post we are finally going to look at getting some data into PowerBI to play around with. We are going to use a query in PowerBI to go and …</p>
-                    <a
-                      href="/articles/bp-6-pbi-intune/"
-                      class="btn btn-outline-primary"
-                      >Continue Reading</a
-                    >
-                  </div>
-                </article>
-              </div>
-            
-              <div
-                class="
-                  col-md-6
-                ">
-                <article class="card mb-4 border-0">
-                  
-                  
-                  
-                    
-                      <div class="post-slider">
-                        
-                          <a href="/articles/bp-5-pbi-intune/">
-                            
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-
-
-
-
-  
-
-  
-  
-    
-      
-    
-
-
-    
-    
-
-
-    
-    
-      
-      
-    
-    
-    
-
-
-    
-    
-      
-      
-        
-
-        
-        
-        
-        
-        
-        
-        
-
-
-        
-        
-
-
-        <picture>
-          <source
-            
-              srcset="/images/title/pbi-intune_hu93e729ed80f60802b181437f64a553ee_407980_545x0_resize_q90_h2_lanczos.webp"
-            
-            media="(max-width: 575px)" />
-          <source
-            
-              srcset="/images/title/pbi-intune_hu93e729ed80f60802b181437f64a553ee_407980_600x0_resize_q90_h2_lanczos.webp"
-            
-            media="(max-width: 767px)" />
-          <source
-            
-              srcset="/images/title/pbi-intune_hu93e729ed80f60802b181437f64a553ee_407980_700x0_resize_q90_h2_lanczos.webp"
-            
-            media="(max-width: 991px)" />
-          <source
-            
-              srcset="/images/title/pbi-intune_hu93e729ed80f60802b181437f64a553ee_407980_1110x0_resize_q90_h2_lanczos.webp"
-             />
-          <img
-            
-              loading="lazy" decoding="async"
-              src="/images/title/pbi-intune_hu93e729ed80f60802b181437f64a553ee_407980_1110x0_resize_q90_lanczos.jpg"
-            class=" w-100 img"
-            alt="post-thumb"
-            width="1499"
-            height="776" />
-        </picture>
-      
-      
-    
-    
-  
-
-
-  
-
-
-                          </a>
-                        
-                      </div>
-                    
-                  
-                  
-                  <div class="card-body">
-                    <h3 class="h4">
-                      <a class="post-title" href="/articles/bp-5-pbi-intune/"
-                        >Intune and PowerBI Deep Dive - Part 5 - Heavy Lifting</a
-                      >
-                    </h3>
-                    <ul class="list-inline post-meta mb-4">
-                      <li class="list-inline-item">
-                        <i class="fas fa-user me-2"></i>
-                        <a
-                          href="/author/jonathan-fallis/"
-                          >Jonathan Fallis</a
-                        >
-                      </li>
-                      <li class="list-inline-item">
-                        Date :
-                        February 5, 2024
-                      </li>
-                      <li class="list-inline-item">
-                        Categories :
-                        
-                          <a
-                            href="/categories/powerbi/"
-                            class="ms-1"
-                            >Power bi
-                          </a>
-                        
-                          ,<a
-                            href="/categories/intune/"
-                            class="ms-1"
-                            >Intune
-                          </a>
-                        
-                          ,<a
-                            href="/categories/microsoft-graph/"
-                            class="ms-1"
-                            >Microsoft graph
-                          </a>
-                        
-                      </li>
-                      <li class="list-inline-item">
-                        Tags :
-                        
-                          <a
-                            href="/tags/microsoft/"
-                            class="ms-1"
-                            >Microsoft
-                          </a>
-                        
-                          ,<a
-                            href="/tags/intune/"
-                            class="ms-1"
-                            >Intune
-                          </a>
-                        
-                          ,<a
-                            href="/tags/powerbi/"
-                            class="ms-1"
-                            >Power bi
-                          </a>
-                        
-                          ,<a
-                            href="/tags/microsoft-graph/"
-                            class="ms-1"
-                            >Microsoft graph
-                          </a>
-                        
-                      </li>
-                    </ul>
-                    <p>In this post we&rsquo;ll take a look at using Logic Apps and OData.Feed to do the &lsquo;heavy lifting&rsquo; for us. By heavy lifting, essentially …</p>
-                    <a
-                      href="/articles/bp-5-pbi-intune/"
-                      class="btn btn-outline-primary"
-                      >Continue Reading</a
-                    >
-                  </div>
-                </article>
-              </div>
-            
-          </div>
-          
-        
-
-
-        
-        
-        
-        
-        
-        
-        
-          <ul
-            class="pagination 
-            ">
-            
-            
-            
-            
-              
-              
-              
-                
-              
-              
-              
-                <li
-                  class="page-item
-                    page-item active
-                  ">
-                  <a href="/articles/" class="page-link">
-                    1
-                  </a>
-                </li>
-              
-            
-              
-              
-              
-                
-              
-              
-              
-                <li
-                  class="page-item">
-                  <a href="/articles/page/2/" class="page-link">
-                    2
-                  </a>
-                </li>
-              
-            
-              
-              
-              
-                
-              
-              
-              
-                <li
-                  class="page-item">
-                  <a href="/articles/page/3/" class="page-link">
-                    3
-                  </a>
-                </li>
-              
-            
-            
-            
-              <li class="page-item">
-                <a href="/articles/page/2/" class="page-link">
-                  &raquo;
-                </a>
-              </li>
-            
-          </ul>
-        
-        
-      </div>
-      
-
-      
-      
-        <aside class="col-lg-4">
-          <div class="ps-0 ps-lg-4"><!-- Social -->
-<div class="widget">
-  <h6 class="widget-title"><span>Social Links</span></h6>
-  <ul class="list-inline widget-list-inline mb-3">
-    
-      <li class="list-inline-item">
-        <a href="https://twitter.com/deploymentshare" target="_blank" style="padding:5px 15px"
-          ><span class="visually-hidden">X - Blog</span
-          ><i class="fab fa-twitter"></i
-        ></a>
-      </li>
-    
-      <li class="list-inline-item">
-        <a href="https://www.linkedin.com/in/jonathan-fallis" target="_blank" style="padding:5px 15px"
-          ><span class="visually-hidden">LinkedIn</span
-          ><i class="fa-brands fa-linkedin-in"></i
-        ></a>
-      </li>
-    
-      <li class="list-inline-item">
-        <a href="https://github.com/jonniehack" target="_blank" style="padding:5px 15px"
-          ><span class="visually-hidden">github</span
-          ><i class="fa-brands fa-github"></i
-        ></a>
-      </li>
-    
-      <li class="list-inline-item">
-        <a href="https://learn.microsoft.com/en-us/users/jonathanfallis" target="_blank" style="padding:5px 15px"
-          ><span class="visually-hidden">Microsoft Learn</span
-          ><i class="fa-brands fa-windows"></i
-        ></a>
-      </li>
-    
-      <li class="list-inline-item">
-        <a href="https://www.buymeacoffee.com/jonathanfallis" target="_blank" style="padding:5px 15px"
-          ><span class="visually-hidden">Buy me a Coffee</span
-          ><i class="fa-solid fa-mug-hot"></i
-        ></a>
-      </li>
-    
-  </ul>
-</div>
-<!-- categories -->
-<div class="widget">
-  <h5 class="widget-title"><span>Categories</span></h5>
-      <ul class="list-unstyled widget-list">
-          <li>
-            <a
-              href="/categories/configuration-manager/"
-              class="d-flex"
-              >Configuration manager
-              <small class="ms-auto">(3)</small></a
-            >
-          </li>
-          <li>
-            <a
-              href="/categories/intune/"
-              class="d-flex"
-              >Intune
-              <small class="ms-auto">(17)</small></a
-            >
-          </li>
-          <li>
-            <a
-              href="/categories/microsoft-deployment-toolkit/"
-              class="d-flex"
-              >Microsoft deployment toolkit
-              <small class="ms-auto">(1)</small></a
-            >
-          </li>
-          <li>
-            <a
-              href="/categories/microsoft-graph/"
-              class="d-flex"
-              >Microsoft graph
-              <small class="ms-auto">(9)</small></a
-            >
-          </li>
-          <li>
-            <a
-              href="/categories/powerbi/"
-              class="d-flex"
-              >Powerbi
-              <small class="ms-auto">(9)</small></a
-            >
-          </li>
-          <li>
-            <a
-              href="/categories/powershell/"
-              class="d-flex"
-              >Powershell
-              <small class="ms-auto">(4)</small></a
-            >
-          </li>
-          <li>
-            <a
-              href="/categories/security/"
-              class="d-flex"
-              >Security
-              <small class="ms-auto">(3)</small></a
-            >
-          </li>
-          <li>
-            <a
-              href="/categories/vpn/"
-              class="d-flex"
-              >VPN
-              <small class="ms-auto">(2)</small></a
-            >
-          </li>
-          <li>
-            <a
-              href="/categories/windows-10/"
-              class="d-flex"
-              >Windows 10
-              <small class="ms-auto">(1)</small></a
-            >
-          </li>
-      </ul>
-</div>
-<!-- tags -->
-<div class="widget">
-  <h5 class="widget-title"><span>Tags</span></h5>
-      <ul class="list-inline widget-list-inline">
-          <li class="list-inline-item">
-            <a href="/tags/app-packaging/"
-              >App packaging</a
-            >
-          </li>
-          <li class="list-inline-item">
-            <a href="/tags/applications/"
-              >Applications</a
-            >
-          </li>
-          <li class="list-inline-item">
-            <a href="/tags/autopilot/"
-              >Autopilot</a
-            >
-          </li>
-          <li class="list-inline-item">
-            <a href="/tags/azure-ad/"
-              >Azure ad</a
-            >
-          </li>
-          <li class="list-inline-item">
-            <a href="/tags/cis/"
-              >Cis</a
-            >
-          </li>
-          <li class="list-inline-item">
-            <a href="/tags/cloud/"
-              >Cloud</a
-            >
-          </li>
-          <li class="list-inline-item">
-            <a href="/tags/configmgr/"
-              >Configmgr</a
-            >
-          </li>
-          <li class="list-inline-item">
-            <a href="/tags/configuration-manager/"
-              >Configuration manager</a
-            >
-          </li>
-          <li class="list-inline-item">
-            <a href="/tags/defender/"
-              >Defender</a
-            >
-          </li>
-          <li class="list-inline-item">
-            <a href="/tags/deployment/"
-              >Deployment</a
-            >
-          </li>
-          <li class="list-inline-item">
-            <a href="/tags/endpoint-manager/"
-              >Endpoint manager</a
-            >
-          </li>
-          <li class="list-inline-item">
-            <a href="/tags/forticlient/"
-              >Forticlient</a
-            >
-          </li>
-          <li class="list-inline-item">
-            <a href="/tags/group-tag/"
-              >Group tag</a
-            >
-          </li>
-          <li class="list-inline-item">
-            <a href="/tags/hybrid/"
-              >Hybrid</a
-            >
-          </li>
-          <li class="list-inline-item">
-            <a href="/tags/hybrid-aad/"
-              >Hybrid aad</a
-            >
-          </li>
-          <li class="list-inline-item">
-            <a href="/tags/intune/"
-              >Intune</a
-            >
-          </li>
-          <li class="list-inline-item">
-            <a href="/tags/microsoft/"
-              >Microsoft</a
-            >
-          </li>
-          <li class="list-inline-item">
-            <a href="/tags/microsoft-graph/"
-              >Microsoft graph</a
-            >
-          </li>
-          <li class="list-inline-item">
-            <a href="/tags/packaging/"
-              >Packaging</a
-            >
-          </li>
-          <li class="list-inline-item">
-            <a href="/tags/powerbi/"
-              >Powerbi</a
-            >
-          </li>
-          <li class="list-inline-item">
-            <a href="/tags/powershell/"
-              >Powershell</a
-            >
-          </li>
-          <li class="list-inline-item">
-            <a href="/tags/sccm/"
-              >Sccm</a
-            >
-          </li>
-          <li class="list-inline-item">
-            <a href="/tags/security/"
-              >Security</a
-            >
-          </li>
-          <li class="list-inline-item">
-            <a href="/tags/vpn/"
-              >VPN</a
-            >
-          </li>
-      </ul>
-</div>
-<!-- Promotion -->
-
-  <div class="promotion">
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-
-
-
-
-  
-
-  
-  
-    
-      
-    
-
-
-    
-    
-
-
-    
-    
-      
-      
-    
-    
-    
-
-
-    
-    
-      
-      
-        
-
-        
-        
-        
-        
-        
-        
-        
-
-
-        
-        
-
-
-        <picture>
-          <source
-            
-              srcset="/images/promotion_hu08b8f673f4774cebe49bd004b4f0aa55_229598_545x0_resize_q90_h2_lanczos.webp"
-            
-            media="(max-width: 575px)" />
-          <source
-            
-              srcset="/images/promotion_hu08b8f673f4774cebe49bd004b4f0aa55_229598_600x0_resize_q90_h2_lanczos.webp"
-            
-            media="(max-width: 767px)" />
-          <source
-            
-              srcset="/images/promotion_hu08b8f673f4774cebe49bd004b4f0aa55_229598_700x0_resize_q90_h2_lanczos.webp"
-            
-            media="(max-width: 991px)" />
-          <source
-            
-              srcset="/images/promotion_hu08b8f673f4774cebe49bd004b4f0aa55_229598_1110x0_resize_q90_h2_lanczos.webp"
-             />
-          <img
-            
-              loading="lazy" decoding="async"
-              src="/images/promotion_hu08b8f673f4774cebe49bd004b4f0aa55_229598_1110x0_resize_q90_lanczos.jpg"
-            class=" w-100 img"
-            alt="promotion-image"
-            width="2921"
-            height="2034" />
-        </picture>
-      
-      
-    
-    
-  
-
-
-  
-
-
-    <div class="promotion-content">
-      <h5 class="text-white mb-3">Currently Rocking</h5>
-      <p class="text-white mb-4">HP ZBook 15 G6 -i9 <br> 64GB Ram / 4TB SSD</p>
-      <a href="https://www8.hp.com/h20195/v2/GetPDF.aspx/c06305136.pdf" class="btn btn-primary"
-        >HP Zbook</a
-      >
-    </div>
-  </div>
-
-<!-- buybeacoffee -->
-  <div class="widget">
-    <h4 class="widget-title h5"><span>If you&#39;d like to thank me</span></h4>
-    <script type="text/javascript" src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js" data-name="bmc-button" data-slug="jonathanfallis" data-color="#5F7FFF" data-emoji="☕" data-font="Poppins" data-text="Buy me a coffee" data-outline-color="#000000" data-font-color="#ffffff" data-coffee-color="#FFDD00" ></script>
-  </div>
-
-
-
-
-<!-- referral -->
-  <div class="widget">
-    <h4 class="widget-title h5"><span>UK Referral Links</span></h4>
-    I don't use adverts on my site to make it easier to read, however, please use my referral links if you're thinking of joining any of these services and want to share a free incentive with me.  <br> <br>
-    <p style="text-align: center;">
-      <a href="https://share.octopus.energy/sepia-mink-787">
-        <img src="https://th.bing.com/th/id/R.ae0a46514d79264fec5a089209471514?rik=wcweKtbBaDydyA&riu=http%3a%2f%2fmysmartenergy.uk%2fimages%2frefersmall.png&ehk=pDgWtLnNVy1GGKeJARZXW5VTJjf48tGfSCImKiLPA%2bE%3d&risl=&pid=ImgRaw&r=0" height="50" width="150">  
-      </a> 
-      <br>
-      (£50 each) 
-      <br>
-      <br>
-        <a href="https://roostermoney.com/referrals/79N37-J">
-          <img src="https://th.bing.com/th/id/OIP.aiVMAz502S3wtmkxDUpvDAHaCA?rs=1&pid=ImgDetMain" height="50" width="150">  
-        </a> 
-        <br>
-        (£10 each child) 
-        <br>
-        <br>
-        <a href="http://aklam.io/uXEUVq">
-          <img src="https://www.snapcomms.com/hs-fs/hubfs/images/Case_studies/page/virgin-media-banner.jpg?width=570&name=virgin-media-banner.jpg" height="50" width="150">  
-        </a>
-        <br>
-        (£50 each) 
-        <br>
-        <br>
-        <a href="https://policyexpert.mention-me.com/m/ol/ru1as-jonathan-fallis">
-          <img src="https://www.moneyexpert.com/storage/uploads/2021/01/policy-expert-logo-1609777567GXC4S.png" height="50" width="150">  
-        </a>
-        <br>
-        (£50 Each)
-        <br>
-        <br>
-        <a href="http://aklam.io/gW7TnR">
-          <img src="https://readwrite.com/wp-content/uploads/2023/12/three-logo-1.webp" height="50" width="150">  
-        </a>
-        <br>
-        (Incentive varies) 
-        <br>
-        <br>
-        <a href="https://www.trading212.com/invite/17tL1b4nlz">
-          <img src="https://mejor.broker/wp-content/uploads/2019/02/trading212-logo.jpg" height="50" width="150">  
-        </a>
-        <br>
-        (Free shares) 
-        <br>
-        <br>
-        <a href="https://www.backmarket.co.uk/">
-          <img src="https://www.underconsideration.com/brandnew/archives/back_market_logo.png" height="50" width="150">
-        </a>
-        <br>
-        (£10 off at Checkout) <br>
-        Use Code: 69378a0728b516a2      
-      </p>      
-  </div></div>
-        </aside>
-      
-      
-    </div>
-  </div>
-</section>
-
-
-
-    
-  
-
-   
     </main>
 
     
@@ -21722,7 +19552,7 @@ header {
 
 
         </a>
-        <p></p>
+        <p>Please like and share on social medai and dont forget to tag me, it is really appreciated and helps my drive to create more content</p>
       </div>
       <div class="col-lg-2 col-md-3 col-6 mb-4">
         <h6 class="mb-4 fw-semibold">Quick Links</h6>
@@ -21808,7 +19638,7 @@ header {
 
   
 
-<script crossorigin="anonymous" defer integrity="sha512-nC6OuLXx6PuwKW3Iaa7qZYukEuZYtcbyjvR/9HbkcW/SCH6CzZodcrQnj7rS/N87au4/ibKDjHkcwpUfkM2ufw==" type="application/javascript">(() => {
+<script crossorigin="anonymous" defer integrity="sha512-PvmhRVExWPGPWMT1YeuEq0TG3izBtQf4dbjWXhb4o2JsUqtJdX&#43;E5xxHAqE/mXODgcmduh3iI6qIecv3cWNPvA==" type="application/javascript">(() => {
   var __create = Object.create;
   var __defProp = Object.defineProperty;
   var __getOwnPropDesc = Object.getOwnPropertyDescriptor;
@@ -23310,7 +21140,7 @@ header {
     }
   });
 
-  // ns-hugo:/home/runner/.cache/hugo_cache/modules/filecache/modules/pkg/mod/github.com/twbs/bootstrap@v5.3.3+incompatible/js/src/dom/data.js
+  // ns-hugo:/home/runner/.cache/hugo_cache/modules/filecache/modules/pkg/mod/github.com/twbs/bootstrap@v5.3.2+incompatible/js/src/dom/data.js
   var elementMap = /* @__PURE__ */ new Map();
   var data_default = {
     set(element, key, instance) {
@@ -23342,7 +21172,7 @@ header {
     }
   };
 
-  // ns-hugo:/home/runner/.cache/hugo_cache/modules/filecache/modules/pkg/mod/github.com/twbs/bootstrap@v5.3.3+incompatible/js/src/util/index.js
+  // ns-hugo:/home/runner/.cache/hugo_cache/modules/filecache/modules/pkg/mod/github.com/twbs/bootstrap@v5.3.2+incompatible/js/src/util/index.js
   var MILLISECONDS_MULTIPLIER = 1e3;
   var TRANSITION_END = "transitionend";
   var parseSelector = (selector) => {
@@ -23505,7 +21335,7 @@ header {
     return list[Math.max(0, Math.min(index, listLength - 1))];
   };
 
-  // ns-hugo:/home/runner/.cache/hugo_cache/modules/filecache/modules/pkg/mod/github.com/twbs/bootstrap@v5.3.3+incompatible/js/src/dom/event-handler.js
+  // ns-hugo:/home/runner/.cache/hugo_cache/modules/filecache/modules/pkg/mod/github.com/twbs/bootstrap@v5.3.2+incompatible/js/src/dom/event-handler.js
   var namespaceRegex = /[^.]*(?=\..*)\.|.*/;
   var stripNameRegex = /\..*/;
   var stripUidRegex = /::\d+$/;
@@ -23744,7 +21574,7 @@ header {
   }
   var event_handler_default = EventHandler;
 
-  // ns-hugo:/home/runner/.cache/hugo_cache/modules/filecache/modules/pkg/mod/github.com/twbs/bootstrap@v5.3.3+incompatible/js/src/dom/manipulator.js
+  // ns-hugo:/home/runner/.cache/hugo_cache/modules/filecache/modules/pkg/mod/github.com/twbs/bootstrap@v5.3.2+incompatible/js/src/dom/manipulator.js
   function normalizeData(value) {
     if (value === "true") {
       return true;
@@ -23796,7 +21626,7 @@ header {
   };
   var manipulator_default = Manipulator;
 
-  // ns-hugo:/home/runner/.cache/hugo_cache/modules/filecache/modules/pkg/mod/github.com/twbs/bootstrap@v5.3.3+incompatible/js/src/util/config.js
+  // ns-hugo:/home/runner/.cache/hugo_cache/modules/filecache/modules/pkg/mod/github.com/twbs/bootstrap@v5.3.2+incompatible/js/src/util/config.js
   var Config = class {
     // Getters
     static get Default() {
@@ -23840,8 +21670,8 @@ header {
   };
   var config_default = Config;
 
-  // ns-hugo:/home/runner/.cache/hugo_cache/modules/filecache/modules/pkg/mod/github.com/twbs/bootstrap@v5.3.3+incompatible/js/src/base-component.js
-  var VERSION = "5.3.3";
+  // ns-hugo:/home/runner/.cache/hugo_cache/modules/filecache/modules/pkg/mod/github.com/twbs/bootstrap@v5.3.2+incompatible/js/src/base-component.js
+  var VERSION = "5.3.2";
   var BaseComponent = class extends config_default {
     constructor(element, config) {
       super();
@@ -23892,7 +21722,7 @@ header {
   };
   var base_component_default = BaseComponent;
 
-  // ns-hugo:/home/runner/.cache/hugo_cache/modules/filecache/modules/pkg/mod/github.com/twbs/bootstrap@v5.3.3+incompatible/js/src/dom/selector-engine.js
+  // ns-hugo:/home/runner/.cache/hugo_cache/modules/filecache/modules/pkg/mod/github.com/twbs/bootstrap@v5.3.2+incompatible/js/src/dom/selector-engine.js
   var getSelector = (element) => {
     let selector = element.getAttribute("data-bs-target");
     if (!selector || selector === "#") {
@@ -23903,9 +21733,9 @@ header {
       if (hrefAttribute.includes("#") && !hrefAttribute.startsWith("#")) {
         hrefAttribute = `#${hrefAttribute.split("#")[1]}`;
       }
-      selector = hrefAttribute && hrefAttribute !== "#" ? hrefAttribute.trim() : null;
+      selector = hrefAttribute && hrefAttribute !== "#" ? parseSelector(hrefAttribute.trim()) : null;
     }
-    return selector ? selector.split(",").map((sel) => parseSelector(sel)).join(",") : null;
+    return selector;
   };
   var SelectorEngine = {
     find(selector, element = document.documentElement) {
@@ -23978,7 +21808,7 @@ header {
   };
   var selector_engine_default = SelectorEngine;
 
-  // ns-hugo:/home/runner/.cache/hugo_cache/modules/filecache/modules/pkg/mod/github.com/twbs/bootstrap@v5.3.3+incompatible/js/src/collapse.js
+  // ns-hugo:/home/runner/.cache/hugo_cache/modules/filecache/modules/pkg/mod/github.com/twbs/bootstrap@v5.3.2+incompatible/js/src/collapse.js
   var NAME = "collapse";
   var DATA_KEY = "bs.collapse";
   var EVENT_KEY = `.${DATA_KEY}`;
@@ -24174,7 +22004,7 @@ header {
   });
   defineJQueryPlugin(Collapse);
 
-  // ns-hugo:/home/runner/.cache/hugo_cache/modules/filecache/modules/pkg/mod/github.com/twbs/bootstrap@v5.3.3+incompatible/js/src/dropdown.js
+  // ns-hugo:/home/runner/.cache/hugo_cache/modules/filecache/modules/pkg/mod/github.com/twbs/bootstrap@v5.3.2+incompatible/js/src/dropdown.js
   var Popper = __toESM(require_popper());
   var NAME2 = "dropdown";
   var DATA_KEY2 = "bs.dropdown";
@@ -24483,7 +22313,7 @@ header {
   });
   defineJQueryPlugin(Dropdown);
 
-  // ns-hugo:/home/runner/.cache/hugo_cache/modules/filecache/modules/pkg/mod/github.com/twbs/bootstrap@v5.3.3+incompatible/js/src/util/backdrop.js
+  // ns-hugo:/home/runner/.cache/hugo_cache/modules/filecache/modules/pkg/mod/github.com/twbs/bootstrap@v5.3.2+incompatible/js/src/util/backdrop.js
   var NAME3 = "backdrop";
   var CLASS_NAME_FADE = "fade";
   var CLASS_NAME_SHOW3 = "show";
@@ -24589,7 +22419,7 @@ header {
   };
   var backdrop_default = Backdrop;
 
-  // ns-hugo:/home/runner/.cache/hugo_cache/modules/filecache/modules/pkg/mod/github.com/twbs/bootstrap@v5.3.3+incompatible/js/src/util/component-functions.js
+  // ns-hugo:/home/runner/.cache/hugo_cache/modules/filecache/modules/pkg/mod/github.com/twbs/bootstrap@v5.3.2+incompatible/js/src/util/component-functions.js
   var enableDismissTrigger = (component, method = "hide") => {
     const clickEvent = `click.dismiss${component.EVENT_KEY}`;
     const name = component.NAME;
@@ -24606,7 +22436,7 @@ header {
     });
   };
 
-  // ns-hugo:/home/runner/.cache/hugo_cache/modules/filecache/modules/pkg/mod/github.com/twbs/bootstrap@v5.3.3+incompatible/js/src/util/focustrap.js
+  // ns-hugo:/home/runner/.cache/hugo_cache/modules/filecache/modules/pkg/mod/github.com/twbs/bootstrap@v5.3.2+incompatible/js/src/util/focustrap.js
   var NAME4 = "focustrap";
   var DATA_KEY3 = "bs.focustrap";
   var EVENT_KEY3 = `.${DATA_KEY3}`;
@@ -24685,7 +22515,7 @@ header {
   };
   var focustrap_default = FocusTrap;
 
-  // ns-hugo:/home/runner/.cache/hugo_cache/modules/filecache/modules/pkg/mod/github.com/twbs/bootstrap@v5.3.3+incompatible/js/src/util/scrollbar.js
+  // ns-hugo:/home/runner/.cache/hugo_cache/modules/filecache/modules/pkg/mod/github.com/twbs/bootstrap@v5.3.2+incompatible/js/src/util/scrollbar.js
   var SELECTOR_FIXED_CONTENT = ".fixed-top, .fixed-bottom, .is-fixed, .sticky-top";
   var SELECTOR_STICKY_CONTENT = ".sticky-top";
   var PROPERTY_PADDING = "padding-right";
@@ -24762,7 +22592,7 @@ header {
   };
   var scrollbar_default = ScrollBarHelper;
 
-  // ns-hugo:/home/runner/.cache/hugo_cache/modules/filecache/modules/pkg/mod/github.com/twbs/bootstrap@v5.3.3+incompatible/js/src/modal.js
+  // ns-hugo:/home/runner/.cache/hugo_cache/modules/filecache/modules/pkg/mod/github.com/twbs/bootstrap@v5.3.2+incompatible/js/src/modal.js
   var NAME5 = "modal";
   var DATA_KEY4 = "bs.modal";
   var EVENT_KEY4 = `.${DATA_KEY4}`;

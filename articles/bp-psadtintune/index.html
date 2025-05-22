@@ -42,6 +42,7 @@
 
 
 
+
 <link rel="manifest" href="/manifest.webmanifest" />
 <meta
   name="msapplication-TileColor"
@@ -49,6 +50,8 @@
 <meta
   name="theme-color"
   content="#fff" />
+
+
 
 
 
@@ -196,6 +199,7 @@
 
 
 
+  <meta name="twitter:creator" content="@Jonathan Fallis" />
 
 
 
@@ -203,6 +207,10 @@
 
 
 
+
+
+
+  
   
     
       <script async src="https://www.googletagmanager.com/gtag/js?id=G-H36JXQVDWY"></script>
@@ -221,6 +229,8 @@
       </script>
     
   
+
+
 
 
 
@@ -261,19 +271,6 @@
 
 
 
-  
-
-
-
-
-
-
-
-
-
-
-
-
 
   
 
@@ -281,7 +278,26 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
   
+
+
+
+
+
+
+  
+
 
 
 
@@ -293,6 +309,7 @@
   let search_no_results = "0 results for";
   let search_initial_message = "";
 </script>
+
 
 
 
@@ -9817,8 +9834,8 @@ iframe.wait-autoplay {
   }
 }
 /*!
-   * Bootstrap  v5.3.3 (https://getbootstrap.com/)
-   * Copyright 2011-2024 The Bootstrap Authors
+   * Bootstrap  v5.3.2 (https://getbootstrap.com/)
+   * Copyright 2011-2023 The Bootstrap Authors
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    */
 :root,
@@ -12162,8 +12179,6 @@ textarea.form-control-lg {
     border-color: var(--bs-btn-active-border-color); }
     .btn-check:checked + .btn:focus-visible, :not(.btn-check) + .btn:active:focus-visible, .btn:first-child:active:focus-visible, .btn.active:focus-visible, .btn.show:focus-visible {
       box-shadow: var(--bs-btn-focus-box-shadow); }
-  .btn-check:checked:focus-visible + .btn {
-    box-shadow: var(--bs-btn-focus-box-shadow); }
   .btn:disabled, .btn.disabled, fieldset:disabled .btn {
     color: var(--bs-btn-disabled-color);
     pointer-events: none;
@@ -13386,11 +13401,12 @@ textarea.form-control-lg {
   --bs-accordion-btn-padding-y: 1rem;
   --bs-accordion-btn-color: var(--bs-body-color);
   --bs-accordion-btn-bg: var(--bs-accordion-bg);
-  --bs-accordion-btn-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='%23212529' stroke-linecap='round' stroke-linejoin='round'%3e%3cpath d='M2 5L8 11L14 5'/%3e%3c/svg%3e");
+  --bs-accordion-btn-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23212529'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
   --bs-accordion-btn-icon-width: 1.25rem;
   --bs-accordion-btn-icon-transform: rotate(-180deg);
   --bs-accordion-btn-icon-transition: transform 0.2s ease-in-out;
-  --bs-accordion-btn-active-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='%23052c65' stroke-linecap='round' stroke-linejoin='round'%3e%3cpath d='M2 5L8 11L14 5'/%3e%3c/svg%3e");
+  --bs-accordion-btn-active-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23052c65'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+  --bs-accordion-btn-focus-border-color: #86b7fe;
   --bs-accordion-btn-focus-box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
   --bs-accordion-body-padding-x: 1.25rem;
   --bs-accordion-body-padding-y: 1rem;
@@ -13438,6 +13454,7 @@ textarea.form-control-lg {
     z-index: 2; }
   .accordion-button:focus {
     z-index: 3;
+    border-color: var(--bs-accordion-btn-focus-border-color);
     outline: 0;
     box-shadow: var(--bs-accordion-btn-focus-box-shadow); }
 
@@ -13451,7 +13468,7 @@ textarea.form-control-lg {
   .accordion-item:first-of-type {
     border-top-left-radius: var(--bs-accordion-border-radius);
     border-top-right-radius: var(--bs-accordion-border-radius); }
-    .accordion-item:first-of-type > .accordion-header .accordion-button {
+    .accordion-item:first-of-type .accordion-button {
       border-top-left-radius: var(--bs-accordion-inner-border-radius);
       border-top-right-radius: var(--bs-accordion-inner-border-radius); }
   .accordion-item:not(:first-of-type) {
@@ -13459,27 +13476,28 @@ textarea.form-control-lg {
   .accordion-item:last-of-type {
     border-bottom-right-radius: var(--bs-accordion-border-radius);
     border-bottom-left-radius: var(--bs-accordion-border-radius); }
-    .accordion-item:last-of-type > .accordion-header .accordion-button.collapsed {
+    .accordion-item:last-of-type .accordion-button.collapsed {
       border-bottom-right-radius: var(--bs-accordion-inner-border-radius);
       border-bottom-left-radius: var(--bs-accordion-inner-border-radius); }
-    .accordion-item:last-of-type > .accordion-collapse {
+    .accordion-item:last-of-type .accordion-collapse {
       border-bottom-right-radius: var(--bs-accordion-border-radius);
       border-bottom-left-radius: var(--bs-accordion-border-radius); }
 
 .accordion-body {
   padding: var(--bs-accordion-body-padding-y) var(--bs-accordion-body-padding-x); }
 
-.accordion-flush > .accordion-item {
+.accordion-flush .accordion-collapse {
+  border-width: 0; }
+
+.accordion-flush .accordion-item {
   border-right: 0;
   border-left: 0;
   border-radius: 0; }
-  .accordion-flush > .accordion-item:first-child {
+  .accordion-flush .accordion-item:first-child {
     border-top: 0; }
-  .accordion-flush > .accordion-item:last-child {
+  .accordion-flush .accordion-item:last-child {
     border-bottom: 0; }
-  .accordion-flush > .accordion-item > .accordion-header .accordion-button, .accordion-flush > .accordion-item > .accordion-header .accordion-button.collapsed {
-    border-radius: 0; }
-  .accordion-flush > .accordion-item > .accordion-collapse {
+  .accordion-flush .accordion-item .accordion-button, .accordion-flush .accordion-item .accordion-button.collapsed {
     border-radius: 0; }
 
 [data-bs-theme="dark"] .accordion-button::after {
@@ -18238,16 +18256,16 @@ header {
   max-width: 100%;
   height: auto; }
 
-.logo-light {
+.img-light {
   display: initial; }
 
-.logo-dark {
+.img-dark {
   display: none; }
 
-.dark .logo-light {
+.dark .img-light {
   display: none; }
 
-.dark .logo-dark {
+.dark .img-dark {
   display: initial; }
 
 .content img {
@@ -19214,10 +19232,6 @@ header {
                     </a>
                     <div class="dropdown-menu">
                       
-                        <a class="dropdown-item" href="https://learn.microsoft.com/en-us/mem/configmgr/core/plan-design/changes/whats-new-incremental-versions"
-                          >Configuration Manager</a
-                        >
-                      
                         <a class="dropdown-item" href="https://learn.microsoft.com/en-us/officeupdates/release-notes-microsoft365-apps"
                           >Microsoft 365</a
                         >
@@ -19242,6 +19256,10 @@ header {
                           >Windows 11</a
                         >
                       
+                        <a class="dropdown-item" href="https://learn.microsoft.com/en-us/windows-365/enterprise/whats-new"
+                          >Windows 365</a
+                        >
+                      
                         <a class="dropdown-item" href="https://learn.microsoft.com/en-us/windows-server/get-started/windows-server-release-info"
                           >Windows Server</a
                         >
@@ -19251,26 +19269,35 @@ header {
                 
               
                 
-                  <li class="nav-item">
-                    <a class="nav-link" href="https://deploymentshare.com/categories/intune/"
-                      >Intune</a
-                    >
-                  </li>
-                
-              
-                
-                  <li class="nav-item">
-                    <a class="nav-link" href="https://deploymentshare.com/categories/powerbi/"
-                      >PowerBI</a
-                    >
-                  </li>
-                
-              
-                
-                  <li class="nav-item">
-                    <a class="nav-link" href="https://deploymentshare.com/categories/configuration-manager/"
-                      >ConfigMgr</a
-                    >
+                  <li class="nav-item dropdown">
+                    <a
+                      class="nav-link"
+                      href="#"
+                      role="button"
+                      data-bs-toggle="dropdown"
+                      aria-haspopup="true"
+                      aria-expanded="false">
+                      Categories <i class="fas fa-angle-down ms-1"></i>
+                    </a>
+                    <div class="dropdown-menu">
+                      
+                        <a class="dropdown-item" href="https://deploymentshare.com/apps/"
+                          >Apps Used</a
+                        >
+                      
+                        <a class="dropdown-item" href="https://deploymentshare.com/categories/configuration-manager/"
+                          >Configuration Manager</a
+                        >
+                      
+                        <a class="dropdown-item" href="https://deploymentshare.com/categories/intune/"
+                          >Intune</a
+                        >
+                      
+                        <a class="dropdown-item" href="https://deploymentshare.com/categories/powerbi/"
+                          >PowerBI</a
+                        >
+                      
+                    </div>
                   </li>
                 
               
@@ -19293,6 +19320,14 @@ header {
                       
                         <a class="dropdown-item" href="https://endpointmgt.com/"
                           >Chris Sellar</a
+                        >
+                      
+                        <a class="dropdown-item" href="https://www.youtube.com/@DeanEllerbyMVP"
+                          >Dean Ellerby</a
+                        >
+                      
+                        <a class="dropdown-item" href="https://skiptotheendpoint.co.uk/"
+                          >James Robinson</a
                         >
                       
                         <a class="dropdown-item" href="https://www.deploymentresearch.com/"
@@ -19332,10 +19367,43 @@ header {
                 
               
                 
-                  <li class="nav-item">
-                    <a class="nav-link" href="https://deploymentshare.com/apps/"
-                      >Apps</a
-                    >
+                  <li class="nav-item dropdown">
+                    <a
+                      class="nav-link"
+                      href="#"
+                      role="button"
+                      data-bs-toggle="dropdown"
+                      aria-haspopup="true"
+                      aria-expanded="false">
+                      Homepage Layout <i class="fas fa-angle-down ms-1"></i>
+                    </a>
+                    <div class="dropdown-menu">
+                      
+                        <a class="dropdown-item" href="https://deploymentshare.com/homepage/full/"
+                          >Full Width</a
+                        >
+                      
+                        <a class="dropdown-item" href="https://deploymentshare.com/homepage/full-left/"
+                          >Full With Left Sidebar</a
+                        >
+                      
+                        <a class="dropdown-item" href="https://deploymentshare.com/homepage/full-right/"
+                          >Full With Right Sidebar</a
+                        >
+                      
+                        <a class="dropdown-item" href="https://deploymentshare.com/homepage/grid/"
+                          >Grid Style</a
+                        >
+                      
+                        <a class="dropdown-item" href="https://deploymentshare.com/homepage/grid-left/"
+                          >Grid With Left Sidebar</a
+                        >
+                      
+                        <a class="dropdown-item" href="https://deploymentshare.com/homepage/grid-right/"
+                          >Grid With Right Sidebar</a
+                        >
+                      
+                    </div>
                   </li>
                 
               
@@ -19578,16 +19646,16 @@ So firstly, I’m assuming by now that you read and absorbed the first write up 
 <br />
 Using this with ConfigMgr applications is quite simple because once you’ve prepared your application you use the root folder as the source content for the application and the rest is pretty straight forward (holler at me if you want that blogging too).  Putting that into Intune however is slightly different.  There are many blog posts about Intune Content Prep Tool however in a nut-shell, this tool will take your content (source) files for your application, and output a single .intunewin file which is the file format that Intune understands.
 So lets go ahead and download the tool from here and extract it to a local folder.</p>
-<p><img src="https://deploymentshare.com/articles/bp-psadtintune/articles/bp-psadtintune/img/PSADTIntune1_hua049a130c4ff6df484eb863609035b4b_26782_filter_18213678467376509734.png#centre" alt="Alt Text"  /></p>
+<p><img alt="Alt Text" src="/articles/bp-psadtintune/articles/bp-psadtintune/img/PSADTIntune1.png#centre"></p>
 <p>The following files should be in the extracted folder</p>
-<p><img src="https://deploymentshare.com/articles/bp-psadtintune/articles/bp-psadtintune/img/PSADTIntune2_hu65487454e039098fa900506bb7414ca2_4645_filter_3823922521786432918.png#centre" alt="Alt Text"  /></p>
+<p><img alt="Alt Text" src="/articles/bp-psadtintune/articles/bp-psadtintune/img/PSADTIntune2.png#centre"></p>
 <p>What we’re going to do is launch a cmd prompt as admin and browse to the folder that contains the files.  This way if we have more that one app to create the executable wont exit when we’ve finished.  When you launch the IntuneWinAppUtil.exe you will be asked three questions.</p>
 <blockquote>
 <p><em>“Who would Use the Intune app must answer me these questions three”</em>
 <br />
 …<strong>Monty Python</strong> (true story)</p>
 </blockquote>
-<p><img src="https://deploymentshare.com/articles/bp-psadtintune/articles/bp-psadtintune/img/PSADTIntune3_hu24de1e98ddde6b533be7ec423379f2ee_11513_filter_17822385140750579449.png#centre" alt="Alt Text"  /></p>
+<p><img alt="Alt Text" src="/articles/bp-psadtintune/articles/bp-psadtintune/img/PSADTIntune3.png#centre"></p>
 <p>Pretty straight forward stuff, specify the sources folder (in our case this will be one of the subfolders we created by copying the TOOLKIT MASTER folder (see previous post), specify the setup file (note this is not the full install command with switches) in our case we’ll be specifying “deploy-application.ps1” which is the script that we’ll call when we want to install and uninstall the application in questions and finally the output folder for the .intunewin file we can import to Intune.  The output file will take the format of [SetupFileName].intunewin so we’ll get deploy-application.intunewin. Remember if you’re making lots of Intune content files and they’re all made from PSADT, the output file will be the same so use different output folders.
 <br />
 <br />
@@ -19601,16 +19669,16 @@ Next, we’ll move over to Intune now and start to import the application. Log i
 
 
 >https://endpoint.microsoft.com/</a> and navigate to the apps blade, select to add a new app and chose the type of “Win32”.</p>
-<p><img src="https://deploymentshare.com/articles/bp-psadtintune/articles/bp-psadtintune/img/PSADTIntune4_hu86e6986d92ab17e278839d8516e75e01_15129_filter_9935677964727751767.png#centre" alt="Alt Text"  /></p>
+<p><img alt="Alt Text" src="/articles/bp-psadtintune/articles/bp-psadtintune/img/PSADTIntune4.png#centre"></p>
 <p>Then continue to populate the details of the app.  In my example I’m using 7Zip.
 Here is the <strong>App Information</strong> section with the parts I’ve edited numbered</p>
-<p><img src="https://deploymentshare.com/articles/bp-psadtintune/articles/bp-psadtintune/img/PSADTIntune5_huea1a96c0e139ad7c890772f72c2dddac_27528_filter_11217129859535230878.png#centre" alt="Alt Text"  /></p>
+<p><img alt="Alt Text" src="/articles/bp-psadtintune/articles/bp-psadtintune/img/PSADTIntune5.png#centre"></p>
 <p>Next is the <strong>Program</strong> section</p>
-<p><img src="https://deploymentshare.com/articles/bp-psadtintune/articles/bp-psadtintune/img/PSADTIntune6_huac196564cd10ca174e73232ee9958321_18746_filter_16998045705128266752.png#centre" alt="Alt Text"  /></p>
+<p><img alt="Alt Text" src="/articles/bp-psadtintune/articles/bp-psadtintune/img/PSADTIntune6.png#centre"></p>
 <p>You can see here is where we call the two PowerShell commands (coincidentally these will be the same commands used in ConfigMgr)
 <br />
 You can set some Requirements of you own if you have them, I normally select Windows 10 1607 as the minimum OS and select the architecture based upon what I’m deploying.  In the case of 7Zip I have downloaded just the x64 version of the application and then added an Execute-MSI statement in the PSADT code to install it.   So my requirements might be this…</p>
-<p><img src="https://deploymentshare.com/articles/bp-psadtintune/articles/bp-psadtintune/img/PSADTIntune13_hudf6733da45a6ef98218bfab6bcba9d72_12607_filter_61722702396406022.png#centre" alt="Alt Text"  /></p>
+<p><img alt="Alt Text" src="/articles/bp-psadtintune/articles/bp-psadtintune/img/PSADTIntune13.png#centre"></p>
 <p>And finally we have the Detection Methods. Normally I like to use the the DisplayVersion of the application that gets stored in the registry hives after installation but in some case you can just use the MSI Product Code.  Generally (but not all the time remember!) you can use one of the following two hives to harvest information about the installed application.</p>
 <ol>
 <li>HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall</li>
@@ -19628,15 +19696,15 @@ You can set some Requirements of you own if you have them, I normally select Win
 </span></span></code></pre></div><p>If you run this it’ll output to the PowerShell Console the keys (you can copy these straight into Intune detection clauses for Registry.  And then you can select your column to use.
 <br />
 Here is an example:</p>
-<p><img src="https://deploymentshare.com/articles/bp-psadtintune/articles/bp-psadtintune/img/PSADTIntune14_hu6bcdf9580905cd087d166f9825add282_55215_filter_16053572255885553945.png#centre" alt="Alt Text"  /></p>
+<p><img alt="Alt Text" src="/articles/bp-psadtintune/articles/bp-psadtintune/img/PSADTIntune14.png#centre"></p>
 <p>From this I can take a number of things:
 <br />
 Firstly, the registry hive key at the top in green text (cyan for the other hive) I can copy this out as first part of the Key path on an Intune Detection Method.  Then I can append the PSChildName item for the individual key, so if I wanted my clause to be whether or not the registry key simply exists, I can use the RegistryHivePath+PSChildName (in red below).</p>
-<p><img src="https://deploymentshare.com/articles/bp-psadtintune/articles/bp-psadtintune/img/PSADTIntune15_huf568dddfe2c2727729231c2e3b8502ed_42373_filter_5912559011467536391.png#centre" alt="Alt Text"  /></p>
+<p><img alt="Alt Text" src="/articles/bp-psadtintune/articles/bp-psadtintune/img/PSADTIntune15.png#centre"></p>
 <p>If I wanted to use the Version number, for example I wanted to say greater than or equal to I could use the RegistryHivePath+PSChildName as the Key Path, then use the DisplayVersion as the Value Name and use the correct operator, like so….</p>
-<p><img src="https://deploymentshare.com/articles/bp-psadtintune/articles/bp-psadtintune/img/PSADTIntune16_hu5fad40b4c84d3f8b552c8be77bf7a5e6_42423_filter_5912559011467536391.png#centre" alt="Alt Text"  /></p>
+<p><img alt="Alt Text" src="/articles/bp-psadtintune/articles/bp-psadtintune/img/PSADTIntune16.png#centre"></p>
 <p>Which gives me&hellip;</p>
-<p><img src="https://deploymentshare.com/articles/bp-psadtintune/articles/bp-psadtintune/img/PSADTIntune17_hu70c9d749eb3dd523dc07cd3228daa550_17034_filter_13344409930392865041.png#centre" alt="Alt Text"  /></p>
+<p><img alt="Alt Text" src="/articles/bp-psadtintune/articles/bp-psadtintune/img/PSADTIntune17.png#centre"></p>
 <p>Ok so now you have an idea on how to get your PSADT apps into Intune as Win32 Applications using the Intune Content Prep Tool, take a moment to go get a coffee as now we’ll move to testing them, once they’re finished uploading and syncing.
 <br />
 <br />
@@ -19649,9 +19717,9 @@ And finally edit the assignments of the application so that its assigned as Avai
 <br />
 Remember – You (mostly want to) deploy the app to the user because the user holds the Intune license.
 Once its uploaded and synced you should see that in your company portal on the device.  Open Company portal on the test device and log in with the username/password for the test user in the group we created above.  Here we see our 7Zip Win32 App (Yes I know there’s a MSfB app for 7Zip, stay with me here… its the process I want you to learn).
-<img src="https://deploymentshare.com/articles/bp-psadtintune/articles/bp-psadtintune/img/7-Zip_Available_hu071d6adfbd82a55ebadfb79f420a798a_30250_filter_14870873418883823163.png#centre" alt="Alt Text"  />
+<img alt="Alt Text" src="/articles/bp-psadtintune/articles/bp-psadtintune/img/7-Zip_Available.png#centre">
 We then highlight and select to install
-<img src="https://deploymentshare.com/articles/bp-psadtintune/articles/bp-psadtintune/img/7-Zip_Installed_hu3b843f254457a23d6ae5df61aef4a7dc_14221_filter_15220300571808546162.png#centre" alt="Alt Text"  />
+<img alt="Alt Text" src="/articles/bp-psadtintune/articles/bp-psadtintune/img/7-Zip_Installed.png#centre">
 Happy days!
 <br />
 We can see here that it is indeed installed.</p>
@@ -19661,12 +19729,12 @@ We can see here that it is indeed installed.</p>
 <h5 id="take-away">Take Away</h5>
 </ins>
 <p>Now, if there are issues (and this is the good bit for me!) don’t forget that PSADT apps log their own <strong>install</strong> and <strong>uninstall</strong> logs into <em>C:\Windows\Logs\Software</em> however if you edit this to match the <strong>IntuneManagementExtension.log</strong> files location (C:\ProgramData\Microsoft\IntuneManagementExtension\Logs), you will have lovely logs to use for troubleshooting <strong>AND</strong> you can collect them remotely from the Intune portal!!</p>
-<p><img src="https://deploymentshare.com/articles/bp-psadtintune/articles/bp-psadtintune/img/PDADT_LogFileLocation1_hu09629ed55132a786d9f63b13662723ab_54080_filter_17580902485335312708.png#centre" alt="Alt Text"  />
+<p><img alt="Alt Text" src="/articles/bp-psadtintune/articles/bp-psadtintune/img/PDADT_LogFileLocation1.png#centre">
 <br />
 <br /></p>
-<p><img src="https://deploymentshare.com/articles/bp-psadtintune/articles/bp-psadtintune/img/PDADT_LogFileLocation2_hu431c979cf1d1a40d870edea5451e66e7_30945_filter_8264384235773344970.png#centre" alt="Alt Text"  /></p>
+<p><img alt="Alt Text" src="/articles/bp-psadtintune/articles/bp-psadtintune/img/PDADT_LogFileLocation2.png#centre"></p>
 <p>Once configured, you can use the “Collect Diagnostics” button and this will collect the logs remotely, without interrupting the end users.  Wonderful!</p>
-<p><img src="https://deploymentshare.com/articles/bp-psadtintune/articles/bp-psadtintune/img/Collectlogs_hu217a4e284502d600dd7a23fd14228546_8421_filter_14655234436468570307.png#centre" alt="Alt Text"  /></p>
+<p><img alt="Alt Text" src="/articles/bp-psadtintune/articles/bp-psadtintune/img/Collectlogs.png#centre"></p>
 <p>THAT, I feel, is <strong>awesome</strong> and will help greatly with troubleshooting your Win32 Apps, should there be a problem
 <br />
 I hope this helps you.
@@ -19723,210 +19791,187 @@ Jonathan.</p>
     
   </ul>
 </div>
-<!-- categories -->
-<div class="widget">
-  <h5 class="widget-title"><span>Categories</span></h5>
+
+
+  
+    <div class="widget">
+      <h5 class="widget-title"><span>Categories</span></h5>
       <ul class="list-unstyled widget-list">
+        
           <li>
-            <a
-              href="/categories/configuration-manager/"
-              class="d-flex"
-              >Configuration manager
+            <a href="/categories/configuration-manager/" class="d-flex"
+              >Configuration Manager
               <small class="ms-auto">(3)</small></a
             >
           </li>
+        
           <li>
-            <a
-              href="/categories/intune/"
-              class="d-flex"
+            <a href="/categories/intune/" class="d-flex"
               >Intune
               <small class="ms-auto">(17)</small></a
             >
           </li>
+        
           <li>
-            <a
-              href="/categories/microsoft-deployment-toolkit/"
-              class="d-flex"
-              >Microsoft deployment toolkit
+            <a href="/categories/microsoft-deployment-toolkit/" class="d-flex"
+              >Microsoft Deployment Toolkit
               <small class="ms-auto">(1)</small></a
             >
           </li>
+        
           <li>
-            <a
-              href="/categories/microsoft-graph/"
-              class="d-flex"
-              >Microsoft graph
+            <a href="/categories/microsoft-graph/" class="d-flex"
+              >Microsoft Graph
               <small class="ms-auto">(9)</small></a
             >
           </li>
+        
           <li>
-            <a
-              href="/categories/powerbi/"
-              class="d-flex"
-              >Powerbi
+            <a href="/categories/powerbi/" class="d-flex"
+              >PowerBi
               <small class="ms-auto">(9)</small></a
             >
           </li>
+        
           <li>
-            <a
-              href="/categories/powershell/"
-              class="d-flex"
-              >Powershell
+            <a href="/categories/powershell/" class="d-flex"
+              >PowerShell
               <small class="ms-auto">(4)</small></a
             >
           </li>
+        
           <li>
-            <a
-              href="/categories/security/"
-              class="d-flex"
+            <a href="/categories/security/" class="d-flex"
               >Security
               <small class="ms-auto">(3)</small></a
             >
           </li>
+        
           <li>
-            <a
-              href="/categories/vpn/"
-              class="d-flex"
+            <a href="/categories/vpn/" class="d-flex"
               >VPN
               <small class="ms-auto">(2)</small></a
             >
           </li>
+        
           <li>
-            <a
-              href="/categories/windows-10/"
-              class="d-flex"
+            <a href="/categories/windows-10/" class="d-flex"
               >Windows 10
               <small class="ms-auto">(1)</small></a
             >
           </li>
+        
       </ul>
-</div>
-<!-- tags -->
-<div class="widget">
-  <h5 class="widget-title"><span>Tags</span></h5>
+    </div>
+  
+
+
+
+  
+    <div class="widget">
+      <h5 class="widget-title"><span>Tags</span></h5>
       <ul class="list-inline widget-list-inline">
+        
           <li class="list-inline-item">
-            <a href="/tags/app-packaging/"
-              >App packaging</a
-            >
+            <a href="/tags/app-packaging/">App Packaging</a>
           </li>
+        
           <li class="list-inline-item">
-            <a href="/tags/applications/"
-              >Applications</a
-            >
+            <a href="/tags/applications/">Applications</a>
           </li>
+        
           <li class="list-inline-item">
-            <a href="/tags/autopilot/"
-              >Autopilot</a
-            >
+            <a href="/tags/autopilot/">Autopilot</a>
           </li>
+        
           <li class="list-inline-item">
-            <a href="/tags/azure-ad/"
-              >Azure ad</a
-            >
+            <a href="/tags/azure-ad/">Azure AD</a>
           </li>
+        
           <li class="list-inline-item">
-            <a href="/tags/cis/"
-              >Cis</a
-            >
+            <a href="/tags/cis/">CIS</a>
           </li>
+        
           <li class="list-inline-item">
-            <a href="/tags/cloud/"
-              >Cloud</a
-            >
+            <a href="/tags/cloud/">Cloud</a>
           </li>
+        
           <li class="list-inline-item">
-            <a href="/tags/configmgr/"
-              >Configmgr</a
-            >
+            <a href="/tags/configmgr/">ConfigMgr</a>
           </li>
+        
           <li class="list-inline-item">
-            <a href="/tags/configuration-manager/"
-              >Configuration manager</a
-            >
+            <a href="/tags/configuration-manager/">Configuration Manager</a>
           </li>
+        
           <li class="list-inline-item">
-            <a href="/tags/defender/"
-              >Defender</a
-            >
+            <a href="/tags/defender/">Defender</a>
           </li>
+        
           <li class="list-inline-item">
-            <a href="/tags/deployment/"
-              >Deployment</a
-            >
+            <a href="/tags/deployment/">Deployment</a>
           </li>
+        
           <li class="list-inline-item">
-            <a href="/tags/endpoint-manager/"
-              >Endpoint manager</a
-            >
+            <a href="/tags/endpoint-manager/">Endpoint Manager</a>
           </li>
+        
           <li class="list-inline-item">
-            <a href="/tags/forticlient/"
-              >Forticlient</a
-            >
+            <a href="/tags/forticlient/">Forticlient</a>
           </li>
+        
           <li class="list-inline-item">
-            <a href="/tags/group-tag/"
-              >Group tag</a
-            >
+            <a href="/tags/group-tag/">Group Tag</a>
           </li>
+        
           <li class="list-inline-item">
-            <a href="/tags/hybrid/"
-              >Hybrid</a
-            >
+            <a href="/tags/hybrid/">Hybrid</a>
           </li>
+        
           <li class="list-inline-item">
-            <a href="/tags/hybrid-aad/"
-              >Hybrid aad</a
-            >
+            <a href="/tags/hybrid-aad/">Hybrid AAD</a>
           </li>
+        
           <li class="list-inline-item">
-            <a href="/tags/intune/"
-              >Intune</a
-            >
+            <a href="/tags/intune/">Intune</a>
           </li>
+        
           <li class="list-inline-item">
-            <a href="/tags/microsoft/"
-              >Microsoft</a
-            >
+            <a href="/tags/microsoft/">Microsoft</a>
           </li>
+        
           <li class="list-inline-item">
-            <a href="/tags/microsoft-graph/"
-              >Microsoft graph</a
-            >
+            <a href="/tags/microsoft-graph/">Microsoft Graph</a>
           </li>
+        
           <li class="list-inline-item">
-            <a href="/tags/packaging/"
-              >Packaging</a
-            >
+            <a href="/tags/packaging/">Packaging</a>
           </li>
+        
           <li class="list-inline-item">
-            <a href="/tags/powerbi/"
-              >Powerbi</a
-            >
+            <a href="/tags/powerbi/">PowerBI</a>
           </li>
+        
           <li class="list-inline-item">
-            <a href="/tags/powershell/"
-              >Powershell</a
-            >
+            <a href="/tags/powershell/">PowerShell</a>
           </li>
+        
           <li class="list-inline-item">
-            <a href="/tags/sccm/"
-              >Sccm</a
-            >
+            <a href="/tags/sccm/">SCCM</a>
           </li>
+        
           <li class="list-inline-item">
-            <a href="/tags/security/"
-              >Security</a
-            >
+            <a href="/tags/security/">Security</a>
           </li>
+        
           <li class="list-inline-item">
-            <a href="/tags/vpn/"
-              >VPN</a
-            >
+            <a href="/tags/vpn/">VPN</a>
           </li>
+        
       </ul>
-</div>
+    </div>
+  
+
 <!-- Promotion -->
 
   <div class="promotion">
@@ -20046,8 +20091,8 @@ Jonathan.</p>
 
 
     <div class="promotion-content">
-      <h5 class="text-white mb-3">Currently Rocking</h5>
-      <p class="text-white mb-4">HP ZBook 15 G6 -i9 <br> 64GB Ram / 4TB SSD</p>
+      <h5 class="text-white mb-3">My Laptop</h5>
+      <p class="text-white mb-4">HP ZBook 15 G6 <br> Intel(R) Core(TM) i9-9880H CPU <br> 64GB Ram / 4TB SSD</p>
       <a href="https://www8.hp.com/h20195/v2/GetPDF.aspx/c06305136.pdf" class="btn btn-primary"
         >HP Zbook</a
       >
@@ -20645,7 +20690,7 @@ background-color: #FF6600
 
 
 
-   
+
     </main>
 
     
@@ -20724,7 +20769,7 @@ background-color: #FF6600
 
 
         </a>
-        <p></p>
+        <p>Please like and share on social medai and dont forget to tag me, it is really appreciated and helps my drive to create more content</p>
       </div>
       <div class="col-lg-2 col-md-3 col-6 mb-4">
         <h6 class="mb-4 fw-semibold">Quick Links</h6>
@@ -20810,7 +20855,7 @@ background-color: #FF6600
 
   
 
-<script crossorigin="anonymous" defer integrity="sha512-nC6OuLXx6PuwKW3Iaa7qZYukEuZYtcbyjvR/9HbkcW/SCH6CzZodcrQnj7rS/N87au4/ibKDjHkcwpUfkM2ufw==" type="application/javascript">(() => {
+<script crossorigin="anonymous" defer integrity="sha512-PvmhRVExWPGPWMT1YeuEq0TG3izBtQf4dbjWXhb4o2JsUqtJdX&#43;E5xxHAqE/mXODgcmduh3iI6qIecv3cWNPvA==" type="application/javascript">(() => {
   var __create = Object.create;
   var __defProp = Object.defineProperty;
   var __getOwnPropDesc = Object.getOwnPropertyDescriptor;
@@ -22312,7 +22357,7 @@ background-color: #FF6600
     }
   });
 
-  // ns-hugo:/home/runner/.cache/hugo_cache/modules/filecache/modules/pkg/mod/github.com/twbs/bootstrap@v5.3.3+incompatible/js/src/dom/data.js
+  // ns-hugo:/home/runner/.cache/hugo_cache/modules/filecache/modules/pkg/mod/github.com/twbs/bootstrap@v5.3.2+incompatible/js/src/dom/data.js
   var elementMap = /* @__PURE__ */ new Map();
   var data_default = {
     set(element, key, instance) {
@@ -22344,7 +22389,7 @@ background-color: #FF6600
     }
   };
 
-  // ns-hugo:/home/runner/.cache/hugo_cache/modules/filecache/modules/pkg/mod/github.com/twbs/bootstrap@v5.3.3+incompatible/js/src/util/index.js
+  // ns-hugo:/home/runner/.cache/hugo_cache/modules/filecache/modules/pkg/mod/github.com/twbs/bootstrap@v5.3.2+incompatible/js/src/util/index.js
   var MILLISECONDS_MULTIPLIER = 1e3;
   var TRANSITION_END = "transitionend";
   var parseSelector = (selector) => {
@@ -22507,7 +22552,7 @@ background-color: #FF6600
     return list[Math.max(0, Math.min(index, listLength - 1))];
   };
 
-  // ns-hugo:/home/runner/.cache/hugo_cache/modules/filecache/modules/pkg/mod/github.com/twbs/bootstrap@v5.3.3+incompatible/js/src/dom/event-handler.js
+  // ns-hugo:/home/runner/.cache/hugo_cache/modules/filecache/modules/pkg/mod/github.com/twbs/bootstrap@v5.3.2+incompatible/js/src/dom/event-handler.js
   var namespaceRegex = /[^.]*(?=\..*)\.|.*/;
   var stripNameRegex = /\..*/;
   var stripUidRegex = /::\d+$/;
@@ -22746,7 +22791,7 @@ background-color: #FF6600
   }
   var event_handler_default = EventHandler;
 
-  // ns-hugo:/home/runner/.cache/hugo_cache/modules/filecache/modules/pkg/mod/github.com/twbs/bootstrap@v5.3.3+incompatible/js/src/dom/manipulator.js
+  // ns-hugo:/home/runner/.cache/hugo_cache/modules/filecache/modules/pkg/mod/github.com/twbs/bootstrap@v5.3.2+incompatible/js/src/dom/manipulator.js
   function normalizeData(value) {
     if (value === "true") {
       return true;
@@ -22798,7 +22843,7 @@ background-color: #FF6600
   };
   var manipulator_default = Manipulator;
 
-  // ns-hugo:/home/runner/.cache/hugo_cache/modules/filecache/modules/pkg/mod/github.com/twbs/bootstrap@v5.3.3+incompatible/js/src/util/config.js
+  // ns-hugo:/home/runner/.cache/hugo_cache/modules/filecache/modules/pkg/mod/github.com/twbs/bootstrap@v5.3.2+incompatible/js/src/util/config.js
   var Config = class {
     // Getters
     static get Default() {
@@ -22842,8 +22887,8 @@ background-color: #FF6600
   };
   var config_default = Config;
 
-  // ns-hugo:/home/runner/.cache/hugo_cache/modules/filecache/modules/pkg/mod/github.com/twbs/bootstrap@v5.3.3+incompatible/js/src/base-component.js
-  var VERSION = "5.3.3";
+  // ns-hugo:/home/runner/.cache/hugo_cache/modules/filecache/modules/pkg/mod/github.com/twbs/bootstrap@v5.3.2+incompatible/js/src/base-component.js
+  var VERSION = "5.3.2";
   var BaseComponent = class extends config_default {
     constructor(element, config) {
       super();
@@ -22894,7 +22939,7 @@ background-color: #FF6600
   };
   var base_component_default = BaseComponent;
 
-  // ns-hugo:/home/runner/.cache/hugo_cache/modules/filecache/modules/pkg/mod/github.com/twbs/bootstrap@v5.3.3+incompatible/js/src/dom/selector-engine.js
+  // ns-hugo:/home/runner/.cache/hugo_cache/modules/filecache/modules/pkg/mod/github.com/twbs/bootstrap@v5.3.2+incompatible/js/src/dom/selector-engine.js
   var getSelector = (element) => {
     let selector = element.getAttribute("data-bs-target");
     if (!selector || selector === "#") {
@@ -22905,9 +22950,9 @@ background-color: #FF6600
       if (hrefAttribute.includes("#") && !hrefAttribute.startsWith("#")) {
         hrefAttribute = `#${hrefAttribute.split("#")[1]}`;
       }
-      selector = hrefAttribute && hrefAttribute !== "#" ? hrefAttribute.trim() : null;
+      selector = hrefAttribute && hrefAttribute !== "#" ? parseSelector(hrefAttribute.trim()) : null;
     }
-    return selector ? selector.split(",").map((sel) => parseSelector(sel)).join(",") : null;
+    return selector;
   };
   var SelectorEngine = {
     find(selector, element = document.documentElement) {
@@ -22980,7 +23025,7 @@ background-color: #FF6600
   };
   var selector_engine_default = SelectorEngine;
 
-  // ns-hugo:/home/runner/.cache/hugo_cache/modules/filecache/modules/pkg/mod/github.com/twbs/bootstrap@v5.3.3+incompatible/js/src/collapse.js
+  // ns-hugo:/home/runner/.cache/hugo_cache/modules/filecache/modules/pkg/mod/github.com/twbs/bootstrap@v5.3.2+incompatible/js/src/collapse.js
   var NAME = "collapse";
   var DATA_KEY = "bs.collapse";
   var EVENT_KEY = `.${DATA_KEY}`;
@@ -23176,7 +23221,7 @@ background-color: #FF6600
   });
   defineJQueryPlugin(Collapse);
 
-  // ns-hugo:/home/runner/.cache/hugo_cache/modules/filecache/modules/pkg/mod/github.com/twbs/bootstrap@v5.3.3+incompatible/js/src/dropdown.js
+  // ns-hugo:/home/runner/.cache/hugo_cache/modules/filecache/modules/pkg/mod/github.com/twbs/bootstrap@v5.3.2+incompatible/js/src/dropdown.js
   var Popper = __toESM(require_popper());
   var NAME2 = "dropdown";
   var DATA_KEY2 = "bs.dropdown";
@@ -23485,7 +23530,7 @@ background-color: #FF6600
   });
   defineJQueryPlugin(Dropdown);
 
-  // ns-hugo:/home/runner/.cache/hugo_cache/modules/filecache/modules/pkg/mod/github.com/twbs/bootstrap@v5.3.3+incompatible/js/src/util/backdrop.js
+  // ns-hugo:/home/runner/.cache/hugo_cache/modules/filecache/modules/pkg/mod/github.com/twbs/bootstrap@v5.3.2+incompatible/js/src/util/backdrop.js
   var NAME3 = "backdrop";
   var CLASS_NAME_FADE = "fade";
   var CLASS_NAME_SHOW3 = "show";
@@ -23591,7 +23636,7 @@ background-color: #FF6600
   };
   var backdrop_default = Backdrop;
 
-  // ns-hugo:/home/runner/.cache/hugo_cache/modules/filecache/modules/pkg/mod/github.com/twbs/bootstrap@v5.3.3+incompatible/js/src/util/component-functions.js
+  // ns-hugo:/home/runner/.cache/hugo_cache/modules/filecache/modules/pkg/mod/github.com/twbs/bootstrap@v5.3.2+incompatible/js/src/util/component-functions.js
   var enableDismissTrigger = (component, method = "hide") => {
     const clickEvent = `click.dismiss${component.EVENT_KEY}`;
     const name = component.NAME;
@@ -23608,7 +23653,7 @@ background-color: #FF6600
     });
   };
 
-  // ns-hugo:/home/runner/.cache/hugo_cache/modules/filecache/modules/pkg/mod/github.com/twbs/bootstrap@v5.3.3+incompatible/js/src/util/focustrap.js
+  // ns-hugo:/home/runner/.cache/hugo_cache/modules/filecache/modules/pkg/mod/github.com/twbs/bootstrap@v5.3.2+incompatible/js/src/util/focustrap.js
   var NAME4 = "focustrap";
   var DATA_KEY3 = "bs.focustrap";
   var EVENT_KEY3 = `.${DATA_KEY3}`;
@@ -23687,7 +23732,7 @@ background-color: #FF6600
   };
   var focustrap_default = FocusTrap;
 
-  // ns-hugo:/home/runner/.cache/hugo_cache/modules/filecache/modules/pkg/mod/github.com/twbs/bootstrap@v5.3.3+incompatible/js/src/util/scrollbar.js
+  // ns-hugo:/home/runner/.cache/hugo_cache/modules/filecache/modules/pkg/mod/github.com/twbs/bootstrap@v5.3.2+incompatible/js/src/util/scrollbar.js
   var SELECTOR_FIXED_CONTENT = ".fixed-top, .fixed-bottom, .is-fixed, .sticky-top";
   var SELECTOR_STICKY_CONTENT = ".sticky-top";
   var PROPERTY_PADDING = "padding-right";
@@ -23764,7 +23809,7 @@ background-color: #FF6600
   };
   var scrollbar_default = ScrollBarHelper;
 
-  // ns-hugo:/home/runner/.cache/hugo_cache/modules/filecache/modules/pkg/mod/github.com/twbs/bootstrap@v5.3.3+incompatible/js/src/modal.js
+  // ns-hugo:/home/runner/.cache/hugo_cache/modules/filecache/modules/pkg/mod/github.com/twbs/bootstrap@v5.3.2+incompatible/js/src/modal.js
   var NAME5 = "modal";
   var DATA_KEY4 = "bs.modal";
   var EVENT_KEY4 = `.${DATA_KEY4}`;
