@@ -6,8 +6,15 @@
     <description>Recent content in ConfigMgr on Deploymentshare - Personal Tech Blog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 14 Dec 2023 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 24 Jun 2025 00:00:00 +0100</lastBuildDate>
     <atom:link href="https://deploymentshare.com/tags/configmgr/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Handy Windows 11 Collections for Configuration Manager</title>
+      <link>https://deploymentshare.com/articles/bp-w11-upgrade/</link>
+      <pubDate>Tue, 24 Jun 2025 00:00:00 +0100</pubDate>
+      <guid>https://deploymentshare.com/articles/bp-w11-upgrade/</guid>
+      <description>Are you ready for Windows 11? No? Why not? Windows 10 deadline is fast approaching - just look at the title image its already starting to fade away&amp;hellip; I kid you not October will be here quick as a flash and there&amp;rsquo;s much to do. Recently I&amp;rsquo;ve had a couple of Configuration Manager customers, starting their journey to Windows 11 and as a result I thought I&amp;rsquo;d create this short blog post on some useful Configuration Manager collections I&amp;rsquo;ve used to aid my customers on their journey.&#xA;A well-structured deployment strategy is crucial for a smooth rollout, and some customers still use Microsoft Configuration Manager (SCCM/MEMCM) which plays a strong role in certain upgrade plans.</description>
+    </item>
     <item>
       <title>Setting a Group Tag During a Configuration Manager Task Sequence</title>
       <link>https://deploymentshare.com/articles/bp-apgrouptagts/</link>
