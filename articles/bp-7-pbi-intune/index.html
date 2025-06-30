@@ -6,7 +6,7 @@
   <head>
     
     <meta charset="utf-8" />
-<title>Intune and PowerBI Deep Dive - Part 7 - Managed Applications</title>
+<title>Intune and Power BI Deep Dive - Part 7 - Managed Applications</title>
 
 
 <meta
@@ -83,7 +83,7 @@
   
 
 
-<title>Intune and PowerBI Deep Dive - Part 7 - Managed Applications</title>
+<title>Intune and Power BI Deep Dive - Part 7 - Managed Applications</title>
 
 
 
@@ -188,13 +188,13 @@
 
 
 
-<meta property="og:title" content="Intune and PowerBI Deep Dive - Part 7 - Managed Applications" />
+<meta property="og:title" content="Intune and Power BI Deep Dive - Part 7 - Managed Applications" />
 <meta property="og:description" content="Visit https://deploymentshare.com to find out more" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://deploymentshare.com/articles/bp-7-pbi-intune/" />
 
 
-<meta name="twitter:title" content="Intune and PowerBI Deep Dive - Part 7 - Managed Applications" />
+<meta name="twitter:title" content="Intune and Power BI Deep Dive - Part 7 - Managed Applications" />
 <meta name="twitter:description" content="Visit https://deploymentshare.com to find out more" />
 
 
@@ -19245,7 +19245,7 @@ header {
                         >
                       
                         <a class="dropdown-item" href="https://learn.microsoft.com/en-us/power-bi/fundamentals/desktop-latest-update?tabs=powerbi-desktop"
-                          >PowerBI Desktop</a
+                          >Power BI Desktop</a
                         >
                       
                         <a class="dropdown-item" href="https://learn.microsoft.com/en-us/windows/release-health/release-information"
@@ -19294,7 +19294,7 @@ header {
                         >
                       
                         <a class="dropdown-item" href="https://deploymentshare.com/categories/powerbi/"
-                          >PowerBI</a
+                          >Power BI</a
                         >
                       
                         <a class="dropdown-item" href="https://deploymentshare.com/categories/powershell/"
@@ -19450,7 +19450,7 @@ header {
       <div
         class="col-lg-8 mx-auto ">
         <div class=" mb-4">
-          <h1 class="h2 mb-3">Intune and PowerBI Deep Dive - Part 7 - Managed Applications</h1>
+          <h1 class="h2 mb-3">Intune and Power BI Deep Dive - Part 7 - Managed Applications</h1>
           <ul class="list-inline post-meta mb-3">
             <li class="list-inline-item"><i class="fas fa-user me-2"></i>
               <a href="/author/jonathan-fallis/">Jonathan Fallis</a>
@@ -19458,7 +19458,7 @@ header {
             <li class="list-inline-item">Date : March 19, 2024</li>
             <li class="list-inline-item">Categories :
               <a
-                href="/categories/power-bi/" class="ms-1">Power Bi </a>
+                href="/categories/power-bi/" class="ms-1">Power BI </a>
               ,<a
                 href="/categories/intune/" class="ms-1">Intune </a>
               ,<a
@@ -19467,7 +19467,7 @@ header {
             <li class="list-inline-item">Tags : <a
                 href="/tags/microsoft/" class="ms-1">Microsoft </a> ,<a
                 href="/tags/intune/" class="ms-1">Intune </a> ,<a
-                href="/tags/power-bi/" class="ms-1">Power Bi </a> ,<a
+                href="/tags/power-bi/" class="ms-1">Power BI </a> ,<a
                 href="/tags/microsoft-graph/" class="ms-1">Microsoft Graph </a> 
             </li>
           </ul>
@@ -19709,7 +19709,7 @@ Here is the documentation links;</p>
  
 
 
->PowerBI parameter</a> called <strong>TenantID</strong> is set</li>
+>Power BI parameter</a> called <strong>TenantID</strong> is set</li>
 <li><a href="https://learn.microsoft.com/en-us/power-query/power-query-query-parameters"
 
 
@@ -19719,7 +19719,7 @@ Here is the documentation links;</p>
  
 
 
->PowerBI parameter</a> called <strong>AppID</strong> is set</li>
+>Power BI parameter</a> called <strong>AppID</strong> is set</li>
 <li><a href="https://learn.microsoft.com/en-us/power-query/power-query-query-parameters"
 
 
@@ -19729,7 +19729,7 @@ Here is the documentation links;</p>
  
 
 
->PowerBI parameter</a> called <strong>SecretID</strong> is set</li>
+>Power BI parameter</a> called <strong>SecretID</strong> is set</li>
 </ul>
 
 
@@ -19813,7 +19813,7 @@ Here is the documentation links;</p>
  
 
 
->Web.Contents</a> to call the logic app that does not require a bearer token and instead pass in the parameters  <strong>TenantID</strong>, <strong>AppID</strong> and <strong>SecretID</strong>.  We are also going to build two variables called in our query called <strong>GraphURL</strong> and <strong>Audience</strong>.  The GraphURL we create, is made up of 4 parts.  The <strong>Audience</strong> variable is going to contain one of the four parts, namely the <strong>Endpoint</strong> part. We will need the logic app call URL storing in a Parameter called <strong>MSGraphCall-NoBearer</strong>.  This is the URL we will pass the parameters to and then the logic app will process the call and pass the data back to PowerBI so we can transform the data in order to form a report.
+>Web.Contents</a> to call the logic app that does not require a bearer token and instead pass in the parameters  <strong>TenantID</strong>, <strong>AppID</strong> and <strong>SecretID</strong>.  We are also going to build two variables called in our query called <strong>GraphURL</strong> and <strong>Audience</strong>.  The GraphURL we create, is made up of 4 parts.  The <strong>Audience</strong> variable is going to contain one of the four parts, namely the <strong>Endpoint</strong> part. We will need the logic app call URL storing in a Parameter called <strong>MSGraphCall-NoBearer</strong>.  This is the URL we will pass the parameters to and then the logic app will process the call and pass the data back to Power BI so we can transform the data in order to form a report.
 <br>
 <br></p>
 <h6 id="pre-requisites">Pre-Requisites</h6>
@@ -19826,7 +19826,7 @@ Here is the documentation links;</p>
 
 
 >Logic App from this post</a> described in <strong>Method 1</strong>, which will handle pagination of the Microsoft Graph call for you.</li>
-<li>You will need to create a new PowerBI Parameter called <strong>MSGraphCall-NoBearer</strong> and in it, place the HTTP POST URL from the &ldquo;When a HTTP request is received&rdquo; step of your Logic App.</li>
+<li>You will need to create a new Power BI Parameter called <strong>MSGraphCall-NoBearer</strong> and in it, place the HTTP POST URL from the &ldquo;When a HTTP request is received&rdquo; step of your Logic App.</li>
 </ul>
 <h6 id="power-query">Power Query</h6>
 <div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powerquery" data-lang="powerquery"><span style="display:flex;"><span><span style="color:#007020;font-weight:bold">let</span>
@@ -19865,7 +19865,7 @@ Here is the documentation links;</p>
 <li>Next we create the JSON body for the logic app call.  This includes our five variables: <strong>TenantID</strong>, <strong>AppID</strong>, <strong>SecretID</strong>, <strong>GraphURL</strong> and <strong>Audience</strong>.  <strong>Audience</strong> is simply the <strong>Endpoint</strong> part from building the previous GraphURL.</li>
 <li>Then we pass the JSON Body to the URL for the Logic App stored in the variable <strong>MSGraphCall-NoBearer</strong> using <strong>Web.Contents</strong>.</li>
 <li>Next, we process the output. This includes converting the list of records to a table and then expanding each of the records inside the table.</li>
-<li>and BOOM! we have our data in PowerBI!</li>
+<li>and BOOM! we have our data in Power BI!</li>
 </ul>
 
       </div>
@@ -19906,7 +19906,7 @@ Here is the documentation links;</p>
  
 
 
->part 4</a>.  We will need the logic app call URL storing in a Parameter called <strong>MSGraphCall</strong>. This is the URL we will pass the parameters to and then the logic app will process the call and pass the data back to PowerBI so we can transform the data in order to form a report.
+>part 4</a>.  We will need the logic app call URL storing in a Parameter called <strong>MSGraphCall</strong>. This is the URL we will pass the parameters to and then the logic app will process the call and pass the data back to Power BI so we can transform the data in order to form a report.
 <br>
 <br></p>
 <h6 id="pre-requisites">Pre-Requisites</h6>
@@ -19927,7 +19927,7 @@ Here is the documentation links;</p>
 
 
 >Logic App from this post</a> described in <strong>Method 2</strong>, which will handle pagination of the Microsoft Graph call for you.</li>
-<li>You will need to create a new PowerBI Parameter called <strong>MSGraphCall</strong> and in it, place the HTTP POST URL from the &ldquo;When a HTTP request is received&rdquo; step of your Logic App.</li>
+<li>You will need to create a new Power BI Parameter called <strong>MSGraphCall</strong> and in it, place the HTTP POST URL from the &ldquo;When a HTTP request is received&rdquo; step of your Logic App.</li>
 </ul>
 <h6 id="power-query">Power Query</h6>
 <div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powerquery" data-lang="powerquery"><span style="display:flex;"><span><span style="color:#007020;font-weight:bold">let</span>
@@ -19961,11 +19961,11 @@ Here is the documentation links;</p>
 <ul>
 <li>Firstly I&rsquo;ve called out the permissions needed. A good practice I like to follow.</li>
 <li>Then I&rsquo;ve built out the properties for the Graph URL. This is made up of four elements <strong>Endpoint</strong>, <strong>Version</strong>, <strong>Resource</strong> and <strong>Query Parameters</strong>. Resulting in one final variable of <strong>GraphURL</strong> which contains all four put together.</li>
-<li>I then use the 3 PowerBI Variables we have <strong>TenantID</strong>, <strong>AppID</strong> and <strong>SecretID</strong> along with the <strong>Endpoint</strong> part of the GrpahURL to call the PowerBI function Get-BearerToken, and the return value is stored in the variable <strong>Bearer</strong> within the query code.</li>
+<li>I then use the 3 Power BI Variables we have <strong>TenantID</strong>, <strong>AppID</strong> and <strong>SecretID</strong> along with the <strong>Endpoint</strong> part of the GrpahURL to call the Power BI function Get-BearerToken, and the return value is stored in the variable <strong>Bearer</strong> within the query code.</li>
 <li>Next we create the JSON body for the logic app call.  This includes our two variables: <strong>GraphURL</strong> and <strong>Bearer</strong>.</li>
 <li>Then we pass the JSON Body to the URL for the Logic App stored in the variable <strong>MSGraphCall</strong> using <strong>Web.Contents</strong>.</li>
 <li>Next, we process the output. This includes converting the list of records to a table and then expanding each of the records inside the table..</li>
-<li>and BOOM! we have our data in PowerBI!</li>
+<li>and BOOM! we have our data in Power BI!</li>
 </ul>
 
       </div>
@@ -20000,9 +20000,9 @@ Here is the documentation links;</p>
  
 
 
->OData.Feed v4</a> Power Query to call the Graph API.  The OData.Feed support pagination, so the feeds itself will will process the call and then pass the data back to PowerBI (no Logic Apps!) so we can transform the data in order to form a report.</p>
+>OData.Feed v4</a> Power Query to call the Graph API.  The OData.Feed support pagination, so the feeds itself will will process the call and then pass the data back to Power BI (no Logic Apps!) so we can transform the data in order to form a report.</p>
 <p>First we set up our GraphURL, as we have done with other queries building it with the four elements. Then we call the Get-BearerToken function to get a token for authorisation. Finally we use the OData.Feed (with the bearer token) to authenticate and pull in our results.</p>
-<p>I tend to find, whilst OData.Feeds are OK, I have found them to be a bit hit and miss.  Most of the time, 95% I would say, you&rsquo;ll be fine.  However I have noticed that the OData.Feed doesn&rsquo;t always support everything you could need, sometimes you get errors on columns straight away.  Sometimes you get columns that you need to expand within PowerBI, you get excited about what you might get and then everything comes back as an error.  But don&rsquo;t let that put you off, this is a great way to handle pagination.
+<p>I tend to find, whilst OData.Feeds are OK, I have found them to be a bit hit and miss.  Most of the time, 95% I would say, you&rsquo;ll be fine.  However I have noticed that the OData.Feed doesn&rsquo;t always support everything you could need, sometimes you get errors on columns straight away.  Sometimes you get columns that you need to expand within Power BI, you get excited about what you might get and then everything comes back as an error.  But don&rsquo;t let that put you off, this is a great way to handle pagination.
 <br>
 <br></p>
 <h6 id="pre-requisites">Pre-Requisites</h6>
@@ -20107,7 +20107,7 @@ Here is the documentation links;</p>
 <a href="/simages/bp-6-pbi-intune-7.png"> <img src="/simages/bp-6-pbi-intune-7.png"> </a></p>
 <h3 id="explanation">Explanation</h3>
 <ul>
-<li>When using Logic Apps, data is processed within the logic app and fed back to PowerBi using <a href="https://learn.microsoft.com/en-us/powerquery-m/web-contents"
+<li>When using Logic Apps, data is processed within the logic app and fed back to Power BI using <a href="https://learn.microsoft.com/en-us/powerquery-m/web-contents"
 
 
 
@@ -20116,9 +20116,9 @@ Here is the documentation links;</p>
  
 
 
->Web.Contents</a> Power Query.  We can do this because the Logic app can return a JSON format we require, and it is using URLs (or rather, web contents).  In our use case we pass parameters to the call to facilitate one method or the other.  Don&rsquo;t forget you can hard-configure these variables in the Logic app instead of passing them up from PowerBI</li>
+>Web.Contents</a> Power Query.  We can do this because the Logic app can return a JSON format we require, and it is using URLs (or rather, web contents).  In our use case we pass parameters to the call to facilitate one method or the other.  Don&rsquo;t forget you can hard-configure these variables in the Logic app instead of passing them up from Power BI</li>
 <li>There is a cost involved in using and calling logic apps, please investigate this and see if you are comfortable.  OData.Feeds are free to use.</li>
-<li>From PowerBI&rsquo;s perspective, its undertaking a weblink call and getting back results.  Precisely what it would do if you pointed the console to a cloud hosted CSV, for example, or any other web URL.  This means that from PowerBI&rsquo;s perspective the call is direct to a web link and does not form part of a hand-authored query.</li>
+<li>From Power BI&rsquo;s perspective, its undertaking a weblink call and getting back results.  Precisely what it would do if you pointed the console to a cloud hosted CSV, for example, or any other web URL.  This means that from Power BI&rsquo;s perspective the call is direct to a web link and does not form part of a hand-authored query.</li>
 <li>Finally, data sanitisation may be required after you get the output.  This can take the form of changing the title of columns, changing the type of data or replacing values in the columns.  The more work you put into data sanitisation, the less stress you&rsquo;ll put on the report as the data is santitised before the visuals are created.</li>
 </ul>
 <h3 id="relationships">Relationships</h3>
@@ -20176,11 +20176,11 @@ Here is the documentation links;</p>
 </tr>
 </tbody>
 </table>
-<p>PatchMyPC provide a nice web hosted CSV you can use, you can use the URL and pass that straight to PowerBI and pull the list of products in directly (love this!).  iVanti Neurons uses a JSON URL that you can use in conjunction with a Web source in PowerBI.  Microsoft Advanced App Management (through Intune Suite) shows their apps on the website as a table you can pull into PowerBI but it only contains the app name, no other information.  This is foolish - I have complained.</p>
+<p>PatchMyPC provide a nice web hosted CSV you can use, you can use the URL and pass that straight to Power BI and pull the list of products in directly (love this!).  iVanti Neurons uses a JSON URL that you can use in conjunction with a Web source in Power BI.  Microsoft Advanced App Management (through Intune Suite) shows their apps on the website as a table you can pull into Power BI but it only contains the app name, no other information.  This is foolish - I have complained.</p>
 <h3 id="additional">Additional</h3>
 <p>PatchMyPC customers can benefit from the fact that they classify their apps quite nicely.   When you pull in your apps data, you may notice that PatchMyPC add notes to the app.  An application created by PatchMyPC has <code>PmpAppID:</code> in the notes followed, by a GUID and an update (which is essentially an app anyway but with slightly different properties) has <code>PmpUpdateID:</code> in the notes followed by a GUID.  Like so;</p>
 <p><img alt="PatchMyPC Notes" src="/articles/bp-7-pbi-intune/img/BP-7-PBI-Intune-1.png#centre"></p>
-<p>You may also notice that anything generated by PatchMyPC has a unique filename.  It will have <code>PatchMyPC-ScriptRunner.intunewin</code> in it something which you might be able to leverage to create a nice PowerBI dashboard based solely upon PatchMyPC.</p>
+<p>You may also notice that anything generated by PatchMyPC has a unique filename.  It will have <code>PatchMyPC-ScriptRunner.intunewin</code> in it something which you might be able to leverage to create a nice Power BI dashboard based solely upon PatchMyPC.</p>
 <h3 id="next-post">Next post</h3>
 <p>Up next <a href="/articles/bp-8-pbi-intune/"
 
@@ -20189,7 +20189,7 @@ Here is the documentation links;</p>
  
 
 
->Autopilot Devices</a>.  <strong>Reminder</strong>, the next few posts will feel very alike with odd changes.  I am hoping chunks become familiar to you and the queries on my GitHub will act as a &lsquo;one-stop shop&rsquo; to go get queries at present we&rsquo;re focussing on getting some data into PowerBI rather than creating a dashboard, that will come in time as we build this up together.</p>
+>Autopilot Devices</a>.  <strong>Reminder</strong>, the next few posts will feel very alike with odd changes.  I am hoping chunks become familiar to you and the queries on my GitHub will act as a &lsquo;one-stop shop&rsquo; to go get queries at present we&rsquo;re focussing on getting some data into Power BI rather than creating a dashboard, that will come in time as we build this up together.</p>
 <i>
 I appreciate you taking the time to read my blog.<br>
 Your interest and support keep me motivated to create more content. <br>
@@ -20289,7 +20289,7 @@ If you think others might benefit from this content, please consider sharing it<
         
           <li>
             <a href="/categories/power-bi/" class="d-flex"
-              >Power Bi
+              >Power BI
               <small class="ms-auto">(9)</small></a
             >
           </li>
@@ -20417,7 +20417,7 @@ If you think others might benefit from this content, please consider sharing it<
           </li>
         
           <li class="list-inline-item">
-            <a href="/tags/power-bi/">Power Bi</a>
+            <a href="/tags/power-bi/">Power BI</a>
           </li>
         
           <li class="list-inline-item">
@@ -20985,7 +20985,7 @@ background-color: #FF6600
 
 
 
-<a class="resp-sharing-button__link" href="https://twitter.com/intent/tweet/?text=Intune%20and%20PowerBI%20Deep%20Dive%20-%20Part%207%20-%20Managed%20Applications&amp;url=https://deploymentshare.com/articles/bp-7-pbi-intune/" target="_blank" rel="noopener" aria-label="" title="Twitter">
+<a class="resp-sharing-button__link" href="https://twitter.com/intent/tweet/?text=Intune%20and%20Power%20BI%20Deep%20Dive%20-%20Part%207%20-%20Managed%20Applications&amp;url=https://deploymentshare.com/articles/bp-7-pbi-intune/" target="_blank" rel="noopener" aria-label="" title="Twitter">
   <div class="resp-sharing-button resp-sharing-button--twitter resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
 
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M23.44 4.83c-.8.37-1.5.38-2.22.02.93-.56.98-.96 1.32-2.02-.88.52-1.86.9-2.9 1.1-.82-.88-2-1.43-3.3-1.43-2.5 0-4.55 2.04-4.55 4.54 0 .36.03.7.1 1.04-3.77-.2-7.12-2-9.36-4.75-.4.67-.6 1.45-.6 2.3 0 1.56.8 2.95 2 3.77-.74-.03-1.44-.23-2.05-.57v.06c0 2.2 1.56 4.03 3.64 4.44-.67.2-1.37.2-2.06.08.58 1.8 2.26 3.12 4.25 3.16C5.78 18.1 3.37 18.74 1 18.46c2 1.3 4.4 2.04 6.97 2.04 8.35 0 12.92-6.92 12.92-12.93 0-.2 0-.4-.02-.6.9-.63 1.96-1.22 2.56-2.14z"/></svg>
@@ -20998,7 +20998,7 @@ background-color: #FF6600
 
 
 
-<a class="resp-sharing-button__link" href="https://www.tumblr.com/widgets/share/tool?posttype=link&amp;title=Intune%20and%20PowerBI%20Deep%20Dive%20-%20Part%207%20-%20Managed%20Applications&amp;caption=Intune%20and%20PowerBI%20Deep%20Dive%20-%20Part%207%20-%20Managed%20Applications&amp;content=https://deploymentshare.com/articles/bp-7-pbi-intune/&amp;canonicalUrl=https://deploymentshare.com/articles/bp-7-pbi-intune/&amp;shareSource=tumblr_share_button" target="_blank" rel="noopener" aria-label="">
+<a class="resp-sharing-button__link" href="https://www.tumblr.com/widgets/share/tool?posttype=link&amp;title=Intune%20and%20Power%20BI%20Deep%20Dive%20-%20Part%207%20-%20Managed%20Applications&amp;caption=Intune%20and%20Power%20BI%20Deep%20Dive%20-%20Part%207%20-%20Managed%20Applications&amp;content=https://deploymentshare.com/articles/bp-7-pbi-intune/&amp;canonicalUrl=https://deploymentshare.com/articles/bp-7-pbi-intune/&amp;shareSource=tumblr_share_button" target="_blank" rel="noopener" aria-label="">
   <div class="resp-sharing-button resp-sharing-button--tumblr resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
 
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.5.5v5h5v4h-5V15c0 5 3.5 4.4 6 2.8v4.4c-6.7 3.2-12 0-12-4.2V9.5h-3V6.7c1-.3 2.2-.7 3-1.3.5-.5 1-1.2 1.4-2 .3-.7.6-1.7.7-3h3.8z"/></svg>
@@ -21011,7 +21011,7 @@ background-color: #FF6600
 
 
 
-<a class="resp-sharing-button__link" href="mailto:?subject=Intune%20and%20PowerBI%20Deep%20Dive%20-%20Part%207%20-%20Managed%20Applications&amp;body=https://deploymentshare.com/articles/bp-7-pbi-intune/" target="_blank" rel="noopener" aria-label="" title="E-Mail">
+<a class="resp-sharing-button__link" href="mailto:?subject=Intune%20and%20Power%20BI%20Deep%20Dive%20-%20Part%207%20-%20Managed%20Applications&amp;body=https://deploymentshare.com/articles/bp-7-pbi-intune/" target="_blank" rel="noopener" aria-label="" title="E-Mail">
   <div class="resp-sharing-button resp-sharing-button--email resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
 
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M22 4H2C.9 4 0 4.9 0 6v12c0 1.1.9 2 2 2h20c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zM7.25 14.43l-3.5 2c-.08.05-.17.07-.25.07-.17 0-.34-.1-.43-.25-.14-.24-.06-.55.18-.68l3.5-2c.24-.14.55-.06.68.18.14.24.06.55-.18.68zm4.75.07c-.1 0-.2-.03-.27-.08l-8.5-5.5c-.23-.15-.3-.46-.15-.7.15-.22.46-.3.7-.14L12 13.4l8.23-5.32c.23-.15.54-.08.7.15.14.23.07.54-.16.7l-8.5 5.5c-.08.04-.17.07-.27.07zm8.93 1.75c-.1.16-.26.25-.43.25-.08 0-.17-.02-.25-.07l-3.5-2c-.24-.13-.32-.44-.18-.68s.44-.32.68-.18l3.5 2c.24.13.32.44.18.68z"/></svg>
@@ -21024,7 +21024,7 @@ background-color: #FF6600
 
 
 
-<a class="resp-sharing-button__link" href="https://pinterest.com/pin/create/button/?url=https://deploymentshare.com/articles/bp-7-pbi-intune/&amp;media=https://deploymentshare.com/articles/bp-7-pbi-intune/&amp;description=Intune%20and%20PowerBI%20Deep%20Dive%20-%20Part%207%20-%20Managed%20Applications" target="_blank" rel="noopener" aria-label="">
+<a class="resp-sharing-button__link" href="https://pinterest.com/pin/create/button/?url=https://deploymentshare.com/articles/bp-7-pbi-intune/&amp;media=https://deploymentshare.com/articles/bp-7-pbi-intune/&amp;description=Intune%20and%20Power%20BI%20Deep%20Dive%20-%20Part%207%20-%20Managed%20Applications" target="_blank" rel="noopener" aria-label="">
   <div class="resp-sharing-button resp-sharing-button--pinterest resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
 
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12.14.5C5.86.5 2.7 5 2.7 8.75c0 2.27.86 4.3 2.7 5.05.3.12.57 0 .66-.33l.27-1.06c.1-.32.06-.44-.2-.73-.52-.62-.86-1.44-.86-2.6 0-3.33 2.5-6.32 6.5-6.32 3.55 0 5.5 2.17 5.5 5.07 0 3.8-1.7 7.02-4.2 7.02-1.37 0-2.4-1.14-2.07-2.54.4-1.68 1.16-3.48 1.16-4.7 0-1.07-.58-1.98-1.78-1.98-1.4 0-2.55 1.47-2.55 3.42 0 1.25.43 2.1.43 2.1l-1.7 7.2c-.5 2.13-.08 4.75-.04 5 .02.17.22.2.3.1.14-.18 1.82-2.26 2.4-4.33.16-.58.93-3.63.93-3.63.45.88 1.8 1.65 3.22 1.65 4.25 0 7.13-3.87 7.13-9.05C20.5 4.15 17.18.5 12.14.5z"/></svg>
@@ -21037,7 +21037,7 @@ background-color: #FF6600
 
 
 
-<a class="resp-sharing-button__link" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://deploymentshare.com/articles/bp-7-pbi-intune/&amp;title=Intune%20and%20PowerBI%20Deep%20Dive%20-%20Part%207%20-%20Managed%20Applications&amp;summary=Intune%20and%20PowerBI%20Deep%20Dive%20-%20Part%207%20-%20Managed%20Applications&amp;https://deploymentshare.com/articles/bp-7-pbi-intune/" target="_blank" rel="noopener" aria-label="">
+<a class="resp-sharing-button__link" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://deploymentshare.com/articles/bp-7-pbi-intune/&amp;title=Intune%20and%20Power%20BI%20Deep%20Dive%20-%20Part%207%20-%20Managed%20Applications&amp;summary=Intune%20and%20Power%20BI%20Deep%20Dive%20-%20Part%207%20-%20Managed%20Applications&amp;https://deploymentshare.com/articles/bp-7-pbi-intune/" target="_blank" rel="noopener" aria-label="">
   <div class="resp-sharing-button resp-sharing-button--linkedin resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
 
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6.5 21.5h-5v-13h5v13zM4 6.5C2.5 6.5 1.5 5.3 1.5 4s1-2.4 2.5-2.4c1.6 0 2.5 1 2.6 2.5 0 1.4-1 2.5-2.6 2.5zm11.5 6c-1 0-2 1-2 2v7h-5v-13h5V10s1.6-1.5 4-1.5c3 0 5 2.2 5 6.3v6.7h-5v-7c0-1-1-2-2-2z"/></svg>
@@ -21050,7 +21050,7 @@ background-color: #FF6600
 
 
 
-<a class="resp-sharing-button__link" href="https://reddit.com/submit/?url=https://deploymentshare.com/articles/bp-7-pbi-intune/&amp;resubmit=true&amp;title=Intune%20and%20PowerBI%20Deep%20Dive%20-%20Part%207%20-%20Managed%20Applications" target="_blank" rel="noopener" aria-label="" title="Reddit">
+<a class="resp-sharing-button__link" href="https://reddit.com/submit/?url=https://deploymentshare.com/articles/bp-7-pbi-intune/&amp;resubmit=true&amp;title=Intune%20and%20Power%20BI%20Deep%20Dive%20-%20Part%207%20-%20Managed%20Applications" target="_blank" rel="noopener" aria-label="" title="Reddit">
   <div class="resp-sharing-button resp-sharing-button--reddit resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
 
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M24 11.5c0-1.65-1.35-3-3-3-.96 0-1.86.48-2.42 1.24-1.64-1-3.75-1.64-6.07-1.72.08-1.1.4-3.05 1.52-3.7.72-.4 1.73-.24 3 .5C17.2 6.3 18.46 7.5 20 7.5c1.65 0 3-1.35 3-3s-1.35-3-3-3c-1.38 0-2.54.94-2.88 2.22-1.43-.72-2.64-.8-3.6-.25-1.64.94-1.95 3.47-2 4.55-2.33.08-4.45.7-6.1 1.72C4.86 8.98 3.96 8.5 3 8.5c-1.65 0-3 1.35-3 3 0 1.32.84 2.44 2.05 2.84-.03.22-.05.44-.05.66 0 3.86 4.5 7 10 7s10-3.14 10-7c0-.22-.02-.44-.05-.66 1.2-.4 2.05-1.54 2.05-2.84zM2.3 13.37C1.5 13.07 1 12.35 1 11.5c0-1.1.9-2 2-2 .64 0 1.22.32 1.6.82-1.1.85-1.92 1.9-2.3 3.05zm3.7.13c0-1.1.9-2 2-2s2 .9 2 2-.9 2-2 2-2-.9-2-2zm9.8 4.8c-1.08.63-2.42.96-3.8.96-1.4 0-2.74-.34-3.8-.95-.24-.13-.32-.44-.2-.68.15-.24.46-.32.7-.18 1.83 1.06 4.76 1.06 6.6 0 .23-.13.53-.05.67.2.14.23.06.54-.18.67zm.2-2.8c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm5.7-2.13c-.38-1.16-1.2-2.2-2.3-3.05.38-.5.97-.82 1.6-.82 1.1 0 2 .9 2 2 0 .84-.53 1.57-1.3 1.87z"/></svg>
@@ -21063,7 +21063,7 @@ background-color: #FF6600
 
 
 
-<a class="resp-sharing-button__link" href="https://www.xing.com/app/user?op=share;url=https://deploymentshare.com/articles/bp-7-pbi-intune/;title=Intune%20and%20PowerBI%20Deep%20Dive%20-%20Part%207%20-%20Managed%20Applications" target="_blank" rel="noopener" aria-label="">
+<a class="resp-sharing-button__link" href="https://www.xing.com/app/user?op=share;url=https://deploymentshare.com/articles/bp-7-pbi-intune/;title=Intune%20and%20Power%20BI%20Deep%20Dive%20-%20Part%207%20-%20Managed%20Applications" target="_blank" rel="noopener" aria-label="">
   <div class="resp-sharing-button resp-sharing-button--xing resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
 
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10.2 9.7l-3-5.4C7.2 4 7 4 6.8 4h-5c-.3 0-.4 0-.5.2v.5L4 10 .4 16v.5c0 .2.2.3.4.3h5c.3 0 .4 0 .5-.2l4-6.6v-.5zM24 .2l-.5-.2H18s-.2 0-.3.3l-8 14v.4l5.2 9c0 .2 0 .3.3.3h5.4s.3 0 .4-.2c.2-.2.2-.4 0-.5l-5-8.8L24 .7V.2z"/></svg>
@@ -21076,7 +21076,7 @@ background-color: #FF6600
 
 
 
-<a class="resp-sharing-button__link" href="whatsapp://send?text=Intune%20and%20PowerBI%20Deep%20Dive%20-%20Part%207%20-%20Managed%20Applications%20https://deploymentshare.com/articles/bp-7-pbi-intune/" target="_blank" rel="noopener" aria-label="">
+<a class="resp-sharing-button__link" href="whatsapp://send?text=Intune%20and%20Power%20BI%20Deep%20Dive%20-%20Part%207%20-%20Managed%20Applications%20https://deploymentshare.com/articles/bp-7-pbi-intune/" target="_blank" rel="noopener" aria-label="">
   <div class="resp-sharing-button resp-sharing-button--whatsapp resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
 
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.1 3.9C17.9 1.7 15 .5 12 .5 5.8.5.7 5.6.7 11.9c0 2 .5 3.9 1.5 5.6L.6 23.4l6-1.6c1.6.9 3.5 1.3 5.4 1.3 6.3 0 11.4-5.1 11.4-11.4-.1-2.8-1.2-5.7-3.3-7.8zM12 21.4c-1.7 0-3.3-.5-4.8-1.3l-.4-.2-3.5 1 1-3.4L4 17c-1-1.5-1.4-3.2-1.4-5.1 0-5.2 4.2-9.4 9.4-9.4 2.5 0 4.9 1 6.7 2.8 1.8 1.8 2.8 4.2 2.8 6.7-.1 5.2-4.3 9.4-9.5 9.4zm5.1-7.1c-.3-.1-1.7-.9-1.9-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.1-.2.2-.3.2-.6.1s-1.2-.5-2.3-1.4c-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6s.3-.3.4-.5c.2-.1.3-.3.4-.5.1-.2 0-.4 0-.5C10 9 9.3 7.6 9 7c-.1-.4-.4-.3-.5-.3h-.6s-.4.1-.7.3c-.3.3-1 1-1 2.4s1 2.8 1.1 3c.1.2 2 3.1 4.9 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.6-.1 1.7-.7 1.9-1.3.2-.7.2-1.2.2-1.3-.1-.3-.3-.4-.6-.5z"/></svg>
@@ -21089,7 +21089,7 @@ background-color: #FF6600
 
 
 
-<a class="resp-sharing-button__link" href="https://news.ycombinator.com/submitlink?u=https://deploymentshare.com/articles/bp-7-pbi-intune/&amp;t=Intune%20and%20PowerBI%20Deep%20Dive%20-%20Part%207%20-%20Managed%20Applications" target="_blank" rel="noopener" aria-label="">
+<a class="resp-sharing-button__link" href="https://news.ycombinator.com/submitlink?u=https://deploymentshare.com/articles/bp-7-pbi-intune/&amp;t=Intune%20and%20Power%20BI%20Deep%20Dive%20-%20Part%207%20-%20Managed%20Applications" target="_blank" rel="noopener" aria-label="">
   <div class="resp-sharing-button resp-sharing-button--hackernews resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
 
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 140"><path fill-rule="evenodd" d="M60.94 82.314L17 0h20.08l25.85 52.093c.397.927.86 1.888 1.39 2.883.53.994.995 2.02 1.393 3.08.265.4.463.764.596 1.095.13.334.262.63.395.898.662 1.325 1.26 2.618 1.79 3.877.53 1.26.993 2.42 1.39 3.48 1.06-2.254 2.22-4.673 3.48-7.258 1.26-2.585 2.552-5.27 3.877-8.052L103.49 0h18.69L77.84 83.308v53.087h-16.9v-54.08z"></path></svg>
@@ -21102,7 +21102,7 @@ background-color: #FF6600
 
 
 
-<a class="resp-sharing-button__link" href="http://vk.com/share.php?title=Intune%20and%20PowerBI%20Deep%20Dive%20-%20Part%207%20-%20Managed%20Applications&amp;url=https://deploymentshare.com/articles/bp-7-pbi-intune/" target="_blank" rel="noopener" aria-label="">
+<a class="resp-sharing-button__link" href="http://vk.com/share.php?title=Intune%20and%20Power%20BI%20Deep%20Dive%20-%20Part%207%20-%20Managed%20Applications&amp;url=https://deploymentshare.com/articles/bp-7-pbi-intune/" target="_blank" rel="noopener" aria-label="">
   <div class="resp-sharing-button resp-sharing-button--vk resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
 
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21.547 7h-3.29a.743.743 0 0 0-.655.392s-1.312 2.416-1.734 3.23C14.734 12.813 14 12.126 14 11.11V7.603A1.104 1.104 0 0 0 12.896 6.5h-2.474a1.982 1.982 0 0 0-1.75.813s1.255-.204 1.255 1.49c0 .42.022 1.626.04 2.64a.73.73 0 0 1-1.272.503 21.54 21.54 0 0 1-2.498-4.543.693.693 0 0 0-.63-.403h-2.99a.508.508 0 0 0-.48.685C3.005 10.175 6.918 18 11.38 18h1.878a.742.742 0 0 0 .742-.742v-1.135a.73.73 0 0 1 1.23-.53l2.247 2.112a1.09 1.09 0 0 0 .746.295h2.953c1.424 0 1.424-.988.647-1.753-.546-.538-2.518-2.617-2.518-2.617a1.02 1.02 0 0 1-.078-1.323c.637-.84 1.68-2.212 2.122-2.8.603-.804 1.697-2.507.197-2.507z"/></svg>
@@ -21115,7 +21115,7 @@ background-color: #FF6600
 
 
 
-<a class="resp-sharing-button__link" href="https://telegram.me/share/url?text=Intune%20and%20PowerBI%20Deep%20Dive%20-%20Part%207%20-%20Managed%20Applications&amp;url=https://deploymentshare.com/articles/bp-7-pbi-intune/" target="_blank" rel="noopener" aria-label="">
+<a class="resp-sharing-button__link" href="https://telegram.me/share/url?text=Intune%20and%20Power%20BI%20Deep%20Dive%20-%20Part%207%20-%20Managed%20Applications&amp;url=https://deploymentshare.com/articles/bp-7-pbi-intune/" target="_blank" rel="noopener" aria-label="">
   <div class="resp-sharing-button resp-sharing-button--telegram resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
 
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M.707 8.475C.275 8.64 0 9.508 0 9.508s.284.867.718 1.03l5.09 1.897 1.986 6.38a1.102 1.102 0 0 0 1.75.527l2.96-2.41a.405.405 0 0 1 .494-.013l5.34 3.87a1.1 1.1 0 0 0 1.046.135 1.1 1.1 0 0 0 .682-.803l3.91-18.795A1.102 1.102 0 0 0 22.5.075L.706 8.475z"/></svg>
@@ -21140,7 +21140,7 @@ background-color: #FF6600
       "@type": "WebPage",
       "@id": "https:\/\/deploymentshare.com\/articles\/bp-7-pbi-intune\/"
     },
-    "headline": "Intune and PowerBI Deep Dive - Part 7 - Managed Applications",
+    "headline": "Intune and Power BI Deep Dive - Part 7 - Managed Applications",
     "description": "",
     "image": "\/images\/title\/pbi-intune.jpg",
     "author": {
@@ -21253,7 +21253,7 @@ background-color: #FF6600
           
           <li><a href="https://deploymentshare.com/categories/intune/">Intune</a></li>
           
-          <li><a href="https://deploymentshare.com/categories/powerbi/">Power Bi</a></li>
+          <li><a href="https://deploymentshare.com/categories/powerbi/">Power BI</a></li>
           
           <li><a href="https://deploymentshare.com/privacy-policy/">Privacy Policy</a></li>
           
