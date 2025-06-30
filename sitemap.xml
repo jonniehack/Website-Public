@@ -8,10 +8,10 @@
     <loc>https://deploymentshare.com/categories/</loc>
     <lastmod>2025-06-24T00:00:00+01:00</lastmod>
   </url><url>
-    <loc>https://deploymentshare.com/tags/configmgr/</loc>
+    <loc>https://deploymentshare.com/tags/configuration-manager/</loc>
     <lastmod>2025-06-24T00:00:00+01:00</lastmod>
   </url><url>
-    <loc>https://deploymentshare.com/categories/configmgr/</loc>
+    <loc>https://deploymentshare.com/categories/configuration-manager/</loc>
     <lastmod>2025-06-24T00:00:00+01:00</lastmod>
   </url><url>
     <loc>https://deploymentshare.com/</loc>
@@ -47,10 +47,10 @@
     <loc>https://deploymentshare.com/categories/microsoft-graph/</loc>
     <lastmod>2024-07-26T00:00:00+01:00</lastmod>
   </url><url>
-    <loc>https://deploymentshare.com/categories/powerbi/</loc>
+    <loc>https://deploymentshare.com/tags/power-bi/</loc>
     <lastmod>2024-07-26T00:00:00+01:00</lastmod>
   </url><url>
-    <loc>https://deploymentshare.com/tags/powerbi/</loc>
+    <loc>https://deploymentshare.com/categories/power-bi/</loc>
     <lastmod>2024-07-26T00:00:00+01:00</lastmod>
   </url><url>
     <loc>https://deploymentshare.com/tags/applications/</loc>
@@ -113,10 +113,7 @@
     <loc>https://deploymentshare.com/articles/bp-1-pbi-intune/</loc>
     <lastmod>2024-01-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://deploymentshare.com/tags/configuration-manager/</loc>
-    <lastmod>2023-12-14T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://deploymentshare.com/categories/configuration-manager/</loc>
+    <loc>https://deploymentshare.com/tags/configmgr/</loc>
     <lastmod>2023-12-14T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://deploymentshare.com/tags/group-tag/</loc>
