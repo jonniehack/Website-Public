@@ -19723,13 +19723,13 @@ header {
 </ul>
 <h3 id="experience">Experience</h3>
 <p>A device was enrolled into Microsoft Intune using Autopilot (v1).  The device had numerous applications installed, one was Forticlient.  The client had a VPN profile installed using <strong>fcconfig.exe</strong> (a tool that comes with the client for this specific purpose).  Autopilot completed and all the applications were installed successfully. After the build completed, it was discovered that the Forticlient would not connect.  It seemed to pause, but it was noted that behind the main window, after clicking on SAML Login, highlighted below</p>
-<p><img alt="SAML Connection" src="/articles/bp-forticlient-ts/img/bp-forticlient-ts1.png#centre"></p>
+<p><img src="https://deploymentshare.com/articles/bp-forticlient-ts/img/bp-forticlient-ts1_hudc625f6ef7d53d78242f0491ec51ee06_25608_filter_9847371181620875241.png#centre" alt="SAML Connection"  /></p>
 <p>..an error was showing..</p>
-<p><img alt="Script Error" src="/articles/bp-forticlient-ts/img/bp-forticlient-ts3.png#centre"></p>
+<p><img src="https://deploymentshare.com/articles/bp-forticlient-ts/img/bp-forticlient-ts3_hu34d5dee3980cb432a77be481733dc784_7638_filter_4324002302723849015.png#centre" alt="Script Error"  /></p>
 <p>My instincts here screamed Internet Explorer error. It had a somewhat familiar look to it.  But.. Windows 11.. and we use Edge now, right? If you search this online, you will see one person suspected this and get shot down, but lots of people using a work around (which works by the way) of using the following option on your configuration:</p>
-<p><img alt="External Browser" src="/articles/bp-forticlient-ts/img/bp-forticlient-ts4.png#centre"></p>
+<p><img src="https://deploymentshare.com/articles/bp-forticlient-ts/img/bp-forticlient-ts4_hu7b984e34c0c75656244b56f8e5489685_22879_filter_12724006379036997491.png#centre" alt="External Browser"  /></p>
 <p>This forces &ldquo;some element&rdquo; of the VPN to use Edge, and thus connects successfully.  I say &ldquo;some element&rdquo;, because in truth, I&rsquo;m not sure. There are no local logs and nothing recorded in event viewer so this is good old fashioned guess work. When you use this option and you try to connect your SAML VPN, it opens an Edge window showing this, and connects.</p>
-<p><img alt="Edge Browser Connection" src="/articles/bp-forticlient-ts/img/bp-forticlient-ts5.png#centre"></p>
+<p><img src="https://deploymentshare.com/articles/bp-forticlient-ts/img/bp-forticlient-ts5_hub9526fca5538938d9be3280dd796c543_11958_filter_18341120378189919679.png#centre" alt="Edge Browser Connection"  /></p>
 <p>You can be forgiven for thinking &ldquo;<em>why not just export a new profile with this in</em>&rdquo; because if it works, it works, right? Looking online at some of the community posts, some have done this, some have even logged tickets with Fortinet and been told to do this as a workaround. One post claimed the problem was fixed in version <strong>7.2.3</strong>, however, one said the problem had returned in version <strong>7.2.4</strong>. Comedy. Rather than use workarounds, my customer wanted a fix or at least to identify the problem so the sleeves were rolled up and I began a trial-and-error process to figure out what was causing it.</p>
 <h3 id="approach">Approach</h3>
 <p>My approach was simple, find out which policy setting causes it by stripping out sub categories one by one until it works and finally narrowing down the setting within the sub category.  I thought this was going to be quick and easy. It was not, by any stretch of the imagination, quick.  Hopefully my efforts will save you time.</p>
@@ -19813,9 +19813,9 @@ header {
 <p>Again I sensed it was down to the security page sections (the ones in bold above).  And I was right, so I removed all sub categories that started with <strong>Windows Components &gt; Internet Explorer &gt; Internet Control Panel &gt; Security Page</strong> and started to add them back one at a time until <strong>Windows Components &gt; Internet Explorer &gt; Internet Control Panel &gt; Security Page &gt; Internet Zone</strong> broke it.</p>
 <p>Now I had 50 or so actual settings to test.  Again, I might add, no logs or event viewer recordings to look at so I started to enable any setting that had <strong>script</strong> in the name one at a time. Painful. This was simply because our error above stated &ldquo;An error has occurred in the <em>script</em> on this page.</p>
 <p>Eventually, I narrowed it down to this</p>
-<p><img alt="Policy Setting" src="/articles/bp-forticlient-ts/img/bp-forticlient-ts7.png#centre"></p>
+<p><img src="https://deploymentshare.com/articles/bp-forticlient-ts/img/bp-forticlient-ts7_hu4dbb1d4d05cffadc8aeb69b9fd0bb92c_7126_filter_1820422179947198873.png#centre" alt="Policy Setting"  /></p>
 <p>Change to this and it works!</p>
-<p><img alt="Policy Setting" src="/articles/bp-forticlient-ts/img/bp-forticlient-ts6.png#centre"></p>
+<p><img src="https://deploymentshare.com/articles/bp-forticlient-ts/img/bp-forticlient-ts6_huf527a9fdc4799e9ac31e8489c6305009_6655_filter_3828624902833107717.png#centre" alt="Policy Setting"  /></p>
 
 
 
@@ -19905,7 +19905,7 @@ header {
 
 
 <p>Given how long it takes to change something, wait for that change to be processed AND be reported back to the Intune console I can&rsquo;t quite tell you how long this fix took me to find (nah, its longer than what you&rsquo;re thinking).</p>
-<p><img alt="VPN Connected" src="/articles/bp-forticlient-ts/img/bp-forticlient-ts2.png#centre"></p>
+<p><img src="https://deploymentshare.com/articles/bp-forticlient-ts/img/bp-forticlient-ts2_hudb1be6e2c7abddd80290ea75b3f71bbb_16242_filter_1815336148407107064.png#centre" alt="VPN Connected"  /></p>
 
 
 
@@ -21108,7 +21108,7 @@ background-color: #FF6600
 
 
         </a>
-        <p>Please like and share on social medai and dont forget to tag me, it is really appreciated and helps my drive to create more content</p>
+        <p>Please like and share on social media and dont forget to tag me, it is really appreciated and helps my drive to create more content</p>
       </div>
       <div class="col-lg-2 col-md-3 col-6 mb-4">
         <h6 class="mb-4 fw-semibold">Quick Links</h6>

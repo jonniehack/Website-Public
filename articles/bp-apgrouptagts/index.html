@@ -19633,13 +19633,13 @@ header {
 <ul>
 <li>Within the Microsoft Entra ID portal, navigate to App Registrations.</li>
 <li>Create a new Registration and name it as you see fit, in my case I called it &ldquo;Autopilot GroupTag&rdquo; you know, because I&rsquo;m super inventive.
-<img alt="Alt Text" src="/articles/bp-apgrouptagts/articles/bp-apgrouptagts/img/BP-APGroupTagTS-11.png#centre">
-<img alt="Alt Text" src="/articles/bp-apgrouptagts/articles/bp-apgrouptagts/img/BP-APGroupTagTS-12.png#centre"></li>
+<img src="https://deploymentshare.com/articles/bp-apgrouptagts/articles/bp-apgrouptagts/img/BP-APGroupTagTS-11_hu46d84c1b31b1c87ac45865d23d5df805_5695_filter_7159974053383120070.png#centre" alt="Alt Text"  />
+<img src="https://deploymentshare.com/articles/bp-apgrouptagts/articles/bp-apgrouptagts/img/BP-APGroupTagTS-12_hu6183ad985305358f986758e3c5b8182f_35360_filter_11749789663056018041.png#centre" alt="Alt Text"  /></li>
 <li>You will now need to add the permission <strong>DeviceManagementServiceConfig.ReadWrite.All</strong>, as a Microsoft Graph Application Permission and grant consent.
-<img alt="Alt Text" src="/articles/bp-apgrouptagts/articles/bp-apgrouptagts/img/BP-APGroupTagTS-13.png#centre">
-<img alt="Alt Text" src="/articles/bp-apgrouptagts/articles/bp-apgrouptagts/img/BP-APGroupTagTS-14.png#centre"></li>
+<img src="https://deploymentshare.com/articles/bp-apgrouptagts/articles/bp-apgrouptagts/img/BP-APGroupTagTS-13_hue519210b988c6a8b4202e34cecd6d83b_34476_filter_4505775234244483322.png#centre" alt="Alt Text"  />
+<img src="https://deploymentshare.com/articles/bp-apgrouptagts/articles/bp-apgrouptagts/img/BP-APGroupTagTS-14_hu2e868f6ceed874e02334fb6562e7ac1a_8989_filter_17984346000889762380.png#centre" alt="Alt Text"  /></li>
 <li>Finally you will need to create an application Secret and copy the secret key (Take note of the expiry date and set reminders for yourself and also, ensure to store the key safely)
-<img alt="Alt Text" src="/articles/bp-apgrouptagts/articles/bp-apgrouptagts/img/BP-APGroupTagTS-15.png#centre"></li>
+<img src="https://deploymentshare.com/articles/bp-apgrouptagts/articles/bp-apgrouptagts/img/BP-APGroupTagTS-15_hu048f45f6a89e321eb495f4ad9c6e5db8_9668_filter_2598682345067480597.png#centre" alt="Alt Text"  /></li>
 </ul>
 <p>Before continuing on you will need the following items:</p>
 <ul>
@@ -19659,7 +19659,7 @@ header {
 
 >from here</a>.</p>
 <p>I wont regurgitate the task sequence configuration steps from the above documentation, however once you have the task sequence set up we&rsquo;re going to make some adjustments.  We are firstly going to create four variables</p>
-<p><img alt="Alt Text" src="/articles/bp-apgrouptagts/articles/bp-apgrouptagts/img/BP-APGroupTagTS-8.png#centre"></p>
+<p><img src="https://deploymentshare.com/articles/bp-apgrouptagts/articles/bp-apgrouptagts/img/BP-APGroupTagTS-8_huef47cc788442ae0003f11ef2023602c6_11321_filter_15486081143826577782.png#centre" alt="Alt Text"  /></p>
 <table>
 <thead>
 <tr>
@@ -19670,14 +19670,14 @@ header {
 <tbody>
 <tr>
 <td>TenantID <br> AppID <br> SecretID <br> GroupTag</td>
-<td style="text-align:center"><img alt="Alt Text" src="/articles/bp-apgrouptagts/articles/bp-apgrouptagts/img/BP-APGroupTagTS-1.png#centre"></td>
+<td style="text-align:center"><img src="https://deploymentshare.com/articles/bp-apgrouptagts/articles/bp-apgrouptagts/img/BP-APGroupTagTS-1_hu7dcdcdb8b78d21d5a2b8783976abb48c_3660_filter_18313456287306184757.png#centre" alt="Alt Text"  /></td>
 </tr>
 </tbody>
 </table>
 <p>For the SecretID, I strongly suggest you tick the box to &ldquo;Do Not Display this Value&rdquo;.  This at least forms some sort of security for you as the secret is the key to the app registration and what it can do.  Keeping that secure may or may not be important to you:</p>
-<p><img alt="Alt Text" src="/articles/bp-apgrouptagts/articles/bp-apgrouptagts/img/BP-APGroupTagTS-2.png#centre"></p>
+<p><img src="https://deploymentshare.com/articles/bp-apgrouptagts/articles/bp-apgrouptagts/img/BP-APGroupTagTS-2_hud911246bbe0a30a0a97ded232617484c_6646_filter_2682498984978480205.png#centre" alt="Alt Text"  /></p>
 <p>A description containing the expiry date might help in the event of failures too :-)
-<img alt="Alt Text" src="/articles/bp-apgrouptagts/articles/bp-apgrouptagts/img/BP-APGroupTagTS-6.png#centre"></p>
+<img src="https://deploymentshare.com/articles/bp-apgrouptagts/articles/bp-apgrouptagts/img/BP-APGroupTagTS-6_hu8a6cb9738be7e4b753c09bafea543a51_4922_filter_16745678836875155913.png#centre" alt="Alt Text"  /></p>
 <h5 id="the-script">The Script</h5>
 <p>Next comes the fun bit.  I lost a considerable amount of time testing this with numerous faults and errors.  I was hoping that, I could use the <a href="https://www.powershellgallery.com/packages/Get-WindowsAutoPilotInfo/2.3"
 
@@ -19894,17 +19894,17 @@ header {
 </ul>
 <h5 id="script-step">Script Step</h5>
 <p>Lets create a PowerShell Script step in our Task sequence.</p>
-<p><img alt="Alt Text" src="/articles/bp-apgrouptagts/articles/bp-apgrouptagts/img/BP-APGroupTagTS-10.png#centre"></p>
+<p><img src="https://deploymentshare.com/articles/bp-apgrouptagts/articles/bp-apgrouptagts/img/BP-APGroupTagTS-10_hu199578f2efca099b528e979727f59cee_14253_filter_17714076840052142902.png#centre" alt="Alt Text"  /></p>
 <p>We will opt to past a script into the step;</p>
-<p><img alt="Alt Text" src="/articles/bp-apgrouptagts/articles/bp-apgrouptagts/img/BP-APGroupTagTS-9.png#centre"></p>
+<p><img src="https://deploymentshare.com/articles/bp-apgrouptagts/articles/bp-apgrouptagts/img/BP-APGroupTagTS-9_hu57d1ed77009585b8114dc1855e178873_2815_filter_2448207195879814103.png#centre" alt="Alt Text"  /></p>
 <p>We will also configure the script to pass in four parameters.</p>
-<p><img alt="Alt Text" src="/articles/bp-apgrouptagts/articles/bp-apgrouptagts/img/BP-APGroupTagTS-3.png#centre"></p>
+<p><img src="https://deploymentshare.com/articles/bp-apgrouptagts/articles/bp-apgrouptagts/img/BP-APGroupTagTS-3_hu93d476fde56a29ee5e4649ccd741874e_5815_filter_5953930174320900072.png#centre" alt="Alt Text"  /></p>
 <p>Notice that the script requires four parameters passing to it and would you believe it!?  they match the task sequence variables we set up earlier.  Wonderful.  to reference a task sequence variable in a task sequence step you surround the text with &ldquo;%&rdquo; like in the above image.</p>
 <p>Within the step you will notice the following;</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>[<span style="color:#60add5">Net.ServicePointManager</span>]::SecurityProtocol = [<span style="color:#60add5">Net.SecurityProtocolType</span>]::Tls12
 </span></span></code></pre></div><p>This enables TLS 1.2.  This is used to overcome networking issues experienced when attempting to go out to the www to receive content.  There are then two sections which manually pull in the modules PowerShellGet and PackageManagement, both required to install the &ldquo;Get-WindowsAutopilotInfo&rdquo; script (which ensures the latest version is always pulled in) and to run it using the parameters we have passed in because&hellip; the script Get-WindowsAutopilotInfo uses the same parameter names we have passed in from our task sequence variables.</p>
 <p>In testing I see the devices appear in Autopilot devices;
-<img alt="Alt Text" src="/articles/bp-apgrouptagts/articles/bp-apgrouptagts/img/BP-APGroupTagTS-7.png#centre"></p>
+<img src="https://deploymentshare.com/articles/bp-apgrouptagts/articles/bp-apgrouptagts/img/BP-APGroupTagTS-7_hu918bd3f68c7bb89992564bd84bfb7541_7476_filter_1079642337203488226.png#centre" alt="Alt Text"  /></p>
 <p>And then shortly after the device that is &ldquo;Not Assigned&rdquo; changes to pending, and lastly - <strong>assigned</strong>
 
 
@@ -19958,7 +19958,7 @@ header {
 <p>Happy Customer.</p>
 <h5 id="testing">Testing</h5>
 <p>Once testing begun there was an issue we noticed.  Shift+F10 was not available in the event of a failure which was odd.  This is controlled by the file <strong>C:\Windows\Setup\Scripts\DisableCMDRequest.TAG</strong> which we can remove with a simple Run Command Line Step.</p>
-<p><img alt="Alt Text" src="/articles/bp-apgrouptagts/articles/bp-apgrouptagts/img/BP-APGroupTagTS-5.png#centre"></p>
+<p><img src="https://deploymentshare.com/articles/bp-apgrouptagts/articles/bp-apgrouptagts/img/BP-APGroupTagTS-5_huc399e9bf50a09f5f52d34764bc2d6223_12286_filter_11084764673926953981.png#centre" alt="Alt Text"  /></p>
 <h5 id="improvements--ideas">Improvements / Ideas</h5>
 <ul>
 <li>If you are not too scared about human-error, you could use something like ServiceUI to prompt the end user for text input to set the group tag and configure the variable GroupTag to the input of that.</li>
@@ -21041,7 +21041,7 @@ background-color: #FF6600
 
 
         </a>
-        <p>Please like and share on social medai and dont forget to tag me, it is really appreciated and helps my drive to create more content</p>
+        <p>Please like and share on social media and dont forget to tag me, it is really appreciated and helps my drive to create more content</p>
       </div>
       <div class="col-lg-2 col-md-3 col-6 mb-4">
         <h6 class="mb-4 fw-semibold">Quick Links</h6>

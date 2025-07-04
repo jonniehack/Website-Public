@@ -19629,7 +19629,7 @@ header {
 
 
 >https://www.everything365.online/2023/09/18/cis-microsoft-intune-for-windows-11-benchmark-in-settings-catalog-json/</a>. Here, the author has taken the time to go through that spreadsheet I mentioned earlier and create policies that are available for you to go grab. I decided to go grab these and merge them into 6 policies as I wasn&rsquo;t a fan of the separation.</p>
-<p><img alt="CIS policies" src="/articles/bp-cis/img/policies.png#centre"></p>
+<p><img src="https://deploymentshare.com/articles/bp-cis/img/policies_hud6c0358863851e04275ebdac86fcc07e_14689_filter_4638942529513495733.png#centre" alt="CIS policies"  /></p>
 <p>Great! Now they are condensed, I was ready to test what works.  The ones I used are <a href="https://github.com/jonniehack/Website-Content/tree/master/Security%20Baselines/CIS"
 
 
@@ -19702,7 +19702,7 @@ header {
  
 
 
-><img alt="1.png" src="/articles/bp-cis/img/1.png#centre"></a>
+><img src="https://deploymentshare.com/articles/bp-cis/img/1_hu1f2987e890ac55292d03977517816820_3696_filter_4570503462956453092.png#centre" alt="1.png"  /></a>
 <a href="https://learn.microsoft.com/en-us/windows/client-management/mdm/policy-csp-deviceguard#lsacfgflags"
 
 
@@ -19712,7 +19712,7 @@ header {
  
 
 
-><img alt="2.png" src="/articles/bp-cis/img/2.png#centre"></a>
+><img src="https://deploymentshare.com/articles/bp-cis/img/2_hu6f1795ef549dc31f162be008f3638482_3467_filter_12512066425443523370.png#centre" alt="2.png"  /></a>
 <a href="https://learn.microsoft.com/en-us/windows/client-management/mdm/policy-csp-deviceguard#requireplatformsecurityfeatures"
 
 
@@ -19722,7 +19722,7 @@ header {
  
 
 
-><img alt="3.png" src="/articles/bp-cis/img/3.png#centre"></a>
+><img src="https://deploymentshare.com/articles/bp-cis/img/3_hu45ee47b0c8b260fe480793cebc8e7c46_3831_filter_3830447252220805738.png#centre" alt="3.png"  /></a>
 <a href="https://learn.microsoft.com/en-us/windows/client-management/mdm/policy-csp-deviceguard#enablevirtualizationbasedsecurity"
 
 
@@ -19732,7 +19732,7 @@ header {
  
 
 
-><img alt="4.png" src="/articles/bp-cis/img/4.png#centre"></a></p>
+><img src="https://deploymentshare.com/articles/bp-cis/img/4_hubffd8fdfddf85f6779796d8d67eb04ba_3840_filter_12512066425443523370.png#centre" alt="4.png"  /></a></p>
 <p><code>./Device/Vendor/MSFT/Policy/Config/DeviceGuard/ConfigureSystemGuardLaunch</code>
 <code>./Device/Vendor/MSFT/Policy/Config/DeviceGuard/LsaCfgFlag</code>
 <code>./Device/Vendor/MSFT/Policy/Config/DeviceGuard/RequirePlatformSecurityFeatures</code>
@@ -19745,7 +19745,7 @@ This level includes the base form of security and is rather comprehensive on its
 <h4 id="policy---cis-l1-computer">Policy - CIS L1 Computer</h4>
 <h5 id="setting---require-private-store-only"><strong>Setting - Require Private Store Only</strong></h5>
 <p>Blocks Microsoft store from working, however, it did not block the deployment of Company Portal and a UWP apps used during testing. This might be historical from the WSfB set up and could be a cause for concern as it has the potential to cause issues. The end user experience was that as soon as you loaded the Microsoft Store, you received a blocked message.
-<img alt="5.png" src="/articles/bp-cis/img/5.png#centre"></p>
+<img src="https://deploymentshare.com/articles/bp-cis/img/5_hu4208a2dc43c9cfec18d7150e09281bd2_18506_filter_17531158120955733474.png#centre" alt="5.png"  /></p>
 <h5 id="setting---disable-one-drive-file-sync"><strong>Setting - Disable One Drive File Sync</strong></h5>
 <p>Blocks Microsoft OneDrive from launching or syncing. Clearly this poses an issue because a lot of customers are using OneDrive to store data, and if they are paying for it via their license agreement it seems wasteful to turn it off. Removing this configuration or setting it to <strong>Sync Enabled</strong>, allows the OneDrive app to launch and silently log in <em>after</em> a reboot.</p>
 <h5 id="setting---manage-preview-builds"><strong>Setting - Manage Preview Builds</strong></h5>
@@ -19759,7 +19759,7 @@ This level includes the base form of security and is rather comprehensive on its
  
 
 
-><img alt="6.png" src="/articles/bp-cis/img/6.png#centre"></a></p>
+><img src="https://deploymentshare.com/articles/bp-cis/img/6_hub038b33d224b5afdf6014d8f1033bec0_3420_filter_8944717145070053558.png#centre" alt="6.png"  /></a></p>
 <h5 id="setting---mss-autoadminlogon-enable-automatic-logon"><strong>Setting - MSS: (AutoAdminLogon) Enable Automatic Logon</strong></h5>
 <p>This one did break autopilot and after a very very long battle, I asked online and got help from the community (shout out to <a href="https://x.com/heyradu"
 
@@ -19780,13 +19780,13 @@ This level includes the base form of security and is rather comprehensive on its
  
 
 
-><img alt="7.png" src="/articles/bp-cis/img/7.png#centre"></a></p>
+><img src="https://deploymentshare.com/articles/bp-cis/img/7_hu96a7daca0aff32fdb05d560696466f04_3581_filter_2009091580493389194.png#centre" alt="7.png"  /></a></p>
 <p>I believe this is going to be a huge cause for concern, so watch out.</p>
 <h3 id="level-2---issues">Level 2 - Issues</h3>
 <h4 id="policy---cis-l2-computer">Policy - CIS L2 Computer</h4>
 <h5 id="setting---turn-off-access-to-the-store"><strong>Setting - Turn off access to the store</strong></h5>
 <p>Blocks Microsoft store from working, completely. Users will receive the following message whether they try to launch the store or install an app from the store in a web console
-<img alt="8.png" src="/articles/bp-cis/img/8.png#centre"></p>
+<img src="https://deploymentshare.com/articles/bp-cis/img/8_hu6c4db5132794d475ab44c9dc7e8b2777_65529_filter_3931568869467391117.png#centre" alt="8.png"  /></p>
 <h5 id="setting---disallow-cloud-notification"><strong>Setting - Disallow Cloud Notification</strong></h5>
 <p>Triggers a reboot during Autopilot, which may or may not cause issues. Interesting then that this is called out on the documentation as <strong>No reboots or service restarts are required for this policy to take effect</strong>, however, the reboot trigger is recorded in the event viewer. One to watch out for.
 <a href="https://learn.microsoft.com/en-us/windows/client-management/mdm/policy-csp-notifications#disallowcloudnotification"
@@ -19798,7 +19798,7 @@ This level includes the base form of security and is rather comprehensive on its
  
 
 
-><img alt="9.png" src="/articles/bp-cis/img/9.png#centre"></a></p>
+><img src="https://deploymentshare.com/articles/bp-cis/img/9_hu0b9fafac7dc3215823b7e9c1080845b1_3878_filter_3557224177854271261.png#centre" alt="9.png"  /></a></p>
 <h5 id="setting---disable-store-originated-apps"><strong>Setting - Disable Store Originated Apps</strong></h5>
 <p>Causes Company Portal to not load for available apps and as the above image shows a &ldquo;The app has been blocked by your administrator&rdquo; message is displayed when trying to launch the app. Stopping this from loading prevents the user from launching any store originated app, including the Company Portal app so if using the Company Portal is important to you, one to look out for if you stick rigidly to the settings here in CIS</p>
 <h3 id="conclusion">Conclusion</h3>
@@ -21010,7 +21010,7 @@ background-color: #FF6600
 
 
         </a>
-        <p>Please like and share on social medai and dont forget to tag me, it is really appreciated and helps my drive to create more content</p>
+        <p>Please like and share on social media and dont forget to tag me, it is really appreciated and helps my drive to create more content</p>
       </div>
       <div class="col-lg-2 col-md-3 col-6 mb-4">
         <h6 class="mb-4 fw-semibold">Quick Links</h6>

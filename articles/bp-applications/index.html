@@ -19622,9 +19622,9 @@ header {
 </blockquote>
 <p>OK, here goes (I hope this makes sense). ‘Packaging’ something simply describes the process of taking a piece of software and making it “ready for deployment” so that, you can use whatever your chosen deployment method is, to distribute that application to devices in your estate with minimal administrative effort. Normally, the distribution methods in environments these days are Configuration Manager (Commonly known as the legacy name SCCM) or Microsoft Intune. Both very good products, although I favour the former.  The two combined now collectively known as Endpoint Manager &amp; you’ll notice some branding changes trickle through but I think it’s safe to say those of us using these technologies know a little of their history.</p>
 <p>Let’s go one at a time here, starting with <strong>Configuration Manager</strong>, within the console, on the Software Library node, under <strong>Application Management</strong> you can see “packages” and “applications” (this is where it starts to get confusing. Software, made deployment-ready, in Configuration Manager, can take the format of a “package” or an “application” and I find that this is where the terms get muddled up).</p>
-<p><img alt="Alt Text" src="/articles/bp-applications/articles/bp-applications/img/APPS1.png#centre"></p>
+<p><img src="https://deploymentshare.com/articles/bp-applications/articles/bp-applications/img/APPS1_hu8e1b6bd981fef7bc7fca894c295cb469_11574_filter_9032992986655779695.png#centre" alt="Alt Text"  /></p>
 <p>As Intune is an MDM (Mobile Device Management) solution, these “apps” can take the format of Windows apps, IOS apps (Apple OS), Android apps… including many others.  Found here:</p>
-<p><img alt="Alt Text" src="/articles/bp-applications/articles/bp-applications/img/APPS2.png#centre"></p>
+<p><img src="https://deploymentshare.com/articles/bp-applications/articles/bp-applications/img/APPS2_hu050ad41df75ecd2dedf2763cd1598f80_5743_filter_508681861391407159.png#centre" alt="Alt Text"  /></p>
 <p>There are sometimes different formats of apps that reside with a category.  Windows apps, for example, generally take the form of (but are not limited to) “Win32” apps, or “Microsoft Store” apps. . It’s important that as you start to explore these consoles that you take note of the terms used and continue to speak and write the same terms in your day-to-day activities to better distinguish to what you are referring to.  Remember so far we’ve used the terms “Packaging”, “Package”, “Application”, “Apps”, “Win32”, “Microsoft Store apps”</p>
 <p>Here are some links that may help you. <br>
 <a href="https://docs.microsoft.com/en-us/mem/configmgr/apps/deploy-use/deploy-applications"
@@ -19673,9 +19673,9 @@ header {
 <h5 id="exe-discovery">.EXE Discovery</h5>
 </ins>
 <p>Place your installer files into a folder and open a command prompt window in that folder.  To interrogate any installer you need to ask it, “what switches are available to use?”.  You can usually achieve this by trying to run the software with a query switch.  Examples would be “/?” (most common) or “/help”,  which should result in the software throwing out a window to let you know what you can do with it, if you’re lucky enough to get one, examine it for silent install command lines and then begin to test them.  Often they take the format of switches you can throw such as “/quiet” (or “/q”), “/silent” (or “/s”) or some other connotation</p>
-<p><img alt="Alt Text" src="/articles/bp-applications/articles/bp-applications/img/APPS3.png#centre"></p>
+<p><img src="https://deploymentshare.com/articles/bp-applications/articles/bp-applications/img/APPS3_hu6940e5e83d8c7fabc152b5c3b4b4aec2_22490_filter_5008046719738690310.png#centre" alt="Alt Text"  /></p>
 <p>In this example a window is thrown out that’s quite large so I cut down what I need to show you.</p>
-<p><img alt="Alt Text" src="/articles/bp-applications/articles/bp-applications/img/APPS4.png#centre"></p>
+<p><img src="https://deploymentshare.com/articles/bp-applications/articles/bp-applications/img/APPS4_hu1114aeaf2809061ed9599f7d2463bc2d_4772_filter_9741821815873865526.png#centre" alt="Alt Text"  /></p>
 <p>… “/verysilent” sounds great! We’ll use that.  This method of querying the application will work 9.5 times out of ten.  You’ll then have to go and test that it installs the application silently and that you receive no end-user prompts whatsoever.  As always, test on throw-away VMs.  Not production.  Once you have the command that installs the software silently, you have your “install string”, which is one part of the discovery.  Next comes the uninstall string.  Normally you can retrieve these from the registry in one of these two locations depending on the architecture of the application.</p>
 <p><strong>32bit Registry Hive</strong>
 <br />
@@ -19687,7 +19687,7 @@ Note: On a 64-bit computer you will need to check both the key above and the fol
 HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall</p>
 <p><strong>Warning!</strong> – I have seen some programs that don’t use these two standard registry locations so if you can’t find what you’re looking for, then you’re going to have to search for what you need.
 Once you’ve explored the registry and found the key for your particular software, there’s usually a subkey you can discover to help you find the silent <strong>uninstall</strong> string.</p>
-<p><img alt="Alt Text" src="/articles/bp-applications/articles/bp-applications/img/APPS5.png#centre"></p>
+<p><img src="https://deploymentshare.com/articles/bp-applications/articles/bp-applications/img/APPS5_hu6a3af4af04069d32c52f1193455958cf_83653_filter_7851855664085151327.png#centre" alt="Alt Text"  /></p>
 <p>I wrote some code to go get some useful information for you from the registry.  It may help save some time</p>
 <h5 id="code">Code</h5>
 <div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#007020">Clear-Host</span>
@@ -19740,7 +19740,7 @@ Like this:  msiexec /x {XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX} /qn</p>
 >Win32 Content Prep Tool</a>, that will take your raw source files and concern them into a single .intunewin file which you then upload to Intune.  This will compress and encrypt the source files for a quicker transfer.  You may have noticed I have linked some documents in this paragraph, those will help you.</p>
 </blockquote>
 <p>Next up, Detection Clauses, these are quite important to your packaging journey, you need to identify a way to detect that the software is installed.  Most of the time, this will be the existence of a registry key.  Using the example from above, we could set the following key to be our detection clause:</p>
-<p><img alt="Alt Text" src="/articles/bp-applications/articles/bp-applications/img/APPS6.png#centre"></p>
+<p><img src="https://deploymentshare.com/articles/bp-applications/articles/bp-applications/img/APPS6_hucff0987b8b25caefa6c6eed321839ae5_23970_filter_4344050240199766252.png#centre" alt="Alt Text"  /></p>
 <p>So we’ll tell the system “If this key exists, then the application is installed”.  We will need to check whether or not it is removed during the uninstall process first, just to be sure its not left behind as an orphan and therefore would lead to a false detection if removed.  In some cases you cant leverage the root-level registry key, you may need to go deeper such as detecting whether or not the version number is equal to or greater than something.  For example in the case of an app that might self-update or update often the registry key will always be present but the version number might increment, you’ll need to tread carefully around these apps to ensure that you don’t get false detections.  Again, take each app as it comes and start to build up your exposure and experience with it.  You’ll start to notice common registry key places (like the ones mentioned earlier) and soon, it will become second nature.</p>
 <ins>
 <h5 id="deployment">Deployment</h5>
@@ -20790,7 +20790,7 @@ background-color: #FF6600
 
 
         </a>
-        <p>Please like and share on social medai and dont forget to tag me, it is really appreciated and helps my drive to create more content</p>
+        <p>Please like and share on social media and dont forget to tag me, it is really appreciated and helps my drive to create more content</p>
       </div>
       <div class="col-lg-2 col-md-3 col-6 mb-4">
         <h6 class="mb-4 fw-semibold">Quick Links</h6>

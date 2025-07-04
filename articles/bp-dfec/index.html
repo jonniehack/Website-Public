@@ -19652,7 +19652,7 @@ header {
 
 >Establishing a Link</a></h4>
 <p>To set up the connection, navigate to the Microsoft Intune &gt; Tenant Administration &gt; Connectors and Tokens &gt; Microsoft Defender for Endpoint and then, like me, you may notice you don&rsquo;t have one set up yet.  Lets fix that.</p>
-<p><img alt="Connector and Token Configuration for MDE" src="/articles/bp-dfec/img/dfe1.png#centre"></p>
+<p><img src="https://deploymentshare.com/articles/bp-dfec/img/dfe1_hu643b60e6dba7664d5f389dbfdddc8274_79275_filter_7993479181156055892.png#centre" alt="Connector and Token Configuration for MDE"  /></p>
 <p>If you click on the link &ldquo;<a href="https://security.microsoft.com/"
 
 
@@ -19663,18 +19663,18 @@ header {
 
 
 >Connect Microsoft Defender for Endpoint to Microsoft Intune in the Microsoft Defender Security Center</a>&rdquo; the Security Centre portal will open in a new window. In the Microsoft Defender Security Center, go to Settings &gt; Endpoints &gt; Advanced features, and turn on the Microsoft Intune connection.</p>
-<p><img alt="Toggle Connector" src="/articles/bp-dfec/img/dfe2.png#centre"></p>
+<p><img src="https://deploymentshare.com/articles/bp-dfec/img/dfe2_hu6cc9f585f2577eb508ea3851d04c7ba1_10609_filter_1414413234069783800.png#centre" alt="Toggle Connector"  /></p>
 <p>This integration enables Intune to receive risk signals from Defender for Endpoint, which can then be used to create and enforce compliance policies.  Once established the Intune console will update. You can see here I have also enabled some settings related to Windows Devices.</p>
-<p><img alt="Successful Connector" src="/articles/bp-dfec/img/dfe3.png#centre"></p>
+<p><img src="https://deploymentshare.com/articles/bp-dfec/img/dfe3_huce07d372e0b616a24295b061f1c3a3e2_78515_filter_3130425595808578068.png#centre" alt="Successful Connector"  /></p>
 <p>Because Microsoft Defender for Endpoint can be used independently to Intune, the first setting allows devices to report their status to Intune, which we would like them to do. Also, the setting to connect versions of Windows 10.0.15063 or above has been selected.  This version refers to Windows 10 Version 1703, released in April 2017. It does not, however, meet the minimum requirement for supporting Microsoft Defender for Endpoint, which starts from version 1709 (10.0.16299.15). So watch out for that, also.</p>
 <h3 id="onboarding-devices">Onboarding Devices</h3>
 <p>Onboarding devices to Microsoft Defender for Endpoint through Intune allows for comprehensive threat detection and response capabilities on each device. When devices are onboarded, Defender for Endpoint can monitor them for suspicious activities and provide detailed insights into potential threats.</p>
 <p>To onboard devices, first, navigate to the Microsoft Intune Console. Go to Endpoint security &gt; Endpoint detection and response.  Notice here it tells you the connector is established.</p>
-<p><img alt="Endpoint Security Detection and Response" src="/articles/bp-dfec/img/dfe4.png#centre"></p>
+<p><img src="https://deploymentshare.com/articles/bp-dfec/img/dfe4_hu05d5e69c42ae5f3acddf2818e1b673c0_13007_filter_2587421054517527644.png#centre" alt="Endpoint Security Detection and Response"  /></p>
 <p>Create a policy. Choose a platform (e.g., Windows 10, Windows 11 and WIndows Server) and select Endpoint detection and response under profile type. Configure the profile with your required settings and deploy it to the targeted device groups (the settings I opted for are in the below image).</p>
-<p><img alt="Endpoint Security Detection and Response Settings for Onboarding" src="/articles/bp-dfec/img/dfe5.png#centre"></p>
+<p><img src="https://deploymentshare.com/articles/bp-dfec/img/dfe5_hu7edcd4b2643b5a2f42fb3fd07460ddec_7600_filter_9774890961755736490.png#centre" alt="Endpoint Security Detection and Response Settings for Onboarding"  /></p>
 <p>Devices will automatically onboard to Defender for Endpoint upon receiving and applying this configuration, beginning real-time protection and threat monitoring.</p>
-<p><img alt="Onboarded Devices" src="/articles/bp-dfec/img/dfe6.png#centre"></p>
+<p><img src="https://deploymentshare.com/articles/bp-dfec/img/dfe6_hu8141957ac1bcc3a651641a10b3dcec3b_11661_filter_415473221413778201.png#centre" alt="Onboarded Devices"  /></p>
 <h3 id="compliance-policy">Compliance Policy</h3>
 <p>We can now use a compliance policy in Intune that leverages the integration with Microsoft Defender for Endpoint to mark devices as compliant or not based upon their risk score. It assigns a risk score to each device, categorising the risk as:</p>
 <ul>
@@ -19684,7 +19684,7 @@ header {
 <li>High: Serious issues that pose a significant threat to the device or network.</li>
 </ul>
 <p>Defender for Endpoint continuously monitors devices for security threats and vulnerabilities. It analyses telemetry data, including malware detection, suspicious activity and security configurations, to assign this risk score.</p>
-<p><img alt="Risk Score" src="/articles/bp-dfec/img/dfe7.png#centre"></p>
+<p><img src="https://deploymentshare.com/articles/bp-dfec/img/dfe7_hue71edc6c3bad6c959bc6484080c87c8b_9417_filter_5654878477542759326.png#centre" alt="Risk Score"  /></p>
 <p>I&rsquo;m not going to talk about what compliance policies are and how to set them up but you can read more here: <a href="https://learn.microsoft.com/mem/intune/protect/advanced-threat-protection-configure#create-and-assign-compliance-policy-to-set-device-risk-level"
 
 
@@ -20852,7 +20852,7 @@ background-color: #FF6600
 
 
         </a>
-        <p>Please like and share on social medai and dont forget to tag me, it is really appreciated and helps my drive to create more content</p>
+        <p>Please like and share on social media and dont forget to tag me, it is really appreciated and helps my drive to create more content</p>
       </div>
       <div class="col-lg-2 col-md-3 col-6 mb-4">
         <h6 class="mb-4 fw-semibold">Quick Links</h6>
