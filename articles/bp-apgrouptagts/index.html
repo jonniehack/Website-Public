@@ -19712,185 +19712,10 @@ header {
           fill="currentColor" />
       </svg><p>Info</p>
   </div>
-  <div class="notice-body"><p>Updated 22-05-2025 with new script logic and functions.  Github script updated - Please check .VERSION section of the script header for more details.</p></div>
+  <div class="notice-body"><p>Updated <strong>21-07-2025</strong> with new script logic and functions.  Github script updated - Please check .VERSION section of the script header for more details.</p></div>
 </div>
 
 <p>*Click to drop down the box and reveal the script</p>
-
-
-
-
-
-
-  
-
-
-
-<div class="accordion ">
-  <button class="accordion-header " data-accordion>
-    Uses Get-WindowsAutopilotInfo - Jonathan Fallis
-    <svg
-      class="accordion-icon"
-      x="0px"
-      y="0px"
-      viewBox="0 0 512 512"
-      xmlspace="preserve">
-      <path
-        fill="currentColor"
-        d="M505.755,123.592c-8.341-8.341-21.824-8.341-30.165,0L256.005,343.176L36.421,123.592c-8.341-8.341-21.824-8.341-30.165,0 s-8.341,21.824,0,30.165l234.667,234.667c4.16,4.16,9.621,6.251,15.083,6.251c5.462,0,10.923-2.091,15.083-6.251l234.667-234.667 C514.096,145.416,514.096,131.933,505.755,123.592z"></path>
-    </svg>
-  </button>
-  <div class="accordion-content ">
-    <p><div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#60a0b0;font-style:italic">&lt;#
-</span></span></span><span style="display:flex;"><span><span style="color:#60a0b0;font-style:italic">.</span><span style="color:#4070a0;font-style:italic">SYNOPSIS</span><span style="color:#60a0b0;font-style:italic">
-</span></span></span><span style="display:flex;"><span><span style="color:#60a0b0;font-style:italic">    Installs Get-WindowsAuopilotInfo.ps1 and calls it using the parameter
-</span></span></span><span style="display:flex;"><span><span style="color:#60a0b0;font-style:italic">.</span><span style="color:#4070a0;font-style:italic">DESCRIPTION</span><span style="color:#60a0b0;font-style:italic">
-</span></span></span><span style="display:flex;"><span><span style="color:#60a0b0;font-style:italic">    * Used alongside a task sequence within Configuration Manager, this script was uses to add the device to autopilot and set a GroupTag
-</span></span></span><span style="display:flex;"><span><span style="color:#60a0b0;font-style:italic">.AUTHOR
-</span></span></span><span style="display:flex;"><span><span style="color:#60a0b0;font-style:italic">    Jonathan Fallis - www.deploymentshare.com
-</span></span></span><span style="display:flex;"><span><span style="color:#60a0b0;font-style:italic">.VERSION
-</span></span></span><span style="display:flex;"><span><span style="color:#60a0b0;font-style:italic">    1.0.1 - Added Error Logging
-</span></span></span><span style="display:flex;"><span><span style="color:#60a0b0;font-style:italic">    1.0.0 - Original
-</span></span></span><span style="display:flex;"><span><span style="color:#60a0b0;font-style:italic">.</span><span style="color:#4070a0;font-style:italic">EXAMPLE</span><span style="color:#60a0b0;font-style:italic">
-</span></span></span><span style="display:flex;"><span><span style="color:#60a0b0;font-style:italic">    .\Set-AutopilotGroupTag -TenantID &#34;123456&#34; -AppID &#34;234567&#34; -SecretID &#34;345678&#34; -GroupTag &#34;AutopilotDevice&#34;
-</span></span></span><span style="display:flex;"><span><span style="color:#60a0b0;font-style:italic">#&gt;</span>
-</span></span><span style="display:flex;"><span> 
-</span></span><span style="display:flex;"><span><span style="color:#007020;font-weight:bold">Param</span>(
-</span></span><span style="display:flex;"><span>    [<span style="color:#007020">Parameter</span>(<span style="color:#4070a0">Mandatory</span>=$true)]
-</span></span><span style="display:flex;"><span>    [<span style="color:#60add5">string</span>]<span style="color:#bb60d5">$TenantID</span>,
-</span></span><span style="display:flex;"><span>    [<span style="color:#007020">Parameter</span>(<span style="color:#4070a0">Mandatory</span>=$true)]
-</span></span><span style="display:flex;"><span>    [<span style="color:#60add5">string</span>]<span style="color:#bb60d5">$AppID</span>,
-</span></span><span style="display:flex;"><span>    [<span style="color:#007020">Parameter</span>(<span style="color:#4070a0">Mandatory</span>=$true)]
-</span></span><span style="display:flex;"><span>    [<span style="color:#60add5">string</span>]<span style="color:#bb60d5">$SecretID</span>,
-</span></span><span style="display:flex;"><span>    [<span style="color:#007020">Parameter</span>(<span style="color:#4070a0">Mandatory</span>=$true)]
-</span></span><span style="display:flex;"><span>    [<span style="color:#60add5">string</span>]<span style="color:#bb60d5">$GroupTag</span>
-</span></span><span style="display:flex;"><span>)
-</span></span><span style="display:flex;"><span> 
-</span></span><span style="display:flex;"><span><span style="color:#bb60d5">$WorkingDir</span> = <span style="color:#bb60d5">$env:TEMP</span>
-</span></span><span style="display:flex;"><span><span style="color:#bb60d5">$LogFilePath</span> = <span style="color:#4070a0">&#34;</span><span style="color:#bb60d5">$WorkingDir</span><span style="color:#4070a0">\Temp\Set-GroupTag.log&#34;</span>
-</span></span><span style="display:flex;"><span>[<span style="color:#60add5">System.Environment</span>]::SetEnvironmentVariable(<span style="color:#4070a0">&#39;LOCALAPPDATA&#39;</span>,<span style="color:#4070a0">&#34;</span><span style="color:#bb60d5">$env:SystemDrive</span><span style="color:#4070a0">\Windows\system32\config\systemprofile\AppData\Local&#34;</span>)
-</span></span><span style="display:flex;"><span> 
-</span></span><span style="display:flex;"><span><span style="color:#60a0b0;font-style:italic">#Function for Error Logging</span>
-</span></span><span style="display:flex;"><span><span style="color:#007020;font-weight:bold">Function</span><span style="color:#bbb"> </span><span style="color:#007020">Write-log</span> {
-</span></span><span style="display:flex;"><span> 
-</span></span><span style="display:flex;"><span>    [<span style="color:#007020">CmdletBinding</span>()]
-</span></span><span style="display:flex;"><span>    <span style="color:#007020;font-weight:bold">Param</span>(
-</span></span><span style="display:flex;"><span>        [<span style="color:#007020">parameter</span>(<span style="color:#4070a0">Mandatory</span> = $true)]
-</span></span><span style="display:flex;"><span>        [<span style="color:#60add5">String</span>]<span style="color:#bb60d5">$Path</span>,
-</span></span><span style="display:flex;"><span> 
-</span></span><span style="display:flex;"><span>        [<span style="color:#007020">parameter</span>(<span style="color:#4070a0">Mandatory</span> = $true)]
-</span></span><span style="display:flex;"><span>        [<span style="color:#60add5">String</span>]<span style="color:#bb60d5">$Message</span>,
-</span></span><span style="display:flex;"><span> 
-</span></span><span style="display:flex;"><span>        [<span style="color:#007020">parameter</span>(<span style="color:#4070a0">Mandatory</span> = $true)]
-</span></span><span style="display:flex;"><span>        [<span style="color:#60add5">String</span>]<span style="color:#bb60d5">$Component</span>,
-</span></span><span style="display:flex;"><span> 
-</span></span><span style="display:flex;"><span>        [<span style="color:#007020">Parameter</span>(<span style="color:#4070a0">Mandatory</span> = $true)]
-</span></span><span style="display:flex;"><span>        [<span style="color:#007020">ValidateSet</span>(<span style="color:#4070a0">&#39;Info&#39;</span>, <span style="color:#4070a0">&#39;Warning&#39;</span>, <span style="color:#4070a0">&#39;Error&#39;</span>)]
-</span></span><span style="display:flex;"><span>        [<span style="color:#60add5">String</span>]<span style="color:#bb60d5">$Type</span>
-</span></span><span style="display:flex;"><span>    )
-</span></span><span style="display:flex;"><span> 
-</span></span><span style="display:flex;"><span>    <span style="color:#007020;font-weight:bold">switch</span> (<span style="color:#bb60d5">$Type</span>) {
-</span></span><span style="display:flex;"><span>        <span style="color:#4070a0">&#39;Info&#39;</span> { [<span style="color:#60add5">int</span>]<span style="color:#bb60d5">$Type</span> = <span style="color:#40a070">1</span> }
-</span></span><span style="display:flex;"><span>        <span style="color:#4070a0">&#39;Warning&#39;</span> { [<span style="color:#60add5">int</span>]<span style="color:#bb60d5">$Type</span> = <span style="color:#40a070">2</span> }
-</span></span><span style="display:flex;"><span>        <span style="color:#4070a0">&#39;Error&#39;</span> { [<span style="color:#60add5">int</span>]<span style="color:#bb60d5">$Type</span> = <span style="color:#40a070">3</span> }
-</span></span><span style="display:flex;"><span>    }
-</span></span><span style="display:flex;"><span> 
-</span></span><span style="display:flex;"><span>    <span style="color:#60a0b0;font-style:italic"># Create a log entry</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#bb60d5">$Content</span> = <span style="color:#4070a0">&#34;&lt;![LOG[</span><span style="color:#bb60d5">$Message</span><span style="color:#4070a0">]LOG]!&gt;&#34;</span> + `
-</span></span><span style="display:flex;"><span>        <span style="color:#4070a0">&#34;&lt;time=</span><span style="color:#4070a0;font-weight:bold">`&#34;</span>$(<span style="color:#007020">Get-Date</span> -Format <span style="color:#4070a0">&#39;HH:mm:ss.ffffff&#39;</span>)<span style="color:#4070a0;font-weight:bold">`&#34;</span><span style="color:#4070a0"> &#34;</span> + `
-</span></span><span style="display:flex;"><span>        <span style="color:#4070a0">&#34;date=</span><span style="color:#4070a0;font-weight:bold">`&#34;</span>$(<span style="color:#007020">Get-Date</span> -Format <span style="color:#4070a0">&#39;M-d-yyyy&#39;</span>)<span style="color:#4070a0;font-weight:bold">`&#34;</span><span style="color:#4070a0"> &#34;</span> + `
-</span></span><span style="display:flex;"><span>        <span style="color:#4070a0">&#34;component=</span><span style="color:#4070a0;font-weight:bold">`&#34;</span><span style="color:#bb60d5">$Component</span><span style="color:#4070a0;font-weight:bold">`&#34;</span><span style="color:#4070a0"> &#34;</span> + `
-</span></span><span style="display:flex;"><span>        <span style="color:#4070a0">&#34;context=</span><span style="color:#4070a0;font-weight:bold">`&#34;</span>$([<span style="color:#60add5">System.Security.Principal.WindowsIdentity</span>]::GetCurrent().Name)<span style="color:#4070a0;font-weight:bold">`&#34;</span><span style="color:#4070a0"> &#34;</span> + `
-</span></span><span style="display:flex;"><span>        <span style="color:#4070a0">&#34;type=</span><span style="color:#4070a0;font-weight:bold">`&#34;</span><span style="color:#bb60d5">$Type</span><span style="color:#4070a0;font-weight:bold">`&#34;</span><span style="color:#4070a0"> &#34;</span> + `
-</span></span><span style="display:flex;"><span>        <span style="color:#4070a0">&#34;thread=</span><span style="color:#4070a0;font-weight:bold">`&#34;</span>$([<span style="color:#60add5">Threading.Thread</span>]::CurrentThread.ManagedThreadId)<span style="color:#4070a0;font-weight:bold">`&#34;</span><span style="color:#4070a0"> &#34;</span> + `
-</span></span><span style="display:flex;"><span>        <span style="color:#4070a0">&#34;file=</span><span style="color:#4070a0;font-weight:bold">`&#34;`&#34;</span><span style="color:#4070a0">&gt;&#34;</span>
-</span></span><span style="display:flex;"><span> 
-</span></span><span style="display:flex;"><span>    <span style="color:#60a0b0;font-style:italic"># Write the line to the log file</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#007020">Add-Content</span> -Path <span style="color:#bb60d5">$Path</span> -Value <span style="color:#bb60d5">$Content</span>
-</span></span><span style="display:flex;"><span>}
-</span></span><span style="display:flex;"><span> 
-</span></span><span style="display:flex;"><span><span style="color:#60a0b0;font-style:italic">#Test for internet connectivty using 8.8.8.8</span>
-</span></span><span style="display:flex;"><span><span style="color:#007020;font-weight:bold">If</span> (<span style="color:#007020">Test-Connection</span> <span style="color:#40a070">8.8</span>.8.8 -quiet) {
-</span></span><span style="display:flex;"><span>    <span style="color:#007020">Write-Log</span> -Type Info -Message <span style="color:#4070a0">&#34;Internet Connection OK&#34;</span> -Component <span style="color:#4070a0">&#34;Internet Check&#34;</span> -Path <span style="color:#bb60d5">$LogFilePath</span>
-</span></span><span style="display:flex;"><span>}
-</span></span><span style="display:flex;"><span><span style="color:#007020;font-weight:bold">Else</span> {
-</span></span><span style="display:flex;"><span>    <span style="color:#007020">Write-Log</span> -Type Error -Message <span style="color:#4070a0">&#34;Internet Connection check failed&#34;</span> -Component <span style="color:#4070a0">&#34;Internet Check&#34;</span> -Path <span style="color:#bb60d5">$LogFilePath</span> ; Exit <span style="color:#40a070">1</span> 
-</span></span><span style="display:flex;"><span>}
-</span></span><span style="display:flex;"><span> 
-</span></span><span style="display:flex;"><span><span style="color:#60a0b0;font-style:italic">#Enable TLS 1.2</span>
-</span></span><span style="display:flex;"><span><span style="color:#007020;font-weight:bold">Try</span> {
-</span></span><span style="display:flex;"><span>        [<span style="color:#60add5">Net.ServicePointManager</span>]::SecurityProtocol = [<span style="color:#60add5">Net.SecurityProtocolType</span>]::Tls12
-</span></span><span style="display:flex;"><span>        <span style="color:#007020">Write-Log</span> -Type Info -Message <span style="color:#4070a0">&#34;Setting TLS1.2 Completed Successfully&#34;</span> -Component <span style="color:#4070a0">&#34;TLS 1.2 Check&#34;</span> -Path <span style="color:#bb60d5">$LogFilePath</span>
-</span></span><span style="display:flex;"><span>    }
-</span></span><span style="display:flex;"><span><span style="color:#007020;font-weight:bold">Catch</span> {
-</span></span><span style="display:flex;"><span>        <span style="color:#007020">Write-Log</span> -Type Error -Message (<span style="color:#bb60d5">$_</span> | <span style="color:#007020">Out-String</span>) -Component <span style="color:#4070a0">&#34;TLS 1.2 Check&#34;</span> -Path <span style="color:#bb60d5">$LogFilePath</span>
-</span></span><span style="display:flex;"><span>}
-</span></span><span style="display:flex;"><span> 
-</span></span><span style="display:flex;"><span><span style="color:#60a0b0;font-style:italic">#PowerShellGet from PSGallery URL</span>
-</span></span><span style="display:flex;"><span><span style="color:#007020;font-weight:bold">Try</span> {
-</span></span><span style="display:flex;"><span>    <span style="color:#007020;font-weight:bold">if</span> (!(<span style="color:#007020">Get-Module</span> -Name PowerShellGet)){
-</span></span><span style="display:flex;"><span>        <span style="color:#bb60d5">$PowerShellGetURL</span> = <span style="color:#4070a0">&#34;https://psg-prod-eastus.azureedge.net/packages/powershellget.2.2.5.nupkg&#34;</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#007020">Write-Log</span> -Type Info -Message <span style="color:#4070a0">&#34;URL set to </span><span style="color:#bb60d5">$PowerShellGetURL</span><span style="color:#4070a0">&#34;</span> -Component <span style="color:#4070a0">&#34;PowerShellGet Check&#34;</span> -Path <span style="color:#bb60d5">$LogFilePath</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#007020">Invoke-WebRequest</span> -UseBasicParsing -Uri <span style="color:#bb60d5">$PowerShellGetURL</span> -OutFile <span style="color:#4070a0">&#34;</span><span style="color:#bb60d5">$WorkingDir</span><span style="color:#4070a0">\powershellget.2.2.5.zip&#34;</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#007020">Write-Log</span> -Type Info -Message <span style="color:#4070a0">&#34;Downloaded PowerShellGet &#34;</span> -Component <span style="color:#4070a0">&#34;PowerShellGet Check&#34;</span> -Path <span style="color:#bb60d5">$LogFilePath</span>
-</span></span><span style="display:flex;"><span>        $Null = <span style="color:#007020">New-Item</span> -Path <span style="color:#4070a0">&#34;</span><span style="color:#bb60d5">$WorkingDir</span><span style="color:#4070a0">\2.2.5&#34;</span> -ItemType Directory -Force
-</span></span><span style="display:flex;"><span>        <span style="color:#007020">Expand-Archive</span> -Path <span style="color:#4070a0">&#34;</span><span style="color:#bb60d5">$WorkingDir</span><span style="color:#4070a0">\powershellget.2.2.5.zip&#34;</span> -DestinationPath <span style="color:#4070a0">&#34;</span><span style="color:#bb60d5">$WorkingDir</span><span style="color:#4070a0">\2.2.5&#34;</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#007020">Write-Log</span> -Type Info -Message <span style="color:#4070a0">&#34;Unzipped PowerShellGet &#34;</span> -Component <span style="color:#4070a0">&#34;PowerShellGet Check&#34;</span> -Path <span style="color:#bb60d5">$LogFilePath</span>
-</span></span><span style="display:flex;"><span>        $Null = <span style="color:#007020">New-Item</span> -Path <span style="color:#4070a0">&#34;</span><span style="color:#bb60d5">$env:ProgramFiles</span><span style="color:#4070a0">\WindowsPowerShell\Modules\PowerShellGet&#34;</span> -ItemType Directory -ErrorAction SilentlyContinue
-</span></span><span style="display:flex;"><span>        <span style="color:#007020">Move-Item</span> -Path <span style="color:#4070a0">&#34;</span><span style="color:#bb60d5">$WorkingDir</span><span style="color:#4070a0">\2.2.5&#34;</span> -Destination <span style="color:#4070a0">&#34;</span><span style="color:#bb60d5">$env:ProgramFiles</span><span style="color:#4070a0">\WindowsPowerShell\Modules\PowerShellGet\2.2.5&#34;</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#007020">Write-Log</span> -Type Info -Message <span style="color:#4070a0">&#34;Moved PowerShellGet to </span><span style="color:#bb60d5">$WorkingDir</span><span style="color:#4070a0">&#34;</span> -Component <span style="color:#4070a0">&#34;PowerShellGet Check&#34;</span> -Path <span style="color:#bb60d5">$LogFilePath</span>
-</span></span><span style="display:flex;"><span>        }
-</span></span><span style="display:flex;"><span>}
-</span></span><span style="display:flex;"><span><span style="color:#007020;font-weight:bold">Catch</span> {
-</span></span><span style="display:flex;"><span>    <span style="color:#007020">Write-Log</span> -Type Error -Message (<span style="color:#bb60d5">$_</span> | <span style="color:#007020">Out-String</span>) -Component <span style="color:#4070a0">&#34;PowerShellGet Check&#34;</span> -Path <span style="color:#bb60d5">$LogFilePath</span>
-</span></span><span style="display:flex;"><span>}
-</span></span><span style="display:flex;"><span> 
-</span></span><span style="display:flex;"><span><span style="color:#60a0b0;font-style:italic">#PackageManagement from PSGallery URL</span>
-</span></span><span style="display:flex;"><span><span style="color:#007020;font-weight:bold">Try</span> {
-</span></span><span style="display:flex;"><span>    <span style="color:#007020;font-weight:bold">if</span> (!(<span style="color:#007020">Get-Module</span> -Name PackageManagement)){
-</span></span><span style="display:flex;"><span>        <span style="color:#bb60d5">$PackageManagementURL</span> = <span style="color:#4070a0">&#34;https://psg-prod-eastus.azureedge.net/packages/packagemanagement.1.4.7.nupkg&#34;</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#007020">Write-Log</span> -Type Info -Message <span style="color:#4070a0">&#34;URL set to </span><span style="color:#bb60d5">$PackageManagementURL</span><span style="color:#4070a0">&#34;</span> -Component <span style="color:#4070a0">&#34;PackageManagement Check&#34;</span> -Path <span style="color:#bb60d5">$LogFilePath</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#007020">Invoke-WebRequest</span> -UseBasicParsing -Uri <span style="color:#bb60d5">$PackageManagementURL</span> -OutFile <span style="color:#4070a0">&#34;</span><span style="color:#bb60d5">$WorkingDir</span><span style="color:#4070a0">\packagemanagement.1.4.7.zip&#34;</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#007020">Write-Log</span> -Type Info -Message <span style="color:#4070a0">&#34;Downloaded PackageManagement&#34;</span> -Component <span style="color:#4070a0">&#34;PackageManagement Check&#34;</span> -Path <span style="color:#bb60d5">$LogFilePath</span>
-</span></span><span style="display:flex;"><span>        $Null = <span style="color:#007020">New-Item</span> -Path <span style="color:#4070a0">&#34;</span><span style="color:#bb60d5">$WorkingDir</span><span style="color:#4070a0">\1.4.7&#34;</span> -ItemType Directory -Force
-</span></span><span style="display:flex;"><span>        <span style="color:#007020">Expand-Archive</span> -Path <span style="color:#4070a0">&#34;</span><span style="color:#bb60d5">$WorkingDir</span><span style="color:#4070a0">\packagemanagement.1.4.7.zip&#34;</span> -DestinationPath <span style="color:#4070a0">&#34;</span><span style="color:#bb60d5">$WorkingDir</span><span style="color:#4070a0">\1.4.7&#34;</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#007020">Write-Log</span> -Type Info -Message <span style="color:#4070a0">&#34;Unzipped PackageManagement&#34;</span> -Component <span style="color:#4070a0">&#34;PackageManagement Check&#34;</span> -Path <span style="color:#bb60d5">$LogFilePath</span>
-</span></span><span style="display:flex;"><span>        $Null = <span style="color:#007020">New-Item</span> -Path <span style="color:#4070a0">&#34;</span><span style="color:#bb60d5">$env:ProgramFiles</span><span style="color:#4070a0">\WindowsPowerShell\Modules\PackageManagement&#34;</span> -ItemType Directory -ErrorAction SilentlyContinue
-</span></span><span style="display:flex;"><span>        <span style="color:#007020">Move-Item</span> -Path <span style="color:#4070a0">&#34;</span><span style="color:#bb60d5">$WorkingDir</span><span style="color:#4070a0">\1.4.7&#34;</span> -Destination <span style="color:#4070a0">&#34;</span><span style="color:#bb60d5">$env:ProgramFiles</span><span style="color:#4070a0">\WindowsPowerShell\Modules\PackageManagement\1.4.7&#34;</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#007020">Write-Log</span> -Type Info -Message <span style="color:#4070a0">&#34;Moved PackageManagement to </span><span style="color:#bb60d5">$WorkingDir</span><span style="color:#4070a0">&#34;</span> -Component <span style="color:#4070a0">&#34;PackageManagement Check&#34;</span> -Path <span style="color:#bb60d5">$LogFilePath</span>
-</span></span><span style="display:flex;"><span>        }
-</span></span><span style="display:flex;"><span>}
-</span></span><span style="display:flex;"><span><span style="color:#007020;font-weight:bold">Catch</span> {
-</span></span><span style="display:flex;"><span>    <span style="color:#007020">Write-Log</span> -Type Error -Message (<span style="color:#bb60d5">$_</span> | <span style="color:#007020">Out-String</span>) -Component <span style="color:#4070a0">&#34;PackageManagement Check&#34;</span> -Path <span style="color:#bb60d5">$LogFilePath</span>
-</span></span><span style="display:flex;"><span>}
-</span></span><span style="display:flex;"><span> 
-</span></span><span style="display:flex;"><span><span style="color:#60a0b0;font-style:italic">#Import PowerShellGet</span>
-</span></span><span style="display:flex;"><span><span style="color:#007020;font-weight:bold">if</span> (<span style="color:#007020">Import-Module</span> PowerShellGet) {
-</span></span><span style="display:flex;"><span>    <span style="color:#007020">Write-Log</span> -Type Info -Message <span style="color:#4070a0">&#34;PowerShellGet Module Imported OK&#34;</span> -Component <span style="color:#4070a0">&#34;PowerShellGet Import&#34;</span> -Path <span style="color:#bb60d5">$LogFilePath</span>
-</span></span><span style="display:flex;"><span>}
-</span></span><span style="display:flex;"><span><span style="color:#007020;font-weight:bold">Else</span> {
-</span></span><span style="display:flex;"><span>    <span style="color:#007020">Write-Log</span> -Type Error -Message (<span style="color:#bb60d5">$_</span> | <span style="color:#007020">Out-String</span>) -Component <span style="color:#4070a0">&#34;PowerShellGet Import&#34;</span> -Path <span style="color:#bb60d5">$LogFilePath</span> ; Exit <span style="color:#40a070">1</span> 
-</span></span><span style="display:flex;"><span>}
-</span></span><span style="display:flex;"><span> 
-</span></span><span style="display:flex;"><span><span style="color:#60a0b0;font-style:italic">#Install the script</span>
-</span></span><span style="display:flex;"><span><span style="color:#007020;font-weight:bold">if</span> (<span style="color:#007020">Install-Script</span> <span style="color:#007020">Get-WindowsAutopilotinfo</span> -Force) {
-</span></span><span style="display:flex;"><span>    <span style="color:#007020">Write-Log</span> -Type Info -Message <span style="color:#4070a0">&#34;Get-WindowsAutopilotInfo Installed OK&#34;</span> -Component <span style="color:#4070a0">&#34;Get-WindowsAutopilotInfo Install&#34;</span> -Path <span style="color:#bb60d5">$LogFilePath</span>
-</span></span><span style="display:flex;"><span>}
-</span></span><span style="display:flex;"><span><span style="color:#007020;font-weight:bold">Else</span> {
-</span></span><span style="display:flex;"><span>    <span style="color:#007020">Write-Log</span> -Type Error -Message (<span style="color:#bb60d5">$_</span> | <span style="color:#007020">Out-String</span>) -Component <span style="color:#4070a0">&#34;Get-WindowsAutopilotInfo Install&#34;</span> -Path <span style="color:#bb60d5">$LogFilePath</span> ; Exit <span style="color:#40a070">1</span> 
-</span></span><span style="display:flex;"><span>}
-</span></span><span style="display:flex;"><span> 
-</span></span><span style="display:flex;"><span><span style="color:#60a0b0;font-style:italic">#Run the script</span>
-</span></span><span style="display:flex;"><span><span style="color:#007020;font-weight:bold">if</span> (<span style="color:#007020">Get-WindowsAutopilotinfo</span> -Online -TenantId <span style="color:#bb60d5">$TenantID</span> -AppId <span style="color:#bb60d5">$AppID</span> -AppSecret <span style="color:#bb60d5">$SecretID</span> -Grouptag <span style="color:#bb60d5">$GroupTag</span>) {
-</span></span><span style="display:flex;"><span>    <span style="color:#007020">Write-Log</span> -Type Info -Message <span style="color:#4070a0">&#34;Get-WindowsAutopilotInfo executed successfully&#34;</span> -Component <span style="color:#4070a0">&#34;Running Get-WindowsAutopilotInfo&#34;</span> -Path <span style="color:#bb60d5">$LogFilePath</span>
-</span></span><span style="display:flex;"><span>}
-</span></span><span style="display:flex;"><span><span style="color:#007020;font-weight:bold">Else</span> {
-</span></span><span style="display:flex;"><span>    <span style="color:#007020">Write-Log</span> -Type Error -Message (<span style="color:#bb60d5">$_</span> | <span style="color:#007020">Out-String</span>) -Component <span style="color:#4070a0">&#34;Get-WindowsAutopilotInfo Install&#34;</span> -Path <span style="color:#bb60d5">$LogFilePath</span> ; Exit <span style="color:#40a070">1</span> 
-</span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div></p>
-  </div>
-</div>
-
 <br>
 
 
@@ -19917,36 +19742,59 @@ header {
     </svg>
   </button>
   <div class="accordion-content ">
-    <p><div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#60a0b0;font-style:italic">&lt;#
-</span></span></span><span style="display:flex;"><span><span style="color:#60a0b0;font-style:italic">.</span><span style="color:#4070a0;font-style:italic">SYNOPSIS</span><span style="color:#60a0b0;font-style:italic">
-</span></span></span><span style="display:flex;"><span><span style="color:#60a0b0;font-style:italic">    Installs Get-WindowsAutopilotInfoCommunity.ps1 and calls it using the parameter
-</span></span></span><span style="display:flex;"><span><span style="color:#60a0b0;font-style:italic">.</span><span style="color:#4070a0;font-style:italic">DESCRIPTION</span><span style="color:#60a0b0;font-style:italic">
-</span></span></span><span style="display:flex;"><span><span style="color:#60a0b0;font-style:italic">    Used alongside a task sequence within Configuration Manager, this script was uses to add the device to autopilot and set a GroupTag
+    <p><div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#60a0b0;font-style:italic">&lt;#PSScriptInfo
+</span></span></span><span style="display:flex;"><span><span style="color:#60a0b0;font-style:italic">
+</span></span></span><span style="display:flex;"><span><span style="color:#60a0b0;font-style:italic">.VERSION 1.2.6
 </span></span></span><span style="display:flex;"><span><span style="color:#60a0b0;font-style:italic">.AUTHOR
-</span></span></span><span style="display:flex;"><span><span style="color:#60a0b0;font-style:italic">    Jonathan Fallis - www.deploymentshare.com
-</span></span></span><span style="display:flex;"><span><span style="color:#60a0b0;font-style:italic">    Nick Benton - www.oddsandendpoints.co.uk
-</span></span></span><span style="display:flex;"><span><span style="color:#60a0b0;font-style:italic">.VERSION
-</span></span></span><span style="display:flex;"><span><span style="color:#60a0b0;font-style:italic">    1.0.7 - Changed WinRM configuration
-</span></span></span><span style="display:flex;"><span><span style="color:#60a0b0;font-style:italic">    1.0.6 - Added Microsoft.Graph.Authentication to the required modules and requirement for WinRM
-</span></span></span><span style="display:flex;"><span><span style="color:#60a0b0;font-style:italic">    1.0.5 - Changed error handling to display in console and use transcript
-</span></span></span><span style="display:flex;"><span><span style="color:#60a0b0;font-style:italic">    1.0.4 - Improved logic
-</span></span></span><span style="display:flex;"><span><span style="color:#60a0b0;font-style:italic">    1.0.3 - Updated so the error handling works
-</span></span></span><span style="display:flex;"><span><span style="color:#60a0b0;font-style:italic">    1.0.2 - Updated to support Get-WindowsAutopilotInfoCommunity and empty groupTags
-</span></span></span><span style="display:flex;"><span><span style="color:#60a0b0;font-style:italic">    1.0.1 - Added Error Logging
-</span></span></span><span style="display:flex;"><span><span style="color:#60a0b0;font-style:italic">    1.0.0 - Original
-</span></span></span><span style="display:flex;"><span><span style="color:#60a0b0;font-style:italic">.</span><span style="color:#4070a0;font-style:italic">EXAMPLE</span><span style="color:#60a0b0;font-style:italic">
-</span></span></span><span style="display:flex;"><span><span style="color:#60a0b0;font-style:italic">    .\Set-AutopilotGroupTag -tenantId &#34;123456&#34; -appId &#34;234567&#34; -appSecret &#34;345678&#34; -groupTag &#34;AutopilotDevice&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#60a0b0;font-style:italic">Jonathan Fallis - www.deploymentshare.com
+</span></span></span><span style="display:flex;"><span><span style="color:#60a0b0;font-style:italic">Nick Benton - www.oddsandendpoints.co.uk
+</span></span></span><span style="display:flex;"><span><span style="color:#60a0b0;font-style:italic">
+</span></span></span><span style="display:flex;"><span><span style="color:#60a0b0;font-style:italic">.RELEASENOTES
+</span></span></span><span style="display:flex;"><span><span style="color:#60a0b0;font-style:italic">1.0.0 - Original
+</span></span></span><span style="display:flex;"><span><span style="color:#60a0b0;font-style:italic">1.0.1 - Added Error Logging
+</span></span></span><span style="display:flex;"><span><span style="color:#60a0b0;font-style:italic">1.0.2 - Updated to support Get-WindowsAutopilotInfoCommunity and empty groupTags
+</span></span></span><span style="display:flex;"><span><span style="color:#60a0b0;font-style:italic">1.1.0 - Updated so the error handling works
+</span></span></span><span style="display:flex;"><span><span style="color:#60a0b0;font-style:italic">1.2.0 - Improved logic
+</span></span></span><span style="display:flex;"><span><span style="color:#60a0b0;font-style:italic">1.2.1 - Changed error handling to display in console and use transcript
+</span></span></span><span style="display:flex;"><span><span style="color:#60a0b0;font-style:italic">1.2.2 - Added Microsoft.Graph.Authentication to the required modules and requirement for WinRM
+</span></span></span><span style="display:flex;"><span><span style="color:#60a0b0;font-style:italic">1.2.3 - Changed WinRM configuration
+</span></span></span><span style="display:flex;"><span><span style="color:#60a0b0;font-style:italic">1.2.4 - Updated logging settings
+</span></span></span><span style="display:flex;"><span><span style="color:#60a0b0;font-style:italic">1.2.5 - Included diagnostics script to allow for troubleshooting
+</span></span></span><span style="display:flex;"><span><span style="color:#60a0b0;font-style:italic">1.2.6 - Corrected params to match blog post images
+</span></span></span><span style="display:flex;"><span><span style="color:#60a0b0;font-style:italic">
+</span></span></span><span style="display:flex;"><span><span style="color:#60a0b0;font-style:italic">PRIVATEDATA
 </span></span></span><span style="display:flex;"><span><span style="color:#60a0b0;font-style:italic">#&gt;</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#007020;font-weight:bold">Param</span>(
+</span></span><span style="display:flex;"><span><span style="color:#60a0b0;font-style:italic">&lt;#
+</span></span></span><span style="display:flex;"><span><span style="color:#60a0b0;font-style:italic">.</span><span style="color:#4070a0;font-style:italic">SYNOPSIS</span><span style="color:#60a0b0;font-style:italic">
+</span></span></span><span style="display:flex;"><span><span style="color:#60a0b0;font-style:italic">    Installs Get-WindowsAutopilotInfoCommunity.ps1 and calls it using the parameters
+</span></span></span><span style="display:flex;"><span><span style="color:#60a0b0;font-style:italic">.</span><span style="color:#4070a0;font-style:italic">DESCRIPTION</span><span style="color:#60a0b0;font-style:italic">
+</span></span></span><span style="display:flex;"><span><span style="color:#60a0b0;font-style:italic">    Used alongside a task sequence within Configuration Manager, this script was uses to add the device to autopilot and set a GroupTag
+</span></span></span><span style="display:flex;"><span><span style="color:#60a0b0;font-style:italic">
+</span></span></span><span style="display:flex;"><span><span style="color:#60a0b0;font-style:italic">.</span><span style="color:#4070a0;font-style:italic">EXAMPLE</span><span style="color:#60a0b0;font-style:italic">
+</span></span></span><span style="display:flex;"><span><span style="color:#60a0b0;font-style:italic">    .\Set-AutopilotGroupTag -tenantId &#34;123456&#34; -appId &#34;234567&#34; -appSecret &#34;345678&#34; -groupTag &#34;AutopilotDevice&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#60a0b0;font-style:italic">
+</span></span></span><span style="display:flex;"><span><span style="color:#60a0b0;font-style:italic">.</span><span style="color:#4070a0;font-style:italic">NOTES</span><span style="color:#60a0b0;font-style:italic">
+</span></span></span><span style="display:flex;"><span><span style="color:#60a0b0;font-style:italic">Should use Task Sequence Variables for the parameters, e.g. %TenantID%, %AppID%, %AppSecret%, %GroupTag%
+</span></span></span><span style="display:flex;"><span><span style="color:#60a0b0;font-style:italic">
+</span></span></span><span style="display:flex;"><span><span style="color:#60a0b0;font-style:italic">To allow data to be passed to SMSTSLog create a variable called &#39;OSDLogPowerShellParameters&#39; and set it to &#39;True&#39;
+</span></span></span><span style="display:flex;"><span><span style="color:#60a0b0;font-style:italic">
+</span></span></span><span style="display:flex;"><span><span style="color:#60a0b0;font-style:italic">#&gt;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#007020;font-weight:bold">param</span>(
+</span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>    [<span style="color:#007020">Parameter</span>(<span style="color:#4070a0">Mandatory</span> = $true)]
-</span></span><span style="display:flex;"><span>    [<span style="color:#60add5">string</span>]<span style="color:#bb60d5">$tenantId</span>,
+</span></span><span style="display:flex;"><span>    [<span style="color:#60add5">string</span>]<span style="color:#bb60d5">$TenantID</span>,
+</span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>    [<span style="color:#007020">Parameter</span>(<span style="color:#4070a0">Mandatory</span> = $true)]
-</span></span><span style="display:flex;"><span>    [<span style="color:#60add5">string</span>]<span style="color:#bb60d5">$appId</span>,
+</span></span><span style="display:flex;"><span>    [<span style="color:#60add5">string</span>]<span style="color:#bb60d5">$AppId</span>,
+</span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>    [<span style="color:#007020">Parameter</span>(<span style="color:#4070a0">Mandatory</span> = $true)]
-</span></span><span style="display:flex;"><span>    [<span style="color:#60add5">string</span>]<span style="color:#bb60d5">$appSecret</span>,
+</span></span><span style="display:flex;"><span>    [<span style="color:#60add5">string</span>]<span style="color:#bb60d5">$SecretID</span>,
+</span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>    [<span style="color:#007020">Parameter</span>(<span style="color:#4070a0">Mandatory</span> = $false)]
-</span></span><span style="display:flex;"><span>    [<span style="color:#60add5">string</span>]<span style="color:#bb60d5">$groupTag</span>
+</span></span><span style="display:flex;"><span>    [<span style="color:#60add5">string</span>]<span style="color:#bb60d5">$GroupTag</span>
+</span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>)
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#bb60d5">$ErrorActionPreference</span> = <span style="color:#4070a0">&#39;stop&#39;</span>
@@ -19964,45 +19812,48 @@ header {
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>[<span style="color:#60add5">System.Environment</span>]::SetEnvironmentVariable(<span style="color:#4070a0">&#39;LOCALAPPDATA&#39;</span>, <span style="color:#4070a0">&#34;</span><span style="color:#bb60d5">$env:SystemDrive</span><span style="color:#4070a0">\Windows\system32\config\systemprofile\AppData\Local&#34;</span>)
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#60a0b0;font-style:italic">#Test for internet connectivity using 8.8.8.8</span>
-</span></span><span style="display:flex;"><span><span style="color:#007020;font-weight:bold">If</span> (<span style="color:#007020">Test-Connection</span> <span style="color:#40a070">8.8</span>.8.8 -Quiet) {
+</span></span><span style="display:flex;"><span><span style="color:#60a0b0;font-style:italic">#region connection check</span>
+</span></span><span style="display:flex;"><span><span style="color:#007020;font-weight:bold">if</span> (<span style="color:#007020">Test-Connection</span> <span style="color:#40a070">8.8</span>.8.8 -Quiet) {
 </span></span><span style="display:flex;"><span>    <span style="color:#007020">Write-Output</span> <span style="color:#4070a0">&#39;Internet Connection OK&#39;</span>
 </span></span><span style="display:flex;"><span>}
-</span></span><span style="display:flex;"><span><span style="color:#007020;font-weight:bold">Else</span> {
+</span></span><span style="display:flex;"><span><span style="color:#007020;font-weight:bold">else</span> {
 </span></span><span style="display:flex;"><span>    <span style="color:#007020">Write-Error</span> <span style="color:#4070a0">&#39;Internet Connection check failed&#39;</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#007020">Stop-Transcript</span>
-</span></span><span style="display:flex;"><span>    Exit <span style="color:#40a070">1</span>
+</span></span><span style="display:flex;"><span>    exit <span style="color:#40a070">1</span>
 </span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#60a0b0;font-style:italic">#endregion connection check</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#60a0b0;font-style:italic">#Enable TLS 1.2</span>
-</span></span><span style="display:flex;"><span><span style="color:#007020;font-weight:bold">Try</span> {
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#60a0b0;font-style:italic">#region TLS1.2</span>
+</span></span><span style="display:flex;"><span><span style="color:#007020;font-weight:bold">try</span> {
 </span></span><span style="display:flex;"><span>    [<span style="color:#60add5">Net.ServicePointManager</span>]::SecurityProtocol = [<span style="color:#60add5">Net.SecurityProtocolType</span>]::Tls12
 </span></span><span style="display:flex;"><span>    <span style="color:#007020">Write-Output</span> <span style="color:#4070a0">&#39;Setting TLS1.2&#39;</span>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>}
-</span></span><span style="display:flex;"><span><span style="color:#007020;font-weight:bold">Catch</span> {
+</span></span><span style="display:flex;"><span><span style="color:#007020;font-weight:bold">catch</span> {
 </span></span><span style="display:flex;"><span>    <span style="color:#007020">Write-Error</span> <span style="color:#4070a0">&#34;Setting TLS1.2 - </span>$(<span style="color:#bb60d5">$_</span>.Exception | <span style="color:#007020">Out-String</span>)<span style="color:#4070a0">&#34;</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#007020">Stop-Transcript</span>
-</span></span><span style="display:flex;"><span>    Exit <span style="color:#40a070">1</span>
+</span></span><span style="display:flex;"><span>    exit <span style="color:#40a070">1</span>
 </span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#60a0b0;font-style:italic">#endregion TLS1.2</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#60a0b0;font-style:italic">#Modules</span>
+</span></span><span style="display:flex;"><span><span style="color:#60a0b0;font-style:italic">#region Modules</span>
 </span></span><span style="display:flex;"><span><span style="color:#bb60d5">$PowerShellModules</span> = @(<span style="color:#4070a0">&#39;PackageManagement&#39;</span>, <span style="color:#4070a0">&#39;PowerShellGet&#39;</span>, <span style="color:#4070a0">&#39;Microsoft.Graph.Authentication&#39;</span>)
 </span></span><span style="display:flex;"><span><span style="color:#007020;font-weight:bold">foreach</span> (<span style="color:#bb60d5">$PowerShellModule</span> <span style="color:#007020;font-weight:bold">in</span> <span style="color:#bb60d5">$PowerShellModules</span>) {
-</span></span><span style="display:flex;"><span>    <span style="color:#bb60d5">$PowerShellModuleVer</span> = <span style="color:#007020;font-weight:bold">Switch</span> (<span style="color:#bb60d5">$PowerShellModule</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#bb60d5">$PowerShellModuleVer</span> = <span style="color:#007020;font-weight:bold">switch</span> (<span style="color:#bb60d5">$PowerShellModule</span>) {
 </span></span><span style="display:flex;"><span>        PackageManagement { <span style="color:#4070a0">&#39;1.4.8.1&#39;</span> }
 </span></span><span style="display:flex;"><span>        PowerShellGet { <span style="color:#4070a0">&#39;2.2.5&#39;</span> }
 </span></span><span style="display:flex;"><span>        Microsoft.Graph.Authentication { <span style="color:#4070a0">&#39;2.9.1&#39;</span> }
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>    }
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#bb60d5">$PowerShellModuleURL</span> = <span style="color:#007020;font-weight:bold">Switch</span> (<span style="color:#bb60d5">$PowerShellModule</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#bb60d5">$PowerShellModuleURL</span> = <span style="color:#007020;font-weight:bold">switch</span> (<span style="color:#bb60d5">$PowerShellModule</span>) {
 </span></span><span style="display:flex;"><span>        PackageManagement { <span style="color:#4070a0">&#34;https://psg-prod-eastus.azureedge.net/packages/</span>$(<span style="color:#bb60d5">$PowerShellModule</span>.ToLower())<span style="color:#4070a0">.</span><span style="color:#bb60d5">$PowerShellModuleVer</span><span style="color:#4070a0">.nupkg&#34;</span> }
 </span></span><span style="display:flex;"><span>        PowerShellGet { <span style="color:#4070a0">&#34;https://psg-prod-eastus.azureedge.net/packages/</span>$(<span style="color:#bb60d5">$PowerShellModule</span>.ToLower())<span style="color:#4070a0">.</span><span style="color:#bb60d5">$PowerShellModuleVer</span><span style="color:#4070a0">.nupkg&#34;</span> }
 </span></span><span style="display:flex;"><span>        Microsoft.Graph.Authentication { <span style="color:#4070a0">&#34;https://psg-prod-eastus.azureedge.net/packages/</span>$(<span style="color:#bb60d5">$PowerShellModule</span>.ToLower())<span style="color:#4070a0">.</span><span style="color:#bb60d5">$PowerShellModuleVer</span><span style="color:#4070a0">.nupkg&#34;</span> }
 </span></span><span style="display:flex;"><span>    }
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#007020;font-weight:bold">Try</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#007020;font-weight:bold">try</span> {
 </span></span><span style="display:flex;"><span>        <span style="color:#007020;font-weight:bold">if</span> (!(<span style="color:#007020">Get-Module</span> -Name <span style="color:#bb60d5">$PowerShellModule</span>)) {
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>            <span style="color:#bb60d5">$PowerShellModuleZip</span> = <span style="color:#4070a0">&#34;</span><span style="color:#bb60d5">$workingDir</span><span style="color:#4070a0">\</span><span style="color:#bb60d5">$PowerShellModule</span><span style="color:#4070a0">.</span><span style="color:#bb60d5">$PowerShellModuleVer</span><span style="color:#4070a0">.zip&#34;</span>
@@ -20029,59 +19880,73 @@ header {
 </span></span><span style="display:flex;"><span>            <span style="color:#007020">Write-Output</span> <span style="color:#4070a0">&#34;Moved </span><span style="color:#bb60d5">$PowerShellModule</span><span style="color:#4070a0"> to </span><span style="color:#bb60d5">$PowerShellModulePF</span><span style="color:#4070a0">&#34;</span>
 </span></span><span style="display:flex;"><span>        }
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>        <span style="color:#007020;font-weight:bold">Try</span> {
+</span></span><span style="display:flex;"><span>        <span style="color:#007020;font-weight:bold">try</span> {
 </span></span><span style="display:flex;"><span>            <span style="color:#007020">Import-Module</span> <span style="color:#bb60d5">$PowerShellModule</span>
 </span></span><span style="display:flex;"><span>            <span style="color:#007020">Write-Output</span> <span style="color:#4070a0">&#34;</span><span style="color:#bb60d5">$PowerShellModule</span><span style="color:#4070a0"> Module Imported OK&#34;</span>
 </span></span><span style="display:flex;"><span>        }
-</span></span><span style="display:flex;"><span>        <span style="color:#007020;font-weight:bold">Catch</span> {
+</span></span><span style="display:flex;"><span>        <span style="color:#007020;font-weight:bold">catch</span> {
 </span></span><span style="display:flex;"><span>            <span style="color:#007020">Write-Error</span> <span style="color:#4070a0">&#34;</span><span style="color:#bb60d5">$PowerShellModule</span><span style="color:#4070a0"> Import - </span>$(<span style="color:#bb60d5">$_</span>.Exception | <span style="color:#007020">Out-String</span>)<span style="color:#4070a0">&#34;</span>
 </span></span><span style="display:flex;"><span>            <span style="color:#007020">Stop-Transcript</span>
-</span></span><span style="display:flex;"><span>            Exit <span style="color:#40a070">1</span>
+</span></span><span style="display:flex;"><span>            exit <span style="color:#40a070">1</span>
 </span></span><span style="display:flex;"><span>        }
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>    }
-</span></span><span style="display:flex;"><span>    <span style="color:#007020;font-weight:bold">Catch</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#007020;font-weight:bold">catch</span> {
 </span></span><span style="display:flex;"><span>        <span style="color:#007020">Write-Error</span> <span style="color:#4070a0">&#34;</span><span style="color:#bb60d5">$PowerShellModule</span><span style="color:#4070a0"> Module - </span>$(<span style="color:#bb60d5">$_</span>.Exception | <span style="color:#007020">Out-String</span>)<span style="color:#4070a0">&#34;</span>
 </span></span><span style="display:flex;"><span>        <span style="color:#007020">Stop-Transcript</span>
-</span></span><span style="display:flex;"><span>        Exit <span style="color:#40a070">1</span>
+</span></span><span style="display:flex;"><span>        exit <span style="color:#40a070">1</span>
 </span></span><span style="display:flex;"><span>    }
 </span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#60a0b0;font-style:italic">#endregion Modules</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#60a0b0;font-style:italic">#enable WinRM</span>
-</span></span><span style="display:flex;"><span><span style="color:#007020;font-weight:bold">Try</span> {
+</span></span><span style="display:flex;"><span><span style="color:#60a0b0;font-style:italic">#region WinRM</span>
+</span></span><span style="display:flex;"><span><span style="color:#007020;font-weight:bold">try</span> {
 </span></span><span style="display:flex;"><span>    <span style="color:#007020">Set-WSManQuickConfig</span> -Force -SkipNetworkProfileCheck
 </span></span><span style="display:flex;"><span>    <span style="color:#007020">Write-Output</span> <span style="color:#4070a0">&#39;Enabled WinRM&#39;</span>
 </span></span><span style="display:flex;"><span>}
 </span></span><span style="display:flex;"><span><span style="color:#007020;font-weight:bold">catch</span> {
 </span></span><span style="display:flex;"><span>    <span style="color:#007020">Write-Error</span> <span style="color:#4070a0">&#34;WinRM - </span>$(<span style="color:#bb60d5">$_</span>.Exception | <span style="color:#007020">Out-String</span>)<span style="color:#4070a0">&#34;</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#007020">Stop-Transcript</span>
-</span></span><span style="display:flex;"><span>    Exit <span style="color:#40a070">1</span>
+</span></span><span style="display:flex;"><span>    exit <span style="color:#40a070">1</span>
 </span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#60a0b0;font-style:italic">#endregion WinRM</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#60a0b0;font-style:italic">#Install the script</span>
-</span></span><span style="display:flex;"><span><span style="color:#007020;font-weight:bold">Try</span> {
+</span></span><span style="display:flex;"><span><span style="color:#60a0b0;font-style:italic">#region Windows Autopilot Info Community</span>
+</span></span><span style="display:flex;"><span><span style="color:#007020;font-weight:bold">try</span> {
 </span></span><span style="display:flex;"><span>    <span style="color:#007020">Install-Script</span> <span style="color:#007020">Get-WindowsAutopilotInfoCommunity</span> -Force
 </span></span><span style="display:flex;"><span>    <span style="color:#007020">Write-Output</span> <span style="color:#4070a0">&#39;Get-WindowsAutopilotInfoCommunity Installed OK&#39;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#007020;font-weight:bold">Try</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#007020;font-weight:bold">try</span> {
 </span></span><span style="display:flex;"><span>        <span style="color:#007020;font-weight:bold">if</span> (!<span style="color:#bb60d5">$groupTag</span>) {
 </span></span><span style="display:flex;"><span>            <span style="color:#bb60d5">$groupTag</span> = <span style="color:#4070a0">&#39;&#39;</span>
 </span></span><span style="display:flex;"><span>        }
 </span></span><span style="display:flex;"><span>        <span style="color:#007020">Get-WindowsAutopilotInfoCommunity</span> -Online -tenantId <span style="color:#bb60d5">$tenantId</span> -appId <span style="color:#bb60d5">$appId</span> -appSecret <span style="color:#bb60d5">$appSecret</span> -groupTag <span style="color:#bb60d5">$groupTag</span>
 </span></span><span style="display:flex;"><span>        <span style="color:#007020">Write-Output</span> <span style="color:#4070a0">&#39;Get-WindowsAutopilotInfoCommunity executed successfully&#39;</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#007020">Stop-Transcript</span>
-</span></span><span style="display:flex;"><span>        exit <span style="color:#40a070">0</span>
 </span></span><span style="display:flex;"><span>    }
-</span></span><span style="display:flex;"><span>    <span style="color:#007020;font-weight:bold">Catch</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#007020;font-weight:bold">catch</span> {
 </span></span><span style="display:flex;"><span>        <span style="color:#007020">Write-Error</span> <span style="color:#4070a0">&#34;Get-WindowsAutopilotInfoCommunity execution - </span>$(<span style="color:#bb60d5">$_</span>.Exception | <span style="color:#007020">Out-String</span>)<span style="color:#4070a0">&#34;</span>
 </span></span><span style="display:flex;"><span>        <span style="color:#007020">Stop-Transcript</span>
-</span></span><span style="display:flex;"><span>        Exit <span style="color:#40a070">1</span>
+</span></span><span style="display:flex;"><span>        exit <span style="color:#40a070">1</span>
 </span></span><span style="display:flex;"><span>    }
 </span></span><span style="display:flex;"><span>}
-</span></span><span style="display:flex;"><span><span style="color:#007020;font-weight:bold">Catch</span> {
+</span></span><span style="display:flex;"><span><span style="color:#007020;font-weight:bold">catch</span> {
 </span></span><span style="display:flex;"><span>    <span style="color:#007020">Write-Error</span> <span style="color:#4070a0">&#34;Get-WindowsAutopilotInfoCommunity Install - </span>$(<span style="color:#bb60d5">$_</span>.Exception | <span style="color:#007020">Out-String</span>)<span style="color:#4070a0">&#34;</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#007020">Stop-Transcript</span>
-</span></span><span style="display:flex;"><span>    Exit <span style="color:#40a070">1</span>
+</span></span><span style="display:flex;"><span>    exit <span style="color:#40a070">1</span>
 </span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#60a0b0;font-style:italic">#endregion Windows Autopilot Info Community</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#60a0b0;font-style:italic">#region Windows Diagnostics Community</span>
+</span></span><span style="display:flex;"><span><span style="color:#007020;font-weight:bold">try</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#007020">Install-Script</span> <span style="color:#007020">Get-AutopilotDiagnosticsCommunity</span> -Force
+</span></span><span style="display:flex;"><span>    <span style="color:#007020">Write-Output</span> <span style="color:#4070a0">&#39;Get-AutopilotDiagnosticsCommunity Installed OK&#39;</span>
+</span></span><span style="display:flex;"><span>    exit <span style="color:#40a070">0</span>
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#007020;font-weight:bold">catch</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#007020">Write-Error</span> <span style="color:#4070a0">&#34;Get-AutopilotDiagnosticsCommunity Install - </span>$(<span style="color:#bb60d5">$_</span>.Exception | <span style="color:#007020">Out-String</span>)<span style="color:#4070a0">&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#007020">Stop-Transcript</span>
+</span></span><span style="display:flex;"><span>    exit <span style="color:#40a070">0</span>
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#60a0b0;font-style:italic">#endregion Windows Diagnostics Community</span>
 </span></span></code></pre></div></p>
   </div>
 </div>
