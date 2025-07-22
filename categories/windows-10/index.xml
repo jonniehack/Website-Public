@@ -13,7 +13,7 @@
       <link>https://deploymentshare.com/articles/bp-applications/</link>
       <pubDate>Sat, 27 Mar 2021 00:00:00 +0000</pubDate>
       <guid>https://deploymentshare.com/articles/bp-applications/</guid>
-      <description>Hello everyone, I hope you are all safe and well.&#xA;I’ve been thinking about writing this for a while and I hope it helps some of you new to app packaging.&#xA;How do I build apps? It never hurts to brush up if you’re a seasoned app-packager. App packaging isn’t going away any time soon, everyone needs apps. The Microsoft app store has gotten better but I don’t feel it’s quite there yet in terms of broadly available applications. Sometimes, companies can have line-of-business applications that they build in-house and as system administrators, you may be responsible for packaging and distributing those applications.</description>
+      <description>&lt;p&gt;Hello everyone, I hope you are all safe and well.&lt;/p&gt;&#xA;&lt;p&gt;I’ve been thinking about writing this for a while and I hope it helps some of you new to app packaging.&lt;/p&gt;&#xA;&lt;ins&gt;&#xA;&lt;h4 id=&#34;how-do-i-build-apps&#34;&gt;How do I build apps?&lt;/h4&gt;&#xA;&lt;/ins&gt;&#xA;&lt;p&gt;It never hurts to brush up if you’re a seasoned app-packager. App packaging isn’t going away any time soon, everyone needs apps. The Microsoft app store has gotten better but I don’t feel it’s quite there yet in terms of broadly available applications. Sometimes, companies can have line-of-business applications that they build in-house and as system administrators, you may be responsible for packaging and distributing those applications. How do you tackle it? where do you begin?&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

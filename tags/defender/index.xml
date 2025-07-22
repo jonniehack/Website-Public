@@ -13,7 +13,7 @@
       <link>https://deploymentshare.com/articles/bp-dfec/</link>
       <pubDate>Wed, 26 Jun 2024 00:00:00 +0100</pubDate>
       <guid>https://deploymentshare.com/articles/bp-dfec/</guid>
-      <description>Defender for Endpoint, are you licensed for it? Are you using it? Are you using Intune? Then why are you not using the Intune Connector for Microsoft Defender for Endpoint (MDE)? In this article I will hope to explore this on your behalf and share my findings. Microsoft Defender for Endpoint and Intune can be integrated to enhance your organisation&amp;rsquo;s security posture by enabling endpoint protection, threat detection, and response capabilities across all managed devices. This integration allows for the sharing of security information and the application of compliance policies based on threat intelligence.&#xA;So, what do we need to be able to use this?</description>
+      <description>&lt;p&gt;Defender for Endpoint, are you licensed for it?  Are you using it?  Are you using Intune?  Then why are you not using the Intune Connector for Microsoft Defender for Endpoint (MDE)?  In this article I will hope to explore this on your behalf and share my findings. Microsoft Defender for Endpoint and Intune can be integrated to enhance your organisation&amp;rsquo;s security posture by enabling endpoint protection, threat detection, and response capabilities across all managed devices. This integration allows for the sharing of security information and the application of compliance policies based on threat intelligence.&lt;/p&gt;&#xA;&lt;p&gt;So, what do we need to be able to use this?  Lets take a look at the minimum requirements for Defender for Endpoint?&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
