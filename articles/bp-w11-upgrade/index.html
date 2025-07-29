@@ -21532,221 +21532,53 @@ header {
 <h3 id="collections">Collections</h3>
 <p>Below is a list of collections you may find useful</p>
 <h5 id="any-windows-10-device">Any Windows 10 device</h5>
-
-
-
-
-
-
-
-
-  
-  
-
-  
-    
-  
-
-  
-
-  
-  
-  
-  <div class="highlight" title="Any_Windows_10_Device.wql"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#007020;font-weight:bold">SELECT</span><span style="color:#bbb"> </span>SMS_R_SYSTEM.ResourceID,SMS_R_SYSTEM.ResourceType,SMS_R_SYSTEM.Name,SMS_R_SYSTEM.SMSUniqueIdentifier,SMS_R_SYSTEM.ResourceDomainORWorkgroup,SMS_R_SYSTEM.Client<span style="color:#bbb">
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#007020;font-weight:bold">SELECT</span><span style="color:#bbb"> </span>SMS_R_SYSTEM.ResourceID,SMS_R_SYSTEM.ResourceType,SMS_R_SYSTEM.Name,SMS_R_SYSTEM.SMSUniqueIdentifier,SMS_R_SYSTEM.ResourceDomainORWorkgroup,SMS_R_SYSTEM.Client<span style="color:#bbb">
 </span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span><span style="color:#007020;font-weight:bold">FROM</span><span style="color:#bbb"> </span>SMS_R_System<span style="color:#bbb"> 
 </span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span><span style="color:#007020;font-weight:bold">INNER</span><span style="color:#bbb"> </span><span style="color:#007020;font-weight:bold">JOIN</span><span style="color:#bbb"> </span>SMS_G_System_OPERATING_SYSTEM<span style="color:#bbb"> </span><span style="color:#007020;font-weight:bold">ON</span><span style="color:#bbb"> </span>SMS_G_System_OPERATING_SYSTEM.ResourceID<span style="color:#bbb"> </span><span style="color:#666">=</span><span style="color:#bbb"> </span>SMS_R_System.ResourceId<span style="color:#bbb">
 </span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span><span style="color:#007020;font-weight:bold">WHERE</span><span style="color:#bbb"> </span>SMS_G_System_OPERATING_SYSTEM.<span style="color:#007020;font-weight:bold">Version</span><span style="color:#bbb"> </span><span style="color:#007020;font-weight:bold">LIKE</span><span style="color:#bbb"> </span><span style="color:#4070a0">&#34;10.0.1%&#34;</span><span style="color:#bbb">
 </span></span></span></code></pre></div>
-
 <h5 id="windows-11---21h2-devices">Windows 11 - 21H2 Devices</h5>
-
-
-
-
-
-
-
-
-  
-  
-
-  
-    
-  
-
-  
-
-  
-  
-  
-  <div class="highlight" title="Windows11_21H2_Devices.wql"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#007020;font-weight:bold">SELECT</span><span style="color:#bbb"> </span>SMS_R_SYSTEM.ResourceID,SMS_R_SYSTEM.ResourceType,SMS_R_SYSTEM.Name,SMS_R_SYSTEM.SMSUniqueIdentifier,SMS_R_SYSTEM.ResourceDomainORWorkgroup,SMS_R_SYSTEM.Client<span style="color:#bbb"> 
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#007020;font-weight:bold">SELECT</span><span style="color:#bbb"> </span>SMS_R_SYSTEM.ResourceID,SMS_R_SYSTEM.ResourceType,SMS_R_SYSTEM.Name,SMS_R_SYSTEM.SMSUniqueIdentifier,SMS_R_SYSTEM.ResourceDomainORWorkgroup,SMS_R_SYSTEM.Client<span style="color:#bbb"> 
 </span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span><span style="color:#007020;font-weight:bold">FROM</span><span style="color:#bbb"> </span>SMS_R_System<span style="color:#bbb"> 
 </span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span><span style="color:#007020;font-weight:bold">INNER</span><span style="color:#bbb"> </span><span style="color:#007020;font-weight:bold">JOIN</span><span style="color:#bbb"> </span>SMS_G_System_OPERATING_SYSTEM<span style="color:#bbb"> </span><span style="color:#007020;font-weight:bold">on</span><span style="color:#bbb"> </span>SMS_G_System_OPERATING_SYSTEM.ResourceID<span style="color:#bbb"> </span><span style="color:#666">=</span><span style="color:#bbb"> </span>SMS_R_System.ResourceId<span style="color:#bbb"> 
 </span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span><span style="color:#007020;font-weight:bold">WHERE</span><span style="color:#bbb"> </span>SMS_G_System_OPERATING_SYSTEM.<span style="color:#007020;font-weight:bold">Version</span><span style="color:#bbb"> </span><span style="color:#666">=</span><span style="color:#bbb"> </span><span style="color:#4070a0">&#34;10.0.22000&#34;</span><span style="color:#bbb">
 </span></span></span></code></pre></div>
-
 <h5 id="windows-11---22h2-devices">Windows 11 - 22H2 Devices</h5>
-
-
-
-
-
-
-
-
-  
-  
-
-  
-    
-  
-
-  
-
-  
-  
-  
-  <div class="highlight" title="Windows11_22H2_Devices.wql"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#007020;font-weight:bold">SELECT</span><span style="color:#bbb"> </span>SMS_R_SYSTEM.ResourceID,SMS_R_SYSTEM.ResourceType,SMS_R_SYSTEM.Name,SMS_R_SYSTEM.SMSUniqueIdentifier,SMS_R_SYSTEM.ResourceDomainORWorkgroup,SMS_R_SYSTEM.Client<span style="color:#bbb">
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#007020;font-weight:bold">SELECT</span><span style="color:#bbb"> </span>SMS_R_SYSTEM.ResourceID,SMS_R_SYSTEM.ResourceType,SMS_R_SYSTEM.Name,SMS_R_SYSTEM.SMSUniqueIdentifier,SMS_R_SYSTEM.ResourceDomainORWorkgroup,SMS_R_SYSTEM.Client<span style="color:#bbb">
 </span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span><span style="color:#007020;font-weight:bold">FROM</span><span style="color:#bbb"> </span>SMS_R_System<span style="color:#bbb"> 
 </span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span><span style="color:#007020;font-weight:bold">INNER</span><span style="color:#bbb"> </span><span style="color:#007020;font-weight:bold">JOIN</span><span style="color:#bbb"> </span>SMS_G_System_OPERATING_SYSTEM<span style="color:#bbb"> </span><span style="color:#007020;font-weight:bold">on</span><span style="color:#bbb"> </span>SMS_G_System_OPERATING_SYSTEM.ResourceID<span style="color:#bbb"> </span><span style="color:#666">=</span><span style="color:#bbb"> </span>SMS_R_System.ResourceId<span style="color:#bbb"> 
 </span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span><span style="color:#007020;font-weight:bold">WHERE</span><span style="color:#bbb"> </span>SMS_G_System_OPERATING_SYSTEM.<span style="color:#007020;font-weight:bold">Version</span><span style="color:#bbb"> </span><span style="color:#666">=</span><span style="color:#bbb"> </span><span style="color:#4070a0">&#34;10.0.22621&#34;</span><span style="color:#bbb">
 </span></span></span></code></pre></div>
-
 <h5 id="windows-11---23h2-devices">Windows 11 - 23H2 Devices</h5>
-
-
-
-
-
-
-
-
-  
-  
-
-  
-    
-  
-
-  
-
-  
-  
-  
-  <div class="highlight" title="Windows11_23H2_Devices.wql"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#007020;font-weight:bold">SELECT</span><span style="color:#bbb"> </span>SMS_R_SYSTEM.ResourceID,SMS_R_SYSTEM.ResourceType,SMS_R_SYSTEM.Name,SMS_R_SYSTEM.SMSUniqueIdentifier,SMS_R_SYSTEM.ResourceDomainORWorkgroup,SMS_R_SYSTEM.Client<span style="color:#bbb">
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#007020;font-weight:bold">SELECT</span><span style="color:#bbb"> </span>SMS_R_SYSTEM.ResourceID,SMS_R_SYSTEM.ResourceType,SMS_R_SYSTEM.Name,SMS_R_SYSTEM.SMSUniqueIdentifier,SMS_R_SYSTEM.ResourceDomainORWorkgroup,SMS_R_SYSTEM.Client<span style="color:#bbb">
 </span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span><span style="color:#007020;font-weight:bold">FROM</span><span style="color:#bbb"> </span>SMS_R_System<span style="color:#bbb"> 
 </span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span><span style="color:#007020;font-weight:bold">INNER</span><span style="color:#bbb"> </span><span style="color:#007020;font-weight:bold">JOIN</span><span style="color:#bbb"> </span>SMS_G_System_OPERATING_SYSTEM<span style="color:#bbb"> </span><span style="color:#007020;font-weight:bold">on</span><span style="color:#bbb"> </span>SMS_G_System_OPERATING_SYSTEM.ResourceID<span style="color:#bbb"> </span><span style="color:#666">=</span><span style="color:#bbb"> </span>SMS_R_System.ResourceId<span style="color:#bbb"> 
 </span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span><span style="color:#007020;font-weight:bold">WHERE</span><span style="color:#bbb"> </span>SMS_G_System_OPERATING_SYSTEM.<span style="color:#007020;font-weight:bold">Version</span><span style="color:#bbb"> </span><span style="color:#666">=</span><span style="color:#bbb"> </span><span style="color:#4070a0">&#34;10.0.22631&#34;</span><span style="color:#bbb">
 </span></span></span></code></pre></div>
-
 <h5 id="windows-11---24h2-devices">Windows 11 - 24H2 Devices</h5>
-
-
-
-
-
-
-
-
-  
-  
-
-  
-    
-  
-
-  
-
-  
-  
-  
-  <div class="highlight" title="Windows11_24H2_Devices.wql"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#007020;font-weight:bold">SELECT</span><span style="color:#bbb"> </span>SMS_R_SYSTEM.ResourceID,SMS_R_SYSTEM.ResourceType,SMS_R_SYSTEM.Name,SMS_R_SYSTEM.SMSUniqueIdentifier,SMS_R_SYSTEM.ResourceDomainORWorkgroup,SMS_R_SYSTEM.Client<span style="color:#bbb">
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#007020;font-weight:bold">SELECT</span><span style="color:#bbb"> </span>SMS_R_SYSTEM.ResourceID,SMS_R_SYSTEM.ResourceType,SMS_R_SYSTEM.Name,SMS_R_SYSTEM.SMSUniqueIdentifier,SMS_R_SYSTEM.ResourceDomainORWorkgroup,SMS_R_SYSTEM.Client<span style="color:#bbb">
 </span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span><span style="color:#007020;font-weight:bold">FROM</span><span style="color:#bbb"> </span>SMS_R_System<span style="color:#bbb"> 
 </span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span><span style="color:#007020;font-weight:bold">INNER</span><span style="color:#bbb"> </span><span style="color:#007020;font-weight:bold">JOIN</span><span style="color:#bbb"> </span>SMS_G_System_OPERATING_SYSTEM<span style="color:#bbb"> </span><span style="color:#007020;font-weight:bold">on</span><span style="color:#bbb"> </span>SMS_G_System_OPERATING_SYSTEM.ResourceID<span style="color:#bbb"> </span><span style="color:#666">=</span><span style="color:#bbb"> </span>SMS_R_System.ResourceId<span style="color:#bbb">
 </span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span><span style="color:#007020;font-weight:bold">WHERE</span><span style="color:#bbb"> </span>SMS_G_System_OPERATING_SYSTEM.<span style="color:#007020;font-weight:bold">Version</span><span style="color:#bbb"> </span><span style="color:#666">=</span><span style="color:#bbb"> </span><span style="color:#4070a0">&#34;10.0.26100&#34;</span><span style="color:#bbb">
 </span></span></span></code></pre></div>
-
 <h5 id="devices-that-are-eligible-to-install-windows-11-22h2">Devices that are eligible to install Windows 11 22H2</h5>
-
-
-
-
-
-
-
-
-  
-  
-
-  
-    
-  
-
-  
-
-  
-  
-  
-  <div class="highlight" title="Eligible_for_Win11_22H2.wql"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#007020;font-weight:bold">SELECT</span><span style="color:#bbb"> </span>SMS_R_SYSTEM.ResourceID,SMS_R_SYSTEM.ResourceType,SMS_R_SYSTEM.Name,SMS_R_SYSTEM.SMSUniqueIdentifier,SMS_R_SYSTEM.ResourceDomainORWorkgroup,SMS_R_SYSTEM.ClientS<span style="color:#bbb">
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#007020;font-weight:bold">SELECT</span><span style="color:#bbb"> </span>SMS_R_SYSTEM.ResourceID,SMS_R_SYSTEM.ResourceType,SMS_R_SYSTEM.Name,SMS_R_SYSTEM.SMSUniqueIdentifier,SMS_R_SYSTEM.ResourceDomainORWorkgroup,SMS_R_SYSTEM.ClientS<span style="color:#bbb">
 </span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span><span style="color:#007020;font-weight:bold">FROM</span><span style="color:#bbb"> </span>SMS_R_System<span style="color:#bbb"> 
 </span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span><span style="color:#007020;font-weight:bold">INNER</span><span style="color:#bbb"> </span><span style="color:#007020;font-weight:bold">JOIN</span><span style="color:#bbb"> </span>SMS_G_System_UPGRADE_EXPERIENCE_INDICATORS<span style="color:#bbb"> </span><span style="color:#007020;font-weight:bold">on</span><span style="color:#bbb"> </span>SMS_G_System_UPGRADE_EXPERIENCE_INDICATORS.ResourceID<span style="color:#bbb"> </span><span style="color:#666">=</span><span style="color:#bbb"> </span>SMS_R_System.ResourceId<span style="color:#bbb">
 </span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span><span style="color:#007020;font-weight:bold">WHERE</span><span style="color:#bbb"> </span>SMS_G_System_UPGRADE_EXPERIENCE_INDICATORS.UpgExProp<span style="color:#bbb"> </span><span style="color:#666">=</span><span style="color:#bbb"> </span><span style="color:#4070a0">&#34;Green&#34;</span><span style="color:#bbb"> </span><span style="color:#007020;font-weight:bold">and</span><span style="color:#bbb"> </span>SMS_G_System_UPGRADE_EXPERIENCE_INDICATORS.<span style="color:#007020;font-weight:bold">Version</span><span style="color:#bbb"> </span><span style="color:#666">=</span><span style="color:#bbb"> </span><span style="color:#4070a0">&#34;NI22H2&#34;</span><span style="color:#bbb"> </span><span style="color:#007020;font-weight:bold">and</span><span style="color:#bbb"> </span>SMS_G_System_UPGRADE_EXPERIENCE_INDICATORS.UpgExU<span style="color:#bbb"> </span><span style="color:#666">=</span><span style="color:#bbb"> </span><span style="color:#4070a0">&#34;Green&#34;</span><span style="color:#bbb">
 </span></span></span></code></pre></div>
-
 <h5 id="devices-that-are-eligible-to-install-windows-11-23h2">Devices that are eligible to install Windows 11 23H2</h5>
-
-
-
-
-
-
-
-
-  
-  
-
-  
-    
-  
-
-  
-
-  
-  
-  
-  <div class="highlight" title="Eligible_for_Win11_23H2.wql"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#007020;font-weight:bold">SELECT</span><span style="color:#bbb"> </span>SMS_R_SYSTEM.ResourceID,SMS_R_SYSTEM.ResourceType,SMS_R_SYSTEM.Name,SMS_R_SYSTEM.SMSUniqueIdentifier,SMS_R_SYSTEM.ResourceDomainORWorkgroup,SMS_R_SYSTEM.Client<span style="color:#bbb">
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#007020;font-weight:bold">SELECT</span><span style="color:#bbb"> </span>SMS_R_SYSTEM.ResourceID,SMS_R_SYSTEM.ResourceType,SMS_R_SYSTEM.Name,SMS_R_SYSTEM.SMSUniqueIdentifier,SMS_R_SYSTEM.ResourceDomainORWorkgroup,SMS_R_SYSTEM.Client<span style="color:#bbb">
 </span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span><span style="color:#007020;font-weight:bold">FROM</span><span style="color:#bbb"> </span>SMS_R_System<span style="color:#bbb"> 
 </span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span><span style="color:#007020;font-weight:bold">INNER</span><span style="color:#bbb"> </span><span style="color:#007020;font-weight:bold">JOIN</span><span style="color:#bbb"> </span>SMS_G_System_UPGRADE_EXPERIENCE_INDICATORS<span style="color:#bbb"> </span><span style="color:#007020;font-weight:bold">on</span><span style="color:#bbb"> </span>SMS_G_System_UPGRADE_EXPERIENCE_INDICATORS.ResourceID<span style="color:#bbb"> </span><span style="color:#666">=</span><span style="color:#bbb"> </span>SMS_R_System.ResourceId<span style="color:#bbb">
 </span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span><span style="color:#007020;font-weight:bold">WHERE</span><span style="color:#bbb"> </span>SMS_G_System_UPGRADE_EXPERIENCE_INDICATORS.UpgExProp<span style="color:#bbb"> </span><span style="color:#666">=</span><span style="color:#bbb"> </span><span style="color:#4070a0">&#34;Green&#34;</span><span style="color:#bbb"> </span><span style="color:#007020;font-weight:bold">and</span><span style="color:#bbb"> </span>SMS_G_System_UPGRADE_EXPERIENCE_INDICATORS.<span style="color:#007020;font-weight:bold">Version</span><span style="color:#bbb"> </span><span style="color:#666">=</span><span style="color:#bbb"> </span><span style="color:#4070a0">&#34;NI23H2&#34;</span><span style="color:#bbb"> </span><span style="color:#007020;font-weight:bold">and</span><span style="color:#bbb"> </span>SMS_G_System_UPGRADE_EXPERIENCE_INDICATORS.UpgExU<span style="color:#bbb"> </span><span style="color:#666">=</span><span style="color:#bbb"> </span><span style="color:#4070a0">&#34;Green&#34;</span><span style="color:#bbb">
 </span></span></span></code></pre></div>
-
 <h5 id="devices-that-are-eligible-to-install-windows-11-24h2">Devices that are eligible to install Windows 11 24H2</h5>
-
-
-
-
-
-
-
-
-  
-  
-
-  
-    
-  
-
-  
-
-  
-  
-  
-  <div class="highlight" title="Eligible_for_Win11_24H2.wql"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#007020;font-weight:bold">SELECT</span><span style="color:#bbb"> </span>SMS_R_SYSTEM.ResourceID,SMS_R_SYSTEM.ResourceType,SMS_R_SYSTEM.Name,SMS_R_SYSTEM.SMSUniqueIdentifier,SMS_R_SYSTEM.ResourceDomainORWorkgroup,SMS_R_SYSTEM.Client<span style="color:#bbb">
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#007020;font-weight:bold">SELECT</span><span style="color:#bbb"> </span>SMS_R_SYSTEM.ResourceID,SMS_R_SYSTEM.ResourceType,SMS_R_SYSTEM.Name,SMS_R_SYSTEM.SMSUniqueIdentifier,SMS_R_SYSTEM.ResourceDomainORWorkgroup,SMS_R_SYSTEM.Client<span style="color:#bbb">
 </span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span><span style="color:#007020;font-weight:bold">FROM</span><span style="color:#bbb"> </span>SMS_R_System<span style="color:#bbb"> 
 </span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span><span style="color:#007020;font-weight:bold">INNER</span><span style="color:#bbb"> </span><span style="color:#007020;font-weight:bold">JOIN</span><span style="color:#bbb"> </span>SMS_G_System_UPGRADE_EXPERIENCE_INDICATORS<span style="color:#bbb"> </span><span style="color:#007020;font-weight:bold">on</span><span style="color:#bbb"> </span>SMS_G_System_UPGRADE_EXPERIENCE_INDICATORS.ResourceID<span style="color:#bbb"> </span><span style="color:#666">=</span><span style="color:#bbb"> </span>SMS_R_System.ResourceId<span style="color:#bbb">
 </span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span><span style="color:#007020;font-weight:bold">WHERE</span><span style="color:#bbb"> </span>SMS_G_System_UPGRADE_EXPERIENCE_INDICATORS.UpgExProp<span style="color:#bbb"> </span><span style="color:#666">=</span><span style="color:#bbb"> </span><span style="color:#4070a0">&#34;Green&#34;</span><span style="color:#bbb"> </span><span style="color:#007020;font-weight:bold">and</span><span style="color:#bbb"> </span>SMS_G_System_UPGRADE_EXPERIENCE_INDICATORS.<span style="color:#007020;font-weight:bold">Version</span><span style="color:#bbb"> </span><span style="color:#666">=</span><span style="color:#bbb"> </span><span style="color:#4070a0">&#34;GE24H2&#34;</span><span style="color:#bbb"> </span><span style="color:#007020;font-weight:bold">and</span><span style="color:#bbb"> </span>SMS_G_System_UPGRADE_EXPERIENCE_INDICATORS.UpgExU<span style="color:#bbb"> </span><span style="color:#666">=</span><span style="color:#bbb"> </span><span style="color:#4070a0">&#34;Green&#34;</span><span style="color:#bbb">
 </span></span></span></code></pre></div>
-
 <p>The upgrade experience indicators are triggered by the &ldquo;Microsoft Compatibility Appraiser&rdquo; scheduled task. if you are missing some devices in your collections its likely that you are going to have to come up with a way to trigger this and get those devices to check in to drop into the collections correctly, that will allow you to breakdown how you are going to target your feature update policies.</p>
 <table>
   <thead>
