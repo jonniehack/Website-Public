@@ -20,33 +20,33 @@
   
   "icons": [
     {
-      "src": "/images/favicon_hu12025833407889310569.png",
+      "src": "/images/favicon_hu_9cb9d5ebf5d63692.png",
       "sizes": "48x48",
       "type": "image/png"
     },
     {
-      "src": "/images/favicon_hu4215621294957516949.png",
+      "src": "/images/favicon_hu_7e8d4d39724518df.png",
       "sizes": "72x72",
       "type": "image/png"
     },
     {
-      "src": "/images/favicon_hu8588216545388247863.png",
+      "src": "/images/favicon_hu_c69d404230eba5be.png",
       "sizes": "96x96",
       "type": "image/png"
     },
     {
-      "src": "/images/favicon_hu5666697625549941465.png",
+      "src": "/images/favicon_hu_47e9e469d1ffe470.png",
       "sizes": "144x144",
       "type": "image/png"
     },
     {
-      "src": "/images/favicon_hu12446136598975805043.png",
+      "src": "/images/favicon_hu_692f82935d88990a.png",
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "any maskable"
     },
     {
-      "src": "/images/favicon_hu850928477109658663.png",
+      "src": "/images/favicon_hu_a181a37d8a0c8dc1.png",
       "sizes": "512x512",
       "type": "image/png"
     }

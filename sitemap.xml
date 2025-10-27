@@ -8,10 +8,10 @@
     <loc>https://deploymentshare.com/categories/</loc>
     <lastmod>2025-06-24T00:00:00+01:00</lastmod>
   </url><url>
-    <loc>https://deploymentshare.com/tags/configuration-manager/</loc>
+    <loc>https://deploymentshare.com/categories/configuration-manager/</loc>
     <lastmod>2025-06-24T00:00:00+01:00</lastmod>
   </url><url>
-    <loc>https://deploymentshare.com/categories/configuration-manager/</loc>
+    <loc>https://deploymentshare.com/tags/configuration-manager/</loc>
     <lastmod>2025-06-24T00:00:00+01:00</lastmod>
   </url><url>
     <loc>https://deploymentshare.com/</loc>
@@ -26,31 +26,31 @@
     <loc>https://deploymentshare.com/tags/</loc>
     <lastmod>2025-06-24T00:00:00+01:00</lastmod>
   </url><url>
-    <loc>https://deploymentshare.com/tags/windows-11/</loc>
-    <lastmod>2025-06-24T00:00:00+01:00</lastmod>
-  </url><url>
     <loc>https://deploymentshare.com/categories/windows-11/</loc>
     <lastmod>2025-06-24T00:00:00+01:00</lastmod>
   </url><url>
-    <loc>https://deploymentshare.com/tags/intune/</loc>
-    <lastmod>2024-07-26T00:00:00+01:00</lastmod>
+    <loc>https://deploymentshare.com/tags/windows-11/</loc>
+    <lastmod>2025-06-24T00:00:00+01:00</lastmod>
   </url><url>
     <loc>https://deploymentshare.com/categories/intune/</loc>
+    <lastmod>2024-07-26T00:00:00+01:00</lastmod>
+  </url><url>
+    <loc>https://deploymentshare.com/tags/intune/</loc>
     <lastmod>2024-07-26T00:00:00+01:00</lastmod>
   </url><url>
     <loc>https://deploymentshare.com/articles/bp-9-pbi-intune/</loc>
     <lastmod>2024-07-26T00:00:00+01:00</lastmod>
   </url><url>
-    <loc>https://deploymentshare.com/tags/microsoft-graph/</loc>
-    <lastmod>2024-07-26T00:00:00+01:00</lastmod>
-  </url><url>
     <loc>https://deploymentshare.com/categories/microsoft-graph/</loc>
     <lastmod>2024-07-26T00:00:00+01:00</lastmod>
   </url><url>
-    <loc>https://deploymentshare.com/tags/power-bi/</loc>
+    <loc>https://deploymentshare.com/tags/microsoft-graph/</loc>
     <lastmod>2024-07-26T00:00:00+01:00</lastmod>
   </url><url>
     <loc>https://deploymentshare.com/categories/power-bi/</loc>
+    <lastmod>2024-07-26T00:00:00+01:00</lastmod>
+  </url><url>
+    <loc>https://deploymentshare.com/tags/power-bi/</loc>
     <lastmod>2024-07-26T00:00:00+01:00</lastmod>
   </url><url>
     <loc>https://deploymentshare.com/tags/applications/</loc>
@@ -62,19 +62,19 @@
     <loc>https://deploymentshare.com/tags/forticlient/</loc>
     <lastmod>2024-07-23T00:00:00+01:00</lastmod>
   </url><url>
-    <loc>https://deploymentshare.com/tags/security/</loc>
+    <loc>https://deploymentshare.com/categories/security/</loc>
     <lastmod>2024-07-23T00:00:00+01:00</lastmod>
   </url><url>
-    <loc>https://deploymentshare.com/categories/security/</loc>
+    <loc>https://deploymentshare.com/tags/security/</loc>
     <lastmod>2024-07-23T00:00:00+01:00</lastmod>
   </url><url>
     <loc>https://deploymentshare.com/articles/bp-forticlient-ts/</loc>
     <lastmod>2024-07-23T00:00:00+01:00</lastmod>
   </url><url>
-    <loc>https://deploymentshare.com/tags/vpn/</loc>
+    <loc>https://deploymentshare.com/categories/vpn/</loc>
     <lastmod>2024-07-23T00:00:00+01:00</lastmod>
   </url><url>
-    <loc>https://deploymentshare.com/categories/vpn/</loc>
+    <loc>https://deploymentshare.com/tags/vpn/</loc>
     <lastmod>2024-07-23T00:00:00+01:00</lastmod>
   </url><url>
     <loc>https://deploymentshare.com/tags/defender/</loc>
