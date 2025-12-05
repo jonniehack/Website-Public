@@ -21593,15 +21593,15 @@ header {
   </thead>
   <tbody>
       <tr>
-          <td>TenantID <br> AppID <br> SecretID <br> GroupTag</td>
-          <td style="text-align: center"><img src="https://deploymentshare.com/articles/bp-apgrouptagts/articles/bp-apgrouptagts/img/BP-APGroupTagTS-1_hu_8a1550d7b6a1534f.png#centre" alt="Alt Text"  /></td>
+          <td>TenantID <br> AppID <br> AppSecret <br> GroupTag</td>
+          <td style="text-align: center"><img src="https://deploymentshare.com/articles/bp-apgrouptagts/articles/bp-apgrouptagts/img/BP-APGroupTagTS-1_hu_7230c6d3c57b3833.png#centre" alt="Alt Text"  /></td>
       </tr>
   </tbody>
 </table>
-<p>For the SecretID, I strongly suggest you tick the box to &ldquo;Do Not Display this Value&rdquo;.  This at least forms some sort of security for you as the secret is the key to the app registration and what it can do.  Keeping that secure may or may not be important to you:</p>
-<p><img src="https://deploymentshare.com/articles/bp-apgrouptagts/articles/bp-apgrouptagts/img/BP-APGroupTagTS-2_hu_3f56e0692922c2ea.png#centre" alt="Alt Text"  /></p>
+<p>For the AppSecret, I strongly suggest you tick the box to &ldquo;Do Not Display this Value&rdquo;.  This at least forms some sort of security for you as the secret is the key to the app registration and what it can do.  Keeping that secure may or may not be important to you:</p>
+<p><img src="https://deploymentshare.com/articles/bp-apgrouptagts/articles/bp-apgrouptagts/img/BP-APGroupTagTS-2_hu_102bf7cc48ec10aa.png#centre" alt="Alt Text"  /></p>
 <p>A description containing the expiry date might help in the event of failures too :-)
-<img src="https://deploymentshare.com/articles/bp-apgrouptagts/articles/bp-apgrouptagts/img/BP-APGroupTagTS-6_hu_80317704a4cd776f.png#centre" alt="Alt Text"  /></p>
+<img src="https://deploymentshare.com/articles/bp-apgrouptagts/articles/bp-apgrouptagts/img/BP-APGroupTagTS-6_hu_189ba9cc8716dfdc.png#centre" alt="Alt Text"  /></p>
 <h5 id="the-script">The Script</h5>
 <p>Next comes the fun bit.  I lost a considerable amount of time testing this with numerous faults and errors.  I was hoping that, I could use the <a href="https://www.powershellgallery.com/packages/Get-WindowsAutoPilotInfo/2.3"
 
@@ -21715,10 +21715,10 @@ header {
 </span></span></span><span style="display:flex;"><span><span style="color:#60a0b0;font-style:italic">    Used alongside a task sequence within Configuration Manager, this script was uses to add the device to autopilot and set a GroupTag
 </span></span></span><span style="display:flex;"><span><span style="color:#60a0b0;font-style:italic">
 </span></span></span><span style="display:flex;"><span><span style="color:#60a0b0;font-style:italic">.</span><span style="color:#4070a0;font-style:italic">EXAMPLE</span><span style="color:#60a0b0;font-style:italic">
-</span></span></span><span style="display:flex;"><span><span style="color:#60a0b0;font-style:italic">    .\Set-AutopilotGroupTag -TenantID &#34;123456&#34; -AppID &#34;234567&#34; -SecretID &#34;345678&#34; -groupTag &#34;AutopilotDevice&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#60a0b0;font-style:italic">    .\Set-AutopilotGroupTag -TenantID &#34;123456&#34; -AppID &#34;234567&#34; -AppSecret &#34;345678&#34; -groupTag &#34;AutopilotDevice&#34;
 </span></span></span><span style="display:flex;"><span><span style="color:#60a0b0;font-style:italic">
 </span></span></span><span style="display:flex;"><span><span style="color:#60a0b0;font-style:italic">.</span><span style="color:#4070a0;font-style:italic">NOTES</span><span style="color:#60a0b0;font-style:italic">
-</span></span></span><span style="display:flex;"><span><span style="color:#60a0b0;font-style:italic">Should use Task Sequence Variables for the parameters, e.g. %TenantID%, %AppID%, %SecretID%, %GroupTag%
+</span></span></span><span style="display:flex;"><span><span style="color:#60a0b0;font-style:italic">Should use Task Sequence Variables for the parameters, e.g. %TenantID%, %AppID%, %AppSecret%, %GroupTag%
 </span></span></span><span style="display:flex;"><span><span style="color:#60a0b0;font-style:italic">
 </span></span></span><span style="display:flex;"><span><span style="color:#60a0b0;font-style:italic">To allow data to be passed to SMSTSLog create a variable called &#39;OSDLogPowerShellParameters&#39; and set it to &#39;True&#39;
 </span></span></span><span style="display:flex;"><span><span style="color:#60a0b0;font-style:italic">
@@ -21733,7 +21733,7 @@ header {
 </span></span><span style="display:flex;"><span>    [<span style="color:#60add5">string</span>]<span style="color:#bb60d5">$AppId</span>,
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>    [<span style="color:#007020">Parameter</span>(<span style="color:#4070a0">Mandatory</span> = <span style="color:#bb60d5">$true</span>)]
-</span></span><span style="display:flex;"><span>    [<span style="color:#60add5">string</span>]<span style="color:#bb60d5">$SecretID</span>,
+</span></span><span style="display:flex;"><span>    [<span style="color:#60add5">string</span>]<span style="color:#bb60d5">$AppSecret</span>,
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>    [<span style="color:#007020">Parameter</span>(<span style="color:#4070a0">Mandatory</span> = <span style="color:#bb60d5">$false</span>)]
 </span></span><span style="display:flex;"><span>    [<span style="color:#60add5">string</span>]<span style="color:#bb60d5">$GroupTag</span>
@@ -21913,64 +21913,40 @@ header {
 <p>We will opt to past a script into the step;</p>
 <p><img src="https://deploymentshare.com/articles/bp-apgrouptagts/articles/bp-apgrouptagts/img/BP-APGroupTagTS-9_hu_cef85e45bfa5eea3.png#centre" alt="Alt Text"  /></p>
 <p>We will also configure the script to pass in four parameters.</p>
-<p><img src="https://deploymentshare.com/articles/bp-apgrouptagts/articles/bp-apgrouptagts/img/BP-APGroupTagTS-3_hu_487381cf5e3be8ef.png#centre" alt="Alt Text"  /></p>
+<p><img src="https://deploymentshare.com/articles/bp-apgrouptagts/articles/bp-apgrouptagts/img/BP-APGroupTagTS-3_hu_bb1c278a1be8f2e1.png#centre" alt="Alt Text"  /></p>
 <p>Notice that the script requires four parameters passing to it and would you believe it!?  they match the task sequence variables we set up earlier.  Wonderful.  to reference a task sequence variable in a task sequence step you surround the text with &ldquo;%&rdquo; like in the above image.</p>
 <p>Within the step you will notice the following;</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>[<span style="color:#60add5">Net.ServicePointManager</span>]::SecurityProtocol = [<span style="color:#60add5">Net.SecurityProtocolType</span>]::Tls12
 </span></span></code></pre></div><p>This enables TLS 1.2.  This is used to overcome networking issues experienced when attempting to go out to the www to receive content.  There are then two sections which manually pull in the modules PowerShellGet and PackageManagement, both required to install the &ldquo;Get-WindowsAutopilotInfo&rdquo; script (which ensures the latest version is always pulled in) and to run it using the parameters we have passed in because&hellip; the script Get-WindowsAutopilotInfo uses the same parameter names we have passed in from our task sequence variables.</p>
 <p>In testing I see the devices appear in Autopilot devices;
 <img src="https://deploymentshare.com/articles/bp-apgrouptagts/articles/bp-apgrouptagts/img/BP-APGroupTagTS-7_hu_5648173767fd5ecd.png#centre" alt="Alt Text"  /></p>
-<p>And then shortly after the device that is &ldquo;Not Assigned&rdquo; changes to pending, and lastly - <strong>assigned</strong>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-  
-    
-    <img
-      title=""
-      loading="lazy"
-      decoding="async"
-      src="https://deploymentshare.com/simages/BP-APGroupTagTS-4.png"
-      alt=""
-      class="img   "
-      width=""
-      height="" />
-  
-  
-
-
-
-
-
-
-  <script>
-    window.addEventListener("load", (e) => {
-      const lightbox = GLightbox();
-    });
-  </script>
-
-</p>
+<p>And then shortly after the device that is &ldquo;Not Assigned&rdquo; changes to pending, and lastly - <strong>assigned</strong></p>
 <p>And VOILA! Device present and accounted for.</p>
 <p>Happy Customer.</p>
+
+
+
+
+  
+  
+
+
+
+
+
+  
+
+
+<div class="notice warning">
+  <div class="notice-head"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="22" height="22">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126ZM12 15.75h.007v.008H12v-.008Z" />
+      </svg>
+      <p>Warning</p>
+    
+  </div>
+  <div class="notice-body"><p>05/12/2025 - It has been reported to me that, due to Microsoft introducing Graph throttling, a customer was having mixed results trying to use the task sequence on batches of machines (10 or more at a time).  Please note this is out of my control. The script can be edited to add random wait times in to help mitigate this but as of yet this is untested.</p></div>
+</div>
+
 <h5 id="testing">Testing</h5>
 <p>Once testing begun there was an issue we noticed.  Shift+F10 was not available in the event of a failure which was odd.  This is controlled by the file <strong>C:\Windows\Setup\Scripts\DisableCMDRequest.TAG</strong> which we can remove with a simple Run Command Line Step.</p>
 <p><img src="https://deploymentshare.com/articles/bp-apgrouptagts/articles/bp-apgrouptagts/img/BP-APGroupTagTS-5_hu_50c53a9c5fa89525.png#centre" alt="Alt Text"  /></p>
