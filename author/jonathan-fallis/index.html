@@ -6,7 +6,7 @@
   <head>
     
     <meta charset="utf-8" />
-<title>Jonathan Fallis</title>
+<title>Jonathan</title>
 
 
 <meta
@@ -83,7 +83,7 @@
   
 
 
-<title>Jonathan Fallis</title>
+<title>Jonathan</title>
 
 
 
@@ -108,7 +108,7 @@
 
 <meta
   name="description"
-  content="IT Ninja" />
+  content="Technical Consultant" />
 
 
 
@@ -161,15 +161,15 @@
       
       
       
-        <meta property="og:image" content="https://deploymentshare.com/images/profile-circle.png" />
-        <meta name="twitter:image" content="https://deploymentshare.com/images/profile-circle.png" />
+        <meta property="og:image" content="https://deploymentshare.com/images/Professional_HandS.png" />
+        <meta name="twitter:image" content="https://deploymentshare.com/images/Professional_HandS.png" />
         <meta
           name="twitter:card"
-          content="summary" />
+          content="summary_large_image" />
       
       
-      <meta property="og:image:width" content="800" />
-      <meta property="og:image:height" content="800" />
+      <meta property="og:image:width" content="1024" />
+      <meta property="og:image:height" content="1167" />
     
 
 
@@ -186,14 +186,14 @@
 
 
 
-<meta property="og:title" content="Jonathan Fallis" />
-<meta property="og:description" content="IT Ninja" />
+<meta property="og:title" content="Jonathan" />
+<meta property="og:description" content="Technical Consultant" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://deploymentshare.com/author/jonathan-fallis/" />
 
 
-<meta name="twitter:title" content="Jonathan Fallis" />
-<meta name="twitter:description" content="IT Ninja" />
+<meta name="twitter:title" content="Jonathan" />
+<meta name="twitter:description" content="Technical Consultant" />
 
 
 
@@ -19769,6 +19769,11 @@ header {
     left: 1.25rem; }
   .featured-post-slider .swiper-button-next {
     right: 1.25rem; }
+  .featured-post-img {
+    height: 320px;
+    width: 100%;
+    object-fit: cover;
+    display: block; }
   .featured-post-overlay {
     position: absolute;
     height: 100%;
@@ -19966,11 +19971,12 @@ header {
   background: #fff;
   margin-bottom: 2.5rem; }
   .widget-about .widget-about-image {
-    height: 130px;
-    width: 6.25rem;
-    object-fit: cover;
+    width: 50%;
+    height: auto;
+    object-fit: contain;
     border-radius: 0.62rem;
-    margin-right: 0.9rem; }
+    margin: 0 auto;
+    display: block; }
   .widget-title {
     position: relative;
     margin-bottom: 0.9rem; }
@@ -20310,6 +20316,30 @@ header {
   .dark #TableOfContents li,
   .dark #TableOfContents a {
     color: #fff !important; }
+
+/* The following Custom CSS adds the details for shrinking the featured post size */
+/* It also needs a change in the featured-post.html partial - look for comments */
+.featured-post-narrow {
+  max-width: 760px; }
+
+.featured-post-img img,
+.featured-post-img picture img {
+  height: 320px;
+  width: 100%;
+  object-fit: contain;
+  display: block; }
+
+.featured-post-slider {
+  position: relative; }
+
+/* move the buttons up or down on the  */
+.featured-post-slider .swiper-pagination {
+  bottom: -2px !important; }
+
+/* Reduce featured post title size */
+.featured-post-content .post-title {
+  font-size: 1.3rem;
+  line-height: 1.25; }
 
 .search-wrapper {
   position: relative;
@@ -21355,7 +21385,7 @@ header {
       <div class="row">
         <div class="col-12">
           <div class="title-bordered mb-5 d-flex align-items-center">
-            <h1 class="h4 fw-normal">Jonathan Fallis</h1>
+            <h1 class="h4 fw-normal">Jonathan</h1>
             <ul class="list-inline social-icons ms-auto me-3 d-none d-sm-block">
               
                 <li class="list-inline-item">
@@ -21474,33 +21504,33 @@ header {
         <picture>
           <source
             
-              srcset="/images/profile-circle_hu_31300ffa7f5ae77d.webp"
+              srcset="/images/Professional_HandS_hu_1b3cc4dc1a652b33.webp"
             
             media="(max-width: 575px)" />
           <source
             
-              srcset="/images/profile-circle_hu_26c13920e382a3cf.webp"
+              srcset="/images/Professional_HandS_hu_49865d118f07c3b1.webp"
             
             media="(max-width: 767px)" />
           <source
             
-              srcset="/images/profile-circle_hu_5b44162480f732c9.webp"
+              srcset="/images/Professional_HandS_hu_74618099f8ded9d4.webp"
             
             media="(max-width: 991px)" />
           <source
             
-              srcset="/images/profile-circle_hu_79ede23d16d548ac.webp"
+              srcset="/images/Professional_HandS_hu_27deb87f41c22db5.webp"
              />
           <img
             
               loading="lazy" decoding="async"
-              src="/images/profile-circle_hu_921b4565cb81e004.png"
+              src="/images/Professional_HandS_hu_8863eb4cf8f9342b.png"
             
             
             class=" rounded-lg img"
             alt="author image"
-            width="800"
-            height="800" />
+            width="1024"
+            height="1167" />
         </picture>
       
       
@@ -21601,6 +21631,8 @@ header {
           </div>
         </div>
         
+          
+            
           <div class="col-lg-4 col-sm-6 mb-4">
             <article class="mb-5">
               
@@ -21795,6 +21827,7 @@ header {
             </article>
           </div>
         
+            
           <div class="col-lg-4 col-sm-6 mb-4">
             <article class="mb-5">
               
@@ -22001,6 +22034,7 @@ header {
             </article>
           </div>
         
+            
           <div class="col-lg-4 col-sm-6 mb-4">
             <article class="mb-5">
               
@@ -22219,6 +22253,7 @@ header {
             </article>
           </div>
         
+            
           <div class="col-lg-4 col-sm-6 mb-4">
             <article class="mb-5">
               
@@ -22413,6 +22448,7 @@ header {
             </article>
           </div>
         
+            
           <div class="col-lg-4 col-sm-6 mb-4">
             <article class="mb-5">
               
@@ -22607,6 +22643,7 @@ header {
             </article>
           </div>
         
+            
           <div class="col-lg-4 col-sm-6 mb-4">
             <article class="mb-5">
               
@@ -22813,6 +22850,7 @@ header {
             </article>
           </div>
         
+            
           <div class="col-lg-4 col-sm-6 mb-4">
             <article class="mb-5">
               
@@ -23019,6 +23057,7 @@ header {
             </article>
           </div>
         
+            
           <div class="col-lg-4 col-sm-6 mb-4">
             <article class="mb-5">
               
@@ -23225,6 +23264,7 @@ header {
             </article>
           </div>
         
+            
           <div class="col-lg-4 col-sm-6 mb-4">
             <article class="mb-5">
               
@@ -23431,6 +23471,7 @@ header {
             </article>
           </div>
         
+            
           <div class="col-lg-4 col-sm-6 mb-4">
             <article class="mb-5">
               
@@ -23637,6 +23678,7 @@ header {
             </article>
           </div>
         
+            
           <div class="col-lg-4 col-sm-6 mb-4">
             <article class="mb-5">
               
@@ -23843,6 +23885,7 @@ header {
             </article>
           </div>
         
+            
           <div class="col-lg-4 col-sm-6 mb-4">
             <article class="mb-5">
               
@@ -24056,6 +24099,7 @@ header {
             </article>
           </div>
         
+            
           <div class="col-lg-4 col-sm-6 mb-4">
             <article class="mb-5">
               
@@ -24262,6 +24306,7 @@ header {
             </article>
           </div>
         
+            
           <div class="col-lg-4 col-sm-6 mb-4">
             <article class="mb-5">
               
@@ -24468,6 +24513,7 @@ header {
             </article>
           </div>
         
+            
           <div class="col-lg-4 col-sm-6 mb-4">
             <article class="mb-5">
               
@@ -24687,6 +24733,7 @@ header {
             </article>
           </div>
         
+            
           <div class="col-lg-4 col-sm-6 mb-4">
             <article class="mb-5">
               
@@ -24923,6 +24970,7 @@ header {
             </article>
           </div>
         
+            
           <div class="col-lg-4 col-sm-6 mb-4">
             <article class="mb-5">
               
@@ -25151,6 +25199,7 @@ Leading on from <a href="articles/bp-psadt/"
             </article>
           </div>
         
+            
           <div class="col-lg-4 col-sm-6 mb-4">
             <article class="mb-5">
               

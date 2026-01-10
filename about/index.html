@@ -6,7 +6,7 @@
   <head>
     
     <meta charset="utf-8" />
-<title>Hi, I Am John Doe</title>
+<title>Hi, I Am Jonathan</title>
 
 
 <meta
@@ -83,7 +83,7 @@
   
 
 
-<title>Hi, I Am John Doe</title>
+<title>Hi, I Am Jonathan</title>
 
 
 
@@ -144,6 +144,40 @@
 
   
   
+    
+    
+      
+    
+
+    
+
+
+    
+    
+
+
+    
+    
+      
+      
+      
+        <meta property="og:image" content="https://deploymentshare.com/images/Professional_HandS.png" />
+        <meta name="twitter:image" content="https://deploymentshare.com/images/Professional_HandS.png" />
+        <meta
+          name="twitter:card"
+          content="summary_large_image" />
+      
+      
+      <meta property="og:image:width" content="1024" />
+      <meta property="og:image:height" content="1167" />
+    
+
+
+    
+    <meta
+      property="og:image:type"
+      content="image/.png" />
+  
 
 
   
@@ -152,13 +186,13 @@
 
 
 
-<meta property="og:title" content="Hi, I Am John Doe" />
+<meta property="og:title" content="Hi, I Am Jonathan" />
 <meta property="og:description" content="This is meta description" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://deploymentshare.com/about/" />
 
 
-<meta name="twitter:title" content="Hi, I Am John Doe" />
+<meta name="twitter:title" content="Hi, I Am Jonathan" />
 <meta name="twitter:description" content="This is meta description" />
 
 
@@ -19735,6 +19769,11 @@ header {
     left: 1.25rem; }
   .featured-post-slider .swiper-button-next {
     right: 1.25rem; }
+  .featured-post-img {
+    height: 320px;
+    width: 100%;
+    object-fit: cover;
+    display: block; }
   .featured-post-overlay {
     position: absolute;
     height: 100%;
@@ -19932,11 +19971,12 @@ header {
   background: #fff;
   margin-bottom: 2.5rem; }
   .widget-about .widget-about-image {
-    height: 130px;
-    width: 6.25rem;
-    object-fit: cover;
+    width: 50%;
+    height: auto;
+    object-fit: contain;
     border-radius: 0.62rem;
-    margin-right: 0.9rem; }
+    margin: 0 auto;
+    display: block; }
   .widget-title {
     position: relative;
     margin-bottom: 0.9rem; }
@@ -20276,6 +20316,30 @@ header {
   .dark #TableOfContents li,
   .dark #TableOfContents a {
     color: #fff !important; }
+
+/* The following Custom CSS adds the details for shrinking the featured post size */
+/* It also needs a change in the featured-post.html partial - look for comments */
+.featured-post-narrow {
+  max-width: 760px; }
+
+.featured-post-img img,
+.featured-post-img picture img {
+  height: 320px;
+  width: 100%;
+  object-fit: contain;
+  display: block; }
+
+.featured-post-slider {
+  position: relative; }
+
+/* move the buttons up or down on the  */
+.featured-post-slider .swiper-pagination {
+  bottom: -2px !important; }
+
+/* Reduce featured post title size */
+.featured-post-content .post-title {
+  font-size: 1.3rem;
+  line-height: 1.25; }
 
 .search-wrapper {
   position: relative;
@@ -21321,23 +21385,27 @@ header {
       <div class="row">
         <div class="col-12">
           <div class="title-bordered mb-5 d-flex align-items-center">
-            <h1 class="h4 fw-normal">Hi, I Am John Doe</h1>
+            <h1 class="h4 fw-normal">Hi, I Am Jonathan</h1>
             <ul class="list-inline social-icons ms-auto me-3 d-none d-sm-block">
               
                 <li class="list-inline-item">
-                  <a href="https://facebook.com"><i class="fab fa-facebook"></i></a>
+                  <a href="https://twitter.com/jonniehack"><i class="fab fa-twitter"></i></a>
                 </li>
               
                 <li class="list-inline-item">
-                  <a href="https://twitter.com"><i class="fab fa-twitter"></i></a>
+                  <a href="https://www.linkedin.com/in/jonathan-fallis"><i class="fab fa-linkedin"></i></a>
                 </li>
               
                 <li class="list-inline-item">
-                  <a href="https://instagram.com"><i class="fab fa-instagram"></i></a>
+                  <a href="https://github.com/jonniehack"><i class="fab fa-github"></i></a>
                 </li>
               
                 <li class="list-inline-item">
-                  <a href="https://linkedin.com"><i class="fab fa-linkedin-in"></i></a>
+                  <a href="https://learn.microsoft.com/en-us/users/jonathanfallis"><i class="fa-brands fa-windows"></i></a>
+                </li>
+              
+                <li class="list-inline-item">
+                  <a href="https://www.buymeacoffee.com/jonathanfallis"><i class="fa-solid fa-mug-hot"></i></a>
                 </li>
               
             </ul>
@@ -21374,6 +21442,8 @@ header {
 
 
 
+  
+
 
 
 
@@ -21381,6 +21451,79 @@ header {
   
 
   
+  
+    
+      
+    
+
+
+    
+    
+
+
+    
+    
+      
+      
+    
+    
+    
+
+
+    
+    
+      
+      
+        
+
+        
+        
+        
+        
+        
+        
+        
+
+
+        
+        
+
+
+        <picture>
+          <source
+            
+              srcset="/images/Professional_HandS_hu_1b3cc4dc1a652b33.webp"
+            
+            media="(max-width: 575px)" />
+          <source
+            
+              srcset="/images/Professional_HandS_hu_49865d118f07c3b1.webp"
+            
+            media="(max-width: 767px)" />
+          <source
+            
+              srcset="/images/Professional_HandS_hu_74618099f8ded9d4.webp"
+            
+            media="(max-width: 991px)" />
+          <source
+            
+              srcset="/images/Professional_HandS_hu_27deb87f41c22db5.webp"
+             />
+          <img
+            
+              loading="lazy" decoding="async"
+              src="/images/Professional_HandS_hu_8863eb4cf8f9342b.png"
+            
+            
+            class=" w-100 mb-4 rounded-lg img"
+            alt="author"
+            width="1024"
+            height="1167" />
+        </picture>
+      
+      
+    
+    
   
 
 
@@ -21391,29 +21534,7 @@ header {
 
 
           <div class="content">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Condimentum in urna justo elit turpis risus vitae viverra enim. Augue quis vitae in non nisi, posuere ultrices tempus. Feugiat consequat suspendisse laoreet vitae enim adipiscing cursus. Duis nunc vitae tincidunt sed nibh id. Egestas erat consequat, ornare etiam donec faucibus. Lorem ut enim nunc, senectus adipiscing sed. Lobortis commodo aliquet pulvinar molestie faucibus diam. Semper porttitor, et dictum</p>
-<p>Faucibus duis urna, consequat morbi imperdiet pulvinar. Mauris vitae sed aliquet eu tincidunt id. Nulla leo eget erat vel pharetra. Morbi nullam morbi non purus, augue. Massa cras odio ante cursus a mauris. Volutpat faucibus feugiat feugiat euismod congue ridiculus. Et ipsum euismod nulla et aenean diam duis. Sem molestie est mauris sit. Et eleifend odio</p>
-
-
-
-<div class="quote">
-  <i class="fas fa-quote-left"></i>
-  <div>
-    <p>Life is a series of natural and spontaneous changes. Don’t resist them – that only create sorrow. Let reality changes be reality. Let things flow naturally way they like.</p>
-    <span class="quote-by"> -John Doe</span>
-  </div>
-</div>
-
-<hr>
-<h4 id="my-skills--experiences">My Skills &amp; Experiences:</h4>
-<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cumto sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec.</p>
-<ul>
-<li>In enim justo, rhoncus ut,</li>
-<li>Curabitur ullamcorper ultricies</li>
-<li>Donec vitae sapien utlorem</li>
-</ul>
-<p>Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna.</p>
-
+            
           </div>
         </div>
       </div>

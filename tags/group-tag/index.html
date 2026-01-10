@@ -19764,6 +19764,11 @@ header {
     left: 1.25rem; }
   .featured-post-slider .swiper-button-next {
     right: 1.25rem; }
+  .featured-post-img {
+    height: 320px;
+    width: 100%;
+    object-fit: cover;
+    display: block; }
   .featured-post-overlay {
     position: absolute;
     height: 100%;
@@ -19961,11 +19966,12 @@ header {
   background: #fff;
   margin-bottom: 2.5rem; }
   .widget-about .widget-about-image {
-    height: 130px;
-    width: 6.25rem;
-    object-fit: cover;
+    width: 50%;
+    height: auto;
+    object-fit: contain;
     border-radius: 0.62rem;
-    margin-right: 0.9rem; }
+    margin: 0 auto;
+    display: block; }
   .widget-title {
     position: relative;
     margin-bottom: 0.9rem; }
@@ -20305,6 +20311,30 @@ header {
   .dark #TableOfContents li,
   .dark #TableOfContents a {
     color: #fff !important; }
+
+/* The following Custom CSS adds the details for shrinking the featured post size */
+/* It also needs a change in the featured-post.html partial - look for comments */
+.featured-post-narrow {
+  max-width: 760px; }
+
+.featured-post-img img,
+.featured-post-img picture img {
+  height: 320px;
+  width: 100%;
+  object-fit: contain;
+  display: block; }
+
+.featured-post-slider {
+  position: relative; }
+
+/* move the buttons up or down on the  */
+.featured-post-slider .swiper-pagination {
+  bottom: -2px !important; }
+
+/* Reduce featured post title size */
+.featured-post-content .post-title {
+  font-size: 1.3rem;
+  line-height: 1.25; }
 
 .search-wrapper {
   position: relative;
@@ -21619,49 +21649,180 @@ header {
       
       
         <aside class="col-lg-4">
-          <div class="ps-0 ps-lg-4"><!-- Social -->
-<div class="widget">
-  <h6 class="widget-title"><span>Social Links</span></h6>
-  <ul class="list-inline widget-list-inline mb-3">
-    
-      <li class="list-inline-item">
-        <a href="https://twitter.com/deploymentshare" target="_blank" style="padding:5px 15px"
-          ><span class="visually-hidden">X - Blog</span
-          ><i class="fab fa-twitter"></i
-        ></a>
-      </li>
-    
-      <li class="list-inline-item">
-        <a href="https://www.linkedin.com/in/jonathan-fallis" target="_blank" style="padding:5px 15px"
-          ><span class="visually-hidden">LinkedIn</span
-          ><i class="fa-brands fa-linkedin-in"></i
-        ></a>
-      </li>
-    
-      <li class="list-inline-item">
-        <a href="https://github.com/jonniehack" target="_blank" style="padding:5px 15px"
-          ><span class="visually-hidden">github</span
-          ><i class="fa-brands fa-github"></i
-        ></a>
-      </li>
-    
-      <li class="list-inline-item">
-        <a href="https://learn.microsoft.com/en-us/users/jonathanfallis" target="_blank" style="padding:5px 15px"
-          ><span class="visually-hidden">Microsoft Learn</span
-          ><i class="fa-brands fa-windows"></i
-        ></a>
-      </li>
-    
-      <li class="list-inline-item">
-        <a href="https://www.buymeacoffee.com/jonathanfallis" target="_blank" style="padding:5px 15px"
-          ><span class="visually-hidden">Buy me a Coffee</span
-          ><i class="fa-solid fa-mug-hot"></i
-        ></a>
-      </li>
-    
-  </ul>
-</div>
+          <div class="ps-0 ps-lg-4"><!-- about me -->
+<div class="widget widget-about">
+  
+    <h5 class="widget-title"><span>About me</span></h5>
 
+    
+      <div class="mb-3 widget-about-image-wrapper">
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+  
+    
+      
+    
+
+
+    
+    
+
+
+    
+    
+      
+      
+    
+    
+    
+
+
+    
+    
+      
+      
+        
+
+        
+        
+        
+        
+        
+        
+        
+
+
+        
+        
+
+
+        <picture>
+          <source
+            
+              srcset="/images/Professional_HandS_hu_1b3cc4dc1a652b33.webp"
+            
+            media="(max-width: 575px)" />
+          <source
+            
+              srcset="/images/Professional_HandS_hu_49865d118f07c3b1.webp"
+            
+            media="(max-width: 767px)" />
+          <source
+            
+              srcset="/images/Professional_HandS_hu_74618099f8ded9d4.webp"
+            
+            media="(max-width: 991px)" />
+          <source
+            
+              srcset="/images/Professional_HandS_hu_27deb87f41c22db5.webp"
+             />
+          <img
+            
+              loading="lazy" decoding="async"
+              src="/images/Professional_HandS_hu_8863eb4cf8f9342b.png"
+            
+            
+            class=" widget-about-image img"
+            alt=""
+            width="1024"
+            height="1167" />
+        </picture>
+      
+      
+    
+    
+  
+
+
+  
+
+
+      </div>
+    
+
+    <div class="widget-about-content text-center">
+      <div class="mb-2">
+        <span class="d-block">Hi, I’m Jonathan. I am currently working as a Technical Consultant in the Cloud Endpoint practice at Phoenix Software …</span>
+      </div>
+
+      <ul class="list-inline social-icons mb-1 mt-2 text-center">
+        
+          <li class="list-inline-item">
+            <a href="https://twitter.com/jonniehack" target="_blank" rel="noopener">
+              <span class="visually-hidden"></span><i class="fab fa-twitter"></i>
+            </a>
+          </li>
+        
+          <li class="list-inline-item">
+            <a href="https://www.linkedin.com/in/jonathan-fallis" target="_blank" rel="noopener">
+              <span class="visually-hidden"></span><i class="fab fa-linkedin"></i>
+            </a>
+          </li>
+        
+          <li class="list-inline-item">
+            <a href="https://github.com/jonniehack" target="_blank" rel="noopener">
+              <span class="visually-hidden"></span><i class="fab fa-github"></i>
+            </a>
+          </li>
+        
+          <li class="list-inline-item">
+            <a href="https://learn.microsoft.com/en-us/users/jonathanfallis" target="_blank" rel="noopener">
+              <span class="visually-hidden"></span><i class="fa-brands fa-windows"></i>
+            </a>
+          </li>
+        
+          <li class="list-inline-item">
+            <a href="https://www.buymeacoffee.com/jonathanfallis" target="_blank" rel="noopener">
+              <span class="visually-hidden"></span><i class="fa-solid fa-mug-hot"></i>
+            </a>
+          </li>
+        
+      </ul>
+
+      <a
+        href="/author/jonathan-fallis/"
+        class="btn btn-sm btn-primary p-1 px-3 rounded mt-2"
+      >About Me</a>
+    </div>
+  
+</div>
 
   
     <div class="widget">
@@ -21852,136 +22013,6 @@ header {
       </ul>
     </div>
   
-
-<!-- Promotion -->
-
-  <div class="promotion">
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-
-
-
-
-  
-
-  
-  
-    
-      
-    
-
-
-    
-    
-
-
-    
-    
-      
-      
-    
-    
-    
-
-
-    
-    
-      
-      
-        
-
-        
-        
-        
-        
-        
-        
-        
-
-
-        
-        
-
-
-        <picture>
-          <source
-            
-              srcset="/images/promotion_hu_f0d6799e1cf32a8a.webp"
-            
-            media="(max-width: 575px)" />
-          <source
-            
-              srcset="/images/promotion_hu_bf3bee5e0dd66013.webp"
-            
-            media="(max-width: 767px)" />
-          <source
-            
-              srcset="/images/promotion_hu_5a93df64e6def40e.webp"
-            
-            media="(max-width: 991px)" />
-          <source
-            
-              srcset="/images/promotion_hu_ae09ac2d96e6b14f.webp"
-             />
-          <img
-            
-              loading="lazy" decoding="async"
-              src="/images/promotion_hu_36890f1d8f29e7f.jpg"
-            
-            
-            class=" w-100 img"
-            alt="promotion-image"
-            width="2921"
-            height="2034" />
-        </picture>
-      
-      
-    
-    
-  
-
-
-  
-
-
-    <div class="promotion-content">
-      <h5 class="text-white mb-3">My Laptop</h5>
-      <p class="text-white mb-4">HP ZBook 15 G6 <br> Intel(R) Core(TM) i9-9880H CPU <br> 64GB Ram / 4TB SSD</p>
-      <a href="https://www8.hp.com/h20195/v2/GetPDF.aspx/c06305136.pdf" class="btn btn-primary"
-        >HP Zbook</a
-      >
-    </div>
-  </div>
 
 <!-- buybeacoffee -->
   <div class="widget">

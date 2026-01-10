@@ -3,7 +3,10 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://deploymentshare.com/articles/</loc>
-    <lastmod>2025-06-24T00:00:00+01:00</lastmod>
+    <lastmod>2026-01-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://deploymentshare.com/</loc>
+    <lastmod>2026-01-10T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://deploymentshare.com/categories/</loc>
     <lastmod>2025-06-24T00:00:00+01:00</lastmod>
@@ -12,9 +15,6 @@
     <lastmod>2025-06-24T00:00:00+01:00</lastmod>
   </url><url>
     <loc>https://deploymentshare.com/tags/configuration-manager/</loc>
-    <lastmod>2025-06-24T00:00:00+01:00</lastmod>
-  </url><url>
-    <loc>https://deploymentshare.com/</loc>
     <lastmod>2025-06-24T00:00:00+01:00</lastmod>
   </url><url>
     <loc>https://deploymentshare.com/articles/bp-w11-upgrade/</loc>
