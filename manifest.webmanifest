@@ -20,33 +20,33 @@
   
   "icons": [
     {
-      "src": "/images/favicon_hu_9cb9d5ebf5d63692.png",
+      "src": "/images/newfavicon_hu_8f85dc840d0d9d7a.png",
       "sizes": "48x48",
       "type": "image/png"
     },
     {
-      "src": "/images/favicon_hu_7e8d4d39724518df.png",
+      "src": "/images/newfavicon_hu_b8652f616c19c732.png",
       "sizes": "72x72",
       "type": "image/png"
     },
     {
-      "src": "/images/favicon_hu_c69d404230eba5be.png",
+      "src": "/images/newfavicon_hu_b561df9818c31974.png",
       "sizes": "96x96",
       "type": "image/png"
     },
     {
-      "src": "/images/favicon_hu_47e9e469d1ffe470.png",
+      "src": "/images/newfavicon_hu_52a72e157e99293d.png",
       "sizes": "144x144",
       "type": "image/png"
     },
     {
-      "src": "/images/favicon_hu_692f82935d88990a.png",
+      "src": "/images/newfavicon_hu_984ca6c072322df.png",
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "any maskable"
     },
     {
-      "src": "/images/favicon_hu_a181a37d8a0c8dc1.png",
+      "src": "/images/newfavicon_hu_f01f7304a3768fb6.png",
       "sizes": "512x512",
       "type": "image/png"
     }
